@@ -39,7 +39,7 @@ public class ImportUtils implements Serializable {
 	
 	
 
-	public static HashMap importIpLevel3_IPFM(UploadItem item,String username){
+	public static HashMap importIpLevel3_IPFM(UploadItem item,String username){ // DMAP Comment : Dead Code Detected - The Following Method has no reference importIpLevel3_IPFM
 		InputStream inputStream = null;
 		List<IpInfoTemp> ipInfoTempList = new ArrayList<IpInfoTemp>();
 		IpInfoTemp ipInfoTemp;
@@ -154,7 +154,7 @@ public class ImportUtils implements Serializable {
 		 return resultMap;
 	} 
 	
-	public static HashMap importIpLevel3_ICTAP(UploadItem item,String username){
+	public static HashMap importIpLevel3_ICTAP(UploadItem item,String username){ // DMAP Comment : Dead Code Detected - The Following Method has no reference importIpLevel3_ICTAP
 		InputStream inputStream = null;
 		List<IpInfoTemp> ipInfoTempList = new ArrayList<IpInfoTemp>();
 		IpInfoTemp ipInfoTemp;

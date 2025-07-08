@@ -54,11 +54,11 @@ public class WS_OM_OMEHRServicesSoapProxy implements org.tempuri.WS_OM_OMEHRServ
 	    catch (javax.xml.rpc.ServiceException serviceException) {}
 	  }  
   
-  public String getEndpoint() {
+  public String getEndpoint() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndpoint
     return _endpoint;
   }
   
-  public void setEndpoint(String endpoint) {
+  public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
     _endpoint = endpoint;
     if (wS_OM_OMEHRServicesSoap != null)
       ((javax.xml.rpc.Stub)wS_OM_OMEHRServicesSoap)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);

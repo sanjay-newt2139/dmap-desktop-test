@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao;
 
 import java.sql.CallableStatement;
@@ -13,19 +14,24 @@ import th.co.ais.ipfm.domain1.IpUrIpResult;
 public class PlanningDaoImpl implements PlanningPLDao {
 	private SessionFactory sessionFactory;
 	
-	public void setSessionFactory(SessionFactory sessionFactory) {
+	public void setSessionFactory(SessionFactory sessionFactory) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSessionFactory
 		this.sessionFactory = sessionFactory;
 	}
 
 	@Override
-	public void urIpTodoList(String urno,String urType, String action, String olaDate, String slaDate) throws Exception{
+	public void urIpTodoList(String urno,String urType, String action, String olaDate, String slaDate) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference urIpTodoList
 		 Connection connection = null;
 		 
 			try{
 				Session session = sessionFactory.getCurrentSession();
 				connection = session.connection();
 				 
-				 String plName = "{call Gen_UR_IP_To_Do_List(?,?,?,?,?)}";
+String plName = "call Gen_UR_IP_To_Do_List(?,?,?,?,?)";//String plName = "{call Gen_UR_IP_To_Do_List(?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier337
+DMAP ConvertedQuery - call Gen_UR_IP_To_Do_List(?,?,?,?,?)
+**/
+
 				 CallableStatement stmt = connection.prepareCall(plName);
 				 //set PL parameter &amp; value
 				 stmt.setString(1,urno);
@@ -54,14 +60,20 @@ public class PlanningDaoImpl implements PlanningPLDao {
 
 	}
 	@Override
-	public String getUrStatusDesc(String urType,String urStatus) throws Exception{
+	public String getUrStatusDesc(String urType,String urStatus) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrStatusDesc
 		 String statusName = "";
 		 Connection connection = null;
 		 try{
 			 
 			 Session session = sessionFactory.getCurrentSession();
 			 connection = session.connection();
-			 CallableStatement stmt = connection.prepareCall("{call GET_UR_STATUS_DESC(?,?,?)}");
+/**
+DMAP TAG: Query converted: Identifier336
+DMAP ConvertedQuery - call GET_UR_STATUS_DESC(?,?,?)
+**/
+
+//			 CallableStatement stmt = connection.prepareCall("{call GET_UR_STATUS_DESC(?,?,?)}");
+			 CallableStatement stmt = connection.prepareCall("call GET_UR_STATUS_DESC(?,?,?)");
 			 //set PL parameter &amp; value
 			 stmt.setString(1,urType);
 			 stmt.setString(2,urStatus);
@@ -88,13 +100,18 @@ public class PlanningDaoImpl implements PlanningPLDao {
 	}
 	
 	@Override
-	public IpUrIpResult checkIPRange(String  IpDigit1,String IpDigit2,String IpDigit3,String IpDigit4,String mask) throws Exception{	 
+	public IpUrIpResult checkIPRange(String  IpDigit1,String IpDigit2,String IpDigit3,String IpDigit4,String mask) throws Exception{	  // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRange
 		 IpUrIpResult obj =null;
 		 Connection connection = null;
 		try{
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
-				 String plName = "{call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)}";
+String plName = "call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)";//String plName = "{call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier335
+DMAP ConvertedQuery - call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 				 CallableStatement stmt = connection.prepareCall(plName);
 				 //Set output data type
 				 //set PL parameter &amp; value
@@ -142,14 +159,20 @@ public class PlanningDaoImpl implements PlanningPLDao {
 	}
 
 	@Override
-	public String checkDuplicateIP(String binSt, String binEd, String option) throws Exception {
+	public String checkDuplicateIP(String binSt, String binEd, String option) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkDuplicateIP
 		String result = "";
 		Connection connection = null;
 		try{
 			 
 			 Session session = sessionFactory.getCurrentSession();
 			 connection = session.connection();
-			 CallableStatement stmt = connection.prepareCall("{call CHECK_DUP_IP(?,?,?,?)}");
+/**
+DMAP TAG: Query converted: Identifier334
+DMAP ConvertedQuery - call CHECK_DUP_IP(?,?,?,?)
+**/
+
+//			 CallableStatement stmt = connection.prepareCall("{call CHECK_DUP_IP(?,?,?,?)}");
+			 CallableStatement stmt = connection.prepareCall("call CHECK_DUP_IP(?,?,?,?)");
 			 //set PL parameter &amp; value
 			 stmt.setString(1,binSt);
 			 stmt.setString(2,binEd);

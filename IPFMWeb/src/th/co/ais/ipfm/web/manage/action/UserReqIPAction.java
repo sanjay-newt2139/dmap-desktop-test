@@ -97,7 +97,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		userReqIPBean = getUserReqIPBean();		
@@ -334,12 +334,12 @@ public class UserReqIPAction  extends AbstractAction {
 		return programID;
 	}
 	
-	public List<SelectItem> userSuggestion(Object event) throws Exception{
+	public List<SelectItem> userSuggestion(Object event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference userSuggestion
 		if (event.toString()==null) return new ArrayList<SelectItem>();
 		return getUserListSelectItem(event.toString());
 	}
 	
-	public void suggestManager() throws IPFMBusinessException{
+	public void suggestManager() throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference suggestManager
 		UserReqIPBean bean = getUserReqIPBean();
 		if (bean.getSuggestProjManager().getRowIndex() < 0){
 			bean.setProjManagerComboItem(new IPFMRichComboItem());
@@ -353,7 +353,7 @@ public class UserReqIPAction  extends AbstractAction {
 		setUserReqIPBean(bean);
 	}
 	
-	public void suggestSysOwner() throws Exception{
+	public void suggestSysOwner() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference suggestSysOwner
 		UserReqIPBean bean = getUserReqIPBean();
 		if (bean.getSuggestSystemOwner().getRowIndex() < 0){
 			bean.setSystemOwnerTeamList(new ArrayList<SelectItem>());
@@ -480,7 +480,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return userListSelectItem;
 	}
 	
-	public void clear() {
+	public void clear() { // DMAP Comment : Dead Code Detected - The Following Method has no reference clear
 		UserReqIPBean bean = getUserReqIPBean();
 		bean.setIpUrIpDetail(new IpUrIpDetail());
 		setUserReqIPBean(bean);
@@ -698,7 +698,7 @@ public class UserReqIPAction  extends AbstractAction {
 		ILoginService loginService = (ILoginService)JSFServiceFinderUtil.getInstance().getBean("loginService");
 		loginService.checkNewUser(userId);
 	}
-	public String saveDraft(){
+	public String saveDraft(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference saveDraft
 		try {
 			UserSession userSession = IPFMWebUtil.getUserSession();
 		    UserReqIPService userReqIPService = (UserReqIPService)JSFServiceFinderUtil.getInstance().getBean("userReqIPService");
@@ -758,7 +758,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 		return null;
 	}
-	public String sendForApprove(){
+	public String sendForApprove(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference sendForApprove
 		try {
 			UserReqIPService userReqIPService = (UserReqIPService)JSFServiceFinderUtil.getInstance().getBean("userReqIPService");
 			userReqIPBean = getUserReqIPBean();
@@ -911,7 +911,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return null;
 	}
 	
-	public String showIpInfoDataTable(){
+	public String showIpInfoDataTable(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference showIpInfoDataTable
 		userReqIPBean = getUserReqIPBean();
 		 try {
 			 int rowIndex = Integer.parseInt(getRequestParameter("rowIndex"));
@@ -934,7 +934,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return null;
 	}
 	
-	public String addIP(){
+	public String addIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addIP
 		UserReqIPService userReqIPService = (UserReqIPService)JSFServiceFinderUtil.getInstance().getBean("userReqIPService");
 		userReqIPBean = getUserReqIPBean();
 	    try {
@@ -1070,7 +1070,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return flgValid;
 	}
 	
-	public void searchIPCheckAllAction(){
+	public void searchIPCheckAllAction(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIPCheckAllAction
 		//System.out.println("------ checkAll -------");
 		userReqIPBean = getUserReqIPBean();
 		try{
@@ -1096,7 +1096,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void checkAll(){
+	public void checkAll(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkAll
 		//System.out.println("------ checkAll -------");
 		userReqIPBean = getUserReqIPBean();
 		try{
@@ -1120,7 +1120,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public String deleteIP(){
+	public String deleteIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteIP
 		userReqIPBean = getUserReqIPBean();
 		//System.out.println("------ delete IP -------");
     	try{
@@ -1523,7 +1523,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	@SuppressWarnings("unchecked")
-	public String importExcel(UploadEvent event) {
+	public String importExcel(UploadEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference importExcel
 		userReqIPBean= getUserReqIPBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		UploadItem item = null;
@@ -1592,7 +1592,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return null;
 	} 
 	
-	public void checkViewFile() {
+	public void checkViewFile() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkViewFile
 		try{	        
 	        String path = getRequestParameter("path");
 	        String fileName = getRequestParameter("fileName");
@@ -1604,7 +1604,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
     }
 	
-	public void viewFile() {
+	public void viewFile() { // DMAP Comment : Dead Code Detected - The Following Method has no reference viewFile
 		try{
 			String path = getRequestParameter("path");
 	        String fileName = getRequestParameter("fileName");
@@ -1618,7 +1618,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
     }
 	
-	public void checkFileTemplate() {
+	public void checkFileTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFileTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -1631,7 +1631,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
     }
 	
-	public void downloadTemplate() {
+	public void downloadTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -1646,7 +1646,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
     }
 	
-	public void uploadComplete(){
+	public void uploadComplete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference uploadComplete
 		System.out.println("====== uploadComplete ======");
 		userReqIPBean = getUserReqIPBean();
 		UserReqIPService userReqIPService = (UserReqIPService)JSFServiceFinderUtil.getInstance().getBean("userReqIPService");
@@ -1667,7 +1667,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void onChangeLocationType(){
+	public void onChangeLocationType(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference onChangeLocationType
 		userReqIPBean = getUserReqIPBean();
 		if (userReqIPBean.getIpUrIpDetail().getLocationType().equalsIgnoreCase("D")) {
 			userReqIPBean.setOfficeUserComboItem(new IPFMRichComboItem());
@@ -1707,12 +1707,12 @@ public class UserReqIPAction  extends AbstractAction {
 		return projectListSelectItem;
 	}
 	
-	public void onSelectManager(){
+	public void onSelectManager(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference onSelectManager
 		UserReqIPBean bean = getUserReqIPBean();
 		bean.getIpUrIpDetail().setProjManagerId(getRequestParameter("managerId"));
 	}
 	
-	public String onChangeProject() throws IPFMBusinessException{
+	public String onChangeProject() throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference onChangeProject
 		UserReqIPBean bean = getUserReqIPBean();
 		try{
 			if (bean.getProjComboItem()!= null && IPFMUtils.ifBlank(bean.getProjComboItem().getLabel(),"").trim().length()>0) {
@@ -1862,7 +1862,7 @@ public class UserReqIPAction  extends AbstractAction {
 		return flgValid;
 	}
 	
-	public void onCheckRowAssignIP(){
+	public void onCheckRowAssignIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference onCheckRowAssignIP
 		userReqIPBean = getUserReqIPBean();
 		SearchIP searchIP = userReqIPBean.getSearchIP();
 		try{
@@ -1887,7 +1887,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void assignSearchIP(){
+	public void assignSearchIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference assignSearchIP
 		userReqIPBean = getUserReqIPBean();
 		SearchIP searchIP = userReqIPBean.getSearchIP();
 		try{
@@ -1963,7 +1963,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void linkSearchIP(){		
+	public void linkSearchIP(){		 // DMAP Comment : Dead Code Detected - The Following Method has no reference linkSearchIP
 		userReqIPBean = getUserReqIPBean();
 		userReqIPBean.setSearchIP(new SearchIP());
 		SearchIP searchIP = userReqIPBean.getSearchIP();
@@ -2358,7 +2358,7 @@ public class UserReqIPAction  extends AbstractAction {
 	}
 	
 	
-	public void resetSearchIP(){
+	public void resetSearchIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference resetSearchIP
 		//System.out.println("----resetSearchIP----");
 		userReqIPBean = getUserReqIPBean();
 		try {
@@ -2370,7 +2370,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void validateImportExcel(){
+	public void validateImportExcel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateImportExcel
 		userReqIPBean = getUserReqIPBean();
 		try {
 			validateAssignInfo();
@@ -2382,7 +2382,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void popupSearchIP(){
+	public void popupSearchIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupSearchIP
 		userReqIPBean = getUserReqIPBean();
 		try {
 			validateAssignInfo();
@@ -2396,7 +2396,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void popupSearchIP1(){
+	public void popupSearchIP1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupSearchIP1
 		userReqIPBean = getUserReqIPBean();
 		try {
 			userReqIPBean.setSearchIP1(new SearchIP());
@@ -2407,7 +2407,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void popupHistory(){
+	public void popupHistory(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupHistory
 		userReqIPBean = getUserReqIPBean();
 		UserReqIPService userReqIPService = (UserReqIPService)JSFServiceFinderUtil.getInstance().getBean("userReqIPService");
 	    String URNo = userReqIPBean.getIpUrIpDetail().getUrNo();
@@ -2427,7 +2427,7 @@ public class UserReqIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void popupAttachFile(){
+	public void popupAttachFile(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupAttachFile
 		userReqIPBean = getUserReqIPBean();
 		try {
 			String attachType = getRequestParameter("attachType");
@@ -2520,13 +2520,13 @@ public class UserReqIPAction  extends AbstractAction {
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Request from Planning Team"));
 			}
 	}
-	public void checkProjCombo(){
+	public void checkProjCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkProjCombo
 		userReqIPBean = getUserReqIPBean();
             if((userReqIPBean.getProjComboItem().getValue()==null) && userReqIPBean.getProjComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Project ID"));
 			}
 	}
-	public void checkProjManagerCombo(){
+	public void checkProjManagerCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkProjManagerCombo
 		userReqIPBean = getUserReqIPBean();
             if((userReqIPBean.getProjManagerComboItem().getValue()==null) && userReqIPBean.getProjManagerComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Project Manager"));
@@ -2538,7 +2538,7 @@ public class UserReqIPAction  extends AbstractAction {
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "System Owner Team"));
 			}
 	}
-	public void checkSystemOwnerCombo(){
+	public void checkSystemOwnerCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkSystemOwnerCombo
 		userReqIPBean = getUserReqIPBean();
             if((userReqIPBean.getSystemOwnerComboItem().getValue()==null) && userReqIPBean.getSystemOwnerComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "System Owner"));

@@ -43,7 +43,7 @@ public class IpLevel1Action extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		ipLevel1Bean = getIpLevel1Bean();		
@@ -113,7 +113,7 @@ public class IpLevel1Action extends AbstractAction {
 		return programID;
 	}
 	
-	public void reset() {
+	public void reset() { // DMAP Comment : Dead Code Detected - The Following Method has no reference reset
 		ipLevel1Bean = getIpLevel1Bean();
 		try{
 			ipLevel1Bean.setSearchFlag(false);
@@ -150,12 +150,12 @@ public class IpLevel1Action extends AbstractAction {
 		return ipLevel1;
 	}
 	
-	public IpLevel2 selectRowLevel2(IpLevel1Bean ipLevel1Bean) throws CloneNotSupportedException{		
+	public IpLevel2 selectRowLevel2(IpLevel1Bean ipLevel1Bean) throws CloneNotSupportedException{		 // DMAP Comment : Dead Code Detected - The Following Method has no reference selectRowLevel2
 		ipLevel1Bean.getIpLevel2DataTable().setRowIndex(Integer.parseInt(getRequestParameter("rowIndex")));
 		IpLevel2 ipLevel2 = (IpLevel2)((IpLevel2)ipLevel1Bean.getIpLevel2DataTable().getRowData()).clone();
 		return ipLevel2;
 	}
-	public void prepareIPStatusList(IpLevel1Bean bean) throws Exception{
+	public void prepareIPStatusList(IpLevel1Bean bean) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference prepareIPStatusList
 		List<SelectItem> ipStatusList = new ArrayList<SelectItem>();
 		for (SelectItem item : bean.getAllIpStatusList()) {
 			IPFMRichComboItem cmb = (IPFMRichComboItem)item.getValue();
@@ -165,7 +165,7 @@ public class IpLevel1Action extends AbstractAction {
 		}
 		bean.setIpStatusList(ipStatusList);
 	}
-	public String popupDetail() throws Exception{
+	public String popupDetail() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupDetail
 		ipLevel1Bean = getIpLevel1Bean();
 		try{
 			IpLevel1 ipLevel1 = selectRowLevel1(ipLevel1Bean);
@@ -207,7 +207,7 @@ public class IpLevel1Action extends AbstractAction {
 		}
 	}
 
-	public String save(){
+	public String save(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference save
 		ipLevel1Bean = getIpLevel1Bean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		try{
@@ -231,7 +231,7 @@ public class IpLevel1Action extends AbstractAction {
 		return null;
 	}
 
-	public void searchIP(){
+	public void searchIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIP
 		ipLevel1Bean = getIpLevel1Bean();
 		ManagementIpService managementIpService = (ManagementIpService)JSFServiceFinderUtil.getInstance().getBean("managementIpService");
 		UserSession userSession = IPFMWebUtil.getUserSession();

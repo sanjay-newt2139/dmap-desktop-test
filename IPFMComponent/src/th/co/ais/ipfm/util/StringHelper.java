@@ -29,7 +29,7 @@ public class StringHelper
 		return sb.toString();
 	}
 	
-	public static boolean isNumeric(String s) 
+	public static boolean isNumeric(String s)  // DMAP Comment : Dead Code Detected - The Following Method has no reference isNumeric
 	{
 		  final char[] chars = s.toCharArray();
 		  for (int x = 0; x < chars.length; x++)
@@ -41,7 +41,7 @@ public class StringHelper
 		  return true;
 	}
 	
-	public static boolean isAlpha(String s) 
+	public static boolean isAlpha(String s)  // DMAP Comment : Dead Code Detected - The Following Method has no reference isAlpha
 	{
 		  final char[] chars = s.toCharArray();
 		  for (int x = 0; x < chars.length; x++)
@@ -54,7 +54,7 @@ public class StringHelper
 		  return true;
 	}
 	
-	public static boolean isAlphaNumeric(String s) 
+	public static boolean isAlphaNumeric(String s)  // DMAP Comment : Dead Code Detected - The Following Method has no reference isAlphaNumeric
 	{
 		  final char[] chars = s.toCharArray();
 		  for (int x = 0; x < chars.length; x++)
@@ -68,7 +68,7 @@ public class StringHelper
 		  return true;
 	}
 	
-	public static String[] splitStringByPattern(String input, String pattern)
+	public static String[] splitStringByPattern(String input, String pattern) // DMAP Comment : Dead Code Detected - The Following Method has no reference splitStringByPattern
 	{
 	        List<String> listResult = new ArrayList<String>();
 
@@ -86,7 +86,7 @@ public class StringHelper
 	        return (String[]) listResult.toArray(new String[listResult.size()]);
 	}
 	
-	public static String[] splitAndValidateEmail(String input)
+	public static String[] splitAndValidateEmail(String input) // DMAP Comment : Dead Code Detected - The Following Method has no reference splitAndValidateEmail
 	{
 		System.out.println("splitAndValidateEmail");
 		
@@ -133,7 +133,7 @@ public class StringHelper
         return result;
     }
 	
-	public static String generateUploadFileName(String s)
+	public static String generateUploadFileName(String s) // DMAP Comment : Dead Code Detected - The Following Method has no reference generateUploadFileName
     {
 		Calendar currentTime = new GregorianCalendar();
         StringBuilder prefixFile = new StringBuilder();
@@ -148,7 +148,7 @@ public class StringHelper
     }
 	
 	
-	public static char getStringLength(String input, int length)
+	public static char getStringLength(String input, int length) // DMAP Comment : Dead Code Detected - The Following Method has no reference getStringLength
     {
 		if (input != null)
 		{
@@ -165,7 +165,7 @@ public class StringHelper
 		return '0';
     }
 	
-	public static boolean notEmptyString(String data){
+	public static boolean notEmptyString(String data){ // DMAP Comment : Dead Code Detected - The Following Method has no reference notEmptyString
 		boolean result = false;
 		if(data == null || data.trim().equals("")){
 			result = false;
@@ -175,7 +175,7 @@ public class StringHelper
 		return result;
 	}
 	
-	public static String convertEmptyToblank(String data){
+	public static String convertEmptyToblank(String data){ // DMAP Comment : Dead Code Detected - The Following Method has no reference convertEmptyToblank
 		String result = "";
 		if(data == null || data.trim().equals("")){
 			result = "";

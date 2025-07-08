@@ -114,51 +114,51 @@ public class IPFunction  implements java.io.Serializable,Cloneable {
        this.rowId = rowId;
     }
     
-    public String getFuncId() {
+    public String getFuncId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncId
         return this.funcId;
     }
     
-    public void setFuncId(String funcId) {
+    public void setFuncId(String funcId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncId
         this.funcId = funcId;
     }
     
-    public Integer getVersion() {
+    public Integer getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Integer version) {
+    public void setVersion(Integer version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     
-    public String getFuncName() {
+    public String getFuncName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncName
         return this.funcName;
     }
     
-    public void setFuncName(String funcName) {
+    public void setFuncName(String funcName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncName
         this.funcName = funcName;
     }
     
-    public Integer getMenuLevel() {
+    public Integer getMenuLevel() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMenuLevel
         return this.menuLevel;
     }
     
-    public void setMenuLevel(Integer menuLevel) {
+    public void setMenuLevel(Integer menuLevel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMenuLevel
         this.menuLevel = menuLevel;
     }
     
-    public Integer getMenuSeq() {
+    public Integer getMenuSeq() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMenuSeq
         return this.menuSeq;
     }
     
-    public void setMenuSeq(Integer menuSeq) {
+    public void setMenuSeq(Integer menuSeq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMenuSeq
         this.menuSeq = menuSeq;
     }
     
-    public String getFuncMatherId() {
+    public String getFuncMatherId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncMatherId
         return this.funcMatherId;
     }
     
-    public void setFuncMatherId(String funcMatherId) {
+    public void setFuncMatherId(String funcMatherId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncMatherId
         this.funcMatherId = funcMatherId;
     }
     
@@ -171,11 +171,11 @@ public class IPFunction  implements java.io.Serializable,Cloneable {
 //	}
 
 
-	public String getProgramId() {
+	public String getProgramId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgramId
         return this.programId;
     }
     
-    public void setProgramId(String programId) {
+    public void setProgramId(String programId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgramId
         this.programId = programId;
     }
     
@@ -187,91 +187,91 @@ public class IPFunction  implements java.io.Serializable,Cloneable {
 //        this.programType = programType;
 //    }
     
-    public String getProgramUrl() {
+    public String getProgramUrl() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgramUrl
         return this.programUrl;
     }
     
-    public void setProgramUrl(String programUrl) {
+    public void setProgramUrl(String programUrl) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgramUrl
         this.programUrl = programUrl;
     }
     
-    public String getStatusAdd() {
+    public String getStatusAdd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatusAdd
         return this.statusAdd;
     }
     
-    public void setStatusAdd(String statusAdd) {
+    public void setStatusAdd(String statusAdd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatusAdd
         this.statusAdd = statusAdd;
     }
     
-    public String getStatusUpdate() {
+    public String getStatusUpdate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatusUpdate
         return this.statusUpdate;
     }
     
-    public void setStatusUpdate(String statusUpdate) {
+    public void setStatusUpdate(String statusUpdate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatusUpdate
         this.statusUpdate = statusUpdate;
     }
     
-    public String getStatusDelete() {
+    public String getStatusDelete() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatusDelete
         return this.statusDelete;
     }
     
-    public void setStatusDelete(String statusDelete) {
+    public void setStatusDelete(String statusDelete) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatusDelete
         this.statusDelete = statusDelete;
     }
     
-    public String getStatusView() {
+    public String getStatusView() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatusView
         return this.statusView;
     }
     
-    public void setStatusView(String statusView) {
+    public void setStatusView(String statusView) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatusView
         this.statusView = statusView;
     }
     
-    public String getStatusAdvance() {
+    public String getStatusAdvance() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatusAdvance
         return this.statusAdvance;
     }
     
-    public void setStatusAdvance(String statusAdvance) {
+    public void setStatusAdvance(String statusAdvance) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatusAdvance
         this.statusAdvance = statusAdvance;
     }
     
-    public String getCreateBy() {
+    public String getCreateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateBy
         return this.createBy;
     }
     
-    public void setCreateBy(String createBy) {
+    public void setCreateBy(String createBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateBy
         this.createBy = createBy;
     }
     
-    public Date getCreateDate() {
+    public Date getCreateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateDate
         return this.createDate;
     }
     
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(Date createDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateDate
         this.createDate = createDate;
     }
     
-	public String getUpdateBy() {
+	public String getUpdateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateBy
         return this.updateBy;
     }
     
-    public void setUpdateBy(String updateBy) {
+    public void setUpdateBy(String updateBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateBy
         this.updateBy = updateBy;
     }
     
-    public Date getUpdateDate() {
+    public Date getUpdateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateDate
         return this.updateDate;
     }
     
-    public void setUpdateDate(Date updateDate) {
+    public void setUpdateDate(Date updateDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateDate
         this.updateDate = updateDate;
     }
     
-	public String getRowId() {
+	public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
 

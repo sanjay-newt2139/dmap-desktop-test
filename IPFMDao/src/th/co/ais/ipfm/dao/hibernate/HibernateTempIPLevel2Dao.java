@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 
@@ -27,6 +28,11 @@ public class HibernateTempIPLevel2Dao extends HibernateGenericDao<TempIpLevel2> 
 			connection = session.connection();
 			 
 			 String procedureName = "{call List_IP_Level2(?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier288
+DMAP ConvertedQuery - call List_IP_Level2(?,?,?,?,?,?)
+**/
+
 			 stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setLong(1,Long.parseLong(ip1));
@@ -85,6 +91,11 @@ public class HibernateTempIPLevel2Dao extends HibernateGenericDao<TempIpLevel2> 
 		sql.append(" from TempIpLevel2 t ");
 		sql.append(" order by t.binary2Start, t.binary2Start ");  
 		
+/**
+DMAP TAG: Query converted but found same: Identifier287
+DMAP ConvertedQuery - select t from TempIpLevel2 t order by t.binary2Start, t.binary2Start
+**/
+
 		result =  session.createQuery(sql.toString()).setMaxResults(maxSearchResult).list();
 		
 //		Criteria criteria = session.createCriteria(TempIpLevel2.class);
@@ -96,7 +107,7 @@ public class HibernateTempIPLevel2Dao extends HibernateGenericDao<TempIpLevel2> 
 		return result;
 	}
 	
-	public List<TempIpLevel2> searchIpLevel2(String ipDigit1, String ipDigit2, String ipDigit3, String ipDigit4, String mask, String teamId, Integer maxSearchResult) throws Exception {
+	public List<TempIpLevel2> searchIpLevel2(String ipDigit1, String ipDigit2, String ipDigit3, String ipDigit4, String mask, String teamId, Integer maxSearchResult) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIpLevel2
 		List<TempIpLevel2> result = new ArrayList<TempIpLevel2>();
 		createTempIPLevel2(ipDigit1, ipDigit2, ipDigit3, ipDigit4, mask, teamId);
 		result = findTempIpLevel2(maxSearchResult);

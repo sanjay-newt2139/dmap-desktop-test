@@ -9,8 +9,8 @@ import th.co.ais.ipfm.domain.IPRange;
 
 
 public interface IIPRangeDao extends IGenericDao<IPRange, Long> {
-	public static final String BOOLEAN_VALUE_TRUE = "T";
-	public static final String BOOLEAN_VALUE_FALSE = "F";
+	public static final String BOOLEAN_VALUE_TRUE = "T"; // DMAP Comment : Dead Code Detected - The Following Field has no reference BOOLEAN_VALUE_TRUE
+	public static final String BOOLEAN_VALUE_FALSE = "F"; // DMAP Comment : Dead Code Detected - The Following Field has no reference BOOLEAN_VALUE_FALSE
 	
 	public List<String> getIPVersionListByTier1TeamID(String tier1TeamID) throws DataAccessException;
 	public List<IPRange> search(IPRange ipRange, int maxResult) throws DataAccessException;

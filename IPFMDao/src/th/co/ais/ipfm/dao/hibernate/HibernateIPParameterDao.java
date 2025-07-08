@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.List;
@@ -18,8 +19,13 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<String> getParameterGroupList() throws DataAccessException {
+	public List<String> getParameterGroupList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getParameterGroupList
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted but found same: Identifier406
+DMAP ConvertedQuery - select distinct parameter_group from ip_parameter order by parameter_group
+**/
+
 		List<String> parameterGroupList = session.createSQLQuery("select distinct parameter_group from ip_parameter order by parameter_group ")
 		.addScalar("parameter_group", Hibernate.STRING).list();
 		return parameterGroupList;
@@ -27,7 +33,7 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 
 	@SuppressWarnings({ "unchecked", "deprecation" })
 	@Override
-	public List<String> getParameterSubGroupList(String parameterGroup)
+	public List<String> getParameterSubGroupList(String parameterGroup) // DMAP Comment : Dead Code Detected - The Following Method has no reference getParameterSubGroupList
 			throws DataAccessException {
 		List<String> parameterSubGroupList = null;
 		if(parameterGroup!=null && parameterGroup.trim().length()>0){
@@ -35,6 +41,14 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 			StringBuffer sb = new StringBuffer();
 			sb.append("select distinct parameter_subgroup from ip_parameter where ");
 			sb.append("parameter_group = '" + parameterGroup + "' ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier405
+DMAP ConvertedQuery - select distinct parameter_subgroup from ip_parameter where parameter_group = 'parameterGroup' order by parameter_subgroup
+**/
+
+/**
+**/
+
 			sb.append("order by parameter_subgroup");
 			parameterSubGroupList = session.createSQLQuery(sb.toString())
 			.addScalar("parameter_subgroup", Hibernate.STRING).list();
@@ -44,7 +58,7 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IPParameter> searchIPParameter(String parameterGroup,
+	public List<IPParameter> searchIPParameter(String parameterGroup, // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIPParameter
 			String parameterSubGroup) throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPParameter.class);
@@ -63,7 +77,7 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 	}
 
 	@Override
-	public int countSearchIPParameter(String parameterGroup,
+	public int countSearchIPParameter(String parameterGroup, // DMAP Comment : Dead Code Detected - The Following Method has no reference countSearchIPParameter
 			String parameterSubGroup) throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPParameter.class);
@@ -79,7 +93,7 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IPParameter> searchIPParameter(String parameterGroup,
+	public List<IPParameter> searchIPParameter(String parameterGroup, // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIPParameter
 			String parameterSubGroup, int maxResult) throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPParameter.class);
@@ -99,7 +113,7 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 	}
 	
 	@Override
-	public IPParameter getIPVersion() throws DataAccessException {
+	public IPParameter getIPVersion() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPVersion
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPParameter.class);
 		
@@ -111,7 +125,7 @@ public class HibernateIPParameterDao extends HibernateGenericDao<IPParameter> im
 	}
 
 	@Override
-	public String getDownloadDocumentURL() {
+	public String getDownloadDocumentURL() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDownloadDocumentURL
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPParameter.class);
 		criteria.add(Restrictions.eq("parameterGroup", "DOCUMENT"));

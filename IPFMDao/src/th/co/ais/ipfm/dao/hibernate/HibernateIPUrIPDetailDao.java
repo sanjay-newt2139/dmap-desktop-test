@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.text.DateFormat;
@@ -29,9 +30,14 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 
 	@SuppressWarnings({ "deprecation" })
 	@Override
-	public String getURNo() throws DataAccessException {
+	public String getURNo() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getURNo
 		Session session = getSessionFactory().getCurrentSession();
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier222
+DMAP ConvertedQuery - select CONCAT('IP', TO_CHAR(statement_timestamp(), 'YYYY') , '-' , LPAD(coalesce(max((SUBSTRING(CAST(t.ur_no AS numeric), CAST(8 AS numeric)))::numeric +1), CAST(1 AS text)), 6, '0') ) as urNo from ip_ur_ip_detail t WHERE substr(t.ur_no, 0, 6) = CONCAT('IP', TO_CHAR(statement_timestamp(), 'YYYY'))
+**/
+
 		String urNo =  (String) session.createSQLQuery(" select 'IP' || TO_CHAR(SYSDATE,'YYYY') || '-' || LPAD(nvl(max(to_number(substr(t.ur_no,8))+1),1) ,6,'0') as urNo from ip_ur_ip_detail t where substr(t.ur_no,0,6) = 'IP'||TO_CHAR(SYSDATE,'YYYY') ")
 //		String urNo =  (String) session.createSQLQuery(" SELECT 'IP' || TO_CHAR(SYSDATE,'YYYY') || '-' || LPAD(UR_IP_SEQ.NEXTVAL ,6,'0') as urNo  FROM DUAL ")
 				.addScalar("urNo", Hibernate.STRING).uniqueResult();
@@ -40,15 +46,21 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 	
 	@SuppressWarnings({ "deprecation" })
 	@Override
-	public String getTempURNo() throws DataAccessException {
+	public String getTempURNo() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTempURNo
 		Session session = getSessionFactory().getCurrentSession();
-		String TempurNo =  (String) session.createSQLQuery("  SELECT 'T' || TO_CHAR(SYSDATE,'YYYY') || LPAD(TEMP_UR_SEQ.NEXTVAL ,6,'0') as urNo FROM DUAL ")
+/**
+DMAP TAG: Query converted: Identifier221
+DMAP ConvertedQuery - SELECT CONCAT('T', TO_CHAR(statement_timestamp(), 'YYYY') , LPAD(nextvalCAST(('temp_ur_seq') AS text), 6, '0'::text) ) as urNo
+**/
+
+//		String TempurNo =  (String) session.createSQLQuery("  SELECT 'T' || TO_CHAR(SYSDATE,'YYYY') || LPAD(TEMP_UR_SEQ.NEXTVAL ,6,'0') as urNo FROM DUAL ")
+		String TempurNo =  (String) session.createSQLQuery("SELECT CONCAT('T', TO_CHAR(statement_timestamp(), 'YYYY') , LPAD(nextvalCAST(('temp_ur_seq') AS text), 6, '0'::text) ) as urNo")
 				.addScalar("urNo", Hibernate.STRING).uniqueResult();
 		return TempurNo;
 	}
 
 	@Override
-	public IpUrIpDetail getIPUrIpDetail(String urNo) throws DataAccessException {
+	public IpUrIpDetail getIPUrIpDetail(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPUrIpDetail
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrIpDetail.class);
 		
@@ -59,7 +71,7 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 	}
 
 	@Override
-	public int countSearchUR(IpUrIpDetail ipUrIpDetail)throws DataAccessException {
+	public int countSearchUR(IpUrIpDetail ipUrIpDetail)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference countSearchUR
 			Session session = getSessionFactory().getCurrentSession();
 			Criteria criteria = session.createCriteria(IpUrIpDetail.class);
 			//criteria.add(Restrictions.eq("ur", parameterGroup));
@@ -70,7 +82,7 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpUrIpDetail> searchUR(IpUrIpDetail ipUrIpDetail, IpUser ipUser)throws DataAccessException {
+	public List<IpUrIpDetail> searchUR(IpUrIpDetail ipUrIpDetail, IpUser ipUser)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchUR
 		System.out.println(">>>>>>searchUR");
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrIpDetail> ipUrIpDetailList = new ArrayList<IpUrIpDetail>();
@@ -101,30 +113,73 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 					sql.append(" FROM IP_USER t3 ");
 					sql.append(" WHERE t3.MANAGER_ID='"+ipUser.getUserId()+"'");
 				    sql.append(" )) ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier220
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND (A.REQ_USER_ID ='ipUser.getUserId()' OR A.REQ_TEAM ='ipUser.getTeamId()' OR (A.UR_NO IN (SELECT DISTINCT t1.UR_NO FROM IP_UR_ACTION t1 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t1.ACTION_USER_ID, ';')) >0 )) OR (A.UR_NO IN (SELECT DISTINCT t2.UR_NO FROM IP_UR_ACTION_HISTORY t2 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t2.ACTION_USER_ID, ';')) >0 )) OR (A.REQ_USER_ID IN (SELECT DISTINCT t3.USER_ID FROM IP_USER t3 WHERE t3.MANAGER_ID='ipUser.getUserId()' ))) ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
+/**
+**/
+
 				    sql.append(" ) ");
 					
 				}
 				System.out.println("TEST > ");
 				if(!"".equals(ipUrIpDetail.getUrNo()) && ipUrIpDetail.getUrNo()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier219
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.UR_NO) LIKE '%ipUrIpDetail.getUrNo().trim().toUpperCase()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.UR_NO) LIKE '%"+ipUrIpDetail.getUrNo().trim().toUpperCase()+"%'");
 				System.out.println(">>>>>" + " AND upper(A.UR_NO) LIKE '%"+ipUrIpDetail.getUrNo().trim().toUpperCase()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getUrType()) && ipUrIpDetail.getUrType()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier218
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND A.UR_TYPE ='ipUrIpDetail.getUrType().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND A.UR_TYPE ='"+ipUrIpDetail.getUrType().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getReqName()) && ipUrIpDetail.getReqName()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier217
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.REQ_USER_ID) ='ipUrIpDetail.getReqName().toUpperCase().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.REQ_USER_ID) ='"+ipUrIpDetail.getReqName().toUpperCase().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getUrStatus()) && ipUrIpDetail.getUrStatus()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier216
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.UR_STATUS) ='ipUrIpDetail.getUrStatus().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.UR_STATUS) ='"+ipUrIpDetail.getUrStatus().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getSubject()) && ipUrIpDetail.getSubject()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier215
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.SUBJECT) LIKE '%ipUrIpDetail.getSubject().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.SUBJECT) LIKE '%"+ipUrIpDetail.getSubject().toUpperCase().trim()+"%'"); 
 				}
 				if(!"".equals(ipUrIpDetail.getProjId())&& ipUrIpDetail.getProjId()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier214
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.PROJ_ID) LIKE '%ipUrIpDetail.getProjId().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.PROJ_ID) LIKE '%"+ipUrIpDetail.getProjId().toUpperCase().trim()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getProjName()) && ipUrIpDetail.getProjName()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier213
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.PROJ_NAME) LIKE '%ipUrIpDetail.getProjName().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.PROJ_NAME) LIKE '%"+ipUrIpDetail.getProjName().toUpperCase().trim()+"%'"); 
 				}
 				if(!"".equals(ipUrIpDetail.getReqDate()) && ipUrIpDetail.getReqDate()!=null){
@@ -137,9 +192,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 						e.printStackTrace();
 					}
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') >= '"+reqDate+"' "); 
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier212
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND TO_CHAR(A.REQ_DATE, '2') >= 'reqDate' AND TO_CHAR(A.REQ_DATE, '2') <= 'reqDateTo' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') <= '"+reqDateTo+"' "); 
 				}
 				if("2".equals(ipUrIpDetail.getOverSla())){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier211
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND A.OVER_SLA = 'Y' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				 sql.append(" AND A.OVER_SLA = 'Y'"); 
 				}
 		}
@@ -147,6 +212,11 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 			&& ("".equals(ipUrIpDetail.getProjName()) || ipUrIpDetail.getProjName()==null)) {
 			if("NC".equals(ipUrIpDetail.getUrType()) || IPFMUtils.ifBlank(ipUrIpDetail.getUrType(), "").trim().length()==0){
 				if(IPFMUtils.ifBlank(ipUrIpDetail.getUrType(), "").trim().length()==0){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier210
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM ( UNION ALL SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				 sql.append(" UNION ALL ");
 				}
 				sql.append(" SELECT A.UR_NO,A.UR_TYPE,A.REQ_SUBJECT SUBJECT,A.UR_STATUS,A.REQ_USER_ID,A.REQ_USER_NAME REQ_NAME,A.REQ_DATE,OVER_SLA,A.UR_STATUS_NAME ");	   
@@ -172,11 +242,21 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 					sql.append(" FROM IP_USER t3 ");
 					sql.append(" WHERE t3.MANAGER_ID='"+ipUser.getUserId()+"'");
 				    sql.append(" )) ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier209
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND (A.REQ_USER_ID ='ipUser.getUserId()' OR A.REQ_TEAM_ID ='ipUser.getTeamId()' OR (A.UR_NO IN (SELECT DISTINCT t1.UR_NO FROM IP_UR_ACTION t1 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t1.ACTION_USER_ID, ';')) >0 )) OR (A.UR_NO IN (SELECT DISTINCT t2.UR_NO FROM IP_UR_ACTION_HISTORY t2 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t2.ACTION_USER_ID, ';')) >0 )) OR (A.REQ_USER_ID IN (SELECT DISTINCT t3.USER_ID FROM IP_USER t3 WHERE t3.MANAGER_ID='ipUser.getUserId()' ))) ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				    sql.append(" ) ");
 					
 				}
 				
 				if(!"".equals(ipUrIpDetail.getUrNo()) && ipUrIpDetail.getUrNo()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier208
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND upper(A.UR_NO) LIKE '%ipUrIpDetail.getUrNo().trim().toUpperCase()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.UR_NO) LIKE '%"+ipUrIpDetail.getUrNo().trim().toUpperCase()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getUrStatus()) && ipUrIpDetail.getUrStatus()!=null){
@@ -193,6 +273,11 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 //						
 //						//sql.append(" AND ((A.UR_STATUS = 'REJECT_PM') OR (A.UR_STATUS = 'WAIT_USER'))");
 //					}else{
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier207
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND A.UR_STATUS = 'ipUrIpDetail.getUrStatus()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 						sql.append(" AND A.UR_STATUS = '"+ipUrIpDetail.getUrStatus()+"' ");
 //					}
 //						if (ipUrIpDetail.getUrStatus()!=null && !ipUrIpDetail.getUrStatus().equalsIgnoreCase("DEL") && !ipUrIpDetail.getUrStatus().equalsIgnoreCase("WAIT_CONFIG")) {
@@ -212,9 +297,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 //					sql.append(" AND A.UR_NO IN (SELECT DISTINCT T.UR_NO FROM IP_UR_ACTION T WHERE T.UR_TYPE='NC' ) ");
 				}
 				if(!"".equals(ipUrIpDetail.getReqName()) && ipUrIpDetail.getReqName()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier206
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND upper(A.REQ_USER_ID) ='ipUrIpDetail.getReqName().toUpperCase().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.REQ_USER_ID) ='"+ipUrIpDetail.getReqName().toUpperCase().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getSubject()) && ipUrIpDetail.getSubject()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier205
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND upper(A.REQ_SUBJECT) LIKE '%ipUrIpDetail.getSubject().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.REQ_SUBJECT) LIKE '%"+ipUrIpDetail.getSubject().toUpperCase().trim()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getReqDate()) &&  ipUrIpDetail.getReqDate()!=null 
@@ -228,9 +323,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 						e.printStackTrace();
 					}
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') >= '"+reqDate+"' "); 
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier204
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND TO_CHAR(A.REQ_DATE, '2') >= 'reqDate' AND TO_CHAR(A.REQ_DATE, '2') <= 'reqDateTo' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') <= '"+reqDateTo+"' "); 
 				}
 				if("2".equals(ipUrIpDetail.getOverSla())){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier203
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND A.OVER_SLA = 'Y' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					 sql.append(" AND A.OVER_SLA = 'Y'"); 
 				}
 				
@@ -243,9 +348,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 		  
 		sql.append(" where a.UR_NO is not null ");
 		if(!"".equals(ipUrIpDetail.getHostName()) && ipUrIpDetail.getHostName()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier202
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM () A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL and a.ur_no in (select i.ur_refer from ip_info i WHERE upper(i.host_name) like upper('%ipUrIpDetail.getHostName()%')) ORDER BY 1, 2, 3
+**/
+
 			sql.append(" and a.ur_no in (select i.ur_refer from ip_info i where upper(i.host_name) like upper('%"+ipUrIpDetail.getHostName()+"%')) ");
 		}
                
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier201
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM () A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 		sql.append(" ORDER BY 1,2,3 ");
 		
 		if((ipUrIpDetail.getIpCriteria() != null && !ipUrIpDetail.getIpCriteria().equals("")) 
@@ -455,6 +570,11 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 		}
 		
 		System.out.println(sql.toString());
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier200
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO,a.UR_TYPE,a.SUBJECT,a.UR_STATUS, a.REQ_USER_ID,a.REQ_NAME, to_char(a.REQ_DATE,'dd/MM/yyyy HH24:mi:ss') as REQ_DATE,a.OVER_SLA,a.UR_STATUS_NAME FROM ( ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1,2,3 sqlTemp
+**/
+
 		List dataList =  session.createSQLQuery(sql.toString()).list();
 		Iterator iter = dataList.iterator();
 		IpUrIpDetail objIPUrIpDetail;
@@ -508,7 +628,7 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpUrIpDetail> searchUR(IpUrIpDetail ipUrIpDetail, String subUrPack,IpUser ipUser)throws DataAccessException {
+	public List<IpUrIpDetail> searchUR(IpUrIpDetail ipUrIpDetail, String subUrPack,IpUser ipUser)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchUR
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrIpDetail> ipUrIpDetailList = new ArrayList<IpUrIpDetail>();
 		StringBuffer sql = new StringBuffer();
@@ -538,30 +658,73 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 					sql.append(" FROM IP_USER t3 ");
 					sql.append(" WHERE t3.MANAGER_ID='"+ipUser.getUserId()+"'");
 				    sql.append(" )) ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier199
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND (A.REQ_USER_ID ='ipUser.getUserId()' OR A.REQ_TEAM ='ipUser.getTeamId()' OR (A.UR_NO IN (SELECT DISTINCT t1.UR_NO FROM IP_UR_ACTION t1 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t1.ACTION_USER_ID, ';')) >0 )) OR (A.UR_NO IN (SELECT DISTINCT t2.UR_NO FROM IP_UR_ACTION_HISTORY t2 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t2.ACTION_USER_ID, ';')) >0 )) OR (A.REQ_USER_ID IN (SELECT DISTINCT t3.USER_ID FROM IP_USER t3 WHERE t3.MANAGER_ID='ipUser.getUserId()' ))) ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
+/**
+**/
+
 				    sql.append(" ) ");
 					
 				}
 				System.out.println("TEST > ");
 				if(!"".equals(ipUrIpDetail.getUrNo()) && ipUrIpDetail.getUrNo()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier198
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.UR_NO) LIKE '%ipUrIpDetail.getUrNo().trim().toUpperCase()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.UR_NO) LIKE '%"+ipUrIpDetail.getUrNo().trim().toUpperCase()+"%'");
 				System.out.println(">>>>>" + " AND upper(A.UR_NO) LIKE '%"+ipUrIpDetail.getUrNo().trim().toUpperCase()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getUrType()) && ipUrIpDetail.getUrType()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier197
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND A.UR_TYPE ='ipUrIpDetail.getUrType().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND A.UR_TYPE ='"+ipUrIpDetail.getUrType().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getReqName()) && ipUrIpDetail.getReqName()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier196
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.REQ_USER_ID) ='ipUrIpDetail.getReqName().toUpperCase().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.REQ_USER_ID) ='"+ipUrIpDetail.getReqName().toUpperCase().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getUrStatus()) && ipUrIpDetail.getUrStatus()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier195
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.UR_STATUS) ='ipUrIpDetail.getUrStatus().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.UR_STATUS) ='"+ipUrIpDetail.getUrStatus().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getSubject()) && ipUrIpDetail.getSubject()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier194
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.SUBJECT) LIKE '%ipUrIpDetail.getSubject().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.SUBJECT) LIKE '%"+ipUrIpDetail.getSubject().toUpperCase().trim()+"%'"); 
 				}
 				if(!"".equals(ipUrIpDetail.getProjId())&& ipUrIpDetail.getProjId()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier193
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.PROJ_ID) LIKE '%ipUrIpDetail.getProjId().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.PROJ_ID) LIKE '%"+ipUrIpDetail.getProjId().toUpperCase().trim()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getProjName()) && ipUrIpDetail.getProjName()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier192
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND upper(A.PROJ_NAME) LIKE '%ipUrIpDetail.getProjName().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				sql.append(" AND upper(A.PROJ_NAME) LIKE '%"+ipUrIpDetail.getProjName().toUpperCase().trim()+"%'"); 
 				}
 				if(!"".equals(ipUrIpDetail.getReqDate()) && ipUrIpDetail.getReqDate()!=null){
@@ -574,9 +737,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 						e.printStackTrace();
 					}
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') >= '"+reqDate+"' "); 
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier191
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND TO_CHAR(A.REQ_DATE, '2') >= 'reqDate' AND TO_CHAR(A.REQ_DATE, '2') <= 'reqDateTo' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') <= '"+reqDateTo+"' "); 
 				}
 				if("2".equals(ipUrIpDetail.getOverSla())){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier190
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_IP_DETAIL A WHERE 1 = 1 AND A.OVER_SLA = 'Y' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				 sql.append(" AND A.OVER_SLA = 'Y'"); 
 				}
 		}
@@ -584,6 +757,11 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 			&& ("".equals(ipUrIpDetail.getProjName()) || ipUrIpDetail.getProjName()==null)) {
 			if("NC".equals(ipUrIpDetail.getUrType()) || IPFMUtils.ifBlank(ipUrIpDetail.getUrType(), "").trim().length()==0){
 				if(IPFMUtils.ifBlank(ipUrIpDetail.getUrType(), "").trim().length()==0){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier189
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM ( UNION ALL SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				 sql.append(" UNION ALL ");
 				}
 				sql.append(" SELECT A.UR_NO,A.UR_TYPE,A.REQ_SUBJECT SUBJECT,A.UR_STATUS,A.REQ_USER_ID,A.REQ_USER_NAME REQ_NAME,A.REQ_DATE,OVER_SLA,A.UR_STATUS_NAME ");	   
@@ -609,11 +787,21 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 					sql.append(" FROM IP_USER t3 ");
 					sql.append(" WHERE t3.MANAGER_ID='"+ipUser.getUserId()+"'");
 				    sql.append(" )) ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier188
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND (A.REQ_USER_ID ='ipUser.getUserId()' OR A.REQ_TEAM_ID ='ipUser.getTeamId()' OR (A.UR_NO IN (SELECT DISTINCT t1.UR_NO FROM IP_UR_ACTION t1 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t1.ACTION_USER_ID, ';')) >0 )) OR (A.UR_NO IN (SELECT DISTINCT t2.UR_NO FROM IP_UR_ACTION_HISTORY t2 WHERE position(';ipUser.getUserId() ;' in CONCAT(';', t2.ACTION_USER_ID, ';')) >0 )) OR (A.REQ_USER_ID IN (SELECT DISTINCT t3.USER_ID FROM IP_USER t3 WHERE t3.MANAGER_ID='ipUser.getUserId()' ))) ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 				    sql.append(" ) ");
 					
 				}
 				
 				if(!"".equals(ipUrIpDetail.getUrNo()) && ipUrIpDetail.getUrNo()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier187
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND upper(A.UR_NO) LIKE '%ipUrIpDetail.getUrNo().trim().toUpperCase()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.UR_NO) LIKE '%"+ipUrIpDetail.getUrNo().trim().toUpperCase()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getUrStatus()) && ipUrIpDetail.getUrStatus()!=null){
@@ -630,6 +818,11 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 //						
 //						//sql.append(" AND ((A.UR_STATUS = 'REJECT_PM') OR (A.UR_STATUS = 'WAIT_USER'))");
 //					}else{
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier186
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND A.UR_STATUS = 'ipUrIpDetail.getUrStatus()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 						sql.append(" AND A.UR_STATUS = '"+ipUrIpDetail.getUrStatus()+"' ");
 //					}
 //						if (ipUrIpDetail.getUrStatus()!=null && !ipUrIpDetail.getUrStatus().equalsIgnoreCase("DEL") && !ipUrIpDetail.getUrStatus().equalsIgnoreCase("WAIT_CONFIG")) {
@@ -649,9 +842,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 //					sql.append(" AND A.UR_NO IN (SELECT DISTINCT T.UR_NO FROM IP_UR_ACTION T WHERE T.UR_TYPE='NC' ) ");
 				}
 				if(!"".equals(ipUrIpDetail.getReqName()) && ipUrIpDetail.getReqName()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier185
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND upper(A.REQ_USER_ID) ='ipUrIpDetail.getReqName().toUpperCase().trim()' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.REQ_USER_ID) ='"+ipUrIpDetail.getReqName().toUpperCase().trim()+"'");
 				}
 				if(!"".equals(ipUrIpDetail.getSubject()) && ipUrIpDetail.getSubject()!=null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier184
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND upper(A.REQ_SUBJECT) LIKE '%ipUrIpDetail.getSubject().toUpperCase().trim()%' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND upper(A.REQ_SUBJECT) LIKE '%"+ipUrIpDetail.getSubject().toUpperCase().trim()+"%'");
 				}
 				if(!"".equals(ipUrIpDetail.getReqDate()) &&  ipUrIpDetail.getReqDate()!=null 
@@ -665,9 +868,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 						e.printStackTrace();
 					}
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') >= '"+reqDate+"' "); 
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier183
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND TO_CHAR(A.REQ_DATE, '2') >= 'reqDate' AND TO_CHAR(A.REQ_DATE, '2') <= 'reqDateTo' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					sql.append(" AND TO_CHAR(A.REQ_DATE,'yyyyMMdd') <= '"+reqDateTo+"' "); 
 				}
 				if("2".equals(ipUrIpDetail.getOverSla())){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier182
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM (SELECT A.UR_NO, A.UR_TYPE, A.REQ_SUBJECT SUBJECT, A.UR_STATUS, A.REQ_USER_ID, A.REQ_USER_NAME REQ_NAME, A.REQ_DATE, OVER_SLA, A.UR_STATUS_NAME FROM IP_UR_NW_CONFIG A WHERE 1 = 1 AND A.OVER_SLA = 'Y' ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 					 sql.append(" AND A.OVER_SLA = 'Y'"); 
 				}
 				
@@ -680,9 +893,19 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
   
 		sql.append(" where a.UR_NO is not null ");
 		if(!"".equals(ipUrIpDetail.getHostName()) && ipUrIpDetail.getHostName()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier181
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, '1') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM () A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL and a.ur_no in (select i.ur_refer from ip_info i WHERE upper(i.host_name) like upper('%ipUrIpDetail.getHostName()%')) ORDER BY 1, 2, 3
+**/
+
 			sql.append(" and a.ur_no in (select i.ur_refer from ip_info i where upper(i.host_name) like upper('%"+ipUrIpDetail.getHostName()+"%')) ");
 		}
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier180
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO, a.UR_TYPE, a.SUBJECT, a.UR_STATUS, a.REQ_USER_ID, a.REQ_NAME, to_char(a.REQ_DATE, 'dd / MM/yyyy HH24:mi:ss') as REQ_DATE, a.OVER_SLA, a.UR_STATUS_NAME FROM () A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1, 2, 3
+**/
+
 		sql.append(" ORDER BY 1,2,3 ");
 		
 		if(subUrPack.length()!=0)
@@ -1166,6 +1389,11 @@ public class HibernateIPUrIPDetailDao extends HibernateGenericDao<IpUrIpDetail> 
 			sql.append(sqlTemp);
 		}
 		System.out.println(sql.toString());
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier179
+DMAP ConvertedQuery - SELECT DISTINCT a.UR_NO,a.UR_TYPE,a.SUBJECT,a.UR_STATUS, a.REQ_USER_ID,a.REQ_NAME,to_char(a.REQ_DATE,'dd/MM/yyyy HH24:mi:ss') as REQ_DATE,a.OVER_SLA,a.UR_STATUS_NAME FROM ( ) A WHERE NULLIF(CAST(a.UR_NO AS text), '') IS NOT NULL ORDER BY 1,2,3 sqlTemp
+**/
+
 		List dataList =  session.createSQLQuery(sql.toString()).list();
 		Iterator iter = dataList.iterator();
 		IpUrIpDetail objIPUrIpDetail;

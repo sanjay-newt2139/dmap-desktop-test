@@ -42,7 +42,7 @@ public class ListEmployee_By_CompanyCode_Name_PIN  implements java.io.Serializab
      * 
      * @param pin
      */
-    public void setPin(java.lang.String pin) {
+    public void setPin(java.lang.String pin) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPin
         this.pin = pin;
     }
 
@@ -62,7 +62,7 @@ public class ListEmployee_By_CompanyCode_Name_PIN  implements java.io.Serializab
      * 
      * @param name
      */
-    public void setName(java.lang.String name) {
+    public void setName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setName
         this.name = name;
     }
 
@@ -82,7 +82,7 @@ public class ListEmployee_By_CompanyCode_Name_PIN  implements java.io.Serializab
      * 
      * @param companyCode
      */
-    public void setCompanyCode(java.lang.String companyCode) {
+    public void setCompanyCode(java.lang.String companyCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCompanyCode
         this.companyCode = companyCode;
     }
 
@@ -163,14 +163,14 @@ public class ListEmployee_By_CompanyCode_Name_PIN  implements java.io.Serializab
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -182,7 +182,7 @@ public class ListEmployee_By_CompanyCode_Name_PIN  implements java.io.Serializab
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

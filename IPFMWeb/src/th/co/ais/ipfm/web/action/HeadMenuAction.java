@@ -9,26 +9,26 @@ public class HeadMenuAction extends AbstractAction {
 	private String programID;
 	
 	
-	public String getProgramID() {
+	public String getProgramID() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgramID
 		return programID;
 	}
 
 
-	public void setProgramID(String programID) {
+	public void setProgramID(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgramID
 		this.programID = programID;
 	}
 
 
-	public String getActionName() {
+	public String getActionName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getActionName
 		return actionName;
 	}
 
 
-	public void setActionName(String actionName) {
+	public void setActionName(String actionName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setActionName
 		this.actionName = actionName;
 	}
 
-	public String perform(){
+	public String perform(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference perform
 		String returnPage = null;
 		try {
 			if(actionName!=null){
@@ -71,7 +71,7 @@ public class HeadMenuAction extends AbstractAction {
 
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

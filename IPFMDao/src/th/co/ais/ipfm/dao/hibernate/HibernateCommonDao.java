@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.sql.CallableStatement;
@@ -23,10 +24,16 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public String getROW_ID() throws DataAccessException {
+	public String getROW_ID() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getROW_ID
 		Session session = getSessionFactory().getCurrentSession();
 //		String msId = (String) session.createSQLQuery("  SELECT 'MS' || LPAD(SEQ_MS_TABLE.NEXTVAL ,6,'0') AS ROW_ID  FROM DUAL ")
-		String msId = (String) session.createSQLQuery(" SELECT SYS_GUID()AS ROW_ID FROM DUAL ")
+/**
+DMAP TAG: Query converted: Identifier93
+DMAP ConvertedQuery - SELECT public.uuid_generate_v4()AS ROW_ID
+**/
+
+//		String msId = (String) session.createSQLQuery(" SELECT SYS_GUID()AS ROW_ID FROM DUAL ")
+		String msId = (String) session.createSQLQuery("SELECT public.uuid_generate_v4()AS ROW_ID")
 		
 				.addScalar("ROW_ID", Hibernate.STRING).uniqueResult();
 		return msId;
@@ -34,7 +41,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public List<IpMasterTable> getMasterList(String refTable) throws DataAccessException {
+	public List<IpMasterTable> getMasterList(String refTable) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		criteria.add(Restrictions.eq("id.refTable", refTable));
@@ -46,7 +53,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public IpMasterTable getMasterById(String rowId) throws DataAccessException {
+	public IpMasterTable getMasterById(String rowId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterById
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		criteria.add(Restrictions.eq("rowId", rowId)).list();
@@ -58,7 +65,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public IpMasterTable getMasterTableById(String rowId) throws DataAccessException{
+	public IpMasterTable getMasterTableById(String rowId) throws DataAccessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterTableById
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append(" SELECT REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS,");
@@ -66,6 +73,11 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 		sql.append(" FROM IPFM.IP_MASTER_TABLE ");
 		sql.append(" WHERE ROW_ID = '"+rowId+"' ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier92
+DMAP ConvertedQuery - SELECT REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA FROM IPFM.IP_MASTER_TABLE WHERE ROW_ID = 'rowId'
+**/
+
 		HashMap map = (HashMap)session.createSQLQuery(sql.toString())
 		.addScalar("REF_TABLE", Hibernate.STRING)
 		.addScalar("REF_KEY", Hibernate.STRING)
@@ -113,13 +125,18 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public List<IpMasterTable> getMasterTableList(String refTable) throws DataAccessException{
+	public List<IpMasterTable> getMasterTableList(String refTable) throws DataAccessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterTableList
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append(" SELECT REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, TO_CHAR(HOLIDAY_DATE,'DD/MM/YYYY') AS HOLIDAY_DATE, ACTIVE_STATUS, ROW_ID");
 		sql.append(" FROM IPFM.IP_MASTER_TABLE ");
 		sql.append(" WHERE REF_TYPE like 'MS' AND ACTIVE_STATUS = '1' AND REF_TABLE = '"+refTable+"'");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier91
+DMAP ConvertedQuery - SELECT REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, TO_CHAR(HOLIDAY_DATE,'DD/MM/YYYY') AS HOLIDAY_DATE, ACTIVE_STATUS, ROW_ID FROM IPFM.IP_MASTER_TABLE WHERE REF_TYPE like 'MS' AND ACTIVE_STATUS = '1' AND REF_TABLE = 'refTable'
+**/
+
 		List<IpMasterTable>  masterList = session.createSQLQuery(sql.toString())
 		.addScalar("REF_TABLE", Hibernate.STRING)
 		.addScalar("REF_KEY", Hibernate.STRING)
@@ -140,7 +157,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public List<IpMasterTable> getMaster_activeStatus_List(String refTable) throws DataAccessException {
+	public List<IpMasterTable> getMaster_activeStatus_List(String refTable) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMaster_activeStatus_List
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		criteria.add(Restrictions.eq("id.refTable", refTable));
@@ -153,7 +170,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpMasterTable> searchMasterTable(String refTable, String refKey) throws DataAccessException {
+	public List<IpMasterTable> searchMasterTable(String refTable, String refKey) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchMasterTable
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		
@@ -172,7 +189,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpMasterTable> searchMasterTableForADD(String refTable, String refKey, String status) throws DataAccessException {
+	public List<IpMasterTable> searchMasterTableForADD(String refTable, String refKey, String status) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchMasterTableForADD
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		
@@ -192,7 +209,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpMasterTable> searchMasterTable(String refTable, String refKey, String refDesc) throws DataAccessException {
+	public List<IpMasterTable> searchMasterTable(String refTable, String refKey, String refDesc) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchMasterTable
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		
@@ -215,7 +232,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	}
 
 	@Override
-	public int countSearchMasterTable(String refTable, String refKey) throws DataAccessException {
+	public int countSearchMasterTable(String refTable, String refKey) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference countSearchMasterTable
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		
@@ -235,7 +252,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpMasterTable> searchMasterTable(String refTable, String refKey, int maxResult) throws DataAccessException {
+	public List<IpMasterTable> searchMasterTable(String refTable, String refKey, int maxResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchMasterTable
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		if(maxResult>0){
@@ -255,7 +272,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<String> getMasterRefTableList() throws DataAccessException {
+	public List<String> getMasterRefTableList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterRefTableList
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sb = new StringBuffer();
 		String ms="MS";
@@ -264,6 +281,11 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 		sb.append(" WHERE ACTIVE_STATUS = '"+1+"' ");
 		sb.append(" AND REF_TYPE = '"+ms+"'");
 		sb.append(" ORDER BY REF_TABLE ");
+/**
+DMAP TAG: Query converted but found same: Identifier90
+DMAP ConvertedQuery - SELECT DISTINCT REF_TABLE FROM IP_MASTER_TABLE WHERE ACTIVE_STATUS = '1 ' AND REF_TYPE = 'MS ' ORDER BY REF_TABLE
+**/
+
 		List<String> masterRefTableList = session.createSQLQuery(sb.toString())
 		.addScalar("REF_TABLE", Hibernate.STRING).list();
 		return masterRefTableList;
@@ -271,7 +293,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	
 
 	@Override
-	public List<IpMasterTable> getMasterRefKeyList(String refTable)throws DataAccessException {
+	public List<IpMasterTable> getMasterRefKeyList(String refTable)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterRefKeyList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpMasterTable.class);
 		
@@ -289,7 +311,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	}
 
 
-	public void insertMaster(IpMasterTable entity) throws DataAccessException{
+	public void insertMaster(IpMasterTable entity) throws DataAccessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference insertMaster
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Object[] params = null;			
@@ -303,55 +325,158 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 		sql.append(" '"+entity.getRefDesc()+"', ");
 		sql.append(" '"+entity.getRefType()+"', ");
 		if(entity.getTcp()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier89
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', 'entity.getTcp()', statement_timestamp(), statement_timestamp(),)
+**/
+
+/**
+**/
+
 			sql.append(" '"+entity.getTcp()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier88
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', null, statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getUdp()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier87
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', 'entity.getUdp()', statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" '"+entity.getUdp()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier86
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', null, statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getOther()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier85
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', 'entity.getOther()', statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" '"+entity.getOther()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier84
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', null, statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getHolidayDate()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier83
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', entity.getHolidayDate() , statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(entity.getHolidayDate()+", ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier82
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', null, statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getActiveStatus()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier81
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', 'entity.getActiveStatus()', statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" '"+entity.getActiveStatus()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier80
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', null, statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getCreatedBy()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier79
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', 'entity.getCreatedBy()', statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" '"+entity.getCreatedBy()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier78
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', null, statement_timestamp(), statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		sql.append(" SYSDATE, ");
 		if(entity.getLastUpdBy()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier77
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), 'entity.getLastUpdBy()', statement_timestamp(),)
+**/
+
 			sql.append(" '"+entity.getLastUpdBy()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier76
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), null, statement_timestamp(),)
+**/
+
 			sql.append(" null, ");			
 		}
 		sql.append(" SYSDATE, ");
 		if(entity.getRowId()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier75
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), statement_timestamp(), 'entity.getRowId()',)
+**/
+
 			sql.append(" '"+entity.getRowId()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier74
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), statement_timestamp(), null,)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getVersion()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier73
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), statement_timestamp(), 'entity.getVersion()',)
+**/
+
 			sql.append(" '"+entity.getVersion()+"', ");
 		}else{
+/**
+DMAP TAG: Query needs manual remediation: Identifier72
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), statement_timestamp(), null,)
+**/
+
 			sql.append(" null, ");			
 		}
 		if(entity.getOrderData()!=null){
+/**
+DMAP TAG: Query needs manual remediation: Identifier71
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), statement_timestamp(), 'entity.getOrderData()',)
+**/
+
 			sql.append(" '"+entity.getOrderData()+"', ");
 		}else{
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier70
+DMAP ConvertedQuery - INSERT INTO IP_MASTER_TABLE(REF_TABLE, REF_KEY, SHORT_DESC, REF_DESC, REF_TYPE, TCP, UDP, OTHER, HOLIDAY_DATE, ACTIVE_STATUS, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, ORDER_DATA) VALUES ('entity.getId().getRefTable()', 'entity.getId().getRefKey()', 'entity.getShortDesc()', 'entity.getRefDesc()', 'entity.getRefType()', statement_timestamp(), statement_timestamp(), null)
+**/
+
 			sql.append(" null ");			
 		}		
 
@@ -365,15 +490,20 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	}
 	
 	@Override
-	public void deleteByRowId(String rowId) {
+	public void deleteByRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByRowId
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_MASTER_TABLE WHERE ROW_ID = ?";
+/**
+DMAP TAG: Query converted but found same: Identifier69
+DMAP ConvertedQuery - DELETE FROM IP_MASTER_TABLE WHERE ROW_ID = ?
+**/
+
 		session.createSQLQuery(sql).setString(0, rowId).executeUpdate();
 		
 	}
 	
 	@Override
-	public void updateNews(IpMasterTable obj) {
+	public void updateNews(IpMasterTable obj) { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateNews
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 
@@ -383,6 +513,11 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 		sql.append(" UPDATE_DATE = SYSDATE ");
 		sql.append(" WHERE REF_TABLE='NEWS' AND ACTIVE_STATUS=1 ");
 			
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier68
+DMAP ConvertedQuery - UPDATE IP_MASTER_TABLE SET REF_DESC = ?, UPDATE_BY = ?, UPDATE_DATE = statement_timestamp() WHERE REF_TABLE='NEWS' AND ACTIVE_STATUS=1
+**/
+
 		session.createSQLQuery(sql.toString())
 		.setString(0, obj.getRefDesc())
 		.setString(1, obj.getLastUpdBy())
@@ -391,7 +526,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	} 
 
 	@Override
-	public void updateFlag(IpMasterTable masterTBL,String refTable,String refKey,String userId) throws DataAccessException {
+	public void updateFlag(IpMasterTable masterTBL,String refTable,String refKey,String userId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateFlag
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
        try{
@@ -401,6 +536,11 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 			sql.append(" UPDATE_DATE = SYSDATE ");
 			sql.append(" WHERE REF_TYPE = ?  AND REF_TABLE = ?  AND REF_KEY = ? ");
 				
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier67
+DMAP ConvertedQuery - UPDATE IP_MASTER_TABLE SET ACTIVE_STATUS = ?, UPDATE_BY = ?, UPDATE_DATE = statement_timestamp() WHERE REF_TYPE = ? AND REF_TABLE = ? AND REF_KEY = ?
+**/
+
 			session.createSQLQuery(sql.toString())
 			.setString(0, "0")
 			.setString(1, userId)
@@ -416,7 +556,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 		
 	} 
 
-	public String genReport()throws DataAccessException{
+	public String genReport()throws DataAccessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference genReport
 		 
 		 Connection connection = null;
 		 CallableStatement stmt = null;
@@ -426,6 +566,11 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 			connection = getSessionFactory().getCurrentSession().connection();
 			plName = "{call GEN_REPORT_IPRUR001()}";
 			
+/**
+DMAP TAG: Query converted: Identifier66
+DMAP ConvertedQuery - call GEN_REPORT_IPRUR001()
+**/
+
 			stmt = connection.prepareCall(plName);
 			
 			stmt.execute();
@@ -450,7 +595,7 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 	
 	}
 	
-	public String updateUROverSlaOla()throws DataAccessException{
+	public String updateUROverSlaOla()throws DataAccessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateUROverSlaOla
 		 
 		 Connection connection = null;
 		 CallableStatement stmt = null;
@@ -459,6 +604,11 @@ public class HibernateCommonDao extends HibernateGenericDao<IpMasterTable> imple
 
 			connection = getSessionFactory().getCurrentSession().connection();
 			plName = "{call UPDATE_UR_OVER_OLA_SLA()}";
+/**
+DMAP TAG: Query converted: Identifier65
+DMAP ConvertedQuery - call UPDATE_UR_OVER_OLA_SLA()
+**/
+
 			stmt = connection.prepareCall(plName);
 			stmt.execute();
 		} catch (Exception ex){

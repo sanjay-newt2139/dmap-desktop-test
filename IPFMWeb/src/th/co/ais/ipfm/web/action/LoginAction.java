@@ -30,8 +30,8 @@ import RSA.RSA;
 public class LoginAction extends AbstractAction{
 	
 	private static final Logger logger = Logger.getLogger(LoginAction.class);
-	DateFormat dfm = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss",new Locale("en","EN"));
-	DateFormat dfm2 = new SimpleDateFormat("dd/MM/yyyy",new Locale("en","EN"));
+	DateFormat dfm = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss",new Locale("en","EN")); // DMAP Comment : Dead Code Detected - The Following Field has no reference dfm
+	DateFormat dfm2 = new SimpleDateFormat("dd/MM/yyyy",new Locale("en","EN")); // DMAP Comment : Dead Code Detected - The Following Field has no reference dfm2
 	
 	@SuppressWarnings("unchecked")
 	public String login() throws Exception{
@@ -139,7 +139,7 @@ public class LoginAction extends AbstractAction{
 		return true;
 	}
 
-	public String logout(){
+	public String logout(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference logout
 		FacesContext context = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession)context.getExternalContext().getSession(true);
 		if(session!=null){
@@ -149,17 +149,17 @@ public class LoginAction extends AbstractAction{
 		
 	}
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}	

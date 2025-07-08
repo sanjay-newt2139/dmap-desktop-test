@@ -21,7 +21,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 
 public class WFAction extends AbstractAction {
 	/********************** MenuAuthenticationAction ***********************/
-	public WFBean wfBean;
+	public WFBean wfBean; // DMAP Comment : Dead Code Detected - The Following Field has no reference wfBean
 	
 
 	
@@ -61,7 +61,7 @@ public class WFAction extends AbstractAction {
 		return programID;
 	}
 	
-	public void tabUserRquest(){
+	public void tabUserRquest(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference tabUserRquest
 		WorkFlowService workFlowService = (WorkFlowService)JSFServiceFinderUtil.getInstance().getBean("workFlowService");
 		WFBean  bean = getWfBean();
 		try{
@@ -82,7 +82,7 @@ public class WFAction extends AbstractAction {
 		}
 	}
 	
-	public void tabNwConfig(){
+	public void tabNwConfig(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference tabNwConfig
 		WorkFlowService workFlowService = (WorkFlowService)JSFServiceFinderUtil.getInstance().getBean("workFlowService");
 		WFBean  bean = getWfBean();
 		try{
@@ -203,7 +203,7 @@ public class WFAction extends AbstractAction {
 		}
 	}
 	
-	public void onkeyOlaPalning(){
+	public void onkeyOlaPalning(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference onkeyOlaPalning
 		WFBean  bean = getWfBean();
 		try{
 			int total =0;
@@ -219,7 +219,7 @@ public class WFAction extends AbstractAction {
 		}
 	}
 	
-	public void onkeyOlaUserRequest(){
+	public void onkeyOlaUserRequest(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference onkeyOlaUserRequest
 		WFBean  bean = getWfBean();
 		try{
 			int total =0;
@@ -335,7 +335,7 @@ public class WFAction extends AbstractAction {
 	}
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

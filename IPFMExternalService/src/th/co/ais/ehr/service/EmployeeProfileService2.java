@@ -31,10 +31,10 @@ public class EmployeeProfileService2 {
 	private String endpoint;
 	private String omcode;
 	
-	public void setEndpoint(String endpoint) {
+	public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
 		this.endpoint = endpoint;
 	}
-	public void setOmcode(String omcode) {
+	public void setOmcode(String omcode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOmcode
 		this.omcode = omcode;
 	}
 	
@@ -43,7 +43,7 @@ public class EmployeeProfileService2 {
 		omcode = PropertyUtil.getProperty("EHR_SERVICE_OM_CODE");
 	}
 	
-	public List<EmployeeProfileOM> getEmployeeProfileByEmail(UserAccount authUser, String email) throws IPFMBusinessException {
+	public List<EmployeeProfileOM> getEmployeeProfileByEmail(UserAccount authUser, String email) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByEmail
 		List<EmployeeProfileOM> profile = null;
 		try {
 			getConfig();
@@ -58,7 +58,7 @@ public class EmployeeProfileService2 {
 			    	EmployeeProfileQueryResponse em = g.fromJson(res, EmployeeProfileQueryResponse.class);
 			    	
 			    	if(em != null && em.getResponseDataList() != null && !"".equals(em.getResponseDataList().trim())) {
-			    		TypeToken<List<EmployeeProfileOM>> listType = new TypeToken<List<EmployeeProfileOM>>() {};
+			    		TypeToken<List<EmployeeProfileOM>> listType = new TypeToken<List<EmployeeProfileOM>>() {}; // DMAP Comment : Dead Code Detected - The Following Class has no reference 1
 			    		List<EmployeeProfileOM> employeeProfileList = g.fromJson(em.getResponseDataList(), listType.getType());
 			    		
 			    		if(employeeProfileList != null && employeeProfileList.size() > 0) {
@@ -80,7 +80,7 @@ public class EmployeeProfileService2 {
 		return profile;
 	}
 	
-	public List<ApproverOM> listAllApprover(UserAccount authUser, String pin, String position) throws IPFMBusinessException {
+	public List<ApproverOM> listAllApprover(UserAccount authUser, String pin, String position) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllApprover
 		List<ApproverOM> aprList = null;
 		try {
 			getConfig();
@@ -95,7 +95,7 @@ public class EmployeeProfileService2 {
 			    	EmployeeProfileQueryResponse em = g.fromJson(res, EmployeeProfileQueryResponse.class);
 			    	
 			    	if(em != null && em.getResponseDataList() != null && !"".equals(em.getResponseDataList().trim())) {
-			    		TypeToken<List<ApproverOM>> listType = new TypeToken<List<ApproverOM>>() {};
+			    		TypeToken<List<ApproverOM>> listType = new TypeToken<List<ApproverOM>>() {}; // DMAP Comment : Dead Code Detected - The Following Class has no reference 2
 			    		List<ApproverOM> approverList = g.fromJson(em.getResponseDataList(), listType.getType());
 			    		
 			    		if(approverList != null && approverList.size() > 0) {
@@ -117,7 +117,7 @@ public class EmployeeProfileService2 {
 		return aprList;
 	}
 	
-	public List<EmployeeProfileOM> getEmployeeProfileByPIN(UserAccount authUser, String pin) throws IPFMBusinessException {
+	public List<EmployeeProfileOM> getEmployeeProfileByPIN(UserAccount authUser, String pin) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPIN
 		List<EmployeeProfileOM> profile = null;
 		try {
 			getConfig();
@@ -132,7 +132,7 @@ public class EmployeeProfileService2 {
 			    	EmployeeProfileQueryResponse em = g.fromJson(res, EmployeeProfileQueryResponse.class);
 			    	
 			    	if(em != null && em.getResponseDataList() != null && !"".equals(em.getResponseDataList().trim())) {
-			    		TypeToken<List<EmployeeProfileOM>> listType = new TypeToken<List<EmployeeProfileOM>>() {};
+			    		TypeToken<List<EmployeeProfileOM>> listType = new TypeToken<List<EmployeeProfileOM>>() {}; // DMAP Comment : Dead Code Detected - The Following Class has no reference 3
 			    		List<EmployeeProfileOM> employeeProfileList = g.fromJson(em.getResponseDataList(), listType.getType());
 			    		
 			    		if(employeeProfileList != null && employeeProfileList.size() > 0) {
@@ -154,7 +154,7 @@ public class EmployeeProfileService2 {
 		return profile;
 	}
 	
-	public List<EmployeeProfileOM> getEmployeeProfileByPrefixEngName(UserAccount authUser, String empEngName) throws IPFMBusinessException {
+	public List<EmployeeProfileOM> getEmployeeProfileByPrefixEngName(UserAccount authUser, String empEngName) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixEngName
 		List<EmployeeProfileOM> profile = null;
 		try {
 			getConfig();
@@ -169,7 +169,7 @@ public class EmployeeProfileService2 {
 			    	EmployeeProfileQueryResponse em = g.fromJson(res, EmployeeProfileQueryResponse.class);
 			    	
 			    	if(em != null && em.getResponseDataList() != null && !"".equals(em.getResponseDataList().trim())) {
-			    		TypeToken<List<EmployeeProfileOM>> listType = new TypeToken<List<EmployeeProfileOM>>() {};
+			    		TypeToken<List<EmployeeProfileOM>> listType = new TypeToken<List<EmployeeProfileOM>>() {}; // DMAP Comment : Dead Code Detected - The Following Class has no reference 4
 			    		List<EmployeeProfileOM> employeeProfileList = g.fromJson(em.getResponseDataList(), listType.getType());
 			    		
 			    		if(employeeProfileList != null && employeeProfileList.size() > 0) {

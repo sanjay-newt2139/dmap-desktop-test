@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -43,7 +44,7 @@ import th.co.ais.ipfm.domain1.Iprur001Result4PK;
 public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> implements IPReportListDao {
 
 	@SuppressWarnings("unchecked")
-	public void addCritier(IpReportList entity) throws DataAccessException {
+	public void addCritier(IpReportList entity) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference addCritier
 		Session session = getSessionFactory().getCurrentSession();
 		session.save(entity);
 
@@ -54,17 +55,28 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 	@SuppressWarnings("unchecked")
 	public String getReportId() throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
-		String reportId =  (String) session.createSQLQuery("  SELECT 'R' || TO_CHAR(SYSDATE,'YYYY') || LPAD(SEQ_REPORT_ID.NEXTVAL ,7,'0') as reportId  FROM DUAL ")
+/**
+DMAP TAG: Query converted: Identifier121
+DMAP ConvertedQuery - SELECT CONCAT('R', TO_CHAR(statement_timestamp(), 'YYYY') , LPAD(nextvalCAST(('seq_report_id') AS text), 7, '0'::text) ) as reportId
+**/
+
+//		String reportId =  (String) session.createSQLQuery("  SELECT 'R' || TO_CHAR(SYSDATE,'YYYY') || LPAD(SEQ_REPORT_ID.NEXTVAL ,7,'0') as reportId  FROM DUAL ")
+		String reportId =  (String) session.createSQLQuery("SELECT CONCAT('R', TO_CHAR(statement_timestamp(), 'YYYY') , LPAD(nextvalCAST(('seq_report_id') AS text), 7, '0'::text) ) as reportId")
 				.addScalar("reportId", Hibernate.STRING).uniqueResult();
 		return reportId;
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<IpReportList> getIpReportList() throws DataAccessException {
+	public List<IpReportList> getIpReportList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpReportList
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT REPORT_ID, REPORT_NAME FROM IP_REPORT_LIST WHERE UPPER(REPORT_STATUS)='COMPLETED' ORDER BY REPORT_NAME");
 		
+/**
+DMAP TAG: Query converted but found same: Identifier120
+DMAP ConvertedQuery - SELECT REPORT_ID, REPORT_NAME FROM IP_REPORT_LIST WHERE UPPER(REPORT_STATUS)='COMPLETED' ORDER BY REPORT_NAME
+**/
+
 		List<IpReportList>  ipReportList = session.createSQLQuery(sql.toString())
 		.addScalar("REPORT_ID", Hibernate.STRING)
 		.addScalar("REPORT_NAME", Hibernate.STRING)
@@ -75,7 +87,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<IpReportList> getIpReportCritier() throws DataAccessException {
+	public List<IpReportList> getIpReportCritier() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpReportCritier
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT TO_CHAR(REQ_DATETIME,'DD/MM/YYYY HH24:mi:ss') as REQ_DATETIME, USER_ID, TO_CHAR(START_DATE,'DD/MM/YYYY')as START_DATE, TO_CHAR(END_DATE,'DD/MM/YYYY') as END_DATE, REPORT_STATUS, REPORT_NAME, ROW_ID, RUN_AT, ERROR_DESC, REPORT_ID ");
@@ -83,6 +95,11 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 		sql.append("WHERE UPPER(REPORT_STATUS)='WAITING' ");
 		sql.append("ORDER BY REPORT_ID ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier119
+DMAP ConvertedQuery - SELECT TO_CHAR(REQ_DATETIME,'1') as REQ_DATETIME, USER_ID, TO_CHAR(START_DATE,'2')as START_DATE, TO_CHAR(END_DATE,'2') as END_DATE, REPORT_STATUS, REPORT_NAME, ROW_ID, RUN_AT, ERROR_DESC, REPORT_ID FROM IP_REPORT_LIST WHERE UPPER(REPORT_STATUS)='WAITING' ORDER BY REPORT_ID
+**/
+
 		List<IpReportList>  ipReportList = session.createSQLQuery(sql.toString())
 		.addScalar("REQ_DATETIME", Hibernate.STRING)
 		.addScalar("USER_ID", Hibernate.STRING)
@@ -100,23 +117,41 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 	}
 	
 	@Override
-	public void deleteReportList(String reportId)throws DataAccessException {
+	public void deleteReportList(String reportId)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteReportList
 		Session session = getSessionFactory().getCurrentSession();
-		SQLQuery sqlQuery  =  session.createSQLQuery(" DELETE IP_REPORT_LIST where REPORT_ID = '"+reportId+"'");
+/**
+DMAP TAG: Query converted: Identifier118
+DMAP ConvertedQuery - DELETE FROM IP_REPORT_LIST where REPORT_ID = 'reportId'
+**/
+
+		SQLQuery sqlQuery  =  session.createSQLQuery("DELETE FROM IP_REPORT_LIST where REPORT_ID = '" + reportId + "'");
 		sqlQuery.executeUpdate();  
 	}
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<IpReportDetail> getIpReportDetail(IpReportDetail obj) throws DataAccessException {
+	public List<IpReportDetail> getIpReportDetail(IpReportDetail obj) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpReportDetail
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append(" SELECT REPORT_ID, USER_ROLE, USER_ID, UR_TYPE, UR_NO, IN_OVER_DUE, IN_REPORT_STATUS, TOTAL_COUNT, SUB_UR_TYPE, TOTAL_UR ");
 		sql.append(" FROM IP_REPORT_DETAIL ");
 		sql.append(" WHERE REPORT_ID ='"+ obj.getReportId()+"'");
 		if(obj.getUrType()!=null && obj.getUrType().equalsIgnoreCase("NC")){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier117
+DMAP ConvertedQuery - SELECT REPORT_ID, USER_ROLE, USER_ID, UR_TYPE, UR_NO, IN_OVER_DUE, IN_REPORT_STATUS, TOTAL_COUNT, SUB_UR_TYPE, TOTAL_UR FROM IP_REPORT_DETAIL WHERE REPORT_ID ='obj.getReportId()' AND UR_TYPE='obj.getUrType()' ORDER BY REPORT_ID 
+**/
+
+/**
+**/
+
 			sql.append(" AND UR_TYPE='"+ obj.getUrType()+"'");
 		}else{
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier116
+DMAP ConvertedQuery - SELECT REPORT_ID, USER_ROLE, USER_ID, UR_TYPE, UR_NO, IN_OVER_DUE, IN_REPORT_STATUS, TOTAL_COUNT, SUB_UR_TYPE, TOTAL_UR FROM IP_REPORT_DETAIL WHERE REPORT_ID ='obj.getReportId()' AND UR_TYPE like 'obj.getUrType()%' ORDER BY REPORT_ID 
+**/
+
 			sql.append(" AND UR_TYPE like '"+ obj.getUrType()+"%'");
 		}
 		sql.append(" ORDER BY REPORT_ID ");
@@ -139,7 +174,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<Iprur001Result1> getIprur001Result1(String reportId) throws DataAccessException {
+	public List<Iprur001Result1> getIprur001Result1(String reportId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIprur001Result1
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		
@@ -157,6 +192,11 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 		sql.append(" WHERE REPORT_ID ='"+ reportId+"'");
 		sql.append(" ORDER BY GROUP_SEQ, DATA_LEVEL, USER_ID ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier115
+DMAP ConvertedQuery - SELECT REPORT_ID ,GROUP_SEQ ,GROUP_NAME ,DATA_LEVEL ,USER_ID, ALL_WAIT_INDUE ,ALL_WAIT_OVERDUE, ALL_REJECT_INDUE, ALL_REJECT_OVERDUE, ALL_COMPLETE_INDUE ,ALL_COMPLETE_OVERDUE , FW_WAIT_INDUE ,FW_WAIT_OVERDUE , FW_REJECT_INDUE, FW_REJECT_OVERDUE ,FW_COMPLETE_INDUE,FW_COMPLETE_OVERDUE, ACDN_WAIT_INDUE, ACDN_WAIT_OVERDUE , ACDN_REJECT_INDUE,ACDN_REJECT_OVERDUE,ACDN_COMPLETE_INDUE ,ACDN_COMPLETE_OVERDUE, ATNP_WAIT_INDUE ,ATNP_WAIT_OVERDUE, ATNP_REJECT_INDUE ,ATNP_REJECT_OVERDUE ,ATNP_COMPLETE_INDUE,ATNP_COMPLETE_OVERDUE, PHY_WAIT_INDUE ,PHY_WAIT_OVERDUE , PHY_REJECT_INDUE, PHY_REJECT_OVERDUE ,PHY_COMPLETE_INDUE,PHY_COMPLETE_OVERDUE , INTG_WAIT_INDUE ,INTG_WAIT_OVERDUE, INTG_REJECT_INDUE, INTG_REJECT_OVERDUE,INTG_COMPLETE_INDUE,INTG_COMPLETE_OVERDUE , RT_WAIT_INDUE ,RT_WAIT_OVERDUE , RT_REJECT_INDUE,RT_REJECT_OVERDUE ,RT_COMPLETE_INDUE ,RT_COMPLETE_OVERDUE , F5_WAIT_INDUE ,F5_WAIT_OVERDUE , F5_REJECT_INDUE ,F5_REJECT_OVERDUE ,F5_COMPLETE_INDUE,F5_COMPLETE_OVERDUE, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, USER_NAME FROM IPRUR001_RESULT1 WHERE REPORT_ID ='reportId' ORDER BY GROUP_SEQ, DATA_LEVEL, USER_ID
+**/
+
 		List<Iprur001Result1>  result1 = session.createSQLQuery(sql.toString())
 		.addScalar("REPORT_ID", Hibernate.STRING)
 		.addScalar("GROUP_SEQ", Hibernate.STRING)
@@ -224,7 +264,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<Iprur001Result2> getTotalURRequest(String reportId, String urType) throws DataAccessException{
+	public List<Iprur001Result2> getTotalURRequest(String reportId, String urType) throws DataAccessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getTotalURRequest
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		
@@ -234,6 +274,11 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 		sql.append(" AND UR_TYPE like '"+ urType+"%'");
 		sql.append(" ORDER BY GROUP_SEQ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier114
+DMAP ConvertedQuery - SELECT REPORT_ID, INDUE, OVERDUE, GROUP_SEQ, GROUP_NAME, UR_TYPE FROM IPRUR001_RESULT2 WHERE REPORT_ID ='reportId' AND UR_TYPE like 'urType%' ORDER BY GROUP_SEQ
+**/
+
 		List<Iprur001Result2>  result = session.createSQLQuery(sql.toString())
 		.addScalar("REPORT_ID", Hibernate.STRING)
 		.addScalar("INDUE", Hibernate.INTEGER)
@@ -247,7 +292,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<Iprur001Result4> getIprur001Result4(String reportId) throws DataAccessException {
+	public List<Iprur001Result4> getIprur001Result4(String reportId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIprur001Result4
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		
@@ -258,6 +303,11 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 		sql.append(" WHERE REPORT_ID ='"+ reportId+"'");
 		sql.append(" ORDER BY GROUP_SEQ, DATA_LEVEL, USER_ID ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier113
+DMAP ConvertedQuery - SELECT REPORT_ID, GROUP_SEQ , GROUP_NAME , DATA_LEVEL, USER_ID, COMPLETE_INDUE, COMPLETE_OVERDUE, WAITMAPP_INDUE, WAITMAPP_OVERDUE, WAITASSIGN_INDUE, WAITASSIGN_OVERDUE, CREATE_BY , CREATE_DATE, UPDATE_BY, UPDATE_DATE, ROW_ID, VERSION, USER_NAME FROM IPRUR001_RESULT4 WHERE REPORT_ID ='reportId' ORDER BY GROUP_SEQ, DATA_LEVEL, USER_ID
+**/
+
 		List<Iprur001Result4>  result4 = session.createSQLQuery(sql.toString())
 		.addScalar("REPORT_ID", Hibernate.STRING)
 		.addScalar("GROUP_SEQ", Hibernate.STRING)
@@ -283,7 +333,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 	
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override	
-	public List<String> getURNCList(String reportId, String seq, String level, String userId, String tab, String action, String status) 
+	public List<String> getURNCList(String reportId, String seq, String level, String userId, String tab, String action, String status)  // DMAP Comment : Dead Code Detected - The Following Method has no reference getURNCList
 		throws DataAccessException{
 	
 		Session session = getSessionFactory().getCurrentSession();
@@ -298,6 +348,11 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 		sb.append(" AND ACTION_STATUS = '"+action+"'");
 		sb.append(" AND DUE_STATUS = '"+status+"'");
 		sb.append(" ORDER BY UR_NO ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier112
+DMAP ConvertedQuery - SELECT UR_NO FROM IPRUR001_RESULT1_DETAIL WHERE REPORT_ID = 'reportId' AND GROUP_SEQ = 'seq' AND DATA_LEVEL = 'level' AND USER_ID = 'userId' AND SUB_UR_TYPE = 'tab' AND ACTION_STATUS = 'action' AND DUE_STATUS = 'status' ORDER BY UR_NO
+**/
+
 		List<String> list = session.createSQLQuery(sb.toString())
 		.addScalar("UR_NO", Hibernate.STRING).list();
 		return list;
@@ -306,7 +361,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<String> getURIPList(String reportId, String seq, String level, String userId, String action, String status) 
+	public List<String> getURIPList(String reportId, String seq, String level, String userId, String action, String status)  // DMAP Comment : Dead Code Detected - The Following Method has no reference getURIPList
 		throws DataAccessException{
 	
 		Session session = getSessionFactory().getCurrentSession();
@@ -320,6 +375,11 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 		sb.append(" AND ACTION_STATUS = '"+action+"'"); 
 		sb.append(" AND DUE_STATUS = '"+status+"'");
 		sb.append(" ORDER BY UR_NO ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier111
+DMAP ConvertedQuery - SELECT distinct(UR_NO) FROM IPRUR001_RESULT4_DETAIL WHERE REPORT_ID = 'reportId' AND GROUP_SEQ = 'seq' AND DATA_LEVEL = 'level' AND USER_ID = 'userId' AND ACTION_STATUS = 'action' AND DUE_STATUS = 'status' ORDER BY UR_NO
+**/
+
 		List<String> list = session.createSQLQuery(sb.toString())
 		.addScalar("UR_NO", Hibernate.STRING).list();
 		return list;	
@@ -327,7 +387,7 @@ public class HibernateIpReportListDao extends HibernateGenericDao<IpReportList> 
 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
-	public IpReportList getReportCritierByReportId(String reportId) throws DataAccessException {
+	public IpReportList getReportCritierByReportId(String reportId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportCritierByReportId
 		Session session = getSessionFactory().getCurrentSession();
 		IpReportList ipReportList = null;
 		try {

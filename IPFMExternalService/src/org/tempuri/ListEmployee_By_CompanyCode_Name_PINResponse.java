@@ -34,7 +34,7 @@ public class ListEmployee_By_CompanyCode_Name_PINResponse  implements java.io.Se
      * 
      * @param listEmployee_By_CompanyCode_Name_PINResult
      */
-    public void setListEmployee_By_CompanyCode_Name_PINResult(org.tempuri.ListEmployee_By_CompanyCode_Name_PINResponseListEmployee_By_CompanyCode_Name_PINResult listEmployee_By_CompanyCode_Name_PINResult) {
+    public void setListEmployee_By_CompanyCode_Name_PINResult(org.tempuri.ListEmployee_By_CompanyCode_Name_PINResponseListEmployee_By_CompanyCode_Name_PINResult listEmployee_By_CompanyCode_Name_PINResult) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setListEmployee_By_CompanyCode_Name_PINResult
         this.listEmployee_By_CompanyCode_Name_PINResult = listEmployee_By_CompanyCode_Name_PINResult;
     }
 
@@ -89,14 +89,14 @@ public class ListEmployee_By_CompanyCode_Name_PINResponse  implements java.io.Se
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -108,7 +108,7 @@ public class ListEmployee_By_CompanyCode_Name_PINResponse  implements java.io.Se
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

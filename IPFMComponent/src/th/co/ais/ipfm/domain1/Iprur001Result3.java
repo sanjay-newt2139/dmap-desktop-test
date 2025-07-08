@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -22,9 +23,14 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "IPRUR001_RESULT3", catalog = "")
+/**
+DMAP TAG: Query converted but found same: Identifier317
+DMAP ConvertedQuery - SELECT i FROM Iprur001Result3 i
+**/
+
 @NamedQueries({@NamedQuery(name = "Iprur001Result3.findAll", query = "SELECT i FROM Iprur001Result3 i")})
 public class Iprur001Result3 implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
     @EmbeddedId
     protected Iprur001Result3PK iprur001Result3PK;
     @Column(name = "GROUP_NAME", length = 50)
@@ -75,147 +81,147 @@ public class Iprur001Result3 implements Serializable {
         this.iprur001Result3PK = new Iprur001Result3PK(reportId, groupSeq);
     }
 
-    public Iprur001Result3PK getIprur001Result3PK() {
+    public Iprur001Result3PK getIprur001Result3PK() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIprur001Result3PK
         return iprur001Result3PK;
     }
 
-    public void setIprur001Result3PK(Iprur001Result3PK iprur001Result3PK) {
+    public void setIprur001Result3PK(Iprur001Result3PK iprur001Result3PK) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIprur001Result3PK
         this.iprur001Result3PK = iprur001Result3PK;
     }
 
-    public String getGroupName() {
+    public String getGroupName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getGroupName
         return groupName;
     }
 
-    public void setGroupName(String groupName) {
+    public void setGroupName(String groupName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setGroupName
         this.groupName = groupName;
     }
 
-    public Integer getCompleteIndue() {
+    public Integer getCompleteIndue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCompleteIndue
         return completeIndue;
     }
 
-    public void setCompleteIndue(Integer completeIndue) {
+    public void setCompleteIndue(Integer completeIndue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCompleteIndue
         this.completeIndue = completeIndue;
     }
 
-    public Integer getCompleteOverdue() {
+    public Integer getCompleteOverdue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCompleteOverdue
         return completeOverdue;
     }
 
-    public void setCompleteOverdue(Integer completeOverdue) {
+    public void setCompleteOverdue(Integer completeOverdue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCompleteOverdue
         this.completeOverdue = completeOverdue;
     }
 
-    public Integer getWaitmappIndue() {
+    public Integer getWaitmappIndue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitmappIndue
         return waitmappIndue;
     }
 
-    public void setWaitmappIndue(Integer waitmappIndue) {
+    public void setWaitmappIndue(Integer waitmappIndue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitmappIndue
         this.waitmappIndue = waitmappIndue;
     }
 
-    public Integer getWaitmappOverdue() {
+    public Integer getWaitmappOverdue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitmappOverdue
         return waitmappOverdue;
     }
 
-    public void setWaitmappOverdue(Integer waitmappOverdue) {
+    public void setWaitmappOverdue(Integer waitmappOverdue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitmappOverdue
         this.waitmappOverdue = waitmappOverdue;
     }
 
-    public Integer getWaitoappIndue() {
+    public Integer getWaitoappIndue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitoappIndue
         return waitoappIndue;
     }
 
-    public void setWaitoappIndue(Integer waitoappIndue) {
+    public void setWaitoappIndue(Integer waitoappIndue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitoappIndue
         this.waitoappIndue = waitoappIndue;
     }
 
-    public Integer getWaitoappOverdue() {
+    public Integer getWaitoappOverdue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitoappOverdue
         return waitoappOverdue;
     }
 
-    public void setWaitoappOverdue(Integer waitoappOverdue) {
+    public void setWaitoappOverdue(Integer waitoappOverdue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitoappOverdue
         this.waitoappOverdue = waitoappOverdue;
     }
 
-    public Integer getWaitassignIndue() {
+    public Integer getWaitassignIndue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitassignIndue
         return waitassignIndue;
     }
 
-    public void setWaitassignIndue(Integer waitassignIndue) {
+    public void setWaitassignIndue(Integer waitassignIndue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitassignIndue
         this.waitassignIndue = waitassignIndue;
     }
 
-    public Integer getWaitassignOverdue() {
+    public Integer getWaitassignOverdue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitassignOverdue
         return waitassignOverdue;
     }
 
-    public void setWaitassignOverdue(Integer waitassignOverdue) {
+    public void setWaitassignOverdue(Integer waitassignOverdue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitassignOverdue
         this.waitassignOverdue = waitassignOverdue;
     }
 
-    public Integer getWaitprocessIndue() {
+    public Integer getWaitprocessIndue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitprocessIndue
         return waitprocessIndue;
     }
 
-    public void setWaitprocessIndue(Integer waitprocessIndue) {
+    public void setWaitprocessIndue(Integer waitprocessIndue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitprocessIndue
         this.waitprocessIndue = waitprocessIndue;
     }
 
-    public Integer getWaitprocessOverdue() {
+    public Integer getWaitprocessOverdue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWaitprocessOverdue
         return waitprocessOverdue;
     }
 
-    public void setWaitprocessOverdue(Integer waitprocessOverdue) {
+    public void setWaitprocessOverdue(Integer waitprocessOverdue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWaitprocessOverdue
         this.waitprocessOverdue = waitprocessOverdue;
     }
 
-    public String getCreateBy() {
+    public String getCreateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateBy
         return createBy;
     }
 
-    public void setCreateBy(String createBy) {
+    public void setCreateBy(String createBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateBy
         this.createBy = createBy;
     }
 
-    public Date getCreateDate() {
+    public Date getCreateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateDate
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(Date createDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateDate
         this.createDate = createDate;
     }
 
-    public String getUpdateBy() {
+    public String getUpdateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateBy
         return updateBy;
     }
 
-    public void setUpdateBy(String updateBy) {
+    public void setUpdateBy(String updateBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateBy
         this.updateBy = updateBy;
     }
 
-    public Date getUpdateDate() {
+    public Date getUpdateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateDate
         return updateDate;
     }
 
-    public void setUpdateDate(Date updateDate) {
+    public void setUpdateDate(Date updateDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateDate
         this.updateDate = updateDate;
     }
 
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return rowId;
     }
 
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
 
-    public Long getVersion() {
+    public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return version;
     }
 
-    public void setVersion(Long version) {
+    public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
 
@@ -240,7 +246,7 @@ public class Iprur001Result3 implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain1.Iprur001Result3[iprur001Result3PK=" + iprur001Result3PK + "]";
     }
 

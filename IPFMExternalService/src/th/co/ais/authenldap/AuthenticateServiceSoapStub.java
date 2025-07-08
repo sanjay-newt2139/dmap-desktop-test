@@ -20,7 +20,7 @@ public class AuthenticateServiceSoapStub extends org.apache.axis.client.Stub imp
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc1
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -156,7 +156,7 @@ public class AuthenticateServiceSoapStub extends org.apache.axis.client.Stub imp
         }
     }
 
-    public th.co.ais.authenldap.ServiceResponse authenticate(th.co.ais.authenldap.UserAuthenticate user, th.co.ais.authenldap.ProjectQuery projectCode) throws java.rmi.RemoteException {
+    public th.co.ais.authenldap.ServiceResponse authenticate(th.co.ais.authenldap.UserAuthenticate user, th.co.ais.authenldap.ProjectQuery projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference authenticate
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }

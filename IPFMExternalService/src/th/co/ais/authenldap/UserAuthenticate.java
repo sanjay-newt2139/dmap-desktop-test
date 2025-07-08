@@ -38,7 +38,7 @@ public class UserAuthenticate  implements java.io.Serializable {
      * 
      * @param username
      */
-    public void setUsername(java.lang.String username) {
+    public void setUsername(java.lang.String username) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUsername
         this.username = username;
     }
 
@@ -58,7 +58,7 @@ public class UserAuthenticate  implements java.io.Serializable {
      * 
      * @param password
      */
-    public void setPassword(java.lang.String password) {
+    public void setPassword(java.lang.String password) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPassword
         this.password = password;
     }
 
@@ -126,14 +126,14 @@ public class UserAuthenticate  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -145,7 +145,7 @@ public class UserAuthenticate  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

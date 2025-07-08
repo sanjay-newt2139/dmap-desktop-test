@@ -73,7 +73,7 @@ public class IPFMUtils {
 	 * @modelguid {21D61038-910B-4BE4-8FCC-EAD8177F2622}
 	 */
 
-	public static String cnvDateToString(
+	public static String cnvDateToString( // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvDateToString
 			java.util.Date inputDate,
 			String targetFormat)
 			throws Exception {
@@ -185,7 +185,7 @@ public class IPFMUtils {
 		return retDate;
 	}
 	
-	public static String cnvDateToStringBE(
+	public static String cnvDateToStringBE( // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvDateToStringBE
 			java.util.Date inputDate,
 			String targetFormat)
 			throws Exception {
@@ -327,7 +327,7 @@ public class IPFMUtils {
 	 * @param inpMark the string value
 	 * @modelguid {BD8AD4AB-61AE-405F-A99B-92FD20F1DBDD}
 	 */
-	public static String cnvSectionMark(String inpMark) throws Exception {
+	public static String cnvSectionMark(String inpMark) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvSectionMark
 		String mark = null;
 		int intMark = Integer.parseInt(inpMark);
 
@@ -365,7 +365,7 @@ public class IPFMUtils {
 	 * @return the formatted date string.
 	 * @modelguid {7E771B77-1756-4843-8634-1B3344435DAB}
 	 */
-	public static String cnvStringDateToBuddhistEra(
+	public static String cnvStringDateToBuddhistEra( // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringDateToBuddhistEra
 		String strDate,
 		String format,
 		String language)
@@ -460,7 +460,7 @@ public class IPFMUtils {
 		return null;
 	}
 	/** @modelguid {FD8C6C51-3F91-4869-91F9-B4D475454A3F} */
-	public static String cnvStringToByte(String inputstr) throws Exception {
+	public static String cnvStringToByte(String inputstr) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToByte
 		String code = checkOs();
 		String outputstr = null;
 		try {
@@ -514,7 +514,7 @@ public class IPFMUtils {
 	 * @param time the time string.Example. 10:30
 	 * @modelguid {A0D82783-A280-471C-827C-CFCBA5158E90}
 	*/
-	public static int cnvStringToTimeInt(String time) {
+	public static int cnvStringToTimeInt(String time) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToTimeInt
 		if (time == null || time.length() == 0)
 			time = "0:00";
 		time = time + ":";
@@ -563,7 +563,7 @@ public class IPFMUtils {
 	 * @param myDate the date value.
 	 * @modelguid {4D0B12DC-5A41-42F2-98D6-410028535162}
 	**/
-	public static String getDateFormatterStyleBuddhistEra(int style, Date myDate) {
+	public static String getDateFormatterStyleBuddhistEra(int style, Date myDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDateFormatterStyleBuddhistEra
 		
 		String ChristianEra = DateFormat.getDateInstance(style).format(myDate);
 		log.debug(" << ChristianEra Date >> = "+ChristianEra);
@@ -610,7 +610,7 @@ public class IPFMUtils {
 		return buddhistEra;
 	}
 	/** @modelguid {D55AD325-A39E-42B8-BD9D-69CB3EDF7E98} */
-	public static String ifBlank(String inputData, String outputData){
+	public static String ifBlank(String inputData, String outputData){ // DMAP Comment : Dead Code Detected - The Following Method has no reference ifBlank
 		 
 		if (inputData == null || inputData.trim().equals(""))
 			return outputData;
@@ -618,7 +618,7 @@ public class IPFMUtils {
 			return inputData;
 	}
 	/** @modelguid {5FF39024-EDBC-47B6-8D10-A5506565795F} */
-	public static String ifNull(String inputData, String outputData){
+	public static String ifNull(String inputData, String outputData){ // DMAP Comment : Dead Code Detected - The Following Method has no reference ifNull
 		 
 		if (inputData == null)
 			return outputData;
@@ -626,7 +626,7 @@ public class IPFMUtils {
 			return inputData;
 	}
 	/** @modelguid {969B3308-C2EE-42B0-B440-C89F987776F3} */
-	public static String numberFormat(int input) {
+	public static String numberFormat(int input) { // DMAP Comment : Dead Code Detected - The Following Method has no reference numberFormat
 		String output = "";
 		String remain = Integer.toString(input);
 		if (remain.length() > 3) {
@@ -646,32 +646,32 @@ public class IPFMUtils {
 	
         
 	/** @modelguid {64A6AB90-6D32-47FE-AA88-47789C8E9BFF} */
-	public static String numberFormat(double input,String format) {
+	public static String numberFormat(double input,String format) { // DMAP Comment : Dead Code Detected - The Following Method has no reference numberFormat
 			String output = "";
 			output=(new DecimalFormat(format)).format(input);
 			return output;
 	}
 
-        public static String numberFormat(long input,String format) {
+        public static String numberFormat(long input,String format) { // DMAP Comment : Dead Code Detected - The Following Method has no reference numberFormat
                     String output = "";
                     output=(new DecimalFormat(format)).format(input);
                     return output;
         }
         
-        public static String bigDecimalToStringFormat(BigDecimal bigDecimal,String format){
+        public static String bigDecimalToStringFormat(BigDecimal bigDecimal,String format){ // DMAP Comment : Dead Code Detected - The Following Method has no reference bigDecimalToStringFormat
             DecimalFormat decimalFormat = new DecimalFormat(format);
             return decimalFormat.format(bigDecimal);
         }
 
 	/** @modelguid {C8151723-B1CF-4CE5-AB1D-13816F46CB40} */
-	public static double cnvStringToNumber(String input){
+	public static double cnvStringToNumber(String input){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToNumber
 		String outputStr="0";
 		if (( input != null) && (input.length()>0 ))
 			outputStr = replaceStrWithStr(input,",","");
 		return Double.parseDouble(outputStr);
 	}	
 
-        public static BigDecimal cnvStringToBigDecimal(String input, int scale){
+        public static BigDecimal cnvStringToBigDecimal(String input, int scale){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToBigDecimal
 		String outputStr="0";
 		if (( input != null) && (input.length()>0 ))
 			outputStr = replaceStrWithStr(input,",","");
@@ -679,7 +679,7 @@ public class IPFMUtils {
                 return result.setScale(scale, BigDecimal.ROUND_FLOOR);
 	}
         
-        public static BigDecimal cnvStringToBigDecimalWithRoundingMode(String input, int scale,int roundingMode){
+        public static BigDecimal cnvStringToBigDecimalWithRoundingMode(String input, int scale,int roundingMode){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToBigDecimalWithRoundingMode
 		String outputStr="0";
 		if (( input != null) && (input.length()>0 ))
 			outputStr = replaceStrWithStr(input,",","");
@@ -687,20 +687,20 @@ public class IPFMUtils {
                 return result.setScale(scale,roundingMode);
 	}
         
-        public static long cnvStringToLongNumber(String input){
+        public static long cnvStringToLongNumber(String input){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToLongNumber
             String outputStr="0";
             if (( input != null) && (input.length()>0 ))
                     outputStr = replaceStrWithStr(input,",","");
 
             return Long.parseLong(outputStr);
         }       
-        public static double cnvStringToDouble(String input){
+        public static double cnvStringToDouble(String input){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToDouble
             String outputStr="0";
             if (( input != null) && (input.length()>0 ))
                     outputStr = replaceStrWithStr(input,",","");
             return Double.parseDouble(outputStr);
         }
-        public static int cnvStringToIntNumber(String input){
+        public static int cnvStringToIntNumber(String input){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cnvStringToIntNumber
             String outputStr="0";
             if (( input != null) && (input.length()>0 ))
                     outputStr = replaceStrWithStr(input,",","");
@@ -777,7 +777,7 @@ public class IPFMUtils {
 	}
 
 	/** @modelguid {9EDCCE2A-6EBE-4652-AA69-AD7B738EEB75} */
-	public static Vector separateSQLString(String inputData, String separator) {
+	public static Vector separateSQLString(String inputData, String separator) { // DMAP Comment : Dead Code Detected - The Following Method has no reference separateSQLString
 		Vector inputVector = new Vector();
 //		int length = inputData.length();
 		if (inputData.length() > 0) {
@@ -949,7 +949,7 @@ public class IPFMUtils {
 		return result;
 	}
 	
-	public static String currentDateBE(String pDateFormat) {
+	public static String currentDateBE(String pDateFormat) { // DMAP Comment : Dead Code Detected - The Following Method has no reference currentDateBE
 		String result = currentDate(pDateFormat);
 		result = dateStringAD2BE(result,pDateFormat);
 		return result;
@@ -1102,7 +1102,7 @@ public class IPFMUtils {
 	}
 	
 	/** @modelguid {95CE7FC5-3005-46AD-B807-EE29C004FB5E} */
-	public static String dateSql2DateStringBE(
+	public static String dateSql2DateStringBE( // DMAP Comment : Dead Code Detected - The Following Method has no reference dateSql2DateStringBE
 		java.sql.Date pDateValue,
 		String pDateFormat) {
 		SimpleDateFormat formatter = new SimpleDateFormat(pDateFormat);
@@ -1116,7 +1116,7 @@ public class IPFMUtils {
 	 * @return java.lang.String
 	 * @modelguid {F24D89F3-ABA4-4DDD-88B8-23CA5DAB7458}
 	 */
-	public static String getDayForPrint(String aDD) {
+	public static String getDayForPrint(String aDD) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDayForPrint
 		int iDD;
 		String sDD;
 		try {
@@ -1136,7 +1136,7 @@ public class IPFMUtils {
 	 * @param aMM the month which you want to get name in thai.
 	 * @modelguid {30EAD5E3-C5C5-47E8-90DA-25A5495D5F5E}
 	 */
-	public static String getThaiMonth(String aMM) {
+	public static String getThaiMonth(String aMM) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getThaiMonth
 		String month[] =
                 {
                         "���Ҥ�",
@@ -1163,7 +1163,7 @@ public class IPFMUtils {
 
 	}
 
-	public static String getAbbrThaiMonth(String aMM) {
+	public static String getAbbrThaiMonth(String aMM) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAbbrThaiMonth
 		String month[] =
 			{
                         "�.�.",
@@ -1260,7 +1260,7 @@ public class IPFMUtils {
 	}
 
 	/** @modelguid {B8025572-6875-4FC0-83CA-1F8EEA5A8E25} */
-	public static byte[] stringToBytes(String str) {
+	public static byte[] stringToBytes(String str) { // DMAP Comment : Dead Code Detected - The Following Method has no reference stringToBytes
 		char[] ch = str.toCharArray();
 		byte[] b = new byte[ch.length];
 		int ptr = 0;
@@ -1278,7 +1278,7 @@ public class IPFMUtils {
 		return false if found special character.
 	 * @modelguid {243DCE72-C98A-4F67-B218-6E52E6CA7187}
 	*/
-	public static boolean isNameEng(String s) {
+	public static boolean isNameEng(String s) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isNameEng
 		byte[] b = s.getBytes();
 		int i = 0;
 		for (i = 0; i < b.length; i++) {
@@ -1309,7 +1309,7 @@ public class IPFMUtils {
 		return false if found special character.
 	 * @modelguid {86C0CD97-EE5A-43C5-BE6E-78A6DBDD1D55}
 	*/
-	public static boolean isNameThai(String s) {
+	public static boolean isNameThai(String s) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isNameThai
 		byte[] b = s.getBytes();
 		int i = 0;
 		for (i = 0; i < b.length; i++) {
@@ -1343,7 +1343,7 @@ public class IPFMUtils {
 		-1 for not found
 	 * @modelguid {CA9158CB-49BD-49D3-8AA1-DDC0B879AAA1}
 	*/
-	public static int strspn(String s, String set) {
+	public static int strspn(String s, String set) { // DMAP Comment : Dead Code Detected - The Following Method has no reference strspn
 		byte[] bs = s.getBytes();
 		byte[] bset = set.getBytes();
 		int i, j;
@@ -1361,7 +1361,7 @@ public class IPFMUtils {
 			return -1;
 	}
 
-	public static String lastDayOfMonth(String dateStr , String lang){
+	public static String lastDayOfMonth(String dateStr , String lang){ // DMAP Comment : Dead Code Detected - The Following Method has no reference lastDayOfMonth
 		String lastDay = "";
 		try {
 			if (dateStr != null && dateStr.trim().length()>0){
@@ -1435,7 +1435,7 @@ public class IPFMUtils {
 
 	}
 	/** @modelguid {AFADB088-0DA8-46D0-A660-1818DBFAA869} */
-	public static java.sql.Date dateStringBE2DateSql(String pDateValue, String pDateFormat) {
+	public static java.sql.Date dateStringBE2DateSql(String pDateValue, String pDateFormat) { // DMAP Comment : Dead Code Detected - The Following Method has no reference dateStringBE2DateSql
 
 		// Convert format content to upper case
 		pDateFormat = pDateFormat.trim().toUpperCase();
@@ -1460,7 +1460,7 @@ public class IPFMUtils {
 		String sDate = buildNewFormat(sDD, sMM, sYY, "yyyy-mm-dd", trgYearLength);
 		return java.sql.Date.valueOf(sDate);
 	}
-    public static boolean isNumberic(String num) {
+    public static boolean isNumberic(String num) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isNumberic
         try {        
             Double.parseDouble(num);        
             return true;    
@@ -1469,7 +1469,7 @@ public class IPFMUtils {
         }
     }
     
-    public static boolean isNumbericInteger(String num) {
+    public static boolean isNumbericInteger(String num) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isNumbericInteger
         try {        
             Integer.parseInt(num);        
             return true;    
@@ -1478,7 +1478,7 @@ public class IPFMUtils {
         }
     }
     
-    public static double calculateRounded10Amount(double amount) {
+    public static double calculateRounded10Amount(double amount) { // DMAP Comment : Dead Code Detected - The Following Method has no reference calculateRounded10Amount
 		BigDecimal result = new BigDecimal(amount);
 		BigDecimal ten = new BigDecimal(10);
 		
@@ -1488,17 +1488,17 @@ public class IPFMUtils {
 		
 		return result.doubleValue();
 	}
-    public static double calculateRoundedAmount(double amount) {
+    public static double calculateRoundedAmount(double amount) { // DMAP Comment : Dead Code Detected - The Following Method has no reference calculateRoundedAmount
 		BigDecimal result = new BigDecimal(amount);
 		result = result.setScale(0, BigDecimal.ROUND_UP);
 		return result.doubleValue();
 	}
-    public static double setScaleNAmount(double amount, int scale) {
+    public static double setScaleNAmount(double amount, int scale) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setScaleNAmount
 		BigDecimal result = new BigDecimal(amount);
 		result.setScale(scale, BigDecimal.ROUND_HALF_UP);
 		return result.doubleValue();
 	}
-    public static String stringCapitalize(String inputStr) {
+    public static String stringCapitalize(String inputStr) { // DMAP Comment : Dead Code Detected - The Following Method has no reference stringCapitalize
         String[] strArray = inputStr.trim().replaceAll("\\n|\\r"," ").split(" ");
         String temp  = "";
         String first = "";
@@ -1519,7 +1519,7 @@ public class IPFMUtils {
         return temp.trim();
     }
     
-    public static String stringCapitalize2(String inputStr) {
+    public static String stringCapitalize2(String inputStr) { // DMAP Comment : Dead Code Detected - The Following Method has no reference stringCapitalize2
         String[] strArray = inputStr.trim().replaceAll("\\n|\\r"," ").split(" ");
         String temp  = "";
         String first = "";
@@ -1540,11 +1540,11 @@ public class IPFMUtils {
         return temp.trim();
     }
     
-    public static String prepareItemName(String itemName){
+    public static String prepareItemName(String itemName){ // DMAP Comment : Dead Code Detected - The Following Method has no reference prepareItemName
         return itemName.replaceAll("'", "''");
     }
             
-    public static boolean compareName(String name1, String name2){
+    public static boolean compareName(String name1, String name2){ // DMAP Comment : Dead Code Detected - The Following Method has no reference compareName
         boolean result = false;
         if (name1 == null || name2 == null) return result;
         name1 = name1.replace(" ",""); 
@@ -1554,7 +1554,7 @@ public class IPFMUtils {
         return result;
     }
     
-    public static boolean pidCheckDigit(String id){
+    public static boolean pidCheckDigit(String id){ // DMAP Comment : Dead Code Detected - The Following Method has no reference pidCheckDigit
         if (id.length() != 13) {
             return false;
         }
@@ -1584,7 +1584,7 @@ public class IPFMUtils {
 	 * Example. dateDuration(startTime,endTime) will returns in format 08:30:00
 	 * @return the time in the String format.
 	*/
-    public static String dateDuration(Date startTime, Date endTime) throws Exception {
+    public static String dateDuration(Date startTime, Date endTime) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference dateDuration
         long  diff = endTime.getTime() - startTime.getTime();
         String result =String.valueOf( diff / (60 * 60 * 1000))+":"
                 + String.valueOf((diff % (60 * 60 * 1000))/(60 * 1000)+100).substring(1) +":"
@@ -1592,7 +1592,7 @@ public class IPFMUtils {
         return result;
     }
     
-    public static String validateServicePort(String str){
+    public static String validateServicePort(String str){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateServicePort
     	String resultValidate = "";
     	try{
 				String sp[] = str.replaceAll(" ", "").split(",");

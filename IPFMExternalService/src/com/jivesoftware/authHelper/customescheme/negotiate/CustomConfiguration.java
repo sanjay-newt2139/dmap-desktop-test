@@ -76,7 +76,7 @@ public class CustomConfiguration extends Configuration {
     //~ Methods ========================================================================================================
 
     @Override
-    public AppConfigurationEntry[] getAppConfigurationEntry(String name) {
+    public AppConfigurationEntry[] getAppConfigurationEntry(String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAppConfigurationEntry
         AppConfigurationEntry[] mappedResult = mappedConfigurations.get(name);
         return mappedResult == null ? defaultConfiguration : mappedResult;
     }
@@ -84,6 +84,6 @@ public class CustomConfiguration extends Configuration {
     /**
      * Does nothing, but required for JDK5
      */
-    public void refresh() {
+    public void refresh() { // DMAP Comment : Dead Code Detected - The Following Method has no reference refresh
     }
 }

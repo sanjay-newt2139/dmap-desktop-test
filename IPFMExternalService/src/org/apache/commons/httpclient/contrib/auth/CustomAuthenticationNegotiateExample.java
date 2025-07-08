@@ -96,7 +96,7 @@ public class CustomAuthenticationNegotiateExample {
         // The Negotiate scheme uses JAAS as credential provider but the
         // httpclient api require us to supply cred anyway.
         // a work around is to provide an empty set of creds.
-        Credentials use_jaas_creds = new Credentials() {};
+        Credentials use_jaas_creds = new Credentials() {}; // DMAP Comment : Dead Code Detected - The Following Class has no reference 1
         client.getState().setCredentials(
             new AuthScope(null, -1, null),
             use_jaas_creds);

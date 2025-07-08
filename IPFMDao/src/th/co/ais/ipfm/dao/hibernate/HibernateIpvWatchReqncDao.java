@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class HibernateIpvWatchReqncDao extends HibernateGenericDao<IpvWatchReqnc
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpvWatchReqnc> findWatchReqNC(String userId) throws Exception {
+	public List<IpvWatchReqnc> findWatchReqNC(String userId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findWatchReqNC
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvWatchReqnc> result = new ArrayList<IpvWatchReqnc>();
 		StringBuffer sql = new StringBuffer();
@@ -24,6 +25,11 @@ public class HibernateIpvWatchReqncDao extends HibernateGenericDao<IpvWatchReqnc
 				"t.reqUserId,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvWatchReqnc t " +
 				"where t.reqUserId = '"+userId+"' " +
 				"order by t.urNo desc, t.subUrNo asc ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier377
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.reqUserId,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvWatchReqnc t where t.reqUserId = 'userId' order by t.urNo desc, t.subUrNo asc
+**/
+
 		List result1 = session.createQuery(sql.toString()).list();
 		Iterator iter = result1.iterator();
 		int i=0;

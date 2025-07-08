@@ -30,8 +30,8 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 public class TeamManageAction extends AbstractAction {
 	
 	/********************** Bean ***********************/
-	public TeamManageBean teamManageBean;
-	public UserSession  userSession;
+	public TeamManageBean teamManageBean; // DMAP Comment : Dead Code Detected - The Following Field has no reference teamManageBean
+	public UserSession  userSession; // DMAP Comment : Dead Code Detected - The Following Field has no reference userSession
 
 	public TeamManageBean getTeamManageBean() {
 		return (TeamManageBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("teamManageBean");
@@ -43,7 +43,7 @@ public class TeamManageAction extends AbstractAction {
 	public UserSession getUserSession() {
 		  return (UserSession) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userSession");
 		}
-	public void setUserSession(UserSession userSession) {
+	public void setUserSession(UserSession userSession) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserSession
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userSession", userSession);
 	}
 	
@@ -151,7 +151,7 @@ public class TeamManageAction extends AbstractAction {
 		}
 		return programID;
 	}
-	public void search(){
+	public void search(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference search
 		TeamManageService teamManageService = (TeamManageService)JSFServiceFinderUtil.getInstance().getBean("teamManageService");
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 		TeamManageBean bean = getTeamManageBean();
@@ -165,7 +165,7 @@ public class TeamManageAction extends AbstractAction {
 		}		
 	}
 	
-	public void updateValueBeforeDelete(){
+	public void updateValueBeforeDelete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDelete
 		String teamId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("teamId").toString();
 		TeamManageBean bean = getTeamManageBean();
 		bean.getIpTeam().setTeamId(teamId);
@@ -223,7 +223,7 @@ public class TeamManageAction extends AbstractAction {
 		}
 	}
 	
-	public void save(){
+	public void save(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference save
 		TeamManageService teamManageService = (TeamManageService)JSFServiceFinderUtil.getInstance().getBean("teamManageService");
 		TeamManageBean bean = getTeamManageBean();
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
@@ -252,14 +252,14 @@ public class TeamManageAction extends AbstractAction {
 		}
 	}
 	
-	public void updateValueBeforeDeleteMember(){
+	public void updateValueBeforeDeleteMember(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDeleteMember
 		String userId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("userId").toString();
 		TeamManageBean bean = getTeamManageBean();
 		bean.getIpUser().setUserId(userId);
 		setTeamMangeBeam(bean);
 	}
 	
-	public void deleteMember(){
+	public void deleteMember(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteMember
 		TeamManageService teamManageService = (TeamManageService)JSFServiceFinderUtil.getInstance().getBean("teamManageService");
 		TeamManageBean bean = getTeamManageBean();
 		UserSession userSessionBean = getUserSession();
@@ -283,7 +283,7 @@ public class TeamManageAction extends AbstractAction {
 		}
 	}
 	
-	public void cancel(){
+	public void cancel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cancel
 		TeamManageBean bean = getTeamManageBean();
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
@@ -298,7 +298,7 @@ public class TeamManageAction extends AbstractAction {
 		}
 	}
 	
-	public void clear(){
+	public void clear(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clear
 		TeamManageBean bean = getTeamManageBean();
 		try {   
 			    bean.getIpTeam().setTeamName("");
@@ -309,7 +309,7 @@ public class TeamManageAction extends AbstractAction {
 		}
 	}
 	
-	public void popupAddTeam(){
+	public void popupAddTeam(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupAddTeam
 		TeamManageService teamManageService = (TeamManageService)JSFServiceFinderUtil.getInstance().getBean("teamManageService");
 		UserSession userSessionBean = getUserSession();
 		TeamManageBean bean = getTeamManageBean();

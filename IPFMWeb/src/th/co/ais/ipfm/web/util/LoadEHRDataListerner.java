@@ -14,11 +14,11 @@ public class LoadEHRDataListerner implements ServletContextListener {
 
 	public static final String[] eng_chars = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 	
-	public void contextDestroyed(ServletContextEvent arg0) {
+	public void contextDestroyed(ServletContextEvent arg0) { // DMAP Comment : Dead Code Detected - The Following Method has no reference contextDestroyed
 		// TODO Auto-generated method stub
 	}
 
-	public void contextInitialized(ServletContextEvent arg0) {
+	public void contextInitialized(ServletContextEvent arg0) { // DMAP Comment : Dead Code Detected - The Following Method has no reference contextInitialized
 		// TODO Auto-generated method stub
 		ServletContext servletContext = arg0.getServletContext();
 		try {
@@ -38,7 +38,7 @@ public class LoadEHRDataListerner implements ServletContextListener {
 		
 	}
 	
-	private void setToEHRData(EmployeeProfile emp , EHRData ehr) {
+	private void setToEHRData(EmployeeProfile emp , EHRData ehr) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setToEHRData
 		ehr.setEmail(emp.getEmail());
 //		ehr.setRoleId(emp.get);
 //		ehr.setUserId(userId);

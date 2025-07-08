@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.sql.Connection;
@@ -16,7 +17,7 @@ import th.co.ais.ipfm.domain1.IpFunction;
 public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implements IMainMenuDao {
 
 	@Override
-	public List<IpFunction> listMenuByUserID(String userId) throws Exception{
+	public List<IpFunction> listMenuByUserID(String userId) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listMenuByUserID
 		Session session = this.getSessionFactory().getCurrentSession();
 		List<IpFunction> result = new ArrayList<IpFunction>();
 		try {
@@ -25,6 +26,11 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 					"where t.id.roleId = m.id.roleId " +
 					"and t.id.funcId = f.funcId " +
 					"and m.id.userId = '"+userId+"' order by f.menuLevel,f.menuSeq");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier411
+DMAP ConvertedQuery - select distinct f from IpRoleFunction t , IpRoleMember m , IpFunction f where t.id.roleId = m.id.roleId and t.id.funcId = f.funcId and m.id.userId = 'userId' order by f.menuLevel,f.menuSeq
+**/
+
 			result = session.createQuery(sqlBuff.toString()).list();
 			
 //			Criteria criteria = session.createCriteria(IpRoleFunction.class);
@@ -54,7 +60,7 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 //	}
 
 	@Override
-	public List<Suggestion> listProject() {
+	public List<Suggestion> listProject() { // DMAP Comment : Dead Code Detected - The Following Method has no reference listProject
 		// TODO Auto-generated method stub
 		List resultList = new ArrayList<Suggestion>();
 		Session session = this.getSessionFactory().getCurrentSession();
@@ -67,6 +73,11 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 			sql.append("ORDER BY A.SHORT_DESC ");
 			
 			Statement stmt = connection.createStatement();
+/**
+DMAP TAG: Query converted but found same: Identifier410
+DMAP ConvertedQuery - select A.REF_KEY, A.SHORT_DESC from ip_master_table A where ref_table = 'LOCATION' ORDER BY A.SHORT_DESC
+**/
+
 			ResultSet rs = stmt.executeQuery(sql.toString());
 			while(rs.next()){
 				resultList.add(new Suggestion(rs.getString("REF_KEY"),rs.getString("SHORT_DESC")));
@@ -80,7 +91,7 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 	}
 
 	@Override
-	public List<IpFunction> findAllMenu() {
+	public List<IpFunction> findAllMenu() { // DMAP Comment : Dead Code Detected - The Following Method has no reference findAllMenu
 		List<IpFunction> resultList = new ArrayList<IpFunction>();
 		Session session = this.getSessionFactory().getCurrentSession();
 		try{
@@ -89,6 +100,11 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 			sql.append("from IPFunction t ");
 			sql.append("order by t.funcId asc ");
 			
+/**
+DMAP TAG: Query converted but found same: Identifier409
+DMAP ConvertedQuery - select t from IPFunction t order by t.funcId asc
+**/
+
 			resultList = session.createQuery(sql.toString()).list();
 			Hibernate.initialize(resultList);
 			System.out.println("IPFunction size = "+ resultList.size());
@@ -114,7 +130,7 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 	}
 
 	@Override
-	public IpFunction findMenuByRowId(Integer rowId) {
+	public IpFunction findMenuByRowId(Integer rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findMenuByRowId
 		IpFunction result = new IpFunction();
 		Session session = this.getSessionFactory().getCurrentSession();
 		try{
@@ -124,6 +140,11 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 			sql.append("where t.rowId = '"+rowId+"' ");
 			sql.append("order by funcId asc ");
 			
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier408
+DMAP ConvertedQuery - select t from IpFunction t where t.rowId = 'rowId' order by funcId asc
+**/
+
 			List<IpFunction> resultList = session.createQuery(sql.toString()).list();
 			
 			if (resultList==null || resultList.size()>0) {
@@ -138,7 +159,7 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 	}
 
 	@Override
-	public List<IpFunction> findMenuLevel1ByUserId(String userId) throws Exception{
+	public List<IpFunction> findMenuLevel1ByUserId(String userId) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference findMenuLevel1ByUserId
 		Session session = this.getSessionFactory().getCurrentSession();
 		List<IpFunction> result = new ArrayList<IpFunction>();
 		try { 
@@ -148,6 +169,11 @@ public class HibernateMainMenuDao extends HibernateGenericDao<IpFunction> implem
 					"and t.id.funcId = f.funcId " +
 					"and f.menuLevel = '0' " +
 					"and m.id.userId = '"+userId+"' order by f.menuSeq");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier407
+DMAP ConvertedQuery - select distinct f from IpRoleFunction t , IpRoleMember m , IpFunction f where t.id.roleId = m.id.roleId and t.id.funcId = f.funcId and f.menuLevel = '0' and m.id.userId = 'userId' order by f.menuSeq
+**/
+
 			result = session.createQuery(sqlBuff.toString()).list();
 			
 //			Criteria criteria = session.createCriteria(IpRoleFunction.class);

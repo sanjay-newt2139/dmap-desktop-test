@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 import org.hibernate.LazyInitializationException;
 
 public class IPFMDataValidateUtil {
-	public static final String OCS_COUNTRY_CODE_PREFIX="66";
+	public static final String OCS_COUNTRY_CODE_PREFIX="66"; // DMAP Comment : Dead Code Detected - The Following Field has no reference OCS_COUNTRY_CODE_PREFIX
 	public static final String MOBILE_NO_PREFIX ="08";
 	public static int MOBILE_NO_LENGTH = 10;
 	public static String mobileRegex = IPFMDataValidateUtil.MOBILE_NO_PREFIX+"[0-9]{"+(IPFMDataValidateUtil.MOBILE_NO_LENGTH-IPFMDataValidateUtil.MOBILE_NO_PREFIX.length())+"}";
@@ -21,10 +21,10 @@ public class IPFMDataValidateUtil {
 	
 	public static String numberRegex = "[0-9]{0,}";
 	public static String numberRegexNoDigit = "[0-9]{0,}";
-	public static String numberRegexOneDigit = "[0-9]{0,}[.]{1}[0-9]{1}"; 
-	public static String numberRegexTwoDigit = "[0-9]{0,}[.]{1}[0-9]{2}";	
+	public static String numberRegexOneDigit = "[0-9]{0,}[.]{1}[0-9]{1}";  // DMAP Comment : Dead Code Detected - The Following Field has no reference numberRegexOneDigit
+	public static String numberRegexTwoDigit = "[0-9]{0,}[.]{1}[0-9]{2}";	 // DMAP Comment : Dead Code Detected - The Following Field has no reference numberRegexTwoDigit
 
-	public static boolean validateNumberDigit(String number, int precision, int scale){
+	public static boolean validateNumberDigit(String number, int precision, int scale){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateNumberDigit
 		String format = "[0-9]{0," + String.valueOf(precision-scale) + "}[.]{1}[0-9]{0," + String.valueOf(scale) +"}"; 
 		if (!number.trim().matches(format)){
 			return false;	
@@ -32,7 +32,7 @@ public class IPFMDataValidateUtil {
 		return true;
 	}
 	
-	public static boolean validateNumberNoDigit(String number, int precision){
+	public static boolean validateNumberNoDigit(String number, int precision){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateNumberNoDigit
 		String format = "[0-9]{0," + String.valueOf(precision) + "}";
 		if (!number.trim().matches(format)){
 			return false;	
@@ -40,7 +40,7 @@ public class IPFMDataValidateUtil {
 		return true;
 	}
 	
-	public static boolean validateNumberNoDigit(String number){
+	public static boolean validateNumberNoDigit(String number){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateNumberNoDigit
 		if (!number.trim().matches(numberRegexNoDigit)){
 			return false;	
 		}	
@@ -53,9 +53,9 @@ public class IPFMDataValidateUtil {
 		}
 		return true;
 	}
-	public static boolean validateMobileNo(String mobileNo) throws Exception{
+	public static boolean validateMobileNo(String mobileNo) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateMobileNo
 		//String regex = "08"+"[0-9]{"+(8)+"}"; 
-		//ËÁÒÂ¤ÇÒÁÇèÒ àÃÔèÁµé¹´éÇÂ 08 áÅÐµÒÁ´éÇÂµÑÇÍÑ¡ÉÃ 0-9 ä» 8 µÑÇ
+		//Ã‹ÃÃ’Ã‚Â¤Ã‡Ã’ÃÃ‡Ã¨Ã’ Ã ÃƒÃ”Ã¨ÃÂµÃ©Â¹Â´Ã©Ã‡Ã‚ 08 Ã¡Ã…ÃÂµÃ’ÃÂ´Ã©Ã‡Ã‚ÂµÃ‘Ã‡ÃÃ‘Â¡Ã‰Ãƒ 0-9 Ã¤Â» 8 ÂµÃ‘Ã‡
 		if (mobileNo.trim().length()>0){
 			if (!mobileNo.trim().matches(mobileRegex)){
 				return false;	
@@ -64,9 +64,9 @@ public class IPFMDataValidateUtil {
 		return true;
 	}
 	
-	public static boolean validateMobileNoTOT(String mobileNo) throws Exception{
+	public static boolean validateMobileNoTOT(String mobileNo) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateMobileNoTOT
 		//String regex = "0"+"[0-9]{"+(9)+"}"; 
-		//ËÁÒÂ¤ÇÒÁÇèÒ àÃÔèÁµé¹´éÇÂ 0 áÅÐµÒÁ´éÇÂµÑÇÍÑ¡ÉÃ 0-9 ä» 9 µÑÇ
+		//Ã‹ÃÃ’Ã‚Â¤Ã‡Ã’ÃÃ‡Ã¨Ã’ Ã ÃƒÃ”Ã¨ÃÂµÃ©Â¹Â´Ã©Ã‡Ã‚ 0 Ã¡Ã…ÃÂµÃ’ÃÂ´Ã©Ã‡Ã‚ÂµÃ‘Ã‡ÃÃ‘Â¡Ã‰Ãƒ 0-9 Ã¤Â» 9 ÂµÃ‘Ã‡
 		if (mobileNo.trim().length()>0){
 			if (!mobileNo.trim().matches(mobileRegexTOT)){
 				return false;	
@@ -75,9 +75,9 @@ public class IPFMDataValidateUtil {
 		return true;
 	}
 	
-	public static boolean validateHomeNo(String homeNo) throws Exception{
+	public static boolean validateHomeNo(String homeNo) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateHomeNo
 		//String regex = "0"+"[0-9]{"+(8)+"}"; 
-		//ËÁÒÂ¤ÇÒÁÇèÒ àÃÔèÁµé¹´éÇÂ 0 áÅÐµÒÁ´éÇÂµÑÇÍÑ¡ÉÃ 0-9 ä» 8 µÑÇ
+		//Ã‹ÃÃ’Ã‚Â¤Ã‡Ã’ÃÃ‡Ã¨Ã’ Ã ÃƒÃ”Ã¨ÃÂµÃ©Â¹Â´Ã©Ã‡Ã‚ 0 Ã¡Ã…ÃÂµÃ’ÃÂ´Ã©Ã‡Ã‚ÂµÃ‘Ã‡ÃÃ‘Â¡Ã‰Ãƒ 0-9 Ã¤Â» 8 ÂµÃ‘Ã‡
 		if (homeNo.trim().length()>0){
 			if (!homeNo.trim().matches(homeRegex)){
 				return false;	
@@ -92,7 +92,7 @@ public class IPFMDataValidateUtil {
 	 * @return boolean
 	 * @throws Exception
 	 */
-	public static boolean isCollectionEmpty(Collection collection) throws Exception {
+	public static boolean isCollectionEmpty(Collection collection) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference isCollectionEmpty
 		org.hibernate.collection.PersistentSet s = new org.hibernate.collection.PersistentSet();
 	  try{
 		if(collection == null || collection.isEmpty()) {
@@ -108,7 +108,7 @@ public class IPFMDataValidateUtil {
 	 * @param sEmail
 	 * @return boolean
 	 */
-	public static boolean validateEmailFormat(String sEmail){
+	public static boolean validateEmailFormat(String sEmail){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateEmailFormat
 		if(sEmail == null || sEmail.length() < 1){
 			return false;
 		}
@@ -122,7 +122,7 @@ public class IPFMDataValidateUtil {
 		return false;
 	}
 
-	public static boolean validateIPFormat(String ipAddress) {
+	public static boolean validateIPFormat(String ipAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateIPFormat
 		try {
 		if (ipAddress==null || ipAddress.trim().length()==0) return false;
 		String[] ipDigit = ipAddress.split("\\.");
@@ -151,14 +151,14 @@ public class IPFMDataValidateUtil {
 		return true;
 	}
 
-	public static boolean validateMaskFormat(String string) {
+	public static boolean validateMaskFormat(String string) { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateMaskFormat
 		if (!validateNumber(string)) return false;
 		int mask = Integer.parseInt(string);
 		if (mask<0 || mask>32) return false;
 		return true;
 	}
 
-	public static boolean validateIPVersion(String ipVersion) {
+	public static boolean validateIPVersion(String ipVersion) { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateIPVersion
 		if (ipVersion!=null && (ipVersion.equalsIgnoreCase("4"))) return true;
 		return false;
 	}

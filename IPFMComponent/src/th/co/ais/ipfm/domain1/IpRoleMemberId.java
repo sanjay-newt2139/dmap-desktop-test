@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import javax.persistence.Column;
@@ -29,7 +29,7 @@ public class IpRoleMemberId  implements java.io.Serializable {
         return this.roleId;
     }
     
-    public void setRoleId(String roleId) {
+    public void setRoleId(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleId
         this.roleId = roleId;
     }
 
@@ -38,7 +38,7 @@ public class IpRoleMemberId  implements java.io.Serializable {
         return this.userId;
     }
     
-    public void setUserId(String userId) {
+    public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
         this.userId = userId;
     }
 

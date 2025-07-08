@@ -26,7 +26,7 @@ public class HibernateIPGroupMemberDao extends HibernateGenericDao<IPGroupMember
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IPGroupMemberUser> searchUserGroupManage(String groupId) throws DataAccessException {
+	public List<IPGroupMemberUser> searchUserGroupManage(String groupId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchUserGroupManage
 			 Session session = getSessionFactory().getCurrentSession();
 			 Criteria criteria = session.createCriteria(IPGroupMemberUser.class);
 			
@@ -41,7 +41,7 @@ public class HibernateIPGroupMemberDao extends HibernateGenericDao<IPGroupMember
 	}
 
 	@Override
-	public int countSearchUserGroupManage(String groupId) throws DataAccessException {
+	public int countSearchUserGroupManage(String groupId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference countSearchUserGroupManage
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPGroupMemberUser.class);
 
@@ -59,7 +59,7 @@ public class HibernateIPGroupMemberDao extends HibernateGenericDao<IPGroupMember
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IPGroupMemberUser> searchUserGroupManage(String groupId, int maxResult) throws DataAccessException {
+	public List<IPGroupMemberUser> searchUserGroupManage(String groupId, int maxResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchUserGroupManage
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPGroupMemberUser.class);
 		if(maxResult>0){

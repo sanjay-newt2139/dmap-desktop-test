@@ -18,7 +18,7 @@ public class CSSDAuthen {
     private static boolean isInit = false;
     private static String _HASH ="SHA1";
     
-    public static void printData(){
+    public static void printData(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference printData
     	System.out.println("0x03 = " + 0x03);
     	System.out.println("0x0c = " + 0x0c);
     	System.out.println("0x30 = " + 0x30);

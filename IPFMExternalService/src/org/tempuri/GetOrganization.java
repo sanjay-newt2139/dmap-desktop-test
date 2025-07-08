@@ -42,7 +42,7 @@ public class GetOrganization  implements java.io.Serializable {
      * 
      * @param orgcode
      */
-    public void setOrgcode(java.lang.String orgcode) {
+    public void setOrgcode(java.lang.String orgcode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOrgcode
         this.orgcode = orgcode;
     }
 
@@ -62,7 +62,7 @@ public class GetOrganization  implements java.io.Serializable {
      * 
      * @param orgname
      */
-    public void setOrgname(java.lang.String orgname) {
+    public void setOrgname(java.lang.String orgname) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOrgname
         this.orgname = orgname;
     }
 
@@ -82,7 +82,7 @@ public class GetOrganization  implements java.io.Serializable {
      * 
      * @param orgdesc
      */
-    public void setOrgdesc(java.lang.String orgdesc) {
+    public void setOrgdesc(java.lang.String orgdesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOrgdesc
         this.orgdesc = orgdesc;
     }
 
@@ -163,14 +163,14 @@ public class GetOrganization  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -182,7 +182,7 @@ public class GetOrganization  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

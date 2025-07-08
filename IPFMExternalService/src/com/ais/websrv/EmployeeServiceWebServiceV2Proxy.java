@@ -22,18 +22,18 @@ public class EmployeeServiceWebServiceV2Proxy implements com.ais.websrv.Employee
     catch (javax.xml.rpc.ServiceException serviceException) {}
   }
   
-  public String getEndpoint() {
+  public String getEndpoint() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndpoint
     return _endpoint;
   }
   
-  public void setEndpoint(String endpoint) {
+  public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
     _endpoint = endpoint;
     if (employeeServiceWebServiceV2 != null)
       ((javax.xml.rpc.Stub)employeeServiceWebServiceV2)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
     
   }
   
-  public com.ais.websrv.EmployeeServiceWebServiceV2 getEmployeeServiceWebServiceV2() {
+  public com.ais.websrv.EmployeeServiceWebServiceV2 getEmployeeServiceWebServiceV2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeServiceWebServiceV2
     if (employeeServiceWebServiceV2 == null)
       _initEmployeeServiceWebServiceV2Proxy();
     return employeeServiceWebServiceV2;

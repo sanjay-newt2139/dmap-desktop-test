@@ -20,7 +20,7 @@ public class WebDBConfigServiceSoapStub extends org.apache.axis.client.Stub impl
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc1
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -158,7 +158,7 @@ public class WebDBConfigServiceSoapStub extends org.apache.axis.client.Stub impl
         }
     }
 
-    public th.co.ais.ehr.domain.DatabaseAccount WS_AUTHENDB_DBConfig(java.lang.String strProjectID) throws java.rmi.RemoteException {
+    public th.co.ais.ehr.domain.DatabaseAccount WS_AUTHENDB_DBConfig(java.lang.String strProjectID) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_AUTHENDB_DBConfig
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -192,7 +192,7 @@ public class WebDBConfigServiceSoapStub extends org.apache.axis.client.Stub impl
 }
     }
 
-    public th.co.ais.ehr.domain.UserAccount WS_AUTHENDB_USERConfig(java.lang.String strProjectID) throws java.rmi.RemoteException {
+    public th.co.ais.ehr.domain.UserAccount WS_AUTHENDB_USERConfig(java.lang.String strProjectID) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_AUTHENDB_USERConfig
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }

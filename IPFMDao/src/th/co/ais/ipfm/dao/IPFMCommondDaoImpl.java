@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao;
 
 import java.sql.CallableStatement;
@@ -24,20 +25,26 @@ public class IPFMCommondDaoImpl implements IPFMCommondDao {
 	//protected DataSource dataSource;
 	private SessionFactory sessionFactory;
 	
-	public void setSessionFactory(SessionFactory sessionFactory) {
+	public void setSessionFactory(SessionFactory sessionFactory) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSessionFactory
 		this.sessionFactory = sessionFactory;
 	}
 
 	@Override
-	public String getSysdate() throws DataAccessException {
+	public String getSysdate() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSysdate
 		Session session = sessionFactory.getCurrentSession();
-		String sysDate =  (String) session.createSQLQuery("SELECT  to_char(sysdate,'dd/mm/yyyy hh24:mi:ss')   as datenow  FROM dual")
+/**
+DMAP TAG: Query converted: Identifier376
+DMAP ConvertedQuery - SELECT to_char(statement_timestamp(), 'dd / mm/yyyy hh24:mi:ss') as datenow
+**/
+
+//		String sysDate =  (String) session.createSQLQuery("SELECT  to_char(sysdate,'dd/mm/yyyy hh24:mi:ss')   as datenow  FROM dual")
+		String sysDate =  (String) session.createSQLQuery("SELECT to_char(statement_timestamp(), 'dd / mm/yyyy hh24:mi:ss') as datenow")
 				.addScalar("datenow", Hibernate.STRING).uniqueResult();
 		return sysDate;
 	}
 
 	@Override
-	public List<Map> callStore(String callName, List params) {
+	public List<Map> callStore(String callName, List params) { // DMAP Comment : Dead Code Detected - The Following Method has no reference callStore
 		// TODO Auto-generated method stub
 		List resultList = new ArrayList<Map>();
 		System.out.println("Execute from Store >>> "+callName);
@@ -90,7 +97,7 @@ public class IPFMCommondDaoImpl implements IPFMCommondDao {
 //		this.dataSource = dataSource;
 //	}
 	
-	public void execStore(String callName, List params) {
+	public void execStore(String callName, List params) { // DMAP Comment : Dead Code Detected - The Following Method has no reference execStore
 		// TODO Auto-generated method stub
 //		System.out.println("Execute from Store >>> "+callName);
 		
@@ -123,12 +130,17 @@ public class IPFMCommondDaoImpl implements IPFMCommondDao {
 	}
 
 	@Override
-	public List<IPMasterValue> getMasterValue(String valueGroup) {		
+	public List<IPMasterValue> getMasterValue(String valueGroup) {		 // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterValue
 		Connection connection = null;
 		List<IPMasterValue> result = new ArrayList<IPMasterValue>();
 		try{
 			Session session = sessionFactory.getCurrentSession();
 			String sql = "SELECT value_group,name,value,description FROM IP_MASTER_VALUE WHERE value_group = :groupName ";
+/**
+DMAP TAG: Query converted but found same: Identifier375
+DMAP ConvertedQuery - SELECT value_group,name,value,description FROM IP_MASTER_VALUE WHERE value_group = :groupName
+**/
+
 			List dataList =  session.createSQLQuery(sql).setParameter("groupName", valueGroup).list();
 			Iterator iter = dataList.iterator();
 			while(iter.hasNext()) {

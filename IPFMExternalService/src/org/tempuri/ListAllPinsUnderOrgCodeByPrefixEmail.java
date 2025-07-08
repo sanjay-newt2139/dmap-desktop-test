@@ -38,7 +38,7 @@ public class ListAllPinsUnderOrgCodeByPrefixEmail  implements java.io.Serializab
      * 
      * @param vOrgCode
      */
-    public void setVOrgCode(java.lang.String vOrgCode) {
+    public void setVOrgCode(java.lang.String vOrgCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVOrgCode
         this.vOrgCode = vOrgCode;
     }
 
@@ -58,7 +58,7 @@ public class ListAllPinsUnderOrgCodeByPrefixEmail  implements java.io.Serializab
      * 
      * @param vEmail
      */
-    public void setVEmail(java.lang.String vEmail) {
+    public void setVEmail(java.lang.String vEmail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVEmail
         this.vEmail = vEmail;
     }
 
@@ -126,14 +126,14 @@ public class ListAllPinsUnderOrgCodeByPrefixEmail  implements java.io.Serializab
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -145,7 +145,7 @@ public class ListAllPinsUnderOrgCodeByPrefixEmail  implements java.io.Serializab
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

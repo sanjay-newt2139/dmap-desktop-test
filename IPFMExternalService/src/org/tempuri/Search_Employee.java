@@ -58,7 +58,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param employee_ID
      */
-    public void setEmployee_ID(java.lang.String employee_ID) {
+    public void setEmployee_ID(java.lang.String employee_ID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEmployee_ID
         this.employee_ID = employee_ID;
     }
 
@@ -78,7 +78,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param emp_Name
      */
-    public void setEmp_Name(java.lang.String emp_Name) {
+    public void setEmp_Name(java.lang.String emp_Name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEmp_Name
         this.emp_Name = emp_Name;
     }
 
@@ -98,7 +98,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param emp_Last_Name
      */
-    public void setEmp_Last_Name(java.lang.String emp_Last_Name) {
+    public void setEmp_Last_Name(java.lang.String emp_Last_Name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEmp_Last_Name
         this.emp_Last_Name = emp_Last_Name;
     }
 
@@ -118,7 +118,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param ENGEmp_Name
      */
-    public void setENGEmp_Name(java.lang.String ENGEmp_Name) {
+    public void setENGEmp_Name(java.lang.String ENGEmp_Name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setENGEmp_Name
         this.ENGEmp_Name = ENGEmp_Name;
     }
 
@@ -138,7 +138,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param ENGEmp_Last_Name
      */
-    public void setENGEmp_Last_Name(java.lang.String ENGEmp_Last_Name) {
+    public void setENGEmp_Last_Name(java.lang.String ENGEmp_Last_Name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setENGEmp_Last_Name
         this.ENGEmp_Last_Name = ENGEmp_Last_Name;
     }
 
@@ -158,7 +158,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param org_ID
      */
-    public void setOrg_ID(java.lang.String org_ID) {
+    public void setOrg_ID(java.lang.String org_ID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOrg_ID
         this.org_ID = org_ID;
     }
 
@@ -178,7 +178,7 @@ public class Search_Employee  implements java.io.Serializable {
      * 
      * @param org_Name
      */
-    public void setOrg_Name(java.lang.String org_Name) {
+    public void setOrg_Name(java.lang.String org_Name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOrg_Name
         this.org_Name = org_Name;
     }
 
@@ -311,14 +311,14 @@ public class Search_Employee  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -330,7 +330,7 @@ public class Search_Employee  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

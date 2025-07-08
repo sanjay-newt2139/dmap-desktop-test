@@ -72,7 +72,7 @@ public class PropertiesMessageUtil {
 		
 	}
 	
-	public static synchronized String getConfirmMessage(String key){
+	public static synchronized String getConfirmMessage(String key){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getConfirmMessage
 	  	String w_msg = null;
 	  	try{  		
 	  		w_msg = PropertiesMessageUtil.getInstance("confirm").getMSG(key);		
@@ -82,7 +82,7 @@ public class PropertiesMessageUtil {
 	  	return w_msg;
 	}
 	
-	public static synchronized String getErrorMessage(String key){
+	public static synchronized String getErrorMessage(String key){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getErrorMessage
 	  	String w_msg = null;
 	  	try{  		
 	  		w_msg = PropertiesMessageUtil.getInstance("error").getMSG(key);		
@@ -91,7 +91,7 @@ public class PropertiesMessageUtil {
 	  	}
 	  	return w_msg;
 	}
-	public static synchronized String getConfigMessage(String key){
+	public static synchronized String getConfigMessage(String key){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getConfigMessage
 	  	String w_msg = null;
 	  	try{  		
 	  		w_msg = PropertiesMessageUtil.getInstance("config").getMSG(key);		
@@ -100,7 +100,7 @@ public class PropertiesMessageUtil {
 	  	}
 	  	return w_msg;
 	}
-	public static synchronized String getProgramurl(String key){
+	public static synchronized String getProgramurl(String key){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgramurl
 	  	String w_msg = null;
 	  	try{  		
 	  		w_msg = PropertiesMessageUtil.getInstance("programurl").getMSG(key);		

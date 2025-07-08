@@ -24,7 +24,7 @@ public class CorporateLocator extends org.apache.axis.client.Service implements 
     // Use to get a proxy class for CorporateSoap
     private java.lang.String CorporateSoap_address = "http://authenldap.ais.co.th/corporate.asmx";
 
-    public java.lang.String getCorporateSoapAddress() {
+    public java.lang.String getCorporateSoapAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCorporateSoapAddress
         return CorporateSoap_address;
     }
 
@@ -35,7 +35,7 @@ public class CorporateLocator extends org.apache.axis.client.Service implements 
         return CorporateSoapWSDDServiceName;
     }
 
-    public void setCorporateSoapWSDDServiceName(java.lang.String name) {
+    public void setCorporateSoapWSDDServiceName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCorporateSoapWSDDServiceName
         CorporateSoapWSDDServiceName = name;
     }
 
@@ -104,13 +104,13 @@ public class CorporateLocator extends org.apache.axis.client.Service implements 
         }
     }
 
-    public javax.xml.namespace.QName getServiceName() {
+    public javax.xml.namespace.QName getServiceName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceName
         return new javax.xml.namespace.QName("http://tempuri.org/", "Corporate");
     }
 
     private java.util.HashSet ports = null;
 
-    public java.util.Iterator getPorts() {
+    public java.util.Iterator getPorts() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPorts
         if (ports == null) {
             ports = new java.util.HashSet();
             ports.add(new javax.xml.namespace.QName("http://tempuri.org/", "CorporateSoap"));

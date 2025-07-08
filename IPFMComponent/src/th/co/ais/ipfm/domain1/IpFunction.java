@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -26,7 +26,7 @@ public class IpFunction extends MasterDomain implements java.io.Serializable , C
      /**
 	 * 
 	 */
-	 private static final long serialVersionUID = 1L;
+	 private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	 private String funcId;
      private Long version;
      private String funcName;
@@ -58,118 +58,118 @@ public class IpFunction extends MasterDomain implements java.io.Serializable , C
      @Id 
     
     @Column(name="FUNC_ID", unique=true, nullable=false, length=10)
-    public String getFuncId() {
+    public String getFuncId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncId
         return this.funcId;
     }
     
-    public void setFuncId(String funcId) {
+    public void setFuncId(String funcId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncId
         this.funcId = funcId;
     }
     @Version
     @Column(name="VERSION", precision=10, scale=0)
-    public Long getVersion() {
+    public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Long version) {
+    public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     
     @Column(name="FUNC_NAME", length=100)
-    public String getFuncName() {
+    public String getFuncName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncName
         return this.funcName;
     }
     
-    public void setFuncName(String funcName) {
+    public void setFuncName(String funcName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncName
         this.funcName = funcName;
     }
     
     @Column(name="MENU_LEVEL", precision=22, scale=0)
-    public Integer getMenuLevel() {
+    public Integer getMenuLevel() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMenuLevel
         return this.menuLevel;
     }
     
-    public void setMenuLevel(Integer menuLevel) {
+    public void setMenuLevel(Integer menuLevel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMenuLevel
         this.menuLevel = menuLevel;
     }
     
     @Column(name="MENU_SEQ", precision=22, scale=0)
-    public Integer getMenuSeq() {
+    public Integer getMenuSeq() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMenuSeq
         return this.menuSeq;
     }
     
-    public void setMenuSeq(Integer menuSeq) {
+    public void setMenuSeq(Integer menuSeq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMenuSeq
         this.menuSeq = menuSeq;
     }
     
     @Column(name="FUNC_MATHER_ID", length=10)
-    public String getFuncMatherId() {
+    public String getFuncMatherId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncMatherId
         return this.funcMatherId;
     }
     
-    public void setFuncMatherId(String funcMatherId) {
+    public void setFuncMatherId(String funcMatherId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncMatherId
         this.funcMatherId = funcMatherId;
     }
     
     @Column(name="PROGRAM_ID", length=20)
-    public String getProgramId() {
+    public String getProgramId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgramId
         return this.programId;
     }
     
-    public void setProgramId(String programId) {
+    public void setProgramId(String programId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgramId
         this.programId = programId;
     }
     
     @Column(name="ACTION_URL", length=1000)
-    public String getActionUrl() {
+    public String getActionUrl() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getActionUrl
         return this.actionUrl;
     }
     
-    public void setActionUrl(String actionUrl) {
+    public void setActionUrl(String actionUrl) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setActionUrl
         this.actionUrl = actionUrl;
     }
     
     @Column(name="ROW_ID", unique=true, length=50)
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
     @Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
 	@Column(name="CREATE_DATE")
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
 	@Column(name="UPDATE_BY")
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 	
 	@Column(name="UPDATE_DATE")
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 	
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
     

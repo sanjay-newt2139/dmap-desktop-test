@@ -34,7 +34,7 @@ public class RangeIPAction extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		rangeIPBean = getRangeIPBean();		
@@ -47,13 +47,13 @@ public class RangeIPAction extends AbstractAction {
 	}
 	
 	
-	public void importData(){
+	public void importData(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference importData
 		RangeIPBean rangeIPBean = getRangeIPBean();
 		rangeIPBean.setImportError("1");
 		System.out.println("--------- rangeIPBean = "+rangeIPBean.getImportError());
 	}
 	
-	public void importData1(){
+	public void importData1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference importData1
 		RangeIPBean rangeIPBean = getRangeIPBean();
 		rangeIPBean.setImportError("2");
 		System.out.println("--------- rangeIPBean = "+rangeIPBean.getImportError());
@@ -69,11 +69,11 @@ public class RangeIPAction extends AbstractAction {
 		}
 		return programID;
 	}
-	public String action_back(){
+	public String action_back(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_back
 		search();
 		return "IPSIP001";
 	}
-	public String action_popupEdit(){
+	public String action_popupEdit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_popupEdit
 		RangeIPBean rangeIPBean = getRangeIPBean();
 		rangeIPBean.getPopupIPRange().setEdIp1(getRequestParameter("rangeIP"));
 		if (getRequestParameter("lockFieldFlag").equalsIgnoreCase("true")){
@@ -85,7 +85,7 @@ public class RangeIPAction extends AbstractAction {
 		setRangeIPBean(rangeIPBean);
 		return null;
 	}
-	public String action_viewDetail(){
+	public String action_viewDetail(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_viewDetail
 		RangeIPBean rangeIPBean = getRangeIPBean();
 		rangeIPBean.getIpRange().setStIp1(getRequestParameter("rangeIP"));
 		List<IPRange> ipRangeList = new ArrayList<IPRange>();
@@ -194,7 +194,7 @@ public class RangeIPAction extends AbstractAction {
 		return flgValid;
 	}
 	
-	public String addRange(){
+	public String addRange(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addRange
 		RangeIPService rangeIPService = (RangeIPService)JSFServiceFinderUtil.getInstance().getBean("rangeIPService");	
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		if(rangeIPService!=null){
@@ -218,7 +218,7 @@ public class RangeIPAction extends AbstractAction {
 		return "IPURS002_02";
 	}
 	
-	public String editRange(){
+	public String editRange(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editRange
 		RangeIPService rangeIPService = (RangeIPService)JSFServiceFinderUtil.getInstance().getBean("rangeIPService");	
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		if(rangeIPService!=null){

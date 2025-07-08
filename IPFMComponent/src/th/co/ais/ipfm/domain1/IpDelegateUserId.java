@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 8 µ.¤. 2553, 16:51:31 by Hibernate Tools 3.2.1.GA
+// Generated 8 Âµ.Â¤. 2553, 16:51:31 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -36,7 +36,7 @@ public class IpDelegateUserId    implements java.io.Serializable {
         return this.userId;
     }
     
-    public void setUserId(String userId) {
+    public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
         this.userId = userId;
     }
     
@@ -45,7 +45,7 @@ public class IpDelegateUserId    implements java.io.Serializable {
         return this.delegateUserId;
     }
     
-    public void setDelegateUserId(String delegateUserId) {
+    public void setDelegateUserId(String delegateUserId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDelegateUserId
         this.delegateUserId = delegateUserId;
     }
 

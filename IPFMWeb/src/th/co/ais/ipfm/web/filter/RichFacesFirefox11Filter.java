@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 public class RichFacesFirefox11Filter implements Filter{
 
 	@Override
-	public void destroy() {
+	public void destroy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference destroy
 		// TODO Auto-generated method stub
 		
 	}
@@ -35,7 +35,7 @@ public class RichFacesFirefox11Filter implements Filter{
     }
 
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {
+	public void init(FilterConfig arg0) throws ServletException { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		
 	}

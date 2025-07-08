@@ -49,12 +49,12 @@ public class IpReportLayoutAction  extends AbstractAction {
 		
 		
 		@Override
-		public boolean validate() {
+		public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 			// TODO Auto-generated method stub
 			return false;
 		}
 		
-		public void popupLayoutInfo()throws Exception{
+		public void popupLayoutInfo()throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupLayoutInfo
 			IpReportDetailBean bean = getBean();
 			String reportId = getRequestParameter("reportId");
 			List<Iprur001Result1> result1 = new ArrayList<Iprur001Result1>();

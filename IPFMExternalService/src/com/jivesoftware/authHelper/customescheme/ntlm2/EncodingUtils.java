@@ -15,12 +15,12 @@ public final class EncodingUtils {
     public static final int SP = 32; // <US-ASCII SP, space (32)>
     public static final int HT = 9;  // <US-ASCII HT, horizontal-tab (9)>
 
-    public static final Charset UTF_8 = Charset.forName("UTF-8");
+    public static final Charset UTF_8 = Charset.forName("UTF-8"); // DMAP Comment : Dead Code Detected - The Following Field has no reference UTF_8
     public static final Charset ASCII = Charset.forName("US-ASCII");
-    public static final Charset ISO_8859_1 = Charset.forName("ISO-8859-1");
+    public static final Charset ISO_8859_1 = Charset.forName("ISO-8859-1"); // DMAP Comment : Dead Code Detected - The Following Field has no reference ISO_8859_1
 
 
-    public static boolean isWhitespace(char ch) {
+    public static boolean isWhitespace(char ch) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isWhitespace
         return ch == EncodingUtils.SP || ch == EncodingUtils.HT || ch == EncodingUtils.CR || ch == EncodingUtils.LF;
     }
 
@@ -105,7 +105,7 @@ public final class EncodingUtils {
      * @param data the string to be encoded
      * @return The string as a byte array.
      */
-    public static byte[] getAsciiBytes(final String data) {
+    public static byte[] getAsciiBytes(final String data) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAsciiBytes
 
         if (data == null) {
             throw new IllegalArgumentException("Parameter may not be null");

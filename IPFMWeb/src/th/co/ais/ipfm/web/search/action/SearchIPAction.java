@@ -24,7 +24,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 public class SearchIPAction  extends AbstractAction {
 	
 	public SearchIPBean searchIPBean;
-	public UserSession  userSession;
+	public UserSession  userSession; // DMAP Comment : Dead Code Detected - The Following Field has no reference userSession
 	
 	
 	public SearchIPBean getSearchIPBean() {
@@ -36,11 +36,11 @@ public class SearchIPAction  extends AbstractAction {
 	public UserSession getUserSession() {
 		  return (UserSession) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userSession");
 		}
-	public void setUserSession(UserSession userSession) {
+	public void setUserSession(UserSession userSession) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserSession
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userSession", userSession);
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		searchIPBean = getSearchIPBean();
@@ -126,7 +126,7 @@ public class SearchIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void popupIPInfo(){
+	public void popupIPInfo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupIPInfo
 		SearchIPService searchURService = (SearchIPService)JSFServiceFinderUtil.getInstance().getBean("searchIPService");
 		SearchIPBean bean = getSearchIPBean();
 		String ipAddress = getRequestParameter("ipAddress");
@@ -155,14 +155,14 @@ public class SearchIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void  reset() throws Exception {
+	public void  reset() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference reset
 		SearchIPBean bean = getSearchIPBean();
 		bean.setSearchList(null);
 		init();
 	}
 	
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		boolean flgValid = true;
 		SearchIPBean bean = getSearchIPBean();
 		if (IPFMUtils.ifBlank(bean.getIpInfo().getStIp1(), "").trim().length()==0 

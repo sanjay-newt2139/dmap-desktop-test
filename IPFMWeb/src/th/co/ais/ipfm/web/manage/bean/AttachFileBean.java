@@ -9,11 +9,11 @@ public class AttachFileBean implements Serializable{
 	
 	private List<IpUrAttachment> listAttach;
 
-	public List<IpUrAttachment> getListAttach() {
+	public List<IpUrAttachment> getListAttach() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getListAttach
 		return listAttach;
 	}
 
-	public void setListAttach(List<IpUrAttachment> listAttach) {
+	public void setListAttach(List<IpUrAttachment> listAttach) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setListAttach
 		this.listAttach = listAttach;
 	}
 	

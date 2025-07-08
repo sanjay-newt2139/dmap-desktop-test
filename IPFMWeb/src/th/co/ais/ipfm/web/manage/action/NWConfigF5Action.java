@@ -53,7 +53,7 @@ public class NWConfigF5Action extends AbstractAction{
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("networkConfigBean", networkConfigBean);
 	}
 	
-	public void retrieveData(ActionEvent event){
+	public void retrieveData(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference retrieveData
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		F5Service f5Service = (F5Service)JSFServiceFinderUtil.getInstance().getBean("f5Service");
@@ -172,7 +172,7 @@ public class NWConfigF5Action extends AbstractAction{
 
 	}
 	
-	public void otherIp(){
+	public void otherIp(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference otherIp
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		bean.setInsertF5Mode(true);
 		boolean checkAll = bean.getF5().isCheckAll();
@@ -185,7 +185,7 @@ public class NWConfigF5Action extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void addData(ActionEvent event){
+	public void addData(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addData
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 	 try{
@@ -373,7 +373,7 @@ public class NWConfigF5Action extends AbstractAction{
 	}
 	
 
-	public void editF5(ActionEvent event){
+	public void editF5(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editF5
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 	 try{
@@ -489,7 +489,7 @@ public class NWConfigF5Action extends AbstractAction{
 		return resultString;
 	}
 	
-	public void initEdit(ActionEvent event){
+	public void initEdit(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference initEdit
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		String rowNumber = getRequestParameter("rowNumber");
@@ -559,7 +559,7 @@ public class NWConfigF5Action extends AbstractAction{
 //		setNetworkConfigBean(bean);
 //	}
 	
-	public void findSubUr(){
+	public void findSubUr(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSubUr
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		
@@ -578,7 +578,7 @@ public class NWConfigF5Action extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void listener(UploadEvent event) throws Exception{
+	public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService)JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		F5Service f5Service = (F5Service)JSFServiceFinderUtil.getInstance().getBean("f5Service");
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
@@ -704,7 +704,7 @@ public class NWConfigF5Action extends AbstractAction{
         setNetworkConfigBean(bean);
     } 
 	
-	public void deleteF5(String urNo,String subUrNo){
+	public void deleteF5(String urNo,String subUrNo){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteF5
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		F5Service f5Service = (F5Service)JSFServiceFinderUtil.getInstance().getBean("f5Service");
 		IpUrF5 f5 = f5Service.findFirewall(urNo, subUrNo);
@@ -748,7 +748,7 @@ public class NWConfigF5Action extends AbstractAction{
 	}
 	
 	
-	public void findIPNode(ActionEvent event){
+	public void findIPNode(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findIPNode
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		F5Service f5Service = (F5Service)JSFServiceFinderUtil.getInstance().getBean("f5Service");
 		IPF5Bean f5Bean = bean.getF5();
@@ -764,14 +764,14 @@ public class NWConfigF5Action extends AbstractAction{
 		setNetworkConfigBean(bean);		
 	}
 	
-	public void errorMessage(){
+	public void errorMessage(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference errorMessage
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		System.out.println("System Error Message for F5");
 		System.out.println("Message >> "+bean.getF5().getErrorMessage());		
 		setNetworkConfigBean(bean);
 	}
 	
-	public void checkFileTemplate() {
+	public void checkFileTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFileTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -785,7 +785,7 @@ public class NWConfigF5Action extends AbstractAction{
     }
 
 	
-	public void downloadTemplate() {
+	public void downloadTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -801,13 +801,13 @@ public class NWConfigF5Action extends AbstractAction{
     }
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -838,7 +838,7 @@ public class NWConfigF5Action extends AbstractAction{
 		return flgValid;
 	}
 	
-	public void clearSnatIP(){
+	public void clearSnatIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearSnatIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		if (bean.getF5().getIsSnatIP()!=null && bean.getF5().getIsSnatIP().equalsIgnoreCase("N")) {
 			bean.getF5().setSnatIp("");

@@ -10,7 +10,7 @@ public class TDLType implements TreeNode {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6514596192023597908L;
+	private static final long serialVersionUID = 6514596192023597908L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	private long id;
 	private Map tdlStatuses = new LinkedHashMap();
 	private String title;
@@ -38,7 +38,7 @@ public class TDLType implements TreeNode {
 		this.id = id;
 	}
 	
-	public void addTDLStatus(TDLStatus tdlStatus) {
+	public void addTDLStatus(TDLStatus tdlStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference addTDLStatus
 		addChild(Long.toString(tdlStatus.getId()), tdlStatus);
 		tdlStatus.setParent(this);
 	}
@@ -46,50 +46,50 @@ public class TDLType implements TreeNode {
 		tdlStatuses.put(identifier, child);
 	}
 
-	public TreeNode getChild(Object id) {
+	public TreeNode getChild(Object id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getChild
 		return (TreeNode) tdlStatuses.get(id);
 	}
 
-	public Iterator getChildren() {
+	public Iterator getChildren() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getChildren
 		return tdlStatuses.entrySet().iterator();
 	}
 
-	public Object getData() {
+	public Object getData() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getData
 		return this;
 	}
 
-	public TreeNode getParent() {
+	public TreeNode getParent() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getParent
 		return tdlRoot;
 	}
 
-	public boolean isLeaf() {
+	public boolean isLeaf() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isLeaf
 		return tdlStatuses.isEmpty();
 	}
 
-	public void removeChild(Object id) {
+	public void removeChild(Object id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference removeChild
 		tdlStatuses.remove(id);
 	}
 
-	public void setData(Object data) {
+	public void setData(Object data) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setData
 	}
 
 	public void setParent(TreeNode parent) {
 		this.tdlRoot = (TDLRoot) parent;
 	}
 
-	public String getTitle() {
+	public String getTitle() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTitle
 		return title;
 	}
 
-	public void setTitle(String title) {
+	public void setTitle(String title) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTitle
 		this.title = title;
 	}
 
-	public int getCounter() {
+	public int getCounter() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCounter
 		return counter;
 	}
 
-	public void setCounter(int counter) {
+	public void setCounter(int counter) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCounter
 		this.counter = counter;
 	}
 
@@ -97,31 +97,31 @@ public class TDLType implements TreeNode {
 		return id;
 	}
 
-	public TDLRoot getTdlRoot() {
+	public TDLRoot getTdlRoot() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTdlRoot
 		return tdlRoot;
 	}
 
-	public void setTdlRoot(TDLRoot tdlRoot) {
+	public void setTdlRoot(TDLRoot tdlRoot) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTdlRoot
 		this.tdlRoot = tdlRoot;
 	}
 
-	public String getType() {
+	public String getType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getType
 		return "tdlType";
 	}
 
-	public String getAction() {
+	public String getAction() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAction
 		return action;
 	}
 
-	public void setAction(String action) {
+	public void setAction(String action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAction
 		this.action = action;
 	}
 
-	public String getUrType() {
+	public String getUrType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrType
 		return urType;
 	}
 
-	public void setUrType(String urType) {
+	public void setUrType(String urType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrType
 		this.urType = urType;
 	}
 

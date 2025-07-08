@@ -53,75 +53,75 @@ public class IPRole {
 
 	
 
-	public List<IPRoleMember> getMemberCollection() {
+	public List<IPRoleMember> getMemberCollection() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMemberCollection
 		return memberCollection;
 	}
 
-	public void setMemberCollection(List<IPRoleMember> memberCollection) {
+	public void setMemberCollection(List<IPRoleMember> memberCollection) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMemberCollection
 		this.memberCollection = memberCollection;
 	}
 
-	public String getRoleId() {
+	public String getRoleId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleId
 		return roleId;
 	}
 
-	public void setRoleId(String roleId) {
+	public void setRoleId(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleId
 		this.roleId = roleId;
 	}
 
-	public String getRoleName() {
+	public String getRoleName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleName
 		return roleName;
 	}
 
-	public void setRoleName(String roleName) {
+	public void setRoleName(String roleName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleName
 		this.roleName = roleName;
 	}
 
-	public String getCreateBy() {
+	public String getCreateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateBy
 		return createBy;
 	}
 
-	public void setCreateBy(String createBy) {
+	public void setCreateBy(String createBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateBy
 		this.createBy = createBy;
 	}
 
-	public Date getCreateDate() {
+	public Date getCreateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateDate
 		return createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(Date createDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateDate
 		this.createDate = createDate;
 	}
 
-	public String getUpdateBy() {
+	public String getUpdateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateBy
 		return updateBy;
 	}
 
-	public void setUpdateBy(String updateBy) {
+	public void setUpdateBy(String updateBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateBy
 		this.updateBy = updateBy;
 	}
 
-	public Date getUpdateDate() {
+	public Date getUpdateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateDate
 		return updateDate;
 	}
 
-	public void setUpdateDate(Date updateDate) {
+	public void setUpdateDate(Date updateDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateDate
 		this.updateDate = updateDate;
 	}
 
-	public String getRowId() {
+	public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
 		return rowId;
 	}
 
-	public void setRowId(String rowId) {
+	public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
 		this.rowId = rowId;
 	}
 
-	public Integer getVersion() {
+	public Integer getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
 		return version;
 	}
 
-	public void setVersion(Integer version) {
+	public void setVersion(Integer version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
 		this.version = version;
 	}
 

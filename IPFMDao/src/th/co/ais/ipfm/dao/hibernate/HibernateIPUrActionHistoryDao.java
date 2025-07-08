@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 
@@ -23,7 +24,7 @@ import th.co.ais.ipfm.util.IPFMConstant;
 public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActionHistory> implements IPUrActionHistoryDao{
 
 	@Override
-	public List<IpUrActionHistory> getHistoryList(String urNo) throws DataAccessException {
+	public List<IpUrActionHistory> getHistoryList(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getHistoryList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrActionHistory.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -34,7 +35,7 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 	}
 	
 	@Override
-	public IpUrActionHistory getIpUrActionHistory(String urNo) throws DataAccessException {
+	public IpUrActionHistory getIpUrActionHistory(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrActionHistory
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrActionHistory.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -42,7 +43,7 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 	}
 
 	@Override
-	public IpUrActionHistory getPMAssign(String urNo, String urType,
+	public IpUrActionHistory getPMAssign(String urNo, String urType, // DMAP Comment : Dead Code Detected - The Following Method has no reference getPMAssign
 			String subUrNo, String subUrType) {
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrActionHistory.class);
@@ -61,22 +62,32 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 	}
 	
 	@Override
-	public void deleteByUrNo(String urNo) throws DataAccessException {
+	public void deleteByUrNo(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByUrNo
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_UR_ACTION_HISTORY AC WHERE AC.UR_NO=?";
+/**
+DMAP TAG: Query converted but found same: Identifier129
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION_HISTORY AC WHERE AC.UR_NO=?
+**/
+
 		session.createSQLQuery(sql).setString(0, urNo).executeUpdate();
 		
 	}
 
 	@Override
-	public void copyHistory(IpUrActionHistory history) {
+	public void copyHistory(IpUrActionHistory history) { // DMAP Comment : Dead Code Detected - The Following Method has no reference copyHistory
 		Session session = getSessionFactory().getCurrentSession();
 		session.save(history);
 	}
 	
 	@Override
-	public BigDecimal getNextActionSeq(String urNo, String urType, String subUrNo) {
+	public BigDecimal getNextActionSeq(String urNo, String urType, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNextActionSeq
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier128
+DMAP ConvertedQuery - SELECT coalesce(MAX(CAST(ACTION_SEQ AS numeric)), 0)+1 as NEWSEQ FROM IP_UR_ACTION_HISTORY WHERE UR_NO='urNo' AND UR_TYPE = 'urType' AND SUB_UR_NO = 'subUrNo'
+**/
+
 		String seqNo =  (String) session.createSQLQuery("SELECT NVL(MAX(ACTION_SEQ),0)+1 as NEWSEQ " +
 				"FROM IP_UR_ACTION_HISTORY WHERE UR_NO='"+urNo+"' AND " +
 				"UR_TYPE = '"+urType+"' AND SUB_UR_NO = '"+subUrNo+"' " )
@@ -85,18 +96,28 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 	}
 	
 	@Override
-	public void deleteNA(String urNo) {
+	public void deleteNA(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteNA
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_UR_ACTION_HISTORY AC WHERE AC.UR_NO=? AND AC.SUB_UR_NO='NA'";
+/**
+DMAP TAG: Query converted but found same: Identifier127
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION_HISTORY AC WHERE AC.UR_NO=? AND AC.SUB_UR_NO='NA'
+**/
+
 		session.createSQLQuery(sql).setString(0, urNo).executeUpdate();
 	}
 
 	@Override
-	public List<IpUrActionHistory> findHistoryAction(String urNo, String urType) {
+	public List<IpUrActionHistory> findHistoryAction(String urNo, String urType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findHistoryAction
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrActionHistory> result = new ArrayList<IpUrActionHistory>();
 		String sql = "select distinct t.ur_no,t.ur_type,t.sub_ur_no,t.sub_ur_type " +
 					" from ip_ur_action_history t where t.ur_no = ? and t.ur_type = ? order by t.sub_ur_type,t.sub_ur_no";
+/**
+DMAP TAG: Query converted but found same: Identifier126
+DMAP ConvertedQuery - select distinct t.ur_no,t.ur_type,t.sub_ur_no,t.sub_ur_type from ip_ur_action_history t where t.ur_no = ? and t.ur_type = ? order by t.sub_ur_type,t.sub_ur_no
+**/
+
 		List list = session.createSQLQuery(sql).addScalar("ur_no",Hibernate.STRING)
 					.addScalar("ur_type",Hibernate.STRING)
 					.addScalar("sub_ur_no",Hibernate.STRING)
@@ -117,13 +138,18 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 	}
 	
 	@Override
-	public List<IpUrActionHistory> findHistoryAction(String urNo,String subUrNo, String urType,String urStatus) {
+	public List<IpUrActionHistory> findHistoryAction(String urNo,String subUrNo, String urType,String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findHistoryAction
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrActionHistory> result = new ArrayList<IpUrActionHistory>();
 		String sql = "select distinct t.ur_no,t.ur_type,t.sub_ur_no,t.sub_ur_type " +
 					" from ip_ur_action_history t where t.ur_no = ? and t.sub_ur_no = ? " +
 					" and t.ur_type = ? and t.ur_status = ? " +
 					" order by t.sub_ur_type,t.sub_ur_no";
+/**
+DMAP TAG: Query converted but found same: Identifier125
+DMAP ConvertedQuery - select distinct t.ur_no,t.ur_type,t.sub_ur_no,t.sub_ur_type from ip_ur_action_history t where t.ur_no = ? and t.sub_ur_no = ? and t.ur_type = ? and t.ur_status = ? order by t.sub_ur_type,t.sub_ur_no
+**/
+
 		List list = session.createSQLQuery(sql).addScalar("ur_no",Hibernate.STRING)
 					.addScalar("ur_type",Hibernate.STRING)
 					.addScalar("sub_ur_no",Hibernate.STRING)
@@ -146,7 +172,7 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IpUrActionHistory> findListTeamReject(String urNo, String subUrNo) {
+	public List<IpUrActionHistory> findListTeamReject(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findListTeamReject
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrActionHistory> result = new ArrayList<IpUrActionHistory>();
 		String sql = "select ac.* from ip_ur_action_history ac , "+
@@ -162,6 +188,11 @@ public class HibernateIPUrActionHistoryDao extends HibernateGenericDao<IpUrActio
 			" ) dd where ac.action_user_id=dd.actionName  "+
 			" and ac.update_date=dd.maxDate and ac.ur_no = ? and ac.sub_ur_no = ? "+
 			" order by ac.action_seq";
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier124
+DMAP ConvertedQuery - select ac.* from ip_ur_action_history ac, (select distinct(i.action_user_id) actionName, max(CAST(i.update_date AS numeric)) maxDate from ip_ur_action_history i WHERE i.ur_no = ? and i.sub_ur_no = ? and i.ur_status in ('COMPLETE_TEAM_WAIT', 'REJECT_TEAM_WAIT', 'COMPLETE_TEAM', 'REJECT_TEAM') group by i.action_user_id having max(CAST(i.update_date AS numeric)) > (select max(CAST(h.update_date AS numeric)) from ip_ur_action_history h WHERE h.ur_no = ? and h.sub_ur_no = ? and h.ur_status in ('PM_ASSIGN'))) dd WHERE ac.action_user_id=dd.actionName and ac.update_date=dd.maxDate and ac.ur_no = ? and ac.sub_ur_no = ? order by ac.action_seq
+**/
+
 		result = session.createSQLQuery(sql).addEntity(IpUrActionHistory.class)
 		.setString(0, urNo).setString(1, subUrNo).setString(2, urNo).setString(3, subUrNo).setString(4, urNo).setString(5, subUrNo).list();
 		return result;

@@ -50,26 +50,26 @@ public class CustomNTLM2Scheme extends CustomNTLM2SchemeBase {
         this.challenge = null;
     }
 
-    public String getSchemeName() {
+    public String getSchemeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSchemeName
         return "ntlm";
     }
 
-    public String getParameter(String name) {
+    public String getParameter(String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getParameter
         // String parameters not supported
         return null;
     }
 
-    public String getRealm() {
+    public String getRealm() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRealm
         // NTLM does not support the concept of an authentication realm
         return null;
     }
 
-    public boolean isConnectionBased() {
+    public boolean isConnectionBased() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isConnectionBased
         return true;
     }
 
 
-    protected void parseChallenge(
+    protected void parseChallenge( // DMAP Comment : Dead Code Detected - The Following Method has no reference parseChallenge
             final CharArrayBuffer buffer,
             int beginIndex, int endIndex) throws MalformedChallengeException {
         String challenge = buffer.substringTrimmed(beginIndex, endIndex);
@@ -87,7 +87,7 @@ public class CustomNTLM2Scheme extends CustomNTLM2SchemeBase {
     }
 
 
-    public String authenticate(
+    public String authenticate( // DMAP Comment : Dead Code Detected - The Following Method has no reference authenticate
             final Credentials credentials,
             final HttpMethod method) throws AuthenticationException {
         NTCredentials ntcredentials = null;
@@ -122,7 +122,7 @@ public class CustomNTLM2Scheme extends CustomNTLM2SchemeBase {
         return buffer.toString();
     }
 
-    public boolean isComplete() {
+    public boolean isComplete() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isComplete
         return this.state == State.MSG_TYPE3_GENERATED || this.state == State.FAILED;
     }
 

@@ -56,90 +56,90 @@ public class IpEmailNotify implements java.io.Serializable , Cloneable{
 	@Column(name="VERSION")
     private Integer version;
     
-	public Integer getVersion() {
+	public Integer getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
 		return version;
 	}
 	
-	public void setVersion(Integer version) {
+	public void setVersion(Integer version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
 		this.version = version;
 	}
-	public String getUserId() {
+	public String getUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserId
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
 		this.userId = userId;
 	}
 
-	public String getUrNo() {
+	public String getUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNo
 		return urNo;
 	}
 
-	public void setUrNo(String urNo) {
+	public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
 		this.urNo = urNo;
 	}
 
-	public String getUrStatus() {
+	public String getUrStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrStatus
 		return urStatus;
 	}
 
-	public void setUrStatus(String urStatus) {
+	public void setUrStatus(String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrStatus
 		this.urStatus = urStatus;
 	}
 
-	public String getEmailLinkStatus() {
+	public String getEmailLinkStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmailLinkStatus
 		return emailLinkStatus;
 	}
 
-	public void setEmailLinkStatus(String emailLinkStatus) {
+	public void setEmailLinkStatus(String emailLinkStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEmailLinkStatus
 		this.emailLinkStatus = emailLinkStatus;
 	}
 
-	public String getEmailCode() {
+	public String getEmailCode() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmailCode
 		return emailCode;
 	}
 
-	public void setEmailCode(String emailCode) {
+	public void setEmailCode(String emailCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEmailCode
 		this.emailCode = emailCode;
 	}
 
-	public String getRowId() {
+	public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
 		return rowId;
 	}
 
-	public void setRowId(String rowId) {
+	public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
 		this.rowId = rowId;
 	}
 
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
 	@Override

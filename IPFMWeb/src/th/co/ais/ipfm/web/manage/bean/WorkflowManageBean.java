@@ -4,6 +4,6 @@ import java.io.Serializable;
 
 public class WorkflowManageBean implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
 }

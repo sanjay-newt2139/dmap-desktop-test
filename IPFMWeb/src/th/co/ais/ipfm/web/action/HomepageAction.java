@@ -6,14 +6,14 @@ import th.co.ais.ipfm.web.util.IPFMWebUtil;
 
 public class HomepageAction extends AbstractAction {
 	
-	public String gotoHomepage(){
+	public String gotoHomepage(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference gotoHomepage
 		//System.out.println("------- gotoHomepage ------");
 		String returnPage = (String)IPFMWebUtil.getObjFromSession("fromPage");
 		if (returnPage==null || returnPage.trim().length()==0) returnPage = "homePage";
 		return returnPage;
 	}
 
-	public String gotoInitTeamManageAction(){
+	public String gotoInitTeamManageAction(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference gotoInitTeamManageAction
 		String returnPage = (String)IPFMWebUtil.getObjFromSession("fromPage");
 		if (returnPage==null || returnPage.trim().length()==0) returnPage = "homePage";
 		TeamManageAction teamManageAction= new TeamManageAction();
@@ -21,7 +21,7 @@ public class HomepageAction extends AbstractAction {
 		return returnPage;
 	}
 	
-	public String gotoHomeSearchURAction(){
+	public String gotoHomeSearchURAction(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference gotoHomeSearchURAction
 		IPFMWebUtil.storeOnSession("fromPage", null);
 		String returnPage = (String)IPFMWebUtil.getObjFromSession("fromPage");
 		if (returnPage==null || returnPage.trim().length()==0) returnPage = "homePage";
@@ -41,7 +41,7 @@ public class HomepageAction extends AbstractAction {
 	}
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

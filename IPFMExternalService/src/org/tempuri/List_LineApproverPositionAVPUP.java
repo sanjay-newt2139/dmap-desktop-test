@@ -38,7 +38,7 @@ public class List_LineApproverPositionAVPUP  implements java.io.Serializable {
      * 
      * @param pin
      */
-    public void setPin(java.lang.String pin) {
+    public void setPin(java.lang.String pin) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPin
         this.pin = pin;
     }
 
@@ -58,7 +58,7 @@ public class List_LineApproverPositionAVPUP  implements java.io.Serializable {
      * 
      * @param position
      */
-    public void setPosition(java.lang.String position) {
+    public void setPosition(java.lang.String position) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPosition
         this.position = position;
     }
 
@@ -126,14 +126,14 @@ public class List_LineApproverPositionAVPUP  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -145,7 +145,7 @@ public class List_LineApproverPositionAVPUP  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

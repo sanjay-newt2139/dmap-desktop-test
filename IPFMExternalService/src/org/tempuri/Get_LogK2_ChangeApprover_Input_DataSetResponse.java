@@ -34,7 +34,7 @@ public class Get_LogK2_ChangeApprover_Input_DataSetResponse  implements java.io.
      * 
      * @param get_LogK2_ChangeApprover_Input_DataSetResult
      */
-    public void setGet_LogK2_ChangeApprover_Input_DataSetResult(org.tempuri.Get_LogK2_ChangeApprover_Input_DataSetResponseGet_LogK2_ChangeApprover_Input_DataSetResult get_LogK2_ChangeApprover_Input_DataSetResult) {
+    public void setGet_LogK2_ChangeApprover_Input_DataSetResult(org.tempuri.Get_LogK2_ChangeApprover_Input_DataSetResponseGet_LogK2_ChangeApprover_Input_DataSetResult get_LogK2_ChangeApprover_Input_DataSetResult) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setGet_LogK2_ChangeApprover_Input_DataSetResult
         this.get_LogK2_ChangeApprover_Input_DataSetResult = get_LogK2_ChangeApprover_Input_DataSetResult;
     }
 
@@ -89,14 +89,14 @@ public class Get_LogK2_ChangeApprover_Input_DataSetResponse  implements java.io.
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -108,7 +108,7 @@ public class Get_LogK2_ChangeApprover_Input_DataSetResponse  implements java.io.
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

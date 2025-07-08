@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -57,19 +58,42 @@ public class HibernateIpvMonitorReqncDao extends HibernateGenericDao<IpvMonitorR
 //	}
 	
 	@Override
-	public List<IpvMonitorReqnc> findMonitorReqNC(String userId) throws Exception {
+	public List<IpvMonitorReqnc> findMonitorReqNC(String userId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findMonitorReqNC
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvMonitorReqnc> result = new ArrayList<IpvMonitorReqnc>();
+/**
+DMAP TAG: Query converted but found same: Identifier315
+DMAP ConvertedQuery - select distinct(role_id) role from ip_role_member rm where rm.role_id in ('R06','R07','R08') and rm.user_id=?
+**/
+
 		List<String> role = session.createSQLQuery("select distinct(role_id) role from ip_role_member rm where rm.role_id in ('R06','R07','R08') and rm.user_id=? ").addScalar("role", Hibernate.STRING).setString(0, userId).list();
 		
 		List result1 = null;
 		if (role != null && role.size() > 0) {
 			StringBuffer sql = new StringBuffer();
 			if(role.contains("R08") || (role.contains("R06") && role.contains("R07"))) {
+/**
+DMAP TAG: Query converted but found same: Identifier314
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t order by t.urNo desc , t.subUrNo asc 
+**/
+
+/**
+**/
+
 				sql.append("select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t order by t.urNo desc , t.subUrNo asc ");
 			} else if(role.contains("R06")) {
+/**
+DMAP TAG: Query converted but found same: Identifier313
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType='AT' order by t.urNo desc, t.subUrNo asc 
+**/
+
 				sql.append("select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType='AT' order by t.urNo desc, t.subUrNo asc ");
 			} else if(role.contains("R07")) {
+/**
+DMAP TAG: Query converted but found same: Identifier312
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType<>'AT' order by t.urNo desc, t.subUrNo asc 
+**/
+
 				sql.append("select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType<>'AT' order by t.urNo desc, t.subUrNo asc ");
 			}
 
@@ -105,21 +129,44 @@ public class HibernateIpvMonitorReqncDao extends HibernateGenericDao<IpvMonitorR
 	
 	
 	@Override
-	public int countMonitorReqNC(String userId) throws Exception {
+	public int countMonitorReqNC(String userId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference countMonitorReqNC
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvMonitorReqnc> result = new ArrayList<IpvMonitorReqnc>();
+/**
+DMAP TAG: Query converted but found same: Identifier311
+DMAP ConvertedQuery - select distinct(role_id) role from ip_role_member rm where rm.role_id in ('R06','R07','R08') and rm.user_id=? order by role
+**/
+
 		List<String> role = session.createSQLQuery("select distinct(role_id) role from ip_role_member rm where rm.role_id in ('R06','R07','R08') and rm.user_id=? order by role ").addScalar("role", Hibernate.STRING).setString(0, userId).list();
 		
 		List result1 = null;
 		if (role != null && role.size() > 0) {
 			StringBuffer sql = new StringBuffer();
 			if(role.contains("R08") || (role.contains("R06") && role.contains("R07"))) {
+/**
+DMAP TAG: Query converted but found same: Identifier310
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t order by t.urNo desc
+**/
+
+/**
+**/
+
 				sql.append("select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t " +
 				"order by t.urNo desc");
 			} else if(role.contains("R06")) {
+/**
+DMAP TAG: Query converted but found same: Identifier309
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType='AT'order by t.urNo desc
+**/
+
 				sql.append("select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType='AT'" +
 				"order by t.urNo desc");
 			} else if(role.contains("R07")) {
+/**
+DMAP TAG: Query converted but found same: Identifier308
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType<>'AT'order by t.urNo desc
+**/
+
 				sql.append("select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.subUrNo from IpvMonitorReqnc t where t.subUrType<>'AT'" +
 				"order by t.urNo desc");
 			}

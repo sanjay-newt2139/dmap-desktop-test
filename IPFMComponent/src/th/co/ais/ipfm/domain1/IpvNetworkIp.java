@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import javax.persistence.Column;
@@ -31,69 +31,69 @@ public class IpvNetworkIp implements java.io.Serializable, Cloneable{
     
     @Id 
     @Column(name="NETWORK_IP", unique=true, nullable=false, length=13)
-    public String getNetworkIp() {
+    public String getNetworkIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkIp
 		return networkIp;
 	}
     
-	public void setNetworkIp(String networkIp) {
+	public void setNetworkIp(String networkIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkIp
 		this.networkIp = networkIp;
 	}
 	
 	@Column(name="T2_TEAM_ID")
-	public String getTier2TeamId() {
+	public String getTier2TeamId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTier2TeamId
 		return tier2TeamId;
 	}
 
-	public void setTier2TeamId(String tier2TeamId) {
+	public void setTier2TeamId(String tier2TeamId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTier2TeamId
 		this.tier2TeamId = tier2TeamId;
 	}
 
 	@Column(name="SYSTEM_OWNER_ID")
-	public String getSystemOwnerId() {
+	public String getSystemOwnerId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerId
 		return systemOwnerId;
 	}
 
-	public void setSystemOwnerId(String systemOwnerId) {
+	public void setSystemOwnerId(String systemOwnerId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSystemOwnerId
 		this.systemOwnerId = systemOwnerId;
 	}
 	@Column(name="SYSTEM_OWNER_TEAM_ID")
-	public String getSystemOwnerTeamId() {
+	public String getSystemOwnerTeamId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerTeamId
 		return systemOwnerTeamId;
 	}
 
-	public void setSystemOwnerTeamId(String systemOwnerTeamId) {
+	public void setSystemOwnerTeamId(String systemOwnerTeamId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSystemOwnerTeamId
 		this.systemOwnerTeamId = systemOwnerTeamId;
 	}
 	@Column(name="NETWORK_IP1")
-	public Integer getNetworkIp1() {
+	public Integer getNetworkIp1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkIp1
 		return networkIp1;
 	}
 
-	public void setNetworkIp1(Integer networkIp1) {
+	public void setNetworkIp1(Integer networkIp1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkIp1
 		this.networkIp1 = networkIp1;
 	}
 	@Column(name="NETWORK_IP2")
-	public Integer getNetworkIp2() {
+	public Integer getNetworkIp2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkIp2
 		return networkIp2;
 	}
 
-	public void setNetworkIp2(Integer networkIp2) {
+	public void setNetworkIp2(Integer networkIp2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkIp2
 		this.networkIp2 = networkIp2;
 	}
 	@Column(name="NETWORK_IP3")
-	public Integer getNetworkIp3() {
+	public Integer getNetworkIp3() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkIp3
 		return networkIp3;
 	}
 
-	public void setNetworkIp3(Integer networkIp3) {
+	public void setNetworkIp3(Integer networkIp3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkIp3
 		this.networkIp3 = networkIp3;
 	}
 	@Column(name="NETWORK_IP4")
-	public Integer getNetworkIp4() {
+	public Integer getNetworkIp4() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkIp4
 		return networkIp4;
 	}
 
-	public void setNetworkIp4(Integer networkIp4) {
+	public void setNetworkIp4(Integer networkIp4) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkIp4
 		this.networkIp4 = networkIp4;
 	}
 	

@@ -22,11 +22,11 @@ public class IntfGatewayValidate {
 		this.intfGateway = intfGateway;
 	}
 
-	public void setIntfGateway(IPIntfGatewayBean intfGateway) {
+	public void setIntfGateway(IPIntfGatewayBean intfGateway) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIntfGateway
 		this.intfGateway = intfGateway;
 	}
 
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		
@@ -139,7 +139,7 @@ public class IntfGatewayValidate {
         return IP_PATTERN.matcher(iPaddress).matches();
 	}
 	
-	private boolean isIpBrfore(String start,String end){
+	private boolean isIpBrfore(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isIpBrfore
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".")+1;
@@ -152,7 +152,7 @@ public class IntfGatewayValidate {
 		return done;
 	}
 	
-	private boolean isSameIPGroup(String start,String end){
+	private boolean isSameIPGroup(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isSameIPGroup
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".");
@@ -181,7 +181,7 @@ public class IntfGatewayValidate {
 	
 	
 	
-	private boolean isServiceFound(String serviceName){
+	private boolean isServiceFound(String serviceName){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isServiceFound
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		IpMasterTable master = firewallService.getServiceByRefID(serviceName);
 		return (master!=null);

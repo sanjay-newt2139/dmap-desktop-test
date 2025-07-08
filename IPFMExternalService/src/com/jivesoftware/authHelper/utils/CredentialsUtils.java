@@ -24,13 +24,13 @@ import static com.jivesoftware.authHelper.consts.AuthConsts.*;
 public class CredentialsUtils {
     private static Logger logger = Logger.getLogger(CredentialsUtils.class.getName());
     private static boolean registeredNTLM;
-    private static boolean registeredCLAIMS;
+    private static boolean registeredCLAIMS; // DMAP Comment : Dead Code Detected - The Following Field has no reference registeredCLAIMS
     private static boolean registeredKERBEROS;
 
     /*
     handle basic authentication with the provided creds
      */
-    public static void setBasicAuthCredentials(HttpClient httpClient,
+    public static void setBasicAuthCredentials(HttpClient httpClient, // DMAP Comment : Dead Code Detected - The Following Method has no reference setBasicAuthCredentials
                                                UsernamePasswordCredentials credentials) {
         httpClient.getState().setCredentials(
                 new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT), credentials);
@@ -42,7 +42,7 @@ public class CredentialsUtils {
     see http://www.websense.com/support/article/kbarticle/How-do-I-Check-NTLM-Version-for-XID-Compatibility
     for NTLM docs
     */
-    public static void setNTLMCredentials(HttpClient httpClient, UsernamePasswordCredentials credentials,
+    public static void setNTLMCredentials(HttpClient httpClient, UsernamePasswordCredentials credentials, // DMAP Comment : Dead Code Detected - The Following Method has no reference setNTLMCredentials
                                           String domain) {
         initNTLMv2();
 
@@ -65,7 +65,7 @@ public class CredentialsUtils {
     /*
     handle KERBEROS authentication with provided creds
     */
-    public static void setKerberosCredentials(HttpClient httpClient,
+    public static void setKerberosCredentials(HttpClient httpClient, // DMAP Comment : Dead Code Detected - The Following Method has no reference setKerberosCredentials
                                               UsernamePasswordCredentials credentials, String domain, String kdc) {
         try {
             //set the login scheme
@@ -101,7 +101,7 @@ public class CredentialsUtils {
     /*
     make requests go through proxy with or without basic auth creds
      */
-    public static void setProxyHost(HttpClient httpClient, UsernamePasswordCredentials proxyCredentials,
+    public static void setProxyHost(HttpClient httpClient, UsernamePasswordCredentials proxyCredentials, // DMAP Comment : Dead Code Detected - The Following Method has no reference setProxyHost
                                     String proxyHost, int proxyPort) {
 
         if (proxyHost != null && !proxyHost.isEmpty()) {

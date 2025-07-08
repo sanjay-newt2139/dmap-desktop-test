@@ -33,7 +33,7 @@ public class IpReportCriteriaAction  extends AbstractAction {
 		
 		IPReportService service = (IPReportService)JSFServiceFinderUtil.getInstance().getBean("iPReportService");
 		
-		IpReportListBean ipReportListBean;
+		IpReportListBean ipReportListBean; // DMAP Comment : Dead Code Detected - The Following Field has no reference ipReportListBean
 		public IpReportListBean getIpReportListBean() {
 			return (IpReportListBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("ipReportListBean");
 		}
@@ -97,7 +97,7 @@ public class IpReportCriteriaAction  extends AbstractAction {
 			return flgValid;
 		}
 		
-		public String AddReport() throws Exception{
+		public String AddReport() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference AddReport
 			IpReportListBean bean = getIpReportListBean();
 			IpReportList ipReportList = new IpReportList();						
 			if(bean!=null){			
@@ -135,7 +135,7 @@ public class IpReportCriteriaAction  extends AbstractAction {
 			return "IPRUR001";		
 		}
 		
-		public String delete() throws Exception{
+		public String delete() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference delete
 			IpReportListBean bean = getIpReportListBean();
 			try{
 //				String reportId = getRequestParameter("reportId");
@@ -148,7 +148,7 @@ public class IpReportCriteriaAction  extends AbstractAction {
 			return "IPRUR001";
 		}	
 		
-		public void updateValueBeforeDelete(){
+		public void updateValueBeforeDelete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDelete
 			String reportId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("reportId").toString();
 			IpReportListBean bean = getIpReportListBean();
 			bean.setReportId(reportId);

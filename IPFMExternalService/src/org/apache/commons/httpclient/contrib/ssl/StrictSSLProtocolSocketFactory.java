@@ -135,7 +135,7 @@ public class StrictSSLProtocolSocketFactory
      * will help to prevent from man-in-the-middle attacks.  If set to 
      * <code>false</code> host name verification is turned off.
      */
-    public void setHostnameVerification(boolean verifyHostname) {
+    public void setHostnameVerification(boolean verifyHostname) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setHostnameVerification
         this.verifyHostname = verifyHostname;
     }
 

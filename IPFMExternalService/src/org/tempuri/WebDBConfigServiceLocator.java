@@ -24,7 +24,7 @@ public class WebDBConfigServiceLocator extends org.apache.axis.client.Service im
     // Use to get a proxy class for WebDBConfigServiceSoap
     private java.lang.String WebDBConfigServiceSoap_address = "http://dblogintest.ais.co.th/wsAuthenDB/webDBconfigService.asmx";
 
-    public java.lang.String getWebDBConfigServiceSoapAddress() {
+    public java.lang.String getWebDBConfigServiceSoapAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWebDBConfigServiceSoapAddress
         return WebDBConfigServiceSoap_address;
     }
 
@@ -35,7 +35,7 @@ public class WebDBConfigServiceLocator extends org.apache.axis.client.Service im
         return WebDBConfigServiceSoapWSDDServiceName;
     }
 
-    public void setWebDBConfigServiceSoapWSDDServiceName(java.lang.String name) {
+    public void setWebDBConfigServiceSoapWSDDServiceName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWebDBConfigServiceSoapWSDDServiceName
         WebDBConfigServiceSoapWSDDServiceName = name;
     }
 
@@ -104,13 +104,13 @@ public class WebDBConfigServiceLocator extends org.apache.axis.client.Service im
         }
     }
 
-    public javax.xml.namespace.QName getServiceName() {
+    public javax.xml.namespace.QName getServiceName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceName
         return new javax.xml.namespace.QName("http://tempuri.org/", "WebDBConfigService");
     }
 
     private java.util.HashSet ports = null;
 
-    public java.util.Iterator getPorts() {
+    public java.util.Iterator getPorts() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPorts
         if (ports == null) {
             ports = new java.util.HashSet();
             ports.add(new javax.xml.namespace.QName("http://tempuri.org/", "WebDBConfigServiceSoap"));

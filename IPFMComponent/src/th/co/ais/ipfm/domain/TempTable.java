@@ -25,42 +25,42 @@ public class TempTable {
 		this.str6=s6;
 	}
 	
-	public String getStr1() {
+	public String getStr1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStr1
 		return str1;
 	}
-	public void setStr1(String str1) {
+	public void setStr1(String str1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStr1
 		this.str1 = str1;
 	}
-	public String getStr2() {
+	public String getStr2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStr2
 		return str2;
 	}
-	public void setStr2(String str2) {
+	public void setStr2(String str2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStr2
 		this.str2 = str2;
 	}
-	public String getStr3() {
+	public String getStr3() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStr3
 		return str3;
 	}
-	public void setStr3(String str3) {
+	public void setStr3(String str3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStr3
 		this.str3 = str3;
 	}
-	public String getStr4() {
+	public String getStr4() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStr4
 		return str4;
 	}
-	public void setStr4(String str4) {
+	public void setStr4(String str4) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStr4
 		this.str4 = str4;
 	}
-	public String getStr5() {
+	public String getStr5() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStr5
 		return str5;
 	}
-	public void setStr5(String str5) {
+	public void setStr5(String str5) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStr5
 		this.str5 = str5;
 	}
 
-	public String getStr6() {
+	public String getStr6() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStr6
 		return str6;
 	}
 
-	public void setStr6(String str6) {
+	public void setStr6(String str6) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStr6
 		this.str6 = str6;
 	}
 	

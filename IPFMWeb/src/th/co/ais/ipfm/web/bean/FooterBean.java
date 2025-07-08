@@ -14,7 +14,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 
 
 public class FooterBean extends IPFMBaseBean {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	private Integer onlineUser;
 	private Integer webCounter;
 	
@@ -22,7 +22,7 @@ public class FooterBean extends IPFMBaseBean {
 		init();
 	}
 
-	private void init() {
+	private void init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		try{
 			IPUserService ipUserService = (IPUserService)JSFServiceFinderUtil.getInstance().getBean("ipUserService");
 			setOnlineUser(ipUserService.getOnlineUser());
@@ -41,7 +41,7 @@ public class FooterBean extends IPFMBaseBean {
 		this.onlineUser = onlineUser;
 	}
 
-	public Integer getWebCounter() {		
+	public Integer getWebCounter() {		 // DMAP Comment : Dead Code Detected - The Following Method has no reference getWebCounter
 		return webCounter;
 	}
 

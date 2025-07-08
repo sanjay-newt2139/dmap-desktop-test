@@ -36,7 +36,7 @@ public class SessionTimeoutFilter implements Filter {
 	private String errorBrowserPage = "errorBrowser.jsp";
 	//test
 	
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) throws ServletException { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 	
 	}
 	
@@ -178,7 +178,7 @@ public class SessionTimeoutFilter implements Filter {
 //		}
 	}
 	
-	public void destroy() {
+	public void destroy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference destroy
 	
 	}
 	
@@ -186,7 +186,7 @@ public class SessionTimeoutFilter implements Filter {
 		return indexPage;
 	}
 
-	public void setIndexPage(String indexPage) {
+	public void setIndexPage(String indexPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIndexPage
 		this.indexPage = indexPage;
 	}
 
@@ -194,7 +194,7 @@ public class SessionTimeoutFilter implements Filter {
 		return timeoutPage;
 	}
 	
-	public void setTimeoutPage(String timeoutPage) {
+	public void setTimeoutPage(String timeoutPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTimeoutPage
 		this.timeoutPage = timeoutPage;
 	}
 
@@ -202,7 +202,7 @@ public class SessionTimeoutFilter implements Filter {
 		return redirectPage;
 	}
 
-	public void setRedirectPage(String redirectPage) {
+	public void setRedirectPage(String redirectPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRedirectPage
 		this.redirectPage = redirectPage;
 	}
 
@@ -210,7 +210,7 @@ public class SessionTimeoutFilter implements Filter {
 		return ajaxskiprequest;
 	}
 
-	public void setAjaxskiprequest(String ajaxskiprequest) {
+	public void setAjaxskiprequest(String ajaxskiprequest) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAjaxskiprequest
 		this.ajaxskiprequest = ajaxskiprequest;
 	}
 
@@ -218,7 +218,7 @@ public class SessionTimeoutFilter implements Filter {
 		return errorBrowserPage;
 	}
 
-	public void setErrorBrowserPage(String errorBrowserPage) {
+	public void setErrorBrowserPage(String errorBrowserPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setErrorBrowserPage
 		this.errorBrowserPage = errorBrowserPage;
 	}
 	

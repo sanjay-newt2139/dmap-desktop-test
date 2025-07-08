@@ -87,7 +87,7 @@ public class PluginProxyUtil {
      *         connection is allowed to the target url.  
      * @throws ProxyDetectionException if detection failed
      */
-    public static ProxyHost detectProxy(URL sampleURL) 
+    public static ProxyHost detectProxy(URL sampleURL)  // DMAP Comment : Dead Code Detected - The Following Method has no reference detectProxy
         throws ProxyDetectionException
     {
         

@@ -69,7 +69,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param tokenId
      */
-    public void setTokenId(java.lang.String tokenId) {
+    public void setTokenId(java.lang.String tokenId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTokenId
         this.tokenId = tokenId;
     }
 
@@ -89,7 +89,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param message
      */
-    public void setMessage(common.bean.ais.com.Message message) {
+    public void setMessage(common.bean.ais.com.Message message) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMessage
         this.message = message;
     }
 
@@ -109,7 +109,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param SSOProgCode
      */
-    public void setSSOProgCode(Permission.bean.ais.com.SSOProgCode SSOProgCode) {
+    public void setSSOProgCode(Permission.bean.ais.com.SSOProgCode SSOProgCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOProgCode
         this.SSOProgCode = SSOProgCode;
     }
 
@@ -129,7 +129,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param SSOProgCodeList
      */
-    public void setSSOProgCodeList(Permission.bean.ais.com.SSOProgDesc[] SSOProgCodeList) {
+    public void setSSOProgCodeList(Permission.bean.ais.com.SSOProgDesc[] SSOProgCodeList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOProgCodeList
         this.SSOProgCodeList = SSOProgCodeList;
     }
 
@@ -137,7 +137,7 @@ public class SSOResponse  implements java.io.Serializable {
         return this.SSOProgCodeList[i];
     }
 
-    public void setSSOProgCodeList(int i, Permission.bean.ais.com.SSOProgDesc _value) {
+    public void setSSOProgCodeList(int i, Permission.bean.ais.com.SSOProgDesc _value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOProgCodeList
         this.SSOProgCodeList[i] = _value;
     }
 
@@ -157,7 +157,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param SSOCompCode
      */
-    public void setSSOCompCode(Permission.bean.ais.com.SSOCompCode[] SSOCompCode) {
+    public void setSSOCompCode(Permission.bean.ais.com.SSOCompCode[] SSOCompCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOCompCode
         this.SSOCompCode = SSOCompCode;
     }
 
@@ -165,7 +165,7 @@ public class SSOResponse  implements java.io.Serializable {
         return this.SSOCompCode[i];
     }
 
-    public void setSSOCompCode(int i, Permission.bean.ais.com.SSOCompCode _value) {
+    public void setSSOCompCode(int i, Permission.bean.ais.com.SSOCompCode _value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOCompCode
         this.SSOCompCode[i] = _value;
     }
 
@@ -185,7 +185,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param SSOEMailListDetail
      */
-    public void setSSOEMailListDetail(Permission.bean.ais.com.SSOEMailListDetail[] SSOEMailListDetail) {
+    public void setSSOEMailListDetail(Permission.bean.ais.com.SSOEMailListDetail[] SSOEMailListDetail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOEMailListDetail
         this.SSOEMailListDetail = SSOEMailListDetail;
     }
 
@@ -193,7 +193,7 @@ public class SSOResponse  implements java.io.Serializable {
         return this.SSOEMailListDetail[i];
     }
 
-    public void setSSOEMailListDetail(int i, Permission.bean.ais.com.SSOEMailListDetail _value) {
+    public void setSSOEMailListDetail(int i, Permission.bean.ais.com.SSOEMailListDetail _value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOEMailListDetail
         this.SSOEMailListDetail[i] = _value;
     }
 
@@ -213,7 +213,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param SSOAuthorizeSubmodule
      */
-    public void setSSOAuthorizeSubmodule(Permission.bean.ais.com.SSOAuthorizeSubmodule[] SSOAuthorizeSubmodule) {
+    public void setSSOAuthorizeSubmodule(Permission.bean.ais.com.SSOAuthorizeSubmodule[] SSOAuthorizeSubmodule) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOAuthorizeSubmodule
         this.SSOAuthorizeSubmodule = SSOAuthorizeSubmodule;
     }
 
@@ -221,7 +221,7 @@ public class SSOResponse  implements java.io.Serializable {
         return this.SSOAuthorizeSubmodule[i];
     }
 
-    public void setSSOAuthorizeSubmodule(int i, Permission.bean.ais.com.SSOAuthorizeSubmodule _value) {
+    public void setSSOAuthorizeSubmodule(int i, Permission.bean.ais.com.SSOAuthorizeSubmodule _value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOAuthorizeSubmodule
         this.SSOAuthorizeSubmodule[i] = _value;
     }
 
@@ -241,7 +241,7 @@ public class SSOResponse  implements java.io.Serializable {
      * 
      * @param SSOProgCodecArr
      */
-    public void setSSOProgCodecArr(Permission.bean.ais.com.SSOProgCode[] SSOProgCodecArr) {
+    public void setSSOProgCodecArr(Permission.bean.ais.com.SSOProgCode[] SSOProgCodecArr) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOProgCodecArr
         this.SSOProgCodecArr = SSOProgCodecArr;
     }
 
@@ -249,7 +249,7 @@ public class SSOResponse  implements java.io.Serializable {
         return this.SSOProgCodecArr[i];
     }
 
-    public void setSSOProgCodecArr(int i, Permission.bean.ais.com.SSOProgCode _value) {
+    public void setSSOProgCodecArr(int i, Permission.bean.ais.com.SSOProgCode _value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSSOProgCodecArr
         this.SSOProgCodecArr[i] = _value;
     }
 
@@ -437,14 +437,14 @@ public class SSOResponse  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -456,7 +456,7 @@ public class SSOResponse  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

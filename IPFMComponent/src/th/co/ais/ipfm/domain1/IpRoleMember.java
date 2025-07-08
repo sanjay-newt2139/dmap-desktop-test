@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -33,7 +33,7 @@ public class IpRoleMember extends MasterDomain implements java.io.Serializable {
      /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	//private IpRoleMemberId id;
      private String roleId;
      private String userId;
@@ -76,65 +76,65 @@ public class IpRoleMember extends MasterDomain implements java.io.Serializable {
 //    }
     
     @Column(name="ROLE_ID", nullable=false, length=20)
-    public String getRoleId() {
+    public String getRoleId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleId
         return this.roleId;
     }
     
-    public void setRoleId(String roleId) {
+    public void setRoleId(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleId
         this.roleId = roleId;
     }
 
     @Column(name="USER_ID", nullable=false, length=20)
-    public String getUserId() {
+    public String getUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserId
         return this.userId;
     }
     
-    public void setUserId(String userId) {
+    public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
         this.userId = userId;
     }
     
     @Version
     @Column(name="VERSION", precision=10, scale=0)
-    public Integer getVersion() {
+    public Integer getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Integer version) {
+    public void setVersion(Integer version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     @Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
 	@Column(name="CREATE_DATE")
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
 	@Column(name="UPDATE_BY")
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 	
 	@Column(name="UPDATE_DATE")
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 	
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
     
@@ -142,56 +142,56 @@ public class IpRoleMember extends MasterDomain implements java.io.Serializable {
     @GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="ROW_ID", unique=true, length=50)
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
 
 	@Transient
-	public String getUserName() {
+	public String getUserName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserName
 		return userName;
 	}
 
-	public void setUserName(String userName) {
+	public void setUserName(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserName
 		this.userName = userName;
 	}
 	@Transient
-	public String getPosition() {
+	public String getPosition() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPosition
 		return position;
 	}
 
-	public void setPosition(String position) {
+	public void setPosition(String position) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPosition
 		this.position = position;
 	}
 	@Transient
-	public String getDept() {
+	public String getDept() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDept
 		return dept;
 	}
 
-	public void setDept(String dept) {
+	public void setDept(String dept) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDept
 		this.dept = dept;
 	}
 	
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name="USER_ID" , referencedColumnName="USER_ID", nullable=true, insertable=false, updatable=false)
-	public IpUser getIpUser() {
+	public IpUser getIpUser() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUser
 		return ipUser;
 	}
 
-	public void setIpUser(IpUser ipUser) {
+	public void setIpUser(IpUser ipUser) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUser
 		this.ipUser = ipUser;
 	}
 	
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name="ROLE_ID" , referencedColumnName="ROLE_ID", nullable=true, insertable=false, updatable=false)
-	public IpRole getIpRole() {
+	public IpRole getIpRole() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpRole
 		return ipRole;
 	}
 
-	public void setIpRole(IpRole ipRole) {
+	public void setIpRole(IpRole ipRole) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpRole
 		this.ipRole = ipRole;
 	}
 

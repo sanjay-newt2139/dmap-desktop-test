@@ -43,7 +43,7 @@ package org.apache.commons.httpclient.contrib.ssl;
  * </p>
  */
 
-public class AuthSSLInitializationError extends Error {
+public class AuthSSLInitializationError extends Error { // DMAP Comment : Dead Code Detected - The Following Class has no reference AuthSSLInitializationError
 
     /**
      * Creates a new AuthSSLInitializationError.

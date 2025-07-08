@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.math.BigDecimal;
@@ -30,7 +31,7 @@ import th.co.ais.ipfm.util.IPFMConstant;
 public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> implements IPUrActionDao{
 	
 	@Override
-	public List<IpUrAction> getURActionList(String urNo) throws DataAccessException {
+	public List<IpUrAction> getURActionList(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getURActionList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -39,23 +40,33 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public void deleteByUrNo(String urNo) {
+	public void deleteByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByUrNo
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_UR_ACTION AC WHERE AC.UR_NO=?";
+/**
+DMAP TAG: Query converted but found same: Identifier404
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION AC WHERE AC.UR_NO=?
+**/
+
 		session.createSQLQuery(sql).setString(0, urNo).executeUpdate();
 		
 	}
 
 	@Override
-	public void deleteBySubUrNo(String urNo, String subUrNo, String urStatus) {
+	public void deleteBySubUrNo(String urNo, String subUrNo, String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteBySubUrNo
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_UR_ACTION AC WHERE AC.UR_NO=? AND AC.SUB_UR_NO = ? AND AC.UR_STATUS = ? ";
+/**
+DMAP TAG: Query converted but found same: Identifier403
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION AC WHERE AC.UR_NO=? AND AC.SUB_UR_NO = ? AND AC.UR_STATUS = ?
+**/
+
 		session.createSQLQuery(sql).setString(0, urNo).setString(1, subUrNo).setString(2, urStatus).executeUpdate();
 		
 	}
 	
 	@Override
-	public IpUrAction findUrAction(String urNo, String subUrNo)
+	public IpUrAction findUrAction(String urNo, String subUrNo) // DMAP Comment : Dead Code Detected - The Following Method has no reference findUrAction
 			throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -67,7 +78,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	
 	
 	@Override
-	public List<IpUrAction> findUrActions(String urNo,String subUrNo) throws DataAccessException {
+	public List<IpUrAction> findUrActions(String urNo,String subUrNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findUrActions
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -83,16 +94,26 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 	
 	@Override
-	public Integer getValueSLADate(String urType,String pm,String isImpact){
+	public Integer getValueSLADate(String urType,String pm,String isImpact){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getValueSLADate
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier402
+DMAP ConvertedQuery - SELECT SLA FROM IP_WF_CONFIG WHERE UR_TYPE='urType' AND IMPACT_STATUS='isImpact' AND PM_TEAM='pm'
+**/
+
 		Integer sla =  (Integer) session.createSQLQuery("SELECT SLA FROM IP_WF_CONFIG WHERE UR_TYPE='"+urType+"' AND IMPACT_STATUS='"+isImpact+"' AND PM_TEAM='"+pm+"'")
 			.addScalar("SLA", Hibernate.INTEGER).uniqueResult();
 		return sla;
 	}
 	
 	@Override
-	public Integer getValueOLADate(String urType,String nodeId) {
+	public Integer getValueOLADate(String urType,String nodeId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getValueOLADate
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier401
+DMAP ConvertedQuery - SELECT OLA FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE='urType' AND NODE_ID='nodeId'
+**/
+
 		Integer ola =  (Integer) session.createSQLQuery("SELECT OLA FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE='"+urType+"' AND NODE_ID='"+nodeId+"'")
 			.addScalar("OLA", Hibernate.INTEGER).uniqueResult();
 		return ola;
@@ -101,6 +122,11 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	@Override
 	public Date getSLADate(Date reqDate,String urType,String pm,String isImpact){
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier400
+DMAP ConvertedQuery - SELECT SLA FROM IP_WF_CONFIG WHERE UR_TYPE='urType' AND IMPACT_STATUS='isImpact ' AND PM_TEAM='pm'
+**/
+
 		String sla =  (String) session.createSQLQuery("SELECT SLA FROM IP_WF_CONFIG WHERE UR_TYPE='"+urType+"' AND IMPACT_STATUS='"+isImpact+"' AND PM_TEAM='"+pm+"'")
 			.addScalar("SLA", Hibernate.STRING).uniqueResult();
 		if(sla==null 
@@ -150,14 +176,24 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		Session session = getSessionFactory().getCurrentSession();
 		String sql="SELECT COUNT(DISTINCT HOLIDAY_DATE) AS HOLIDAY_DAYS FROM IP_MASTER_TABLE WHERE REF_TABLE='HOLIDAY' AND ACTIVE_STATUS=1 ";
 		sql+="AND HOLIDAY_DATE BETWEEN (TO_DATE('"+smf.format(start)+"','dd/mm/yyyy')) AND (TO_DATE('"+smf.format(end)+"','dd/mm/yyyy'))";
+/**
+DMAP TAG: Query converted but found same: Identifier399
+DMAP ConvertedQuery - SELECT COUNT(DISTINCT HOLIDAY_DATE) AS HOLIDAY_DAYS FROM IP_MASTER_TABLE WHERE REF_TABLE='HOLIDAY' AND ACTIVE_STATUS=1
+**/
+
 		Integer holiday =  (Integer) session.createSQLQuery(sql)
 			.addScalar("HOLIDAY_DAYS", Hibernate.INTEGER).uniqueResult();
 		return holiday;
 	}
 
 	@Override
-	public Date getOLADate(Date reqDate,String urType,String nodeId) {
+	public Date getOLADate(Date reqDate,String urType,String nodeId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOLADate
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier398
+DMAP ConvertedQuery - SELECT OLA FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE='urType' AND NODE_ID='nodeId'
+**/
+
 		String ola =  (String) session.createSQLQuery("SELECT OLA FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE='"+urType+"' AND NODE_ID='"+nodeId+"'")
 			.addScalar("OLA", Hibernate.STRING).uniqueResult();
 		if(ola==null 
@@ -192,7 +228,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public List<IpUrAction> listActionByStatus(String urNo, String status) {
+	public List<IpUrAction> listActionByStatus(String urNo, String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listActionByStatus
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -201,21 +237,31 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public void deleteByRowID(String rowID) {
+	public void deleteByRowID(String rowID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByRowID
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_UR_ACTION AC WHERE AC.ROW_ID=?";
+/**
+DMAP TAG: Query converted but found same: Identifier397
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION AC WHERE AC.ROW_ID=?
+**/
+
 		session.createSQLQuery(sql).setString(0, rowID).executeUpdate();
 	}
 
 	@Override
-	public void deleteNA(String urNo) {
+	public void deleteNA(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteNA
 		Session session = getSessionFactory().getCurrentSession();
 		String sql = "DELETE FROM IP_UR_ACTION AC WHERE AC.UR_NO=? AND AC.SUB_UR_NO='NA'";
+/**
+DMAP TAG: Query converted but found same: Identifier396
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION AC WHERE AC.UR_NO=? AND AC.SUB_UR_NO='NA'
+**/
+
 		session.createSQLQuery(sql).setString(0, urNo).executeUpdate();
 	}
 
 	@Override
-	public List<IpUrAction> listActionByOwner(String urNo, String owner) {
+	public List<IpUrAction> listActionByOwner(String urNo, String owner) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listActionByOwner
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -224,7 +270,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public boolean isOwnerApproveAll(String urNo) {
+	public boolean isOwnerApproveAll(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isOwnerApproveAll
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -233,7 +279,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public void updateAction(String urNo,String urStatus , String callFunc, String callMode,
+	public void updateAction(String urNo,String urStatus , String callFunc, String callMode, // DMAP Comment : Dead Code Detected - The Following Method has no reference updateAction
 			IpUser user) {
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
@@ -245,6 +291,11 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		sql.append(",	UPDATE_BY = ? ");		
 		sql.append(",	UPDATE_DATE = sysdate ");		
 		sql.append("WHERE UR_NO=? ");			
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier395
+DMAP ConvertedQuery - UPDATE IP_UR_ACTION SET UR_STATUS = ? , ACTION_NAME= (SELECT DISTINCT SUB_UR_STATUS_NAME FROM IP_UR_STATUS WHERE UR_TYPE='NC' AND SUB_UR_STATUS_ID = ? ) , CALL_ FUNCTION _ID=? , CALL_MODE=? , UPDATE_BY = ? , UPDATE_DATE = statement_timestamp() WHERE UR_NO=?
+**/
+
 		session.createSQLQuery(sql.toString())
 			.setString(0, urStatus)
 			.setString(1, urStatus)
@@ -255,7 +306,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 			.executeUpdate();
 	}
 	@Override
-	public void updateActionReject(String urNo,String urStatus , String callFunc, String callMode,
+	public void updateActionReject(String urNo,String urStatus , String callFunc, String callMode, // DMAP Comment : Dead Code Detected - The Following Method has no reference updateActionReject
 			IpUser user , IpUser reqUser) {
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
@@ -269,6 +320,11 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		sql.append(",	UPDATE_BY = ? ");	
 		sql.append(",	UPDATE_DATE = sysdate ");		
 		sql.append("WHERE UR_NO=? ");			
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier394
+DMAP ConvertedQuery - UPDATE IP_UR_ACTION SET UR_STATUS = ? , ACTION_NAME= (SELECT DISTINCT SUB_UR_STATUS_NAME FROM IP_UR_STATUS WHERE UR_TYPE='NC' AND SUB_UR_STATUS_ID = ? ) , CALL_ FUNCTION _ID=? , CALL_MODE=? , ACTION_USER_ID = ? , ACTION_USER = ? , UPDATE_BY = ? , UPDATE_DATE = statement_timestamp() WHERE UR_NO=?
+**/
+
 		session.createSQLQuery(sql.toString())
 			.setString(0, urStatus)
 			.setString(1, urStatus)
@@ -282,7 +338,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public boolean isOwnerRejectAll(String urNo) {
+	public boolean isOwnerRejectAll(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isOwnerRejectAll
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -293,7 +349,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 
 
 	@Override
-	public List<IpUrAction> listActionForActm(String urNo,IpUser user) {
+	public List<IpUrAction> listActionForActm(String urNo,IpUser user) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listActionForActm
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -304,7 +360,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public List<IpUrAction> listActionTeam(String urNo, IpUser user) {
+	public List<IpUrAction> listActionTeam(String urNo, IpUser user) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listActionTeam
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -314,12 +370,17 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public boolean isInRole(String user, String RoleId) {
+	public boolean isInRole(String user, String RoleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isInRole
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append("select count(DISTINCT role_id) as num ");
 		sql.append("from ip_role_member ");				
 		sql.append("where user_id = ? and role_id=? ");
+/**
+DMAP TAG: Query converted but found same: Identifier393
+DMAP ConvertedQuery - select count(DISTINCT role_id) as num from ip_role_member where user_id = ? and role_id=?
+**/
+
 		Integer count =  (Integer) (session.createSQLQuery(sql.toString())
 			.addScalar("num", Hibernate.INTEGER)
 			.setString(0, user)
@@ -330,7 +391,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public boolean isSendMailACTM(String user) {
+	public boolean isSendMailACTM(String user) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isSendMailACTM
 		boolean done = false;
 		String [] roleId = {"R9","R10","R11","R12","R13","R14","R15","R16","R17"};
 		Map<String, String> teamId = new HashMap<String, String>();
@@ -355,13 +416,21 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public void deleteACTM(String urNo,IpUser user) {
+	public void deleteACTM(String urNo,IpUser user) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteACTM
 		StringBuffer sql = new StringBuffer();
 		Session session = getSessionFactory().getCurrentSession();		
 		sql.append("DELETE FROM IP_UR_ACTION ");					
 		sql.append("WHERE UR_NO=? ");					
 		sql.append("AND UR_STATUS='WAIT_ACTM' ");	
 		if (user!=null) {
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier392
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION WHERE UR_NO=? AND UR_STATUS='WAIT_ACTM' AND position( CONCAT(';', ?, ';') in CONCAT(';', ACTION_USER_ID, ';')) >0
+**/
+
+/**
+**/
+
 			sql.append("AND INSTR(';'||ACTION_USER_ID||';' , ';'||?||';' )>0 ");	
 			session.createSQLQuery(sql.toString())
 				.setString(0, urNo)
@@ -376,7 +445,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public List<IpUrAction> listWaitTeamProcess(String urNo,IpUser user){
+	public List<IpUrAction> listWaitTeamProcess(String urNo,IpUser user){ // DMAP Comment : Dead Code Detected - The Following Method has no reference listWaitTeamProcess
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -389,7 +458,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public List<IpUrAction> findActionStatus(IpUrAction action, String ststus) {
+	public List<IpUrAction> findActionStatus(IpUrAction action, String ststus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findActionStatus
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", action.getUrNo()));
@@ -401,7 +470,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 	
 	@Override
-	public boolean isDelegateAble(String urNo, String subUrNo,String userId) {
+	public boolean isDelegateAble(String urNo, String subUrNo,String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isDelegateAble
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -415,7 +484,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 	
 	@Override
-	public boolean isRejectAble(String urNo, String subUrNo,String userId)throws Exception {
+	public boolean isRejectAble(String urNo, String subUrNo,String userId)throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference isRejectAble
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -430,7 +499,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 
 
 	@Override
-	public List<IpUrAction> listPMAssign(String urNo, IpUser user) {
+	public List<IpUrAction> listPMAssign(String urNo, IpUser user) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listPMAssign
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -441,10 +510,15 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public int getOLADateFromNodeID(String roleId) {
+	public int getOLADateFromNodeID(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOLADateFromNodeID
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT OLA FROM IP_WF_CONFIG_DETAIL where NODE_ID=?");
+/**
+DMAP TAG: Query converted but found same: Identifier391
+DMAP ConvertedQuery - SELECT OLA FROM IP_WF_CONFIG_DETAIL where NODE_ID=?
+**/
+
 		Integer count =  (Integer) (session.createSQLQuery(sql.toString())
 				.addScalar("OLA", Hibernate.INTEGER)
 				.setString(0, roleId))
@@ -453,7 +527,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public IpWfConfig getSLADateImpact(String isImpact) {
+	public IpWfConfig getSLADateImpact(String isImpact) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSLADateImpact
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpWfConfig.class);
 		criteria.add(Restrictions.eq("urType", "NC"));
@@ -464,19 +538,24 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public String isOverSla(String urNo) {
+	public String isOverSla(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isOverSla
 		StringBuffer sql = new StringBuffer();
 		sql.append("select decode(sign(sla_date - trunc(sysdate)),-1,'Y','N') ");
 		sql.append("from ip_ur_action ");
 		sql.append("where ur_no = '"+urNo+"' ");					
 		
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier390
+DMAP ConvertedQuery - select CASE WHEN sign(sla_date - trunc(statement_timestamp()))=-1 THEN 'Y' ELSE 'N' END from ip_ur_action WHERE ur_no = 'urNo'
+**/
+
 		String overSla = (String)session.createSQLQuery(sql.toString()).uniqueResult();
 		return overSla;
 	}
 
 	@Override
-	public IpUrAction findUrActionNotify(String urNo,String status,String userId) {
+	public IpUrAction findUrActionNotify(String urNo,String status,String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findUrActionNotify
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -491,7 +570,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public IpUrAction findUrAction(String urNo, String subUrNo, String user)
+	public IpUrAction findUrAction(String urNo, String subUrNo, String user) // DMAP Comment : Dead Code Detected - The Following Method has no reference findUrAction
 			throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -503,7 +582,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public int getUnFinishUR(String urNo) {
+	public int getUnFinishUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUnFinishUR
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT COUNT(SUB_UR_NO) as num "); 					
 		sql.append("FROM IP_UR_ACTION ");					
@@ -511,6 +590,11 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		sql.append("AND UR_STATUS IN ('WAIT_ACTM','WAIT_ACTM_TEAM','WAIT_TEAM','WAIT_PM') ");
 		
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted but found same: Identifier389
+DMAP ConvertedQuery - SELECT COUNT(SUB_UR_NO) as num FROM IP_UR_ACTION WHERE UR_NO=? AND UR_STATUS IN ('WAIT_ACTM','WAIT_ACTM_TEAM','WAIT_TEAM','WAIT_PM')
+**/
+
 		Integer num = (Integer)(session.createSQLQuery(sql.toString())
 				.addScalar("num", Hibernate.INTEGER))
 				.setString(0, urNo)
@@ -520,7 +604,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 	
 	@Override
-	public List<IpUrAction> findActionByURAndStatus(String urNo, String[] status) throws Exception {
+	public List<IpUrAction> findActionByURAndStatus(String urNo, String[] status) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findActionByURAndStatus
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -530,7 +614,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 	
 	@Override
-	public List<IpUrAction> findActionBySubURAndStatus(String urNo,String subUrNo, String[] status) throws Exception {
+	public List<IpUrAction> findActionBySubURAndStatus(String urNo,String subUrNo, String[] status) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findActionBySubURAndStatus
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
@@ -541,7 +625,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public List<IpUrAction> listAction(String urNo, IpUser user, String status) {
+	public List<IpUrAction> listAction(String urNo, IpUser user, String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAction
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -555,7 +639,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		return criteria.list();
 	}
 	@Override
-	public List<IpUrAction> listAction(String urNo, String subUrNo) {
+	public List<IpUrAction> listAction(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAction
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -567,7 +651,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public Map deletePreviousUrAction(String urNo) {
+	public Map deletePreviousUrAction(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deletePreviousUrAction
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -585,6 +669,11 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		sql.append("DELETE FROM IP_UR_ACTION ");					
 		sql.append("WHERE UR_NO=? ");					
 		
+/**
+DMAP TAG: Query converted but found same: Identifier388
+DMAP ConvertedQuery - DELETE FROM IP_UR_ACTION WHERE UR_NO=?
+**/
+
 		session.createSQLQuery(sql.toString())
 			.setString(0, urNo)
 			.executeUpdate();
@@ -593,7 +682,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 
 	@Override
-	public List<IpUrAction> getURAction(String urNo) throws DataAccessException {
+	public List<IpUrAction> getURAction(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getURAction
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -601,7 +690,7 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 		return criteria.list();
 	}
 	@Override
-	public List<IpUrAction> findIpUrActionList(String urNo) throws DataAccessException {
+	public List<IpUrAction> findIpUrActionList(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpUrActionList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrAction.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -610,8 +699,13 @@ public class HibernateIPUrActionDao extends HibernateGenericDao<IpUrAction> impl
 	}
 	
 	@Override
-	public BigDecimal getNextActionSeq(String urNo, String urType, String subUrNo) throws Exception{
+	public BigDecimal getNextActionSeq(String urNo, String urType, String subUrNo) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getNextActionSeq
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier387
+DMAP ConvertedQuery - SELECT coalesce(MAX(CAST(ACTION_SEQ AS numeric)), 0)+1 as NEWSEQ FROM (SELECT coalesce(ACTION_SEQ, 0) as ACTION_SEQ FROM IP_UR_ACTION WHERE UR_NO='urNo' AND UR_TYPE = 'urType' AND SUB_UR_NO = 'subUrNo' UNION SELECT coalesce(ACTION_SEQ, 0) as ACTION_SEQ FROM IP_UR_ACTION_HISTORY WHERE UR_NO='urNo' AND UR_TYPE = 'urType' AND SUB_UR_NO = 'subUrNo') alias4
+**/
+
 		String seqNo =  (String) session.createSQLQuery(
 					"SELECT NVL(MAX(ACTION_SEQ),0)+1 as NEWSEQ " +
 					"FROM (" +

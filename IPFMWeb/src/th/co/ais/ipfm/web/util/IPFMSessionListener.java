@@ -17,14 +17,14 @@ public class IPFMSessionListener implements HttpSessionListener {
 	
 	private static final Logger logger = Logger.getLogger(IPFMSessionListener.class);
 	
-	public void sessionCreated(HttpSessionEvent event) {
+	public void sessionCreated(HttpSessionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference sessionCreated
 		logger.debug("Current Session created : " 
 				+ event.getSession().getId() 
 				+ " at "+ new Date());
 
 	}
 
-	public void sessionDestroyed(HttpSessionEvent event) {
+	public void sessionDestroyed(HttpSessionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference sessionDestroyed
 		HttpSession session = event.getSession();
 		logger.debug("Current Session destroyed :"  + session.getId() + " Logging out user.");
 		try {

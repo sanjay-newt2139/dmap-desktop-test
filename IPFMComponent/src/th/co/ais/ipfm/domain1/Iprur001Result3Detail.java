@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -22,9 +23,14 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "IPRUR001_RESULT3_DETAIL", catalog = "")
+/**
+DMAP TAG: Query converted but found same: Identifier371
+DMAP ConvertedQuery - SELECT i FROM Iprur001Result3Detail i
+**/
+
 @NamedQueries({@NamedQuery(name = "Iprur001Result3Detail.findAll", query = "SELECT i FROM Iprur001Result3Detail i")})
 public class Iprur001Result3Detail implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
     @EmbeddedId
     protected Iprur001Result3DetailPK iprur001Result3DetailPK;
     @Column(name = "UR_NO", length = 30)
@@ -55,67 +61,67 @@ public class Iprur001Result3Detail implements Serializable {
         this.iprur001Result3DetailPK = new Iprur001Result3DetailPK(reportId, groupSeq, urStatus, dueStatus);
     }
 
-    public Iprur001Result3DetailPK getIprur001Result3DetailPK() {
+    public Iprur001Result3DetailPK getIprur001Result3DetailPK() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIprur001Result3DetailPK
         return iprur001Result3DetailPK;
     }
 
-    public void setIprur001Result3DetailPK(Iprur001Result3DetailPK iprur001Result3DetailPK) {
+    public void setIprur001Result3DetailPK(Iprur001Result3DetailPK iprur001Result3DetailPK) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIprur001Result3DetailPK
         this.iprur001Result3DetailPK = iprur001Result3DetailPK;
     }
 
-    public String getUrNo() {
+    public String getUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNo
         return urNo;
     }
 
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
 
-    public String getCreateBy() {
+    public String getCreateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateBy
         return createBy;
     }
 
-    public void setCreateBy(String createBy) {
+    public void setCreateBy(String createBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateBy
         this.createBy = createBy;
     }
 
-    public Date getCreateDate() {
+    public Date getCreateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateDate
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(Date createDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateDate
         this.createDate = createDate;
     }
 
-    public String getUpdateBy() {
+    public String getUpdateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateBy
         return updateBy;
     }
 
-    public void setUpdateBy(String updateBy) {
+    public void setUpdateBy(String updateBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateBy
         this.updateBy = updateBy;
     }
 
-    public Date getUpdateDate() {
+    public Date getUpdateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateDate
         return updateDate;
     }
 
-    public void setUpdateDate(Date updateDate) {
+    public void setUpdateDate(Date updateDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateDate
         this.updateDate = updateDate;
     }
 
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return rowId;
     }
 
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
 
-    public Long getVersion() {
+    public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return version;
     }
 
-    public void setVersion(Long version) {
+    public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
 
@@ -140,7 +146,7 @@ public class Iprur001Result3Detail implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain1.Iprur001Result3Detail[iprur001Result3DetailPK=" + iprur001Result3DetailPK + "]";
     }
 

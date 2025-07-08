@@ -13,7 +13,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 
 public class Monitor extends TDL {
 	
-	private static final long serialVersionUID = -6150677742864628537L;
+	private static final long serialVersionUID = -6150677742864628537L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	 
 	public Monitor() {
 		//initData();
@@ -21,7 +21,7 @@ public class Monitor extends TDL {
 		tdlStatusList.addAll(getTDLAsList());
 	}	
 	
-	public Map getTdlRoots() {
+	public Map getTdlRoots() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTdlRoots
 		if (this.tdlRoots==null) {
 			initData();
 		}

@@ -21,11 +21,11 @@ public class FirewallValidate {
 		this.firewall = bean;
 	}
 
-	public void setFirewallBean(IPFirewallBean bean) {
+	public void setFirewallBean(IPFirewallBean bean) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFirewallBean
 		this.firewall = bean;
 	}
 	
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		

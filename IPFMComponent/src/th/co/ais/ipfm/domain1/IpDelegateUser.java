@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 8 µ.¤. 2553, 16:51:31 by Hibernate Tools 3.2.1.GA
+// Generated 8 Âµ.Â¤. 2553, 16:51:31 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -55,103 +55,103 @@ public class IpDelegateUser extends MasterDomain  implements java.io.Serializabl
         @AttributeOverride(name="userId", column=@Column(name="USER_ID", nullable=false, length=20) ), 
         @AttributeOverride(name="delegateUserId", column=@Column(name="DELEGATE_USER_ID", nullable=false, length=20) )} )
       
-    public IpDelegateUserId getId() {
+    public IpDelegateUserId getId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getId
         return this.id;
     }
     
-    public void setId(IpDelegateUserId id) {
+    public void setId(IpDelegateUserId id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setId
         this.id = id;
     }
     @Version
     @Column(name="VERSION", precision=10, scale=0)
-    public Long getVersion() {
+    public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Long version) {
+    public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     @Temporal(TemporalType.DATE)
     @Column(name="START_DATE", length=7)
-    public Date getStartDate() {
+    public Date getStartDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStartDate
         return this.startDate;
     }
     
-    public void setStartDate(Date startDate) {
+    public void setStartDate(Date startDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStartDate
         this.startDate = startDate;
     }
     @Temporal(TemporalType.DATE)
     @Column(name="END_DATE", length=7)
-    public Date getEndDate() {
+    public Date getEndDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndDate
         return this.endDate;
     }
     
-    public void setEndDate(Date endDate) {
+    public void setEndDate(Date endDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndDate
         this.endDate = endDate;
     }
 
 	@Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
 	@Column(name="CREATE_DATE")
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
 	@Column(name="UPDATE_BY")
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 	
 	@Column(name="UPDATE_DATE")
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 	
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
     
 
 	@Column(name="ROW_ID")
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
 		return rowId;
 	}
 
-	public void setRowId(String rowId) {
+	public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
 		this.rowId = rowId;
 	}
 
 	@Transient
-	public String getUserName() {
+	public String getUserName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserName
 		return userName;
 	}
 
-	public void setUserName(String userName) {
+	public void setUserName(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserName
 		this.userName = userName;
 	}
 
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "DELEGATE_USER_ID", referencedColumnName = "USER_ID", nullable = true, insertable=false,updatable=false)
-    public IpUser getDelegateUser() {
+    public IpUser getDelegateUser() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDelegateUser
 		return delegateUser;
 	}
 
-	public void setDelegateUser(IpUser delegateUser) {
+	public void setDelegateUser(IpUser delegateUser) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDelegateUser
 		this.delegateUser = delegateUser;
 	}
 }

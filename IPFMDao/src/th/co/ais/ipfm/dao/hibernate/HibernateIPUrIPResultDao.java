@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.math.BigDecimal;
@@ -23,8 +24,13 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public String reCheck_ip_range(IpUrIpResult ipUrIpResult) throws DataAccessException {
+	public String reCheck_ip_range(IpUrIpResult ipUrIpResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference reCheck_ip_range
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier177
+DMAP ConvertedQuery - SELECT DISTINCT 'X' AS chk FROM IP_LEVEL1 A WHERE A.BINARY1_START BETWEEN 'ipUrIpResult.getBinary1Start()' AND 'ipUrIpResult.getBinary1End()' AND A.BINARY1_END BETWEEN 'ipUrIpResult.getBinary1Start()' AND 'ipUrIpResult.getBinary1End()'
+**/
+
 		String result =  (String) session.createSQLQuery("  SELECT DISTINCT 'X' AS chk  FROM IP_LEVEL1 A  WHERE A.BINARY1_START BETWEEN '"+ipUrIpResult.getBinary1Start()+"' AND '"+
 				       ipUrIpResult.getBinary1End()+"' AND A.BINARY1_END BETWEEN '"+ipUrIpResult.getBinary1Start()+"' AND '"+ipUrIpResult.getBinary1End()+"'")
 				.addScalar("chk", Hibernate.STRING).uniqueResult();
@@ -33,8 +39,13 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public String reCheck_ip_range23(IpUrIpResult ipUrIpResult) throws DataAccessException {
+	public String reCheck_ip_range23(IpUrIpResult ipUrIpResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference reCheck_ip_range23
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier176
+DMAP ConvertedQuery - SELECT DISTINCT 'X' AS chk FROM IP_LEVEL2 A WHERE A.BINARY2_START BETWEEN 'ipUrIpResult.getBinary2Start()' AND 'ipUrIpResult.getBinary2End()' AND A.BINARY2_END BETWEEN 'ipUrIpResult.getBinary2Start()' AND 'ipUrIpResult.getBinary2End()'
+**/
+
 		String result =  (String) session.createSQLQuery("  SELECT DISTINCT 'X' AS chk  FROM IP_LEVEL2 A  WHERE A.BINARY2_START BETWEEN '"+ipUrIpResult.getBinary2Start()+"' AND '"+
 				       ipUrIpResult.getBinary2End()+"' AND A.BINARY2_END BETWEEN '"+ipUrIpResult.getBinary2Start()+"' AND '"+ipUrIpResult.getBinary2End()+"'")
 				.addScalar("chk", Hibernate.STRING).uniqueResult();
@@ -42,15 +53,20 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	}
 	
 	@Override
-	public BigDecimal getSeqNo(String urNo) {
+	public BigDecimal getSeqNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSeqNo
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier175
+DMAP ConvertedQuery - SELECT coalesce(MAX(CAST(SEQ AS numeric)), 0)+1 as NEWSEQ FROM IP_UR_IP_RESULT WHERE UR_NO='urNo'
+**/
+
 		String seqNo =  (String) session.createSQLQuery("SELECT NVL(MAX(SEQ),0)+1 as NEWSEQ FROM IP_UR_IP_RESULT WHERE UR_NO='"+urNo+"'")
 				.addScalar("NEWSEQ", Hibernate.STRING).uniqueResult();
 		return new BigDecimal(seqNo);
 	}
 	
 	@Override
-	public IpUrIpResult addIpUrIpResult(IpUrIpResult ipUrIpResult) throws DataAccessException {
+	public IpUrIpResult addIpUrIpResult(IpUrIpResult ipUrIpResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference addIpUrIpResult
 		
 		try {
 			insert(ipUrIpResult);
@@ -60,7 +76,7 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 		return ipUrIpResult;
 	}
 	@Override
-	public IpUrIpResult updateIpUrIpResult(IpUrIpResult ipUrIpResult) throws DataAccessException {
+	public IpUrIpResult updateIpUrIpResult(IpUrIpResult ipUrIpResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpUrIpResult
 		
 		try {
 			update(ipUrIpResult);
@@ -72,7 +88,7 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 
 
 	@Override
-	public IpUrIpResult getIpUrIpResult(String urNo) throws DataAccessException {
+	public IpUrIpResult getIpUrIpResult(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIpResult
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrIpResult.class);
 		
@@ -83,12 +99,17 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	
 	
 	@Override
-	public IpUrIpResult checkIPRange(IpUrIpResult ipUrIpResult) throws DataAccessException {	 
+	public IpUrIpResult checkIPRange(IpUrIpResult ipUrIpResult) throws DataAccessException {	  // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRange
 		 IpUrIpResult obj =null;
 		 Connection connection = null;
 		 try{
 			     connection = getSessionFactory().getCurrentSession().connection();
-				 String plName = "{call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)}";
+String plName = "call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)";//String plName = "{call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier174
+DMAP ConvertedQuery - call check_ip_range(?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 				 CallableStatement stmt = connection.prepareCall(plName);
 				 //Set output data type
 				 //set PL parameter &amp; value
@@ -127,7 +148,7 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	  	return obj;
 	}
 	@Override
-	public IpUrIpResult checkIPRange23(IpUrIpResult ipUrIpResult) throws Exception {	 
+	public IpUrIpResult checkIPRange23(IpUrIpResult ipUrIpResult) throws Exception {	  // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRange23
 //		System.out.println("-- checkIPRange23 --");
 		 Connection connection = null;
 		 CallableStatement stmt = null;
@@ -136,7 +157,12 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 //			System.out.println(" ipUrIpResult.getVt2TeamId() = "+ ipUrIpResult.getVt2TeamId());
 //			System.out.println(" result = "+ ipUrIpResult.getResult());
 			connection = getSessionFactory().getCurrentSession().connection();
-			String plName = "{call check_ip_range23(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+String plName = "call check_ip_range23(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";//String plName = "{call check_ip_range23(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier173
+DMAP ConvertedQuery - call check_ip_range23(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 			stmt = connection.prepareCall(plName);
 			//Set output data type
 			//set PL parameter &amp; value
@@ -195,12 +221,17 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	  	return ipUrIpResult;
 	}
 	@Override
-	public IpUrIpResult checkIPRange23_2(IpUrIpResult ipUrIpResult) throws Exception {	 
+	public IpUrIpResult checkIPRange23_2(IpUrIpResult ipUrIpResult) throws Exception {	  // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRange23_2
 		 Connection connection = null;
 		 CallableStatement stmt = null;
 		 try{
 			connection = getSessionFactory().getCurrentSession().connection();
-			String plName = "{call check_ip_range23_2(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+String plName = "call check_ip_range23_2(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";//String plName = "{call check_ip_range23_2(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier172
+DMAP ConvertedQuery - call check_ip_range23_2(?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 			stmt = connection.prepareCall(plName);
 			//Set output data type
 			//set PL parameter &amp; value
@@ -258,12 +289,17 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	  	return ipUrIpResult;
 	}
 	@Override
-	public IpUrIpResult checkIPRange23_3(IpUrIpResult ipUrIpResult) throws Exception {	 
+	public IpUrIpResult checkIPRange23_3(IpUrIpResult ipUrIpResult) throws Exception {	  // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRange23_3
 		 Connection connection = null;
 		 CallableStatement stmt = null;
 		 try{
 			 connection = getSessionFactory().getCurrentSession().connection();
-			String plName = "{call check_ip_range23_3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+String plName = "call check_ip_range23_3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";//String plName = "{call check_ip_range23_3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier171
+DMAP ConvertedQuery - call check_ip_range23_3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 			stmt = connection.prepareCall(plName);
 			//Set output data type
 			//set PL parameter &amp; value
@@ -322,7 +358,7 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	}
 
 	@Override
-	public List<IpUrIpResult> getIpUrIpResultList(String urNo) throws DataAccessException {
+	public List<IpUrIpResult> getIpUrIpResultList(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIpResultList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrIpResult.class);		
 		criteria.add(Restrictions.eq("id.urNo", urNo));
@@ -331,13 +367,18 @@ public class HibernateIPUrIPResultDao extends HibernateGenericDao<IpUrIpResult> 
 	}
 	
 	@Override
-	public IpUrIpResult getIpStartEnd3(String ip1, String ip2, String ip3, String ip4, String mark) throws Exception {
+	public IpUrIpResult getIpStartEnd3(String ip1, String ip2, String ip3, String ip4, String mark) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpStartEnd3
 		 Connection connection = null;
 		 CallableStatement stmt = null;
 		 IpUrIpResult ipUrIpResult = new IpUrIpResult();
 		 try{
 			 connection = getSessionFactory().getCurrentSession().connection();
-			String plName = "{call get_ip_start_end3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+String plName = "call get_ip_start_end3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";//String plName = "{call get_ip_start_end3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier170
+DMAP ConvertedQuery - call get_ip_start_end3(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 			stmt = connection.prepareCall(plName);
 			//Set output data type
 			//set PL parameter &amp; value

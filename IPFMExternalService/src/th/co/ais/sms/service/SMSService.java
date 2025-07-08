@@ -8,31 +8,31 @@ import org.springframework.ui.velocity.VelocityEngineUtils;
 
 
 public class SMSService {
-	public static final String TEMPLATE_1 = "Template1";
-	public static final String TEMPLATE_OVERSLA = "OverSLATemplate";
+	public static final String TEMPLATE_1 = "Template1"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_1
+	public static final String TEMPLATE_OVERSLA = "OverSLATemplate"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_OVERSLA
 	public static final String DOUBLE_QOUTE = "\"";
 	public static final String SPACE = " ";
 	private static final Logger logger = Logger.getLogger(SMSService.class);
 	private String shellcommand = null;
 	private VelocityEngine velocityEngine;
 	
-	public VelocityEngine getVelocityEngine() {
+	public VelocityEngine getVelocityEngine() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVelocityEngine
 		return velocityEngine;
 	}
 	
-	public void setVelocityEngine(VelocityEngine velocityEngine) {
+	public void setVelocityEngine(VelocityEngine velocityEngine) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVelocityEngine
 		this.velocityEngine = velocityEngine;
 	}
 	
-	public String getShellcommand() {
+	public String getShellcommand() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getShellcommand
 		return shellcommand;
 	}
 	
-	public void setShellcommand(String shellcommand) {
+	public void setShellcommand(String shellcommand) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setShellcommand
 		this.shellcommand = shellcommand;
 	}
 	
-	public void sendSMS(String srcMSISDN, String desMSISDN, String template, Map model){
+	public void sendSMS(String srcMSISDN, String desMSISDN, String template, Map model){ // DMAP Comment : Dead Code Detected - The Following Method has no reference sendSMS
 		try {
 			String text = VelocityEngineUtils.mergeTemplateIntoString(
             		velocityEngine, "th/co/ais/sms/service/sms" + template + ".vm", model);

@@ -46,7 +46,7 @@ public class IpLevel2Action extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		ipLevel2Bean = getIpLevel2Bean();		
@@ -115,7 +115,7 @@ public class IpLevel2Action extends AbstractAction {
 		return programID;
 	}
 	
-	public void reset() {
+	public void reset() { // DMAP Comment : Dead Code Detected - The Following Method has no reference reset
 		ipLevel2Bean = getIpLevel2Bean();
 		try{
 			ipLevel2Bean.setSearchFlag(false);
@@ -150,7 +150,7 @@ public class IpLevel2Action extends AbstractAction {
 		}
 	}
 	
-	public void checkAll(){
+	public void checkAll(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkAll
 		ipLevel2Bean = getIpLevel2Bean();
 		try{
 			if (ipLevel2Bean.getIpLevel2DataTable().getRowCount()>0) {
@@ -171,7 +171,7 @@ public class IpLevel2Action extends AbstractAction {
 		}
 	}
 	
-	public void searchIP(){
+	public void searchIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIP
 		ipLevel2Bean = getIpLevel2Bean();
 		ManagementIpService managementIpService = (ManagementIpService)JSFServiceFinderUtil.getInstance().getBean("managementIpService");
 		try{
@@ -359,7 +359,7 @@ public class IpLevel2Action extends AbstractAction {
 		}
 	}
 	
-	public String popupDetail() {
+	public String popupDetail() { // DMAP Comment : Dead Code Detected - The Following Method has no reference popupDetail
 		ipLevel2Bean = getIpLevel2Bean();
 		try{
 			
@@ -393,7 +393,7 @@ public class IpLevel2Action extends AbstractAction {
 		return null;
 	}
 	
-	public String save(){
+	public String save(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference save
 //		System.out.println("----- save ------");
 		ipLevel2Bean = getIpLevel2Bean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -424,7 +424,7 @@ public class IpLevel2Action extends AbstractAction {
 		return null;
 	}
 	
-	public String popupExpireDate(){
+	public String popupExpireDate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupExpireDate
 		ipLevel2Bean = getIpLevel2Bean();
 		try{
 			if (ipLevel2Bean.getIpLevel2DataTable().getRowCount()>0) {
@@ -465,7 +465,7 @@ public class IpLevel2Action extends AbstractAction {
 		return null;
 	}
 	
-	public String updateExpireDate(){
+	public String updateExpireDate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateExpireDate
 		ipLevel2Bean = getIpLevel2Bean();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd", Locale.US);
 		try{
@@ -671,7 +671,7 @@ public class IpLevel2Action extends AbstractAction {
 		ipLevel2.setInstallTypeName(ipLevel2Bean.getInstallTypeComboItem().getValue()==null?"":ipLevel2Bean.getInstallTypeComboItem().getLabel());
     }
 
-	public void validateCheckBoxIPStatus(){
+	public void validateCheckBoxIPStatus(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateCheckBoxIPStatus
 		ipLevel2Bean = getIpLevel2Bean();
 		BigDecimal sumIP = new BigDecimal(0);
 		BigDecimal totalIP = new BigDecimal(0);

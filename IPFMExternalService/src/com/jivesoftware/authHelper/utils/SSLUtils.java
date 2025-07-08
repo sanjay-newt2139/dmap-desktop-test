@@ -31,7 +31,7 @@ public class SSLUtils {
       creats SSL Sockets that accepts all certificates including expired and self-signed certificates
       warning : might be insecure , use for testing
      */
-    public static void trustAllSSLCertificates() throws IOException {
+    public static void trustAllSSLCertificates() throws IOException { // DMAP Comment : Dead Code Detected - The Following Method has no reference trustAllSSLCertificates
 
         if (!registeredHTTPStrustAll) {
             try {
@@ -48,7 +48,7 @@ public class SSLUtils {
         }
     }
 
-    public static void trustJDKDefaultSSLCertificates() {
+    public static void trustJDKDefaultSSLCertificates() { // DMAP Comment : Dead Code Detected - The Following Method has no reference trustJDKDefaultSSLCertificates
         trustCustomHTTPSCertificates(null, null, null, null,
                 HTTPS_PORT); //DEFAULT_TRUST_STORE_PATH, DEFAULT_STORE_PASSWORD);
     }

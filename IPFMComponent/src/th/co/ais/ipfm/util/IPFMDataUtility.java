@@ -46,7 +46,7 @@ public class IPFMDataUtility {
 
 	public static final String SIMPLE_DATETIME_PATTERN = "dd/MM/yyyy HH:mm:ss";
 
-	public static final String PATTERN_yyMM = "yyMM";
+	public static final String PATTERN_yyMM = "yyMM"; // DMAP Comment : Dead Code Detected - The Following Field has no reference PATTERN_yyMM
 
 	public static final long MILLISECS_PER_DAY = 86400000;
 
@@ -68,7 +68,7 @@ public class IPFMDataUtility {
 	 * @return Date By Specific Thai Locale
 	 * @throws Exception
 	 */
-	public static Date getCurrentDateTh() throws Exception {
+	public static Date getCurrentDateTh() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCurrentDateTh
 		return new GregorianCalendar(thLocale).getTime();
 	}
 
@@ -76,19 +76,19 @@ public class IPFMDataUtility {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Date getCurrentDateByPattern() throws Exception {
+	public static Date getCurrentDateByPattern() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCurrentDateByPattern
 		SimpleDateFormat sdf = new SimpleDateFormat(SIMPLE_DATE_PATTERN);
 		String curDate = sdf.format(new Date());
 		return sdf.parse(curDate);
 	}
 
-	public static Date convertDateByPattern(Date date) throws Exception {
+	public static Date convertDateByPattern(Date date) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertDateByPattern
 		SimpleDateFormat sdf = new SimpleDateFormat(SIMPLE_DATE_PATTERN);
 		String curDate = sdf.format(date);
 		return sdf.parse(curDate);
 	}
 	
-	public static Locale getDefaultLocale() {
+	public static Locale getDefaultLocale() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDefaultLocale
 		return enLocale;
 	}
 
@@ -96,7 +96,7 @@ public class IPFMDataUtility {
 	 * String Thai Date Format with pattern dd/MM/yyyy
 	 * 
 	 */
-	public static String toStringThaiDateSimpleFormat(Date date) throws Exception {
+	public static String toStringThaiDateSimpleFormat(Date date) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference toStringThaiDateSimpleFormat
 		SimpleDateFormat thFormat = new SimpleDateFormat(SIMPLE_DATE_PATTERN, thLocale);
 		return thFormat.format(date);
 	}
@@ -113,7 +113,7 @@ public class IPFMDataUtility {
 	 * String Eng Date Format with pattern dd/MM/yyyy
 	 * 
 	 */
-	public static String toStringEngDateSimpleFormat(Date date) throws Exception {
+	public static String toStringEngDateSimpleFormat(Date date) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference toStringEngDateSimpleFormat
 		SimpleDateFormat engFormat = new SimpleDateFormat(SIMPLE_DATE_PATTERN, enLocale);
 		return engFormat.format(date);
 	}
@@ -121,7 +121,7 @@ public class IPFMDataUtility {
 	/*
 	 * String Eng Date Format with pattern dd/MM/yyyy hh:mm:ss
 	 */
-	public static String toStringEngDateTimeSimpleFormat(Date date) {
+	public static String toStringEngDateTimeSimpleFormat(Date date) { // DMAP Comment : Dead Code Detected - The Following Method has no reference toStringEngDateTimeSimpleFormat
 		SimpleDateFormat engFormat = new SimpleDateFormat(SIMPLE_DATETIME_PATTERN, enLocale);
 		return engFormat.format(date);
 	}
@@ -129,7 +129,7 @@ public class IPFMDataUtility {
 	/*
 	 * String Eng Date Format with pattern yyMM
 	 */
-	public static String toStringEngDateBySimpleFormat(Date date, String formatDate) {
+	public static String toStringEngDateBySimpleFormat(Date date, String formatDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference toStringEngDateBySimpleFormat
 		SimpleDateFormat engFormat = new SimpleDateFormat(formatDate, enLocale);
 		return engFormat.format(date);
 	}
@@ -146,7 +146,7 @@ public class IPFMDataUtility {
 	 * convert Date String to Date Object . Apply for patterns, dd/MM/yyyy,
 	 * dd/MM/yyyy HH:mm:ss, yyyy-MM-dd HH:mm:ss
 	 */
-	public static Date convertStringToDate(String stringDate) throws Exception {
+	public static Date convertStringToDate(String stringDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertStringToDate
 		SimpleDateFormat format = new SimpleDateFormat();
 		format.setCalendar(new GregorianCalendar(enLocale));
 		Date rtnDate = null;
@@ -179,13 +179,13 @@ public class IPFMDataUtility {
 	 * calculate Diff Date return number of differ days
 	 * 
 	 */
-	public static long diffDayCalculate(Date startDate, Date endDate) throws Exception {
+	public static long diffDayCalculate(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffDayCalculate
 		long endL = endDate.getTime();
 		long startL = startDate.getTime();
 		return ((endL - startL) / MILLISECS_PER_DAY);
 	}
 
-	public static long diffSecCalculate(Date startDate, Date endDate) throws Exception {
+	public static long diffSecCalculate(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffSecCalculate
 		long endL = endDate.getTime();
 		long startL = startDate.getTime();
 		return ((endL - startL) /1000);
@@ -194,7 +194,7 @@ public class IPFMDataUtility {
 	 * calculate Diff Date return number of differ days
 	 * 
 	 */
-	public static long diffDayCalculateIgnoreTime(Date startDate, Date endDate) throws Exception {
+	public static long diffDayCalculateIgnoreTime(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffDayCalculateIgnoreTime
 		/*
 		 * Date startDateNoTime = setDateIgnoreTime(startDate); Date
 		 * endDateNoTime = setDateIgnoreTime(endDate); long endL =
@@ -224,7 +224,7 @@ public class IPFMDataUtility {
 	 * calculate Diff Month return number of differ months
 	 * 
 	 */
-	public static long diffMonthCalculate(Date startDate, Date endDate) throws Exception {
+	public static long diffMonthCalculate(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffMonthCalculate
 		long endL = endDate.getTime();
 		long startL = startDate.getTime();
 		return ((endL - startL) / (MILLISECS_PER_DAY * 30));
@@ -233,7 +233,7 @@ public class IPFMDataUtility {
 	 * calculate Diff Month return number of differ months
 	 * 
 	 */
-	public static long diffMonthCalculateIgnoreTime(Date startDate, Date endDate) throws Exception {
+	public static long diffMonthCalculateIgnoreTime(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffMonthCalculateIgnoreTime
 		/*
 		 * Date startDateNoTime = setDateIgnoreTime(startDate); Date
 		 * endDateNoTime = setDateIgnoreTime(endDate); long endL =
@@ -251,7 +251,7 @@ public class IPFMDataUtility {
 		return ((endL - startL) / (MILLISECS_PER_DAY * 30));
 	}
 
-	public static long diffYearCalculate(Date startDate, Date endDate) throws Exception {
+	public static long diffYearCalculate(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffYearCalculate
 		long endL = endDate.getTime();
 		long startL = startDate.getTime();
 		return ((endL - startL) / (MILLISECS_PER_DAY * 365));
@@ -260,7 +260,7 @@ public class IPFMDataUtility {
 	 * calculate Diff Year return number of differ years
 	 * 
 	 */
-	public static long diffYearCalculateIgnoreTime(Date startDate, Date endDate) throws Exception {
+	public static long diffYearCalculateIgnoreTime(Date startDate, Date endDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference diffYearCalculateIgnoreTime
 		SimpleDateFormat sdf = new SimpleDateFormat(SIMPLE_DATE_PATTERN);
 		String startDtString = sdf.format(startDate);
 		Date startDateNoTime = sdf.parse(startDtString);
@@ -277,7 +277,7 @@ public class IPFMDataUtility {
 	 * int mins = +,-
 	 */
 	//Add by Chayatorn 12/05/2010
-	public static Date shiftMinute(Date inputDate, int mins) throws Exception {
+	public static Date shiftMinute(Date inputDate, int mins) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference shiftMinute
 		Calendar calendar = new GregorianCalendar();
 		calendar.setTime(inputDate);
 		calendar.add(Calendar.MINUTE, mins);
@@ -287,7 +287,7 @@ public class IPFMDataUtility {
 	/*
 	 * shift date up
 	 */
-	public static Date shiftDateUp(Date inputDate, int days) throws Exception {
+	public static Date shiftDateUp(Date inputDate, int days) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference shiftDateUp
 		Calendar calendar = new GregorianCalendar();
 		calendar.setTime(inputDate);
 		calendar.add(Calendar.DAY_OF_MONTH, days);
@@ -318,7 +318,7 @@ public class IPFMDataUtility {
 	/*
 	 * shift month down
 	 */
-	public static Date shiftMonthDown(Date inputDate, int months) throws Exception {
+	public static Date shiftMonthDown(Date inputDate, int months) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference shiftMonthDown
 		Calendar calendar = new GregorianCalendar();
 		calendar.setTime(inputDate);
 		int monthDown = months * -1;
@@ -329,12 +329,12 @@ public class IPFMDataUtility {
 	/*
 	 * convert double to String. Apply for patterns 1) #,### 2) #,##0.00 3) etc
 	 */
-	public static String convertNumberToStringByFormat(double inputDouble, String format) {
+	public static String convertNumberToStringByFormat(double inputDouble, String format) { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertNumberToStringByFormat
 		DecimalFormat decimalFormat = new DecimalFormat(format);
 		return decimalFormat.format(inputDouble);
 	}
 
-	public static String convertNumberToStringByFormat(BigDecimal inputDouble, String format) {
+	public static String convertNumberToStringByFormat(BigDecimal inputDouble, String format) { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertNumberToStringByFormat
 		DecimalFormat decimalFormat = new DecimalFormat(format);
 		return decimalFormat.format(inputDouble);
 	}
@@ -342,7 +342,7 @@ public class IPFMDataUtility {
 	/*
 	 * convert long to String. Apply for patterns 1) #,### 2) etc
 	 */
-	public static String convertNumberToStringByFormat(long inputLong, String format) {
+	public static String convertNumberToStringByFormat(long inputLong, String format) { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertNumberToStringByFormat
 		DecimalFormat decimalFormat = new DecimalFormat(format);
 		return decimalFormat.format(inputLong);
 	}
@@ -356,7 +356,7 @@ public class IPFMDataUtility {
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
-	public static List convertSetToList(Set sets) throws Exception {
+	public static List convertSetToList(Set sets) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertSetToList
 		if (sets == null) {
 			return null;
 		} else {
@@ -373,7 +373,7 @@ public class IPFMDataUtility {
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
-	public static Set convertListToSet(List lists) throws Exception {
+	public static Set convertListToSet(List lists) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertListToSet
 		if (lists == null) {
 			return null;
 		} else {
@@ -533,7 +533,7 @@ public class IPFMDataUtility {
 		}
 	}
 
-	public static int calculateCustomerAge(Date custBirthDate) throws Exception {
+	public static int calculateCustomerAge(Date custBirthDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference calculateCustomerAge
 		Date currentDate = new Date();
 		Calendar calendar = new GregorianCalendar();
 		calendar.setTime(currentDate);
@@ -594,7 +594,7 @@ public class IPFMDataUtility {
 	 * @param orderBySortType
 	 * 			HashMap<String, String> which key is fieldName and value is sortType such as "A" = asc, "D" = dsc and "U" = unsort
 	 */
-	public static List sortColumnListBySortTypeFieldName(List listDomain, String orderBy, HashMap<String, String> orderBySortType) throws Exception {
+	public static List sortColumnListBySortTypeFieldName(List listDomain, String orderBy, HashMap<String, String> orderBySortType) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference sortColumnListBySortTypeFieldName
 		String sortType = orderBySortType.get(orderBy);
 		//Sort >> if Map value is "U" or "D", sort by asc
 		//		  if Map value is "A", sort by dsc
@@ -615,7 +615,7 @@ public class IPFMDataUtility {
 		return listDomain;
 	}
 
-	public static String buildMessage(String message, String... arguments) {
+	public static String buildMessage(String message, String... arguments) { // DMAP Comment : Dead Code Detected - The Following Method has no reference buildMessage
 		// System.out.println("buildMessage");
 		if (arguments != null && arguments.length > 0) {
 			for (int i = 0; i < arguments.length; i++) {
@@ -630,7 +630,7 @@ public class IPFMDataUtility {
 	}
 
 	// Override method
-	public static String buildMessage(String message, List<String> arguments) {
+	public static String buildMessage(String message, List<String> arguments) { // DMAP Comment : Dead Code Detected - The Following Method has no reference buildMessage
 		// System.out.println("buildMessage");
 		if (arguments != null && arguments.size() > 0) {
 			for (int i = 0; i < arguments.size(); i++) {
@@ -644,7 +644,7 @@ public class IPFMDataUtility {
 		return message;
 	}
 
-	public static String getFileExtension(String fileName) {
+	public static String getFileExtension(String fileName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFileExtension
 		String[] fileNames = fileName.split("[.]");
 		if (fileNames != null && fileNames.length > 1) {
 			return fileNames[fileNames.length - 1];
@@ -656,7 +656,7 @@ public class IPFMDataUtility {
 	 * Copy Java Bean Properties param1 accept Destination Java Bean Object
 	 * param2 accept Input Java Bean Object
 	 */
-	public static void copyProperties(Object dest, Object input) throws Exception {
+	public static void copyProperties(Object dest, Object input) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference copyProperties
 		WrapDynaBean inputBean = new WrapDynaBean(input);
 		WrapDynaBean outputBean = new WrapDynaBean(dest);
 		for (DynaProperty dp : outputBean.getDynaClass().getDynaProperties()) {
@@ -675,7 +675,7 @@ public class IPFMDataUtility {
 	 * Object
 	 * 
 	 */
-	public static <T> List convertDomainToWrapBeanList(Collection<T> domainList) throws Exception {
+	public static <T> List convertDomainToWrapBeanList(Collection<T> domainList) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertDomainToWrapBeanList
 		List<WrapperBeanObject<T>> convertList = new ArrayList<WrapperBeanObject<T>>();
 		if (!IPFMDataValidateUtil.isCollectionEmpty(domainList)) {
 			for (T domainObj : domainList) {
@@ -692,7 +692,7 @@ public class IPFMDataUtility {
 	 * Object
 	 * 
 	 */
-	public static <T> List convertWrapBeanToObjectList(Collection<WrapperBeanObject<T>> wrapperDomainList) throws Exception {
+	public static <T> List convertWrapBeanToObjectList(Collection<WrapperBeanObject<T>> wrapperDomainList) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertWrapBeanToObjectList
 		List<T> convertList = new ArrayList<T>();
 		if (!IPFMDataValidateUtil.isCollectionEmpty(wrapperDomainList)) {
 			for (WrapperBeanObject<T> wrapperDomain : wrapperDomainList) {
@@ -704,7 +704,7 @@ public class IPFMDataUtility {
 		return convertList;
 	}
 
-	public static Date getLastDayOfMonth(Date date) throws Exception {
+	public static Date getLastDayOfMonth(Date date) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastDayOfMonth
 		String dd = "01";
 		String MM = toStringCustomDateFormat(date, "MM", Locale.US);
 		String yyyy = toStringCustomDateFormat(date, "yyyy", Locale.US);
@@ -714,7 +714,7 @@ public class IPFMDataUtility {
 		return lastDayOfMonth;
 	}
 
-	public static String convertCreditNoDisplay(String inputNo) {
+	public static String convertCreditNoDisplay(String inputNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertCreditNoDisplay
 		if (inputNo != null && !"".equals(inputNo)) {
 			if (inputNo.length() > 4) {
 				int endPoint = inputNo.length() - 4;
@@ -732,7 +732,7 @@ public class IPFMDataUtility {
 		}
 	}
 
-	public static Date convertToEnYear(Date inputDate) throws Exception {
+	public static Date convertToEnYear(Date inputDate) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertToEnYear
 		try {
 			// en Locale
 			Date currentDate = IPFMDataUtility.getCurrentDate();
@@ -766,7 +766,7 @@ public class IPFMDataUtility {
 		return inputDate;
 	}
 
-	public static void convertParameterListToObject(ParameterList parameterList, Object domain) throws Exception {
+	public static void convertParameterListToObject(ParameterList parameterList, Object domain) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertParameterListToObject
 		try {
 			WrapDynaBean wrapBean = new WrapDynaBean(domain);
 			if ((wrapBean != null) && (parameterList != null)) {
@@ -782,7 +782,7 @@ public class IPFMDataUtility {
 		}
 	}
 
-	public static void convertObjectToSffResponse(Object domain, SffResponse sffResponse, String errorMessage) throws Exception {
+	public static void convertObjectToSffResponse(Object domain, SffResponse sffResponse, String errorMessage) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertObjectToSffResponse
 		try {
 			sffResponse.setErrorMessage(errorMessage);
 			WrapDynaBean wrapBean = new WrapDynaBean(domain);
@@ -797,7 +797,7 @@ public class IPFMDataUtility {
 	}
 
 	@SuppressWarnings("unused")
-	public static HashMap<String,String> convertParameterListToHashMap(ParameterList parameterList) throws Exception {
+	public static HashMap<String,String> convertParameterListToHashMap(ParameterList parameterList) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertParameterListToHashMap
 		HashMap<String,String> hm = new HashMap<String,String>();
 		try {
 			if (parameterList != null) {
@@ -878,11 +878,11 @@ public class IPFMDataUtility {
 		}
 	}
 	
-	public static int randomNumber() {		
+	public static int randomNumber() {		 // DMAP Comment : Dead Code Detected - The Following Method has no reference randomNumber
 		return new Random().nextInt(10);
 	}
 	
-	public static String formatNumber4FixComma(String num)throws Exception{
+	public static String formatNumber4FixComma(String num)throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference formatNumber4FixComma
 		
 		String resultData = "";
 		if (num!=null && num.trim().length()>0) {
@@ -917,7 +917,7 @@ public class IPFMDataUtility {
 		return resultData;
 	}
 	
-	public static Date adjustTimeToStartOfDate (Date inputDate)
+	public static Date adjustTimeToStartOfDate (Date inputDate) // DMAP Comment : Dead Code Detected - The Following Method has no reference adjustTimeToStartOfDate
     {
         Calendar calendar = Calendar.getInstance ();
         calendar.setTime(inputDate);
@@ -928,7 +928,7 @@ public class IPFMDataUtility {
         return calendar.getTime ();
     }
     
-    public static Date adjustTimeToEndOfDate (Date inputDate)
+    public static Date adjustTimeToEndOfDate (Date inputDate) // DMAP Comment : Dead Code Detected - The Following Method has no reference adjustTimeToEndOfDate
     {
         Calendar calendar = Calendar.getInstance ();
         calendar.setTime(inputDate);
@@ -942,7 +942,7 @@ public class IPFMDataUtility {
 	/********************************************************************************
 	  * Methods setLineSeparator convert String List to String separated by newline *
 	  *******************************************************************************/
-	public static String setLineSeparator(List<String> sErrMsgList){
+	public static String setLineSeparator(List<String> sErrMsgList){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setLineSeparator
 		String eol = System.getProperty("line.separator");
 		StringBuilder sErrMsg = new StringBuilder();
 		if(null != sErrMsgList && sErrMsgList.size() > 0){
@@ -960,7 +960,7 @@ public class IPFMDataUtility {
 	/******************************************************************************
 	  * Methods setLineSeparator convert String List to String separated by comma *
 	  *****************************************************************************/
-	public static String setCommaSeparator(List<String> sErrorParam){
+	public static String setCommaSeparator(List<String> sErrorParam){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommaSeparator
 		StringBuilder sAppendErr = new StringBuilder();
 		int sErrSize = sErrorParam.size();
 		if(sErrSize > 1){
@@ -980,7 +980,7 @@ public class IPFMDataUtility {
 		return sAppendErr.toString();
 	}
 	
-	public static void convertDecimalToBinary(Integer decimal, String binary) throws Exception {
+	public static void convertDecimalToBinary(Integer decimal, String binary) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertDecimalToBinary
 		try {
 			binary = Integer.toBinaryString(decimal);
 			for (int i = binary.length() ; i<8 ; i++){
@@ -991,7 +991,7 @@ public class IPFMDataUtility {
 		}
 	}
 	
-	public static String convertStringToBinary(String input) throws Exception {
+	public static String convertStringToBinary(String input) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertStringToBinary
 		String binary = "";
 		try {
 			binary = Integer.toBinaryString(Integer.parseInt(input));
@@ -1004,7 +1004,7 @@ public class IPFMDataUtility {
 		return binary;
 	}
 	
-	public static String convertIpStringToBinary(String ipAddress) throws Exception {
+	public static String convertIpStringToBinary(String ipAddress) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertIpStringToBinary
 		String ipBinary = "";
 		String binary = "";
 		try {

@@ -34,7 +34,7 @@ public class PropertyUtil {
 		}
 	}
 
-	public static Hashtable getAllProperty() {
+	public static Hashtable getAllProperty() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllProperty
 		if (cache == null) {
 			getPropertyFile();
 		}
@@ -42,13 +42,13 @@ public class PropertyUtil {
 		return cache;
 	}
 
-	public static Hashtable reloadProperty() {
+	public static Hashtable reloadProperty() { // DMAP Comment : Dead Code Detected - The Following Method has no reference reloadProperty
 		getPropertyFile();
 
 		return cache;
 	}
 
-	public static String getProperty(String key) {
+	public static String getProperty(String key) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProperty
 		if (cache == null) {
 			getPropertyFile();
 		}

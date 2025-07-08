@@ -13,7 +13,7 @@ public class SuggestionAction {
 	}
 	
 	
-	public List<Suggestion> getList(Object suggest) {
+	public List<Suggestion> getList(Object suggest) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getList
         String ref = (String)suggest;
         CommonService commond = (CommonService)JSFServiceFinderUtil.getInstance().getBean("commonService");
         return commond.findSuggestion("LOCATION", ref);

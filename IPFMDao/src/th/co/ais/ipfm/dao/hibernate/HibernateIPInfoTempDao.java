@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.Date;
@@ -16,7 +17,7 @@ public class HibernateIPInfoTempDao extends HibernateGenericDao<IpInfoTemp> impl
 	
 	
 	@Override
-	public void insertIpInfoTemp(IpInfoTemp ipInfoTemp , String createBy) throws DataAccessException {
+	public void insertIpInfoTemp(IpInfoTemp ipInfoTemp , String createBy) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference insertIpInfoTemp
 		Session session = getSessionFactory().getCurrentSession();		
 		StringBuffer sql  =  new StringBuffer();
 		sql.append(" insert into ip_info_temp ( ");
@@ -31,6 +32,11 @@ public class HibernateIPInfoTempDao extends HibernateGenericDao<IpInfoTemp> impl
 		sql.append(" ,? ");
 		sql.append(" ) ");
 	
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier328
+DMAP ConvertedQuery - insert into ip_info_temp(IP_ADDRESS, IP_STATUS, IP_SUBMASK, GATEWAY, HOST_NAME, SYSTEM_NAME, VLAN_ID, EXPIRED_DATE, SYSTEM_OWNER_NAME, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, NAT_IP) values (?,?,?,?,?, ?,?,?,?,? statement_timestamp(),?,statement_timestamp() ,?)
+**/
+
 		Query query = session.createSQLQuery(sql.toString());
 		query.setString(0, ipInfoTemp.getIpAddress());
 		query.setString(1, ipInfoTemp.getIpStatus());
@@ -51,19 +57,29 @@ public class HibernateIPInfoTempDao extends HibernateGenericDao<IpInfoTemp> impl
 	}
 		
 	@Override
-	public void deleteIpInfoTempByCreateBy(String createBy) throws DataAccessException {
+	public void deleteIpInfoTempByCreateBy(String createBy) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteIpInfoTempByCreateBy
 		Session session = getSessionFactory().getCurrentSession();		
 		StringBuffer sql = new StringBuffer();
 		sql.append("DELETE IP_INFO_TEMP WHERE CREATE_BY = ? " );
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier327
+DMAP ConvertedQuery - DELETE FROM IP_INFO_TEMP WHERE CREATE_BY = ?
+**/
+
 		int result = session.createSQLQuery(sql.toString()).setString(0, createBy).executeUpdate();
 	}
 	
 
 	@Override
-	public void insertErrorLog(String ip, String type, String msg, String username) throws DataAccessException {
+	public void insertErrorLog(String ip, String type, String msg, String username) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference insertErrorLog
 		Session session = getSessionFactory().getCurrentSession();		
 		StringBuffer sql = new StringBuffer();
 		sql.append("INSERT INTO IP_LOG_VERIFY (IP, TYPE, MSG, username,row_id, create_date) VALUES (?, ?, ?, ?,sys_guid(), sysdate)" );
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier326
+DMAP ConvertedQuery - INSERT INTO IP_LOG_VERIFY (IP, TYPE, MSG, username,row_id, create_date) VALUES (?, ?, ?, ?,public.uuid_generate_v4(), statement_timestamp())
+**/
+
 		int result = session.createSQLQuery(sql.toString()).setString(0, ip).setString(1, type).setString(2, msg).setString(3, username).executeUpdate();
 		
 	}

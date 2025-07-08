@@ -29,7 +29,7 @@ public class ErrorMessageUtil {
 		return instance;
 	}
 	
-	public static synchronized String getMessage(String key){
+	public static synchronized String getMessage(String key){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getMessage
 	  	String w_msg = null;
 	  	try{  		
 	  		w_msg = ErrorMessageUtil.getInstance().getMSG(key);		

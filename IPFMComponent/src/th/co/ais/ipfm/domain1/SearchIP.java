@@ -30,151 +30,151 @@ public class SearchIP  {
         this.ipAddress = ipAddress;
     }
     
-	public String getIpAddress() {
+	public String getIpAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpAddress
         return this.ipAddress;
     }
     
-    public void setIpAddress(String ipAddress) {
+    public void setIpAddress(String ipAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpAddress
         this.ipAddress = ipAddress;
     }
     
-	public String getIpVersion() {
+	public String getIpVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpVersion
 		return ipVersion;
 	}
 
-	public void setIpVersion(String ipVersion) {
+	public void setIpVersion(String ipVersion) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpVersion
 		this.ipVersion = ipVersion;
 	}
 
-	public String getIpSubmask() {
+	public String getIpSubmask() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpSubmask
 		return ipSubmask;
 	}
 
-	public void setIpSubmask(String ipSubmask) {
+	public void setIpSubmask(String ipSubmask) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpSubmask
 		this.ipSubmask = ipSubmask;
 	}
 
-	public String getIpv4digit1() {
+	public String getIpv4digit1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv4digit1
 		return ipv4digit1;
 	}
 
-	public void setIpv4digit1(String ipv4digit1) {
+	public void setIpv4digit1(String ipv4digit1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv4digit1
 		this.ipv4digit1 = ipv4digit1;
 	}
 
-	public String getIpv4digit2() {
+	public String getIpv4digit2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv4digit2
 		return ipv4digit2;
 	}
 
-	public void setIpv4digit2(String ipv4digit2) {
+	public void setIpv4digit2(String ipv4digit2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv4digit2
 		this.ipv4digit2 = ipv4digit2;
 	}
 
-	public String getIpv4digit3() {
+	public String getIpv4digit3() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv4digit3
 		return ipv4digit3;
 	}
 
-	public void setIpv4digit3(String ipv4digit3) {
+	public void setIpv4digit3(String ipv4digit3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv4digit3
 		this.ipv4digit3 = ipv4digit3;
 	}
 
-	public String getIpv4digit4() {
+	public String getIpv4digit4() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv4digit4
 		return ipv4digit4;
 	}
 
-	public void setIpv4digit4(String ipv4digit4) {
+	public void setIpv4digit4(String ipv4digit4) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv4digit4
 		this.ipv4digit4 = ipv4digit4;
 	}
 
-	public String getIpv6digit1() {
+	public String getIpv6digit1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv6digit1
 		return ipv6digit1;
 	}
 
-	public void setIpv6digit1(String ipv6digit1) {
+	public void setIpv6digit1(String ipv6digit1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv6digit1
 		this.ipv6digit1 = ipv6digit1;
 	}
 
-	public String getIpv6digit2() {
+	public String getIpv6digit2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv6digit2
 		return ipv6digit2;
 	}
 
-	public void setIpv6digit2(String ipv6digit2) {
+	public void setIpv6digit2(String ipv6digit2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv6digit2
 		this.ipv6digit2 = ipv6digit2;
 	}
 
-	public String getIpv6digit3() {
+	public String getIpv6digit3() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv6digit3
 		return ipv6digit3;
 	}
 
-	public void setIpv6digit3(String ipv6digit3) {
+	public void setIpv6digit3(String ipv6digit3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv6digit3
 		this.ipv6digit3 = ipv6digit3;
 	}
 
-	public String getIpv6digit4() {
+	public String getIpv6digit4() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv6digit4
 		return ipv6digit4;
 	}
 
-	public void setIpv6digit4(String ipv6digit4) {
+	public void setIpv6digit4(String ipv6digit4) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv6digit4
 		this.ipv6digit4 = ipv6digit4;
 	}
 
-	public String getIpv6digit5() {
+	public String getIpv6digit5() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv6digit5
 		return ipv6digit5;
 	}
 
-	public void setIpv6digit5(String ipv6digit5) {
+	public void setIpv6digit5(String ipv6digit5) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv6digit5
 		this.ipv6digit5 = ipv6digit5;
 	}
 
-	public String getIpv6digit6() {
+	public String getIpv6digit6() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpv6digit6
 		return ipv6digit6;
 	}
 
-	public void setIpv6digit6(String ipv6digit6) {
+	public void setIpv6digit6(String ipv6digit6) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpv6digit6
 		this.ipv6digit6 = ipv6digit6;
 	}
 
-	public List<IpUrIpResult> getIpUrIpResultList() {
+	public List<IpUrIpResult> getIpUrIpResultList() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIpResultList
 		return ipUrIpResultList;
 	}
 
-	public void setIpUrIpResultList(List<IpUrIpResult> ipUrIpResultList) {
+	public void setIpUrIpResultList(List<IpUrIpResult> ipUrIpResultList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIpResultList
 		this.ipUrIpResultList = ipUrIpResultList;
 	}
 
-	public List<IpLevel2> getIpLevel2List() {
+	public List<IpLevel2> getIpLevel2List() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpLevel2List
 		return ipLevel2List;
 	}
 
-	public void setIpLevel2List(List<IpLevel2> ipLevel2List) {
+	public void setIpLevel2List(List<IpLevel2> ipLevel2List) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel2List
 		this.ipLevel2List = ipLevel2List;
 	}
 
-	public List<IpInfo> getIpInfoList() {
+	public List<IpInfo> getIpInfoList() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpInfoList
 		return ipInfoList;
 	}
 
-	public void setIpInfoList(List<IpInfo> ipInfoList) {
+	public void setIpInfoList(List<IpInfo> ipInfoList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoList
 		this.ipInfoList = ipInfoList;
 	}
 
-	public String getVsubmask() {
+	public String getVsubmask() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVsubmask
 		return vsubmask;
 	}
 
-	public void setVsubmask(String vsubmask) {
+	public void setVsubmask(String vsubmask) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVsubmask
 		this.vsubmask = vsubmask;
 	}
 	
-	public IpMaskDisplay getIpMaskDisplay() {
+	public IpMaskDisplay getIpMaskDisplay() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpMaskDisplay
 		return ipMaskDisplay;
 	}
 
-	public void setIpMaskDisplay(IpMaskDisplay ipMaskDisplay) {
+	public void setIpMaskDisplay(IpMaskDisplay ipMaskDisplay) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpMaskDisplay
 		this.ipMaskDisplay = ipMaskDisplay;
 	}
 
-	public boolean isLinkIP(){
+	public boolean isLinkIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isLinkIP
 		//if (vsubmask==null|| vsubmask.trim().length()==0 || vsubmask.equalsIgnoreCase("32")) return false;
 		//return true;
 		return false;

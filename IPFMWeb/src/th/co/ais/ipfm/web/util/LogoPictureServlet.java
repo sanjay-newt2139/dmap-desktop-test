@@ -17,7 +17,7 @@ import th.co.ais.ipfm.web.bean.IPFMConfigBean;
  * Servlet implementation class LogoPictureServlet
  */
 public class LogoPictureServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
        
     /**
      * @see HttpServlet#HttpServlet()

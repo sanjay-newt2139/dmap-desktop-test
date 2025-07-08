@@ -11,21 +11,21 @@ public class FileUploadListener implements ProgressListener{
     super();
   }
 
-  public void update(long aBytesRead, long aContentLength,int anItem){
+  public void update(long aBytesRead, long aContentLength,int anItem){ // DMAP Comment : Dead Code Detected - The Following Method has no reference update
     bytesRead = aBytesRead;
     contentLength = aContentLength;
     item = anItem;
  }
 
-  public long getBytesRead(){
+  public long getBytesRead(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getBytesRead
     return bytesRead;
   }
 
-  public long getContentLength(){
+  public long getContentLength(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getContentLength
     return contentLength;
   }
 
-  public long getItem(){
+  public long getItem(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getItem
     return item;
   }
 }

@@ -18,46 +18,46 @@ import th.co.ais.ipfm.util.PropertyUtil;
 
 
 public class EMailService {
-	public static final String TEMPLATE_1 = "Template1";
-	public static final String TEMPLATE_IPFM = "TemplateIPFM";
-	public static final String TEMPLATE_IPFM_NC_UR = "TemplateIPFMNCByUr";
-	public static final String TEMPLATE_IPFM_NC_SUBUR = "TemplateIPFMNCBySubUr";
-	public static final String TEMPLATE_IPFM_TEAM_REJECT = "TemplateIPFMTeamReject";
-	public static final String TEMPLATE_IPFM_ASSIGNIP = "TemplateIPFMAssignIP";
-	public static final String TEMPLATE_IPFM_IPEXPIRE = "TemplateIPFMIPExpire";
-	public static final String TEMPLATE_IPFM_IPEXPIRE_LEVEL2 = "TemplateIPFMIPExpireLevel2";
-	public static final String TEMPLATE_IPFM_IPEXPIRE_LEVEL2_ASSIGN = "TemplateIPFMIPExpireLevel2Assign";	
-	public static final String TEMPLATE_IPFM_ASSIGNIP_PLANNING = "PlanningAssignIP";
+	public static final String TEMPLATE_1 = "Template1"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_1
+	public static final String TEMPLATE_IPFM = "TemplateIPFM"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM
+	public static final String TEMPLATE_IPFM_NC_UR = "TemplateIPFMNCByUr"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_NC_UR
+	public static final String TEMPLATE_IPFM_NC_SUBUR = "TemplateIPFMNCBySubUr"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_NC_SUBUR
+	public static final String TEMPLATE_IPFM_TEAM_REJECT = "TemplateIPFMTeamReject"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_TEAM_REJECT
+	public static final String TEMPLATE_IPFM_ASSIGNIP = "TemplateIPFMAssignIP"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_ASSIGNIP
+	public static final String TEMPLATE_IPFM_IPEXPIRE = "TemplateIPFMIPExpire"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_IPEXPIRE
+	public static final String TEMPLATE_IPFM_IPEXPIRE_LEVEL2 = "TemplateIPFMIPExpireLevel2"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_IPEXPIRE_LEVEL2
+	public static final String TEMPLATE_IPFM_IPEXPIRE_LEVEL2_ASSIGN = "TemplateIPFMIPExpireLevel2Assign";	 // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_IPEXPIRE_LEVEL2_ASSIGN
+	public static final String TEMPLATE_IPFM_ASSIGNIP_PLANNING = "PlanningAssignIP"; // DMAP Comment : Dead Code Detected - The Following Field has no reference TEMPLATE_IPFM_ASSIGNIP_PLANNING
 	private static final Logger logger = Logger.getLogger(EMailService.class);
 	private JavaMailSender sender = null;
 	private VelocityEngine velocityEngine;
 	private IPEmailNotifyDao ipEmailNotify;
 	
-	public String getKeyCodeEmail(){
+	public String getKeyCodeEmail(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getKeyCodeEmail
 		return (UUID.randomUUID()).toString();
 	}
 	
-	public void setIpEmailNotify(IPEmailNotifyDao ipEmailNotify) {
+	public void setIpEmailNotify(IPEmailNotifyDao ipEmailNotify) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpEmailNotify
 		this.ipEmailNotify = ipEmailNotify;
 	}
 
-	public JavaMailSender getSender() {
+	public JavaMailSender getSender() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSender
 		return sender;
 	}
 
-	public void setSender(JavaMailSender sender) {
+	public void setSender(JavaMailSender sender) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSender
 		this.sender = sender;
 	}
 
-	public VelocityEngine getVelocityEngine() {
+	public VelocityEngine getVelocityEngine() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVelocityEngine
 		return velocityEngine;
 	}
 
-	public void setVelocityEngine(VelocityEngine velocityEngine) {
+	public void setVelocityEngine(VelocityEngine velocityEngine) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVelocityEngine
 		this.velocityEngine = velocityEngine;
 	}
 
-	public void sendMail(final String[] to, final String[] cc, final String from, final String template, final Map model){
+	public void sendMail(final String[] to, final String[] cc, final String from, final String template, final Map model){ // DMAP Comment : Dead Code Detected - The Following Method has no reference sendMail
 		System.out.print("Send mail to "+to);
 		System.out.print("Send mail cc "+cc);
 		System.out.print("Send mail to "+from);
@@ -73,7 +73,7 @@ public class EMailService {
 			}
 			
 			MimeMessagePreparator preparator = new MimeMessagePreparator() {
-				public void prepare(MimeMessage mimeMessage) throws Exception {
+				public void prepare(MimeMessage mimeMessage) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference prepare
 		            MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 		            message.setTo(to);
 		            if(cc!=null && cc.length>0){
@@ -97,7 +97,7 @@ public class EMailService {
 		}
 	}
 	
-	public void deleteNotify(String urNo,String urStatus){
+	public void deleteNotify(String urNo,String urStatus){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteNotify
 		if((urStatus!=null) && !(urStatus.equals(""))){
 			ipEmailNotify.deleteNotibyByStatus(urNo, urStatus);
 		} else {

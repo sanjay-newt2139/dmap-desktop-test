@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
 
 public class IPFMMessageUtils {
 	//	Log
-	public static Logger logger = Logger.getLogger(IPFMMessageUtils.class);
+	public static Logger logger = Logger.getLogger(IPFMMessageUtils.class); // DMAP Comment : Dead Code Detected - The Following Field has no reference logger
 	
 	public static void addMessage(String messageKey, Object param) {
         FacesContext context = FacesContext.getCurrentInstance( );
@@ -90,31 +90,31 @@ public class IPFMMessageUtils {
 		}
 	}	
 	
-	public static void addMessageInfo(String message){
+	public static void addMessageInfo(String message){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageInfo
 		addMessage(FacesMessage.SEVERITY_INFO, message);
 		addInfoMsg();
 	}
 	
-	public static void addMessageInfo(String clientId, String message){
+	public static void addMessageInfo(String clientId, String message){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageInfo
 		addMessage(clientId, FacesMessage.SEVERITY_INFO, message);
 		addInfoMsg();
 	}	
 	
-	public static void addMessageError(String message){
+	public static void addMessageError(String message){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageError
 		addMessage(FacesMessage.SEVERITY_ERROR, message);
 		addErrorMsg();
 	}
 	
-	public static void addMessageError(String clientId, String message){
+	public static void addMessageError(String clientId, String message){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageError
 		addMessage(clientId, FacesMessage.SEVERITY_ERROR, message);
 	}	
 	
-	public static void addMessageError(List<String> messageList){
+	public static void addMessageError(List<String> messageList){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageError
 		addMessage(FacesMessage.SEVERITY_ERROR, messageList);
 		addErrorMsg();
 	}
 	
-	public static void addMessageError(String clientId, List<String> messageList){
+	public static void addMessageError(String clientId, List<String> messageList){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageError
 		addMessage(clientId, FacesMessage.SEVERITY_ERROR, messageList);
 		addErrorMsg();
 	}	
@@ -157,27 +157,27 @@ public class IPFMMessageUtils {
 //		addMessage(FacesMessage.SEVERITY_ERROR, message);
 //	}
 	
-	public static void addMessageWarn(String message){
+	public static void addMessageWarn(String message){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageWarn
 		addMessage(FacesMessage.SEVERITY_WARN, message);
 		addWarnMsg();
 	}
 	
-	public static void addMessageWarn(String clientId, String message){
+	public static void addMessageWarn(String clientId, String message){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageWarn
 		addMessage(clientId, FacesMessage.SEVERITY_WARN, message);
 		addWarnMsg();
 	}	
 	
-	public static void addMessageFatal(String message) {
+	public static void addMessageFatal(String message) { // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageFatal
 		addMessage(FacesMessage.SEVERITY_FATAL, message);
 		addFatalMsg();
 	}
 	
-	public static void addMessageFatal(String clientId, String message) {
+	public static void addMessageFatal(String clientId, String message) { // DMAP Comment : Dead Code Detected - The Following Method has no reference addMessageFatal
 		addMessage(FacesMessage.SEVERITY_FATAL, message);
 		addFatalMsg();
 	}
 	
-	 public static boolean hasMessages() {
+	 public static boolean hasMessages() { // DMAP Comment : Dead Code Detected - The Following Method has no reference hasMessages
 	      FacesContext ctx = FacesContext.getCurrentInstance();
 	      if (ctx.getMessages().hasNext()){
 	          return true;

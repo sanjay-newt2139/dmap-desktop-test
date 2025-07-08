@@ -37,7 +37,7 @@ public class SearchURAction  extends AbstractAction{
 	private Logger logger = Logger.getLogger(SearchURAction.class);
 
 	public SearchURBean searchURBean;
-	public UserSession  userSession;
+	public UserSession  userSession; // DMAP Comment : Dead Code Detected - The Following Field has no reference userSession
 	
 	public SearchURBean getSearchURDataBean() {
 		return (SearchURBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("searchURBean");
@@ -49,11 +49,11 @@ public class SearchURAction  extends AbstractAction{
 	public UserSession getUserSession() {
 		  return (UserSession) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userSession");
 		}
-	public void setUserSession(UserSession userSession) {
+	public void setUserSession(UserSession userSession) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserSession
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userSession", userSession);
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		searchURBean = getSearchURDataBean();
@@ -153,7 +153,7 @@ public class SearchURAction  extends AbstractAction{
 		return programID;
 	}
 
-	public void changeUrStatusList(){
+	public void changeUrStatusList(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrStatusList
 		SearchURService searchURService = (SearchURService)JSFServiceFinderUtil.getInstance().getBean("searchURService");
 		SearchURBean bean = getSearchURDataBean();
 		List<SelectItem> urStatusList = new ArrayList<SelectItem>();
@@ -348,7 +348,7 @@ public class SearchURAction  extends AbstractAction{
 
 	}
 	
-	public String navigation(){
+	public String navigation(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference navigation
 		SearchURBean bean = getSearchURDataBean();
 		String urNo = getRequestParameter("URNo");
 		String mode = getRequestParameter("MODE");
@@ -400,7 +400,7 @@ public class SearchURAction  extends AbstractAction{
 		return returnPage;
 	}
 	
-	public void  reset() throws Exception {
+	public void  reset() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference reset
 		SearchURBean bean = getSearchURDataBean();
 		bean.setSearchList(null);
 		init();

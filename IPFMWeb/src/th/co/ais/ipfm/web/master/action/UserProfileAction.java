@@ -52,7 +52,7 @@ public class UserProfileAction extends AbstractAction{
             .getRequestParameterMap().get(name);
     }
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		userProfileBean = getUserProfileBean();		
@@ -213,7 +213,7 @@ public class UserProfileAction extends AbstractAction{
 		return programID;
 	}
 	
-	public void onchngeUsreIdCobo(){
+	public void onchngeUsreIdCobo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference onchngeUsreIdCobo
 		 UserProfileService userProfileService = (UserProfileService)JSFServiceFinderUtil.getInstance().getBean("userProfileService");
 		 UserProfileBean bean = getUserProfileBean();
 		 List<SelectItem> delegateToList = new ArrayList<SelectItem>();
@@ -328,7 +328,7 @@ public class UserProfileAction extends AbstractAction{
 		}
 	}
 	
-	public void updateFromEhr(){
+	public void updateFromEhr(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateFromEhr
 		 UserProfileService userProfileService = (UserProfileService)JSFServiceFinderUtil.getInstance().getBean("userProfileService");
 		 UserProfileBean bean = getUserProfileBean();
 		 String userId = getRequestParameter("userId");
@@ -370,7 +370,7 @@ public class UserProfileAction extends AbstractAction{
 		return null;
 	}
 	
-	public String saveUserProfileByAdmin(){
+	public String saveUserProfileByAdmin(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference saveUserProfileByAdmin
 		 UserProfileService userProfileService = (UserProfileService)JSFServiceFinderUtil.getInstance().getBean("userProfileService");
 		 UserProfileBean bean = getUserProfileBean();
 		 try {
@@ -390,7 +390,7 @@ public class UserProfileAction extends AbstractAction{
 	}	
 	
 	
-	public String reloadPage(){
+	public String reloadPage(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference reloadPage
 		UserProfileBean bean = getUserProfileBean();
 		if (bean.getUserStatus().equalsIgnoreCase("Y")) {
 			return "ISSMS007";
@@ -441,7 +441,7 @@ public class UserProfileAction extends AbstractAction{
 		}
 	}
 	
-	public void updateValueBeforeDeleteDelegate(){
+	public void updateValueBeforeDeleteDelegate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDeleteDelegate
 		String delegateUserId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("delegateUserId").toString();
 		UserProfileBean bean =  getUserProfileBean();
 		IpDelegateUserId ipDelegateUserId  = new IpDelegateUserId(null, delegateUserId);
@@ -506,7 +506,7 @@ public class UserProfileAction extends AbstractAction{
 		}
 	}
 	
-	public void updateValueBeforeDeleteRole(){
+	public void updateValueBeforeDeleteRole(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDeleteRole
 		String roleId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("roleId").toString();
 		String userId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("userId").toString();
 		String userName = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("userName").toString();
@@ -529,7 +529,7 @@ public class UserProfileAction extends AbstractAction{
 		}
 	}
 		
-	public void addDelegateAdmin(){
+	public void addDelegateAdmin(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addDelegateAdmin
 		 UserProfileService userProfileService = (UserProfileService)JSFServiceFinderUtil.getInstance().getBean("userProfileService");
 		 UserProfileBean bean =  getUserProfileBean();
 		 try {
@@ -554,7 +554,7 @@ public class UserProfileAction extends AbstractAction{
 		}
 	}
 
-	public void addRoleAdmin(){
+	public void addRoleAdmin(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addRoleAdmin
 		 UserProfileService userProfileService = (UserProfileService)JSFServiceFinderUtil.getInstance().getBean("userProfileService");
 		 UserProfileBean bean =  getUserProfileBean();
 		 try {
@@ -720,7 +720,7 @@ public class UserProfileAction extends AbstractAction{
 	return flgValid;
 	}
 	
-	public String gotoUserProfile(){
+	public String gotoUserProfile(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference gotoUserProfile
 		changeComboRole();
 		return "ISSMS007";
 	}

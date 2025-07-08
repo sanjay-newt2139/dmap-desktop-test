@@ -20,15 +20,15 @@ public class EmployeeProfileService {
 	private String password;
 	private String endpoint;
 	
-	public void setEndpoint(String endpoint) {
+	public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
 		this.endpoint = endpoint;
 	}
 
-	public void setUsername(String username) {
+	public void setUsername(String username) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUsername
 		this.username = username;
 	}
 
-	public void setPassword(String password) {
+	public void setPassword(String password) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPassword
 		this.password = password;
 	}
 
@@ -58,7 +58,7 @@ public class EmployeeProfileService {
 		return aprList; 
 	}	
 	
-	public List<EmployeeProfile> getEmployeeProfilesByEmail(String email) throws IPFMBusinessException {
+	public List<EmployeeProfile> getEmployeeProfilesByEmail(String email) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfilesByEmail
 		List<EmployeeProfile> empList = null;
 		try {
 			if(endpoint!=null && username!=null && password!=null){
@@ -84,7 +84,7 @@ public class EmployeeProfileService {
 		return empList; 
 	}
 	
-	public List<EmployeeProfile> getEmployeeProfilesByPIN(String pin) throws IPFMBusinessException {
+	public List<EmployeeProfile> getEmployeeProfilesByPIN(String pin) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfilesByPIN
 		List<EmployeeProfile> empList = null;
 		try {
 			if(endpoint!=null && username!=null && password!=null){
@@ -110,7 +110,7 @@ public class EmployeeProfileService {
 		return empList; 
 	}	
 	
-	public List<EmployeeProfile> GetEmployeeProfileByPrefixEngName(String engName) throws IPFMBusinessException {
+	public List<EmployeeProfile> GetEmployeeProfileByPrefixEngName(String engName) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference GetEmployeeProfileByPrefixEngName
 		List<EmployeeProfile> empList = null;
 		try {
 			if(endpoint!=null && username!=null && password!=null){

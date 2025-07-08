@@ -12,11 +12,11 @@ public class WS_OM_OMEHRServicesLocator extends org.apache.axis.client.Service i
 	private String username;
 	private String password;
 	
-    public void setUsername(String username) {
+    public void setUsername(String username) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUsername
 		this.username = username;
 	}
 
-	public void setPassword(String password) {
+	public void setPassword(String password) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPassword
 		this.password = password;
 	}
 
@@ -39,7 +39,7 @@ public class WS_OM_OMEHRServicesLocator extends org.apache.axis.client.Service i
     // Use to get a proxy class for WS_OM_OMEHRServicesSoap
     private java.lang.String WS_OM_OMEHRServicesSoap_address = "http://test-omservices.ais.co.th/ExternalServices/WS_OM_OMEHRServices.asmx";
 
-    public java.lang.String getWS_OM_OMEHRServicesSoapAddress() {
+    public java.lang.String getWS_OM_OMEHRServicesSoapAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWS_OM_OMEHRServicesSoapAddress
         return WS_OM_OMEHRServicesSoap_address;
     }
 
@@ -50,7 +50,7 @@ public class WS_OM_OMEHRServicesLocator extends org.apache.axis.client.Service i
         return WS_OM_OMEHRServicesSoapWSDDServiceName;
     }
 
-    public void setWS_OM_OMEHRServicesSoapWSDDServiceName(java.lang.String name) {
+    public void setWS_OM_OMEHRServicesSoapWSDDServiceName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWS_OM_OMEHRServicesSoapWSDDServiceName
         WS_OM_OMEHRServicesSoapWSDDServiceName = name;
     }
 
@@ -89,7 +89,7 @@ public class WS_OM_OMEHRServicesLocator extends org.apache.axis.client.Service i
     // Use to get a proxy class for WS_OM_OMEHRServicesSoap12
     private java.lang.String WS_OM_OMEHRServicesSoap12_address = "http://test-omservices.ais.co.th/ExternalServices/WS_OM_OMEHRServices.asmx";
 
-    public java.lang.String getWS_OM_OMEHRServicesSoap12Address() {
+    public java.lang.String getWS_OM_OMEHRServicesSoap12Address() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWS_OM_OMEHRServicesSoap12Address
         return WS_OM_OMEHRServicesSoap12_address;
     }
 
@@ -100,7 +100,7 @@ public class WS_OM_OMEHRServicesLocator extends org.apache.axis.client.Service i
         return WS_OM_OMEHRServicesSoap12WSDDServiceName;
     }
 
-    public void setWS_OM_OMEHRServicesSoap12WSDDServiceName(java.lang.String name) {
+    public void setWS_OM_OMEHRServicesSoap12WSDDServiceName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWS_OM_OMEHRServicesSoap12WSDDServiceName
         WS_OM_OMEHRServicesSoap12WSDDServiceName = name;
     }
 
@@ -184,13 +184,13 @@ public class WS_OM_OMEHRServicesLocator extends org.apache.axis.client.Service i
         }
     }
 
-    public javax.xml.namespace.QName getServiceName() {
+    public javax.xml.namespace.QName getServiceName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceName
         return new javax.xml.namespace.QName("http://tempuri.org/", "WS_OM_OMEHRServices");
     }
 
     private java.util.HashSet ports = null;
 
-    public java.util.Iterator getPorts() {
+    public java.util.Iterator getPorts() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPorts
         if (ports == null) {
             ports = new java.util.HashSet();
             ports.add(new javax.xml.namespace.QName("http://tempuri.org/", "WS_OM_OMEHRServicesSoap"));

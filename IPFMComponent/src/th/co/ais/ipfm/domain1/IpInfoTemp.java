@@ -123,111 +123,111 @@ public class IpInfoTemp extends MasterDomain implements java.io.Serializable,Clo
     }
     
 	@Column(name="IP_ADDRESS", unique=true, nullable=false, length=21)
-    public String getIpAddress() {
+    public String getIpAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpAddress
         return this.ipAddress;
     }
     
-    public void setIpAddress(String ipAddress) {
+    public void setIpAddress(String ipAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpAddress
         this.ipAddress = ipAddress;
     }
     
     @Column(name="IP_SUBMASK", length=5)
-    public String getIpSubmask() {
+    public String getIpSubmask() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpSubmask
         return this.ipSubmask;
     }
     
-    public void setIpSubmask(String ipSubmask) {
+    public void setIpSubmask(String ipSubmask) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpSubmask
         this.ipSubmask = ipSubmask;
     }
 
     @Column(name="IP_STATUS", length=50)
-    public String getIpStatus() {
+    public String getIpStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpStatus
         return this.ipStatus;
     }
     
-    public void setIpStatus(String ipStatus) {
+    public void setIpStatus(String ipStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpStatus
         this.ipStatus = ipStatus;
     }
     
     @Column(name="GATEWAY", length=30)
-    public String getGateway() {
+    public String getGateway() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getGateway
         return this.gateway;
     }
     
-    public void setGateway(String gateway) {
+    public void setGateway(String gateway) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setGateway
         this.gateway = gateway;
     }
     
     @Column(name="HOST_NAME", length=1000)
-    public String getHostName() {
+    public String getHostName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getHostName
         return this.hostName;
     }
     
-    public void setHostName(String hostName) {
+    public void setHostName(String hostName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setHostName
         this.hostName = hostName;
     }
     
     @Column(name="SYSTEM_NAME", length=1000)
-    public String getSystemName() {
+    public String getSystemName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemName
         return this.systemName;
     }
     
-    public void setSystemName(String systemName) {
+    public void setSystemName(String systemName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSystemName
         this.systemName = systemName;
     }
     
     @Temporal(TemporalType.DATE)
     @Column(name="EXPIRED_DATE", length=7)
-    public Date getExpiredDate() {
+    public Date getExpiredDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpiredDate
         return this.expiredDate;
     }
     
-    public void setExpiredDate(Date expiredDate) {
+    public void setExpiredDate(Date expiredDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpiredDate
         this.expiredDate = expiredDate;
     }
     
 	@Column(name="SYSTEM_OWNER_NAME", length=1000)
-    public String getSystemOwnerName() {
+    public String getSystemOwnerName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerName
         return this.systemOwnerName;
     }
     
-    public void setSystemOwnerName(String systemOwnerName) {
+    public void setSystemOwnerName(String systemOwnerName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSystemOwnerName
         this.systemOwnerName = systemOwnerName;
     }
     
 	@Column(name="CREATE_BY")
-    public String getCreatedBy() {
+    public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
  		return createdBy;
  	}
 
- 	public void setCreatedBy(String createdBy) {
+ 	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
  		this.createdBy = createdBy;
  	}
 
  	@Column(name="CREATE_DATE")
- 	public Date getCreated() {
+ 	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
  		return created;
  	}
 
- 	public void setCreated(Date created) {
+ 	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
  		this.created = created;
  	}
 
  	@Column(name="UPDATE_BY")
- 	public String getLastUpdBy() {
+ 	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
  		return lastUpdBy;
  	}
 
- 	public void setLastUpdBy(String lastUpdBy) {
+ 	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
  		this.lastUpdBy = lastUpdBy;
  	}
  	
  	@Column(name="UPDATE_DATE")
- 	public Date getLastUpd() {
+ 	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
  		return lastUpd;
  	}
  	
- 	public void setLastUpd(Date lastUpd) {
+ 	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
  		this.lastUpd = lastUpd;
  	}
  	
@@ -235,38 +235,38 @@ public class IpInfoTemp extends MasterDomain implements java.io.Serializable,Clo
 	@GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="ROW_ID", unique=true, length=50)
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
     
     @Column(name="VLAN_ID", length=30)
-    public String getVlanId() {
+    public String getVlanId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVlanId
         return this.vlanId;
     }
     
-    public void setVlanId(String vlanId) {
+    public void setVlanId(String vlanId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVlanId
         this.vlanId = vlanId;
     }
 
     @Column(name="TEMPLATE_TYPE", length=10)
-	public String getTemplateType() {
+	public String getTemplateType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTemplateType
 		return templateType;
 	}
 
-	public void setTemplateType(String templateType) {
+	public void setTemplateType(String templateType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTemplateType
 		this.templateType = templateType;
 	}
 	
 	@Column(name="NAT_IP", length=500)
-	public String getNatIp() {
+	public String getNatIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNatIp
 		return natIp;
 	}
 
-	public void setNatIp(String natIp) {
+	public void setNatIp(String natIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNatIp
 		this.natIp = natIp;
 	}
     

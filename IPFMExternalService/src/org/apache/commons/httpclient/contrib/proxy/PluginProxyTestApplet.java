@@ -69,7 +69,7 @@ public class PluginProxyTestApplet extends JApplet {
         
     }
     
-    public void init() {
+    public void init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
         Container content = getContentPane();
         content.setLayout(new BorderLayout());
         
@@ -90,9 +90,9 @@ public class PluginProxyTestApplet extends JApplet {
         JPanel buttonPanel = getPanel(new FlowLayout());
         JButton button = new JButton("Detect Proxy");
         button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) { // DMAP Comment : Dead Code Detected - The Following Method has no reference actionPerformed
                 SwingUtilities.invokeLater(new Runnable() {
-                    public void run() {
+                    public void run() { // DMAP Comment : Dead Code Detected - The Following Method has no reference run
                         detectProxy();
                     }
                 });
@@ -167,7 +167,7 @@ public class PluginProxyTestApplet extends JApplet {
         }        
     }
     
-    public String getProxyHost(String urlString) {
+    public String getProxyHost(String urlString) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProxyHost
         String result = urlString;
         try {
             URL url = new URL(urlString);
@@ -181,7 +181,7 @@ public class PluginProxyTestApplet extends JApplet {
         return result;
     }
 
-    public int getProxyPort(String urlString) {
+    public int getProxyPort(String urlString) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProxyPort
         int result = 80;
         try {
             URL url = new URL(urlString);

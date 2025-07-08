@@ -121,7 +121,7 @@ public class UserGroupManageAction extends AbstractAction {
 	}
 
 	
-	public void updateValueBeforeDelete(){
+	public void updateValueBeforeDelete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDelete
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		UserGroupManageBean userGroupManageBean = getUserGroupManageBean();
 		userGroupManageBean.setRowId(rowId);
@@ -129,7 +129,7 @@ public class UserGroupManageAction extends AbstractAction {
 
 	}
 	
-	public void delete(){
+	public void delete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference delete
 		UserGroupManageBean userGroupManageBean = getUserGroupManageBean();
 		if(userGroupManageBean!=null && userGroupManageBean.getRowId()!=null && userGroupManageBean.getRowId().trim().length()>0){
 			UserGroupManageService userGroupManageService = (UserGroupManageService)JSFServiceFinderUtil.getInstance().getBean("userGroupManageService");
@@ -144,7 +144,7 @@ public class UserGroupManageAction extends AbstractAction {
 		}
 	}
 	
-	public void cancel() {
+	public void cancel() { // DMAP Comment : Dead Code Detected - The Following Method has no reference cancel
 		
 		init();
 	}

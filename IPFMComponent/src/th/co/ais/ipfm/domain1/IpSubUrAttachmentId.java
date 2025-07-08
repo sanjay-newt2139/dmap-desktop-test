@@ -37,7 +37,7 @@ public class IpSubUrAttachmentId  implements java.io.Serializable , Cloneable {
         return this.urNo;
     }
     
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
 
@@ -46,7 +46,7 @@ public class IpSubUrAttachmentId  implements java.io.Serializable , Cloneable {
         return this.seq;
     }
     
-    public void setSeq(BigDecimal seq) {
+    public void setSeq(BigDecimal seq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSeq
         this.seq = seq;
     }
 
@@ -55,25 +55,25 @@ public class IpSubUrAttachmentId  implements java.io.Serializable , Cloneable {
         return this.category;
     }
     
-    public void setCategory(String category) {
+    public void setCategory(String category) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCategory
         this.category = category;
     }
     
     @Column(name="FILE_NAME", length=100)
-    public String getFileName() {
+    public String getFileName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFileName
         return this.fileName;
     }
     
-    public void setFileName(String fileName) {
+    public void setFileName(String fileName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFileName
         this.fileName = fileName;
     }
     
     @Column(name="SUB_UR_NO", length=10)
-    public String getSubUrNo() {
+    public String getSubUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubUrNo
         return this.subUrNo;
     }
     
-    public void setSubUrNo(String subUrNo) {
+    public void setSubUrNo(String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubUrNo
         this.subUrNo = subUrNo;
     }
 

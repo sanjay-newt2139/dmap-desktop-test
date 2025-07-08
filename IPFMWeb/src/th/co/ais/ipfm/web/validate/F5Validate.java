@@ -28,11 +28,11 @@ public class F5Validate {
 		this.f5 = f5;
 	}
 
-	public void setF5(IPF5Bean f5) {
+	public void setF5(IPF5Bean f5) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setF5
 		this.f5 = f5;
 	}
 
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		
@@ -162,7 +162,7 @@ public class F5Validate {
         return IP_PATTERN.matcher(iPaddress).matches();
 	}
 	
-	private boolean isIpBrfore(String start,String end){
+	private boolean isIpBrfore(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isIpBrfore
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".")+1;
@@ -187,7 +187,7 @@ public class F5Validate {
 //	}
 	
 	
-	public String validateWeightOver(List<IpUrF5> f5List) {
+	public String validateWeightOver(List<IpUrF5> f5List) { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateWeightOver
 		StringBuffer result = new StringBuffer("");
 		if(f5List != null && f5List.size() > 0) {
 			HashSet<String> ipAddressSet = new HashSet<String>();
@@ -228,7 +228,7 @@ public class F5Validate {
 		return result.toString();
 	}
 	
-	private boolean isSameIPGroup(String start,String end){
+	private boolean isSameIPGroup(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isSameIPGroup
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".");

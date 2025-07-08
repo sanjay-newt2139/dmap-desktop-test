@@ -49,7 +49,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("networkConfigBean", networkConfigBean);
 	}
 	
-	public void addAccessList(ActionEvent event){
+	public void addAccessList(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addAccessList
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		try {
@@ -156,7 +156,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		}
 	}
 	
-	public void findSourceIP(ActionEvent event){
+	public void findSourceIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSourceIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		AccessListService cdnService = (AccessListService)JSFServiceFinderUtil.getInstance().getBean("accessListService");
 		IPAccessListBean cdn = bean.getAccessList();
@@ -261,7 +261,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		}
 	}
 	
-	public void findDestIP(ActionEvent event){
+	public void findDestIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findDestIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		AccessListService cdnService = (AccessListService)JSFServiceFinderUtil.getInstance().getBean("accessListService");
 		IPAccessListBean cdn = bean.getAccessList();
@@ -377,7 +377,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		return resultString;
 	}
 	
-	public void findSubUr(){
+	public void findSubUr(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSubUr
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		
@@ -397,7 +397,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void listener(UploadEvent event) throws Exception{
+	public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService)JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		AccessListService cdnService = (AccessListService)JSFServiceFinderUtil.getInstance().getBean("accessListService");
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
@@ -529,7 +529,7 @@ public class NWConfigAccessListAction extends AbstractAction{
         setNetworkConfigBean(bean);
     } 
 	
-	public void editCdnInit(){
+	public void editCdnInit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editCdnInit
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		String rowNumber = getRequestParameter("rowNumber");
@@ -590,7 +590,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void editAccessList(ActionEvent event){
+	public void editAccessList(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editAccessList
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		try {
@@ -763,7 +763,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 //		}
 //	}	
 	
-	public void deleteCDN(String urNo,String subUrNo){
+	public void deleteCDN(String urNo,String subUrNo){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteCDN
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		AccessListService cdnService = (AccessListService)JSFServiceFinderUtil.getInstance().getBean("accessListService");
 		IpUrAccessListCdn accessList = cdnService.findAccessListCdn(urNo, subUrNo);
@@ -798,7 +798,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		
 	}
 	
-	public void clearSourceIP(ActionEvent event){
+	public void clearSourceIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearSourceIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPAccessListBean cdn = bean.getAccessList();
 		cdn.setSourceFound("0");
@@ -810,7 +810,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 		setNetworkConfigBean(bean);		
 	}
 	
-	public void clearDestIP(ActionEvent event){
+	public void clearDestIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearDestIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPAccessListBean cdn = bean.getAccessList();
 		cdn.setDestFound("0");
@@ -823,7 +823,7 @@ public class NWConfigAccessListAction extends AbstractAction{
 	}
 
 	
-	public void checkFileTemplate() {
+	public void checkFileTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFileTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -837,7 +837,7 @@ public class NWConfigAccessListAction extends AbstractAction{
     }
 
 	
-	public void downloadTemplate() {
+	public void downloadTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -853,13 +853,13 @@ public class NWConfigAccessListAction extends AbstractAction{
     }
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}

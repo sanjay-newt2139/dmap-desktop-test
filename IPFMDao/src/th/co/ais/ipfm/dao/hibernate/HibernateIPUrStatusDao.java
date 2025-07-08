@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 
@@ -15,7 +16,7 @@ public class HibernateIPUrStatusDao extends HibernateGenericDao<IpUrStatus> impl
 IPUrStatusDao {
 
 	@Override
-	public List<IpUrStatus> getUrStatusList(String urType) throws DataAccessException {
+	public List<IpUrStatus> getUrStatusList(String urType) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrStatusList
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrStatus> ipUrStatusList = new ArrayList<IpUrStatus>();
 		StringBuffer sql = new StringBuffer();
@@ -23,9 +24,22 @@ IPUrStatusDao {
 				sql.append(" FROM IP_UR_STATUS ");
 				sql.append(" WHERE 1 = 1 ");
 				if(!"".equals(urType) && urType !=null ){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier347
+DMAP ConvertedQuery - SELECT DISTINCT UR_STATUS_ID,UR_STATUS_NAME FROM IP_UR_STATUS WHERE 1 = 1 AND UR_TYPE = 'urType' AND ACTIVE = 'Y' ORDER BY UR_STATUS_NAME 
+**/
+
+/**
+**/
+
 					sql.append(" AND UR_TYPE = '"+urType+"' ");
 				}
 				sql.append(" AND ACTIVE = 'Y' ");
+/**
+DMAP TAG: Query converted but found same: Identifier346
+DMAP ConvertedQuery - SELECT DISTINCT UR_STATUS_ID,UR_STATUS_NAME FROM IP_UR_STATUS WHERE 1 = 1 AND ACTIVE = 'Y' ORDER BY UR_STATUS_NAME 
+**/
+
 				sql.append(" ORDER BY UR_STATUS_NAME ");
 
 		List dataList =  session.createSQLQuery(sql.toString()).list();
@@ -45,7 +59,7 @@ IPUrStatusDao {
 	}
 
 	@Override
-	public List<IpUrStatus> getSubUrStatusList(String urType) throws DataAccessException {
+	public List<IpUrStatus> getSubUrStatusList(String urType) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubUrStatusList
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpUrStatus> ipUrStatusList = new ArrayList<IpUrStatus>();
 		StringBuffer sql = new StringBuffer();
@@ -53,9 +67,22 @@ IPUrStatusDao {
 				sql.append(" FROM IP_UR_STATUS ");
 				sql.append(" WHERE 1 = 1 ");
 				if(!"".equals(urType) && urType !=null ){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier345
+DMAP ConvertedQuery - SELECT DISTINCT SUB_UR_STATUS_ID,SUB_UR_STATUS_NAME FROM IP_UR_STATUS WHERE 1 = 1 AND UR_TYPE = 'urType' AND ACTIVE = 'Y' ORDER BY SUB_UR_STATUS_NAME 
+**/
+
+/**
+**/
+
 					sql.append(" AND UR_TYPE = '"+urType+"' ");
 				}
 				sql.append(" AND ACTIVE = 'Y' ");
+/**
+DMAP TAG: Query converted but found same: Identifier344
+DMAP ConvertedQuery - SELECT DISTINCT SUB_UR_STATUS_ID,SUB_UR_STATUS_NAME FROM IP_UR_STATUS WHERE 1 = 1 AND ACTIVE = 'Y' ORDER BY SUB_UR_STATUS_NAME 
+**/
+
 				sql.append(" ORDER BY SUB_UR_STATUS_NAME ");
 
 		List dataList =  session.createSQLQuery(sql.toString()).list();

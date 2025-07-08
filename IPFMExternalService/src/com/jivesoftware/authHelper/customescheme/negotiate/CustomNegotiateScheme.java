@@ -66,7 +66,7 @@ public class CustomNegotiateScheme implements AuthScheme {
     private String challenge = null;
 
     private static final int UNINITIATED = 0;
-    private static final int INITIATED = 1;
+    private static final int INITIATED = 1; // DMAP Comment : Dead Code Detected - The Following Field has no reference INITIATED
     private static final int NEGOTIATING = 3;
     private static final int ESTABLISHED = 4;
     private static final int FAILED = Integer.MAX_VALUE;
@@ -185,7 +185,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      *
      * @since 3.0
      */
-    public void processChallenge(final String challenge) {
+    public void processChallenge(final String challenge) { // DMAP Comment : Dead Code Detected - The Following Method has no reference processChallenge
         //System.out.println("%%%%in process challenge%%% challenge="+challenge);
         LOG.info("enter processChallenge(challenge=\"" + challenge + "\")");
         if (challenge.startsWith("Negotiate")) {
@@ -226,7 +226,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      *
      * @return <code>Negotiate</code>
      */
-    public String getSchemeName() {
+    public String getSchemeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSchemeName
         return "Negotiate";
     }
 
@@ -236,7 +236,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      *
      * @return <code>null</code>
      */
-    public String getRealm() {
+    public String getRealm() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRealm
         return null;
     }
 
@@ -259,7 +259,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      * @deprecated no longer used
      */
     @Deprecated
-    public String getID() {
+    public String getID() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getID
         LOG.info("enter getID(): " + challenge);
         return challenge;
     }
@@ -274,7 +274,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      *
      * @return the parameter with the given name
      */
-    public String getParameter(String name) {
+    public String getParameter(String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getParameter
         LOG.info("enter getParameter(" + name + ")");
         if (name == null) {
             throw new IllegalArgumentException("Parameter name may not be null");
@@ -290,7 +290,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      *
      * @since 3.0
      */
-    public boolean isConnectionBased() {
+    public boolean isConnectionBased() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isConnectionBased
         LOG.info("enter isConnectionBased()");
         return true;
     }
@@ -303,7 +303,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      * @deprecated Use {@link #authenticate(org.apache.commons.httpclient.Credentials, org.apache.commons.httpclient.HttpMethod)}
      */
     @Deprecated
-    public String authenticate(Credentials credentials, String method, String uri)
+    public String authenticate(Credentials credentials, String method, String uri) // DMAP Comment : Dead Code Detected - The Following Method has no reference authenticate
             throws AuthenticationException {
         throw new AuthenticationException("method not supported by Negotiate scheme");
     }
@@ -323,7 +323,7 @@ public class CustomNegotiateScheme implements AuthScheme {
      *
      * @since 3.0
      */
-    public synchronized String authenticate(
+    public synchronized String authenticate( // DMAP Comment : Dead Code Detected - The Following Method has no reference authenticate
             Credentials credentials,
             HttpMethod method
     ) throws AuthenticationException {
@@ -398,7 +398,7 @@ public class CustomNegotiateScheme implements AuthScheme {
             return oid;
         }
 
-        public Object run() throws Exception {
+        public Object run() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference run
             // Replace the following with an action to be performed
             // by authenticated user
 

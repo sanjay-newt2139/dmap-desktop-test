@@ -34,12 +34,12 @@ public class CHECKMANAGERResponse  implements java.io.Serializable {
      * 
      * @param CHECKMANAGERResult
      */
-    public void setCHECKMANAGERResult(boolean CHECKMANAGERResult) {
+    public void setCHECKMANAGERResult(boolean CHECKMANAGERResult) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCHECKMANAGERResult
         this.CHECKMANAGERResult = CHECKMANAGERResult;
     }
 
     private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
+    public synchronized boolean equals(java.lang.Object obj) { // DMAP Comment : Dead Code Detected - The Following Method has no reference equals
         if (!(obj instanceof CHECKMANAGERResponse)) return false;
         CHECKMANAGERResponse other = (CHECKMANAGERResponse) obj;
         if (obj == null) return false;
@@ -84,14 +84,14 @@ public class CHECKMANAGERResponse  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -103,7 +103,7 @@ public class CHECKMANAGERResponse  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

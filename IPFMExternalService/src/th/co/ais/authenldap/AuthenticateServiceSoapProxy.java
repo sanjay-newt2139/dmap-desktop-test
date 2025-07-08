@@ -27,11 +27,11 @@ public class AuthenticateServiceSoapProxy implements th.co.ais.authenldap.Authen
     catch (javax.xml.rpc.ServiceException serviceException) {}
   }
   
-  public String getEndpoint() {
+  public String getEndpoint() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndpoint
     return _endpoint;
   }
   
-  public void setEndpoint(String endpoint) {
+  public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
     _endpoint = endpoint;
     if (authenticateServiceSoap != null)
       ((javax.xml.rpc.Stub)authenticateServiceSoap)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);

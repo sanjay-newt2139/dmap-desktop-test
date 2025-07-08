@@ -20,7 +20,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc1
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -340,7 +340,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
         }
     }
 
-    public org.tempuri.WS_GEN_DeleteAuthenLDAPResponseWS_GEN_DeleteAuthenLDAPResult WS_GEN_DeleteAuthenLDAP(java.lang.String userName, java.lang.String projectCode) throws java.rmi.RemoteException {
+    public org.tempuri.WS_GEN_DeleteAuthenLDAPResponseWS_GEN_DeleteAuthenLDAPResult WS_GEN_DeleteAuthenLDAP(java.lang.String userName, java.lang.String projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_GEN_DeleteAuthenLDAP
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -374,7 +374,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
 }
     }
 
-    public org.tempuri.WS_GEN_SearchAuthenLDAPResponseWS_GEN_SearchAuthenLDAPResult WS_GEN_SearchAuthenLDAP(java.lang.String userName, java.lang.String passWd, java.lang.String projectCode) throws java.rmi.RemoteException {
+    public org.tempuri.WS_GEN_SearchAuthenLDAPResponseWS_GEN_SearchAuthenLDAPResult WS_GEN_SearchAuthenLDAP(java.lang.String userName, java.lang.String passWd, java.lang.String projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_GEN_SearchAuthenLDAP
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -408,7 +408,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
 }
     }
 
-    public org.tempuri.WS_GEN_ADDAuthenLDAPResponseWS_GEN_ADDAuthenLDAPResult WS_GEN_ADDAuthenLDAP(java.lang.String userName, java.lang.String passWd, java.lang.String projectCode, java.lang.String EECODE) throws java.rmi.RemoteException {
+    public org.tempuri.WS_GEN_ADDAuthenLDAPResponseWS_GEN_ADDAuthenLDAPResult WS_GEN_ADDAuthenLDAP(java.lang.String userName, java.lang.String passWd, java.lang.String projectCode, java.lang.String EECODE) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_GEN_ADDAuthenLDAP
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -442,7 +442,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
 }
     }
 
-    public org.tempuri.WS_GEN_GetUserInfoResponseWS_GEN_GetUserInfoResult WS_GEN_GetUserInfo(java.lang.String userName, java.lang.String projectCode) throws java.rmi.RemoteException {
+    public org.tempuri.WS_GEN_GetUserInfoResponseWS_GEN_GetUserInfoResult WS_GEN_GetUserInfo(java.lang.String userName, java.lang.String projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_GEN_GetUserInfo
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -476,7 +476,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
 }
     }
 
-    public org.tempuri.WS_GEN_AuthenLDAPResponseWS_GEN_AuthenLDAPResult WS_GEN_AuthenLDAP(java.lang.String userName, java.lang.String passWd, java.lang.String projectCode) throws java.rmi.RemoteException {
+    public org.tempuri.WS_GEN_AuthenLDAPResponseWS_GEN_AuthenLDAPResult WS_GEN_AuthenLDAP(java.lang.String userName, java.lang.String passWd, java.lang.String projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_GEN_AuthenLDAP
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -510,7 +510,7 @@ public class CorporateSoapStub extends org.apache.axis.client.Stub implements or
 }
     }
 
-    public org.tempuri.WS_GEN_UpdateAuthenLDAPResponseWS_GEN_UpdateAuthenLDAPResult WS_GEN_UpdateAuthenLDAP(java.lang.String userName, java.lang.String oldPassWd, java.lang.String newPassWd, java.lang.String projectCode) throws java.rmi.RemoteException {
+    public org.tempuri.WS_GEN_UpdateAuthenLDAPResponseWS_GEN_UpdateAuthenLDAPResult WS_GEN_UpdateAuthenLDAP(java.lang.String userName, java.lang.String oldPassWd, java.lang.String newPassWd, java.lang.String projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference WS_GEN_UpdateAuthenLDAP
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }

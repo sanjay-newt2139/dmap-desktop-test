@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import javax.persistence.Column;
@@ -33,7 +33,7 @@ public class IpNetworkConfigId  implements java.io.Serializable {
         return this.ipAddress;
     }
     
-    public void setIpAddress(String ipAddress) {
+    public void setIpAddress(String ipAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpAddress
         this.ipAddress = ipAddress;
     }
 
@@ -42,7 +42,7 @@ public class IpNetworkConfigId  implements java.io.Serializable {
         return this.seq;
     }
     
-    public void setSeq(String seq) {
+    public void setSeq(String seq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSeq
         this.seq = seq;
     }
 
@@ -51,7 +51,7 @@ public class IpNetworkConfigId  implements java.io.Serializable {
         return this.ncType;
     }
     
-    public void setNcType(String ncType) {
+    public void setNcType(String ncType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNcType
         this.ncType = ncType;
     }
 
@@ -60,7 +60,7 @@ public class IpNetworkConfigId  implements java.io.Serializable {
         return this.requestFor;
     }
     
-    public void setRequestFor(String requestFor) {
+    public void setRequestFor(String requestFor) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRequestFor
         this.requestFor = requestFor;
     }
 

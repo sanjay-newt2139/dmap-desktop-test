@@ -55,110 +55,110 @@ public class Inbox  implements java.io.Serializable {
      @Id 
     
     @Column(name="ROW_ID", unique=true, nullable=false, precision=22, scale=0)
-    public Integer getRowId() {
+    public Integer getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(Integer rowId) {
+    public void setRowId(Integer rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
     
     @Column(name="KEY", length=3)
-    public String getKey() {
+    public String getKey() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getKey
         return this.key;
     }
     
-    public void setKey(String key) {
+    public void setKey(String key) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setKey
         this.key = key;
     }
     
     @Column(name="FIELD1", length=100)
-    public String getField1() {
+    public String getField1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField1
         return this.field1;
     }
     
-    public void setField1(String field1) {
+    public void setField1(String field1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField1
         this.field1 = field1;
     }
     
     @Column(name="FIELD2", length=100)
-    public String getField2() {
+    public String getField2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField2
         return this.field2;
     }
     
-    public void setField2(String field2) {
+    public void setField2(String field2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField2
         this.field2 = field2;
     }
     
     @Column(name="FIELD3", length=100)
-    public String getField3() {
+    public String getField3() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField3
         return this.field3;
     }
     
-    public void setField3(String field3) {
+    public void setField3(String field3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField3
         this.field3 = field3;
     }
     
     @Column(name="FIELD4", length=100)
-    public String getField4() {
+    public String getField4() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField4
         return this.field4;
     }
     
-    public void setField4(String field4) {
+    public void setField4(String field4) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField4
         this.field4 = field4;
     }
     
     @Column(name="FIELD5", length=100)
-    public String getField5() {
+    public String getField5() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField5
         return this.field5;
     }
     
-    public void setField5(String field5) {
+    public void setField5(String field5) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField5
         this.field5 = field5;
     }
     
     @Column(name="FIELD6", length=100)
-    public String getField6() {
+    public String getField6() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField6
         return this.field6;
     }
     
-    public void setField6(String field6) {
+    public void setField6(String field6) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField6
         this.field6 = field6;
     }
     
     @Column(name="FIELD7", length=100)
-    public String getField7() {
+    public String getField7() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField7
         return this.field7;
     }
     
-    public void setField7(String field7) {
+    public void setField7(String field7) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField7
         this.field7 = field7;
     }
     
     @Column(name="FIELD8", length=100)
-    public String getField8() {
+    public String getField8() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField8
         return this.field8;
     }
     
-    public void setField8(String field8) {
+    public void setField8(String field8) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField8
         this.field8 = field8;
     }
     
     @Column(name="FIELD9", length=100)
-    public String getField9() {
+    public String getField9() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField9
         return this.field9;
     }
     
-    public void setField9(String field9) {
+    public void setField9(String field9) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField9
         this.field9 = field9;
     }
     
     @Column(name="FIELD10", length=100)
-    public String getField10() {
+    public String getField10() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getField10
         return this.field10;
     }
     
-    public void setField10(String field10) {
+    public void setField10(String field10) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setField10
         this.field10 = field10;
     }
 

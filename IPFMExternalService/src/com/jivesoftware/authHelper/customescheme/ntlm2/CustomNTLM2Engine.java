@@ -94,7 +94,7 @@ public class CustomNTLM2Engine {
      * @throws Exception
      *             If the messages cannot be retrieved.
      */
-    final String getResponseFor(String message, String username, String password,
+    final String getResponseFor(String message, String username, String password, // DMAP Comment : Dead Code Detected - The Following Method has no reference getResponseFor
                                 String host, String domain) throws AuthenticationException {
 
         final String response;
@@ -153,7 +153,7 @@ public class CustomNTLM2Engine {
     /**
      * @return Returns the credentialCharset.
      */
-    String getCredentialCharset() {
+    String getCredentialCharset() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCredentialCharset
         return credentialCharset;
     }
 
@@ -161,7 +161,7 @@ public class CustomNTLM2Engine {
      * @param credentialCharset
      *            The credentialCharset to set.
      */
-    void setCredentialCharset(String credentialCharset) {
+    void setCredentialCharset(String credentialCharset) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCredentialCharset
         this.credentialCharset = credentialCharset;
     }
 
@@ -175,12 +175,12 @@ public class CustomNTLM2Engine {
     }
 
     /** Convert host to standard form */
-    private static String convertHost(String host) {
+    private static String convertHost(String host) { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertHost
         return stripDotSuffix(host);
     }
 
     /** Convert domain to standard form */
-    private static String convertDomain(String domain) {
+    private static String convertDomain(String domain) { // DMAP Comment : Dead Code Detected - The Following Method has no reference convertDomain
         return stripDotSuffix(domain);
     }
 
@@ -293,7 +293,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Calculate and return random secondary key */
-        public byte[] getSecondaryKey()
+        public byte[] getSecondaryKey() // DMAP Comment : Dead Code Detected - The Following Method has no reference getSecondaryKey
                 throws AuthenticationException {
             if (secondaryKey == null) {
                 secondaryKey = makeSecondaryKey();
@@ -329,7 +329,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Calculate and return the NTLMResponse */
-        public byte[] getNTLMResponse()
+        public byte[] getNTLMResponse() // DMAP Comment : Dead Code Detected - The Following Method has no reference getNTLMResponse
                 throws AuthenticationException {
             if (ntlmResponse == null) {
                 ntlmResponse = lmResponse(getNTLMHash(), challenge);
@@ -372,7 +372,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Calculate the NTLMv2Response */
-        public byte[] getNTLMv2Response()
+        public byte[] getNTLMv2Response() // DMAP Comment : Dead Code Detected - The Following Method has no reference getNTLMv2Response
                 throws AuthenticationException {
             if (ntlmv2Response == null) {
                 ntlmv2Response = lmv2Response(getNTLMv2Hash(), challenge, getNTLMv2Blob());
@@ -381,7 +381,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Calculate the LMv2Response */
-        public byte[] getLMv2Response()
+        public byte[] getLMv2Response() // DMAP Comment : Dead Code Detected - The Following Method has no reference getLMv2Response
                 throws AuthenticationException {
             if (lmv2Response == null) {
                 lmv2Response = lmv2Response(getNTLMv2Hash(), challenge, getClientChallenge());
@@ -390,7 +390,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Get NTLM2SessionResponse */
-        public byte[] getNTLM2SessionResponse()
+        public byte[] getNTLM2SessionResponse() // DMAP Comment : Dead Code Detected - The Following Method has no reference getNTLM2SessionResponse
                 throws AuthenticationException {
             if (ntlm2SessionResponse == null) {
                 ntlm2SessionResponse = ntlm2SessionResponse(getNTLMHash(), challenge, getClientChallenge());
@@ -411,7 +411,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Get LMUserSessionKey */
-        public byte[] getLMUserSessionKey()
+        public byte[] getLMUserSessionKey() // DMAP Comment : Dead Code Detected - The Following Method has no reference getLMUserSessionKey
                 throws AuthenticationException {
             if (lmUserSessionKey == null) {
                 byte[] lmHash = getLMHash();
@@ -435,7 +435,7 @@ public class CustomNTLM2Engine {
         }
 
         /** GetNTLMv2UserSessionKey */
-        public byte[] getNTLMv2UserSessionKey()
+        public byte[] getNTLMv2UserSessionKey() // DMAP Comment : Dead Code Detected - The Following Method has no reference getNTLMv2UserSessionKey
                 throws AuthenticationException {
             if (ntlmv2UserSessionKey == null) {
                 byte[] ntlmv2Hash = getNTLMv2Hash();
@@ -451,7 +451,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Get NTLM2SessionResponseUserSessionKey */
-        public byte[] getNTLM2SessionResponseUserSessionKey()
+        public byte[] getNTLM2SessionResponseUserSessionKey() // DMAP Comment : Dead Code Detected - The Following Method has no reference getNTLM2SessionResponseUserSessionKey
                 throws AuthenticationException {
             if (ntlm2SessionResponseUserSessionKey == null) {
                 byte[] ntlmUserSessionKey = getNTLMUserSessionKey();
@@ -466,7 +466,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Get LAN Manager session key */
-        public byte[] getLanManagerSessionKey()
+        public byte[] getLanManagerSessionKey() // DMAP Comment : Dead Code Detected - The Following Method has no reference getLanManagerSessionKey
                 throws AuthenticationException {
             if (lanManagerSessionKey == null) {
                 byte[] lmHash = getLMHash();
@@ -505,7 +505,7 @@ public class CustomNTLM2Engine {
     }
 
     /** Calculates RC4 */
-    static byte[] RC4(byte[] value, byte[] key)
+    static byte[] RC4(byte[] value, byte[] key) // DMAP Comment : Dead Code Detected - The Following Method has no reference RC4
             throws AuthenticationException {
         try {
             Cipher rc4 = Cipher.getInstance("RC4");
@@ -828,17 +828,17 @@ public class CustomNTLM2Engine {
          * Get the length of the signature and flags, so calculations can adjust
          * offsets accordingly.
          */
-        protected int getPreambleLength() {
+        protected int getPreambleLength() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPreambleLength
             return SIGNATURE.length + 4;
         }
 
         /** Get the message length */
-        protected int getMessageLength() {
+        protected int getMessageLength() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMessageLength
             return currentOutputPosition;
         }
 
         /** Read a byte from a position within the message buffer */
-        protected byte readByte(int position) throws AuthenticationException {
+        protected byte readByte(int position) throws AuthenticationException { // DMAP Comment : Dead Code Detected - The Following Method has no reference readByte
             if (messageContents.length < position + 1) {
                 throw new AuthenticationException("NTLM: Message too short");
             }
@@ -846,7 +846,7 @@ public class CustomNTLM2Engine {
         }
 
         /** Read a bunch of bytes from a position in the message buffer */
-        protected void readBytes(byte[] buffer, int position) throws AuthenticationException {
+        protected void readBytes(byte[] buffer, int position) throws AuthenticationException { // DMAP Comment : Dead Code Detected - The Following Method has no reference readBytes
             if (messageContents.length < position + buffer.length) {
                 throw new AuthenticationException("NTLM: Message too short");
             }
@@ -1596,13 +1596,13 @@ public class CustomNTLM2Engine {
 
     }
 
-    public String generateType1Msg(
+    public String generateType1Msg( // DMAP Comment : Dead Code Detected - The Following Method has no reference generateType1Msg
             final String domain,
             final String workstation) throws AuthenticationException {
         return getType1Message(workstation, domain);
     }
 
-    public String generateType3Msg(
+    public String generateType3Msg( // DMAP Comment : Dead Code Detected - The Following Method has no reference generateType3Msg
             final String username,
             final String password,
             final String domain,

@@ -15,7 +15,7 @@ public class LDAPService {
 	private String endpoint;
 	private String projectCode;
 	
-	public void setEndpoint(String endpoint) {
+	public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
 		this.endpoint = endpoint;
 	}
 	

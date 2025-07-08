@@ -50,7 +50,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("networkConfigBean", networkConfigBean);
 	}
 	
-	public void addRouting(ActionEvent event){
+	public void addRouting(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addRouting
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		try {
@@ -121,7 +121,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 		}
 	}
 
-	public void editRouting(ActionEvent event){
+	public void editRouting(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editRouting
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		try {
@@ -178,7 +178,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 	}
 	
 	
-	public void findIPNode(ActionEvent event){
+	public void findIPNode(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findIPNode
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		RoutingService intfGatewayService = (RoutingService)JSFServiceFinderUtil.getInstance().getBean("routingService");
 		IPRoutingBean routingBean = bean.getRouting();
@@ -210,7 +210,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 		return resultString;
 	}
 	
-	public void findSubUr(){
+	public void findSubUr(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSubUr
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		
@@ -229,7 +229,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void listener(UploadEvent event) throws Exception{
+	public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService)JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		RoutingService routingService = (RoutingService)JSFServiceFinderUtil.getInstance().getBean("routingService");
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
@@ -325,7 +325,7 @@ public class NWConfigRoutingAction extends AbstractAction{
         setNetworkConfigBean(bean);
     } 
 	
-	public void editRoutingInit(){
+	public void editRoutingInit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editRoutingInit
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
@@ -390,7 +390,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 //		}
 //	}
 	
-	public void deleteRouting(String urNo,String subUrNo){
+	public void deleteRouting(String urNo,String subUrNo){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteRouting
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		RoutingService routingService = (RoutingService)JSFServiceFinderUtil.getInstance().getBean("routingService");
 		IpUrRouting routing = routingService.findFirewall(urNo, subUrNo);
@@ -416,7 +416,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 		
 	}
 	
-	public void clearDestIP(ActionEvent event){
+	public void clearDestIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearDestIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPRoutingBean routing = bean.getRouting();
 		routing.setIsFound("0");
@@ -426,7 +426,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 	}
 	
 	
-	public void checkFileTemplate() {
+	public void checkFileTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFileTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -440,7 +440,7 @@ public class NWConfigRoutingAction extends AbstractAction{
     }
 
 	
-	public void downloadTemplate() {
+	public void downloadTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -455,7 +455,7 @@ public class NWConfigRoutingAction extends AbstractAction{
 		}
     }
 	
-	public void clearSourceIP(ActionEvent event){
+	public void clearSourceIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearSourceIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPRoutingBean routing = bean.getRouting();
 		routing.setIsFound("0");
@@ -467,13 +467,13 @@ public class NWConfigRoutingAction extends AbstractAction{
 	}
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}

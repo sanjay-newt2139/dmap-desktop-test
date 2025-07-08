@@ -18,7 +18,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 public class HistoryNwConfigAction  extends AbstractAction {
 
 	public HistoryNwConfigBean historyNwConfigBean;
-	public UserSession  userSession;
+	public UserSession  userSession; // DMAP Comment : Dead Code Detected - The Following Field has no reference userSession
 
 
 	public HistoryNwConfigBean getHistoryNwConfigBean() {
@@ -27,10 +27,10 @@ public class HistoryNwConfigAction  extends AbstractAction {
 	public void setHistoryNwConfigBean(HistoryNwConfigBean historyNwConfigBean) {
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("historyNwConfigBean", historyNwConfigBean);
 	}
-	public UserSession getUserSession() {
+	public UserSession getUserSession() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserSession
 	  return (UserSession) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userSession");
 	}
-	public void setUserSession(UserSession userSession) {
+	public void setUserSession(UserSession userSession) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserSession
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userSession", userSession);
 	}
 	
@@ -39,7 +39,7 @@ public class HistoryNwConfigAction  extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		historyNwConfigBean = getHistoryNwConfigBean();		
@@ -78,7 +78,7 @@ public class HistoryNwConfigAction  extends AbstractAction {
 
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		boolean flgValid = true;
 		return flgValid;
 	}

@@ -20,67 +20,67 @@ public class TabControlAction extends AbstractAction{
 	private HtmlTab tabF5;
 	private HtmlTabPanel tabPanel;
 	
-	public HtmlTabPanel getTabPanel() {
+	public HtmlTabPanel getTabPanel() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabPanel
 		return tabPanel;
 	}
 
-	public void setTabPanel(HtmlTabPanel tabPanel) {
+	public void setTabPanel(HtmlTabPanel tabPanel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabPanel
 		this.tabPanel = tabPanel;
 	}
 
-	public HtmlTab getTabAccessList() {
+	public HtmlTab getTabAccessList() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabAccessList
 		return tabAccessList;
 	}
 
-	public void setTabAccessList(HtmlTab tabAccessList) {
+	public void setTabAccessList(HtmlTab tabAccessList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabAccessList
 		this.tabAccessList = tabAccessList;
 	}
 
-	public HtmlTab getTabAccessTNP() {
+	public HtmlTab getTabAccessTNP() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabAccessTNP
 		return tabAccessTNP;
 	}
 
-	public void setTabAccessTNP(HtmlTab tabAccessTNP) {
+	public void setTabAccessTNP(HtmlTab tabAccessTNP) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabAccessTNP
 		this.tabAccessTNP = tabAccessTNP;
 	}
 
-	public HtmlTab getTabPhysical() {
+	public HtmlTab getTabPhysical() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabPhysical
 		return tabPhysical;
 	}
 
-	public void setTabPhysical(HtmlTab tabPhysical) {
+	public void setTabPhysical(HtmlTab tabPhysical) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabPhysical
 		this.tabPhysical = tabPhysical;
 	}
 
-	public HtmlTab getTabGateway() {
+	public HtmlTab getTabGateway() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabGateway
 		return tabGateway;
 	}
 
-	public void setTabGateway(HtmlTab tabGateway) {
+	public void setTabGateway(HtmlTab tabGateway) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabGateway
 		this.tabGateway = tabGateway;
 	}
 
-	public HtmlTab getTabRouting() {
+	public HtmlTab getTabRouting() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabRouting
 		return tabRouting;
 	}
 
-	public void setTabRouting(HtmlTab tabRouting) {
+	public void setTabRouting(HtmlTab tabRouting) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabRouting
 		this.tabRouting = tabRouting;
 	}
 
-	public HtmlTab getTabF5() {
+	public HtmlTab getTabF5() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabF5
 		return tabF5;
 	}
 
-	public void setTabF5(HtmlTab tabF5) {
+	public void setTabF5(HtmlTab tabF5) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabF5
 		this.tabF5 = tabF5;
 	}
 
-	public HtmlTab getTabFirewall() {
+	public HtmlTab getTabFirewall() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTabFirewall
 		return tabFirewall;
 	}
 
-	public void setTabFirewall(HtmlTab tabFirewall) {
+	public void setTabFirewall(HtmlTab tabFirewall) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTabFirewall
 		this.tabFirewall = tabFirewall;
 	}
 
@@ -95,11 +95,11 @@ public class TabControlAction extends AbstractAction{
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("networkConfigBean", networkConfigBean);
 	}
 	
-	public void disableTab(ActionEvent event){
+	public void disableTab(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference disableTab
 		
 	}
 
-	public void firewallToggle(ActionEvent event){
+	public void firewallToggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference firewallToggle
 		
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		//tabFirewall.setDisabled(!bean.getFirewallCheck());
@@ -117,7 +117,7 @@ public class TabControlAction extends AbstractAction{
 			
 	}
 	
-	public void accessListToggle(ActionEvent event){
+	public void accessListToggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference accessListToggle
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		ReqNWConfigBean reqNetworkBean = (getNetworkConfigBean()!=null)?getNetworkConfigBean():new ReqNWConfigBean();
 		//tabAccessList.setDisabled(!bean.getAccessListCheck());
@@ -131,7 +131,7 @@ public class TabControlAction extends AbstractAction{
 			
 	}
 	
-	public void accessTNPToggle(ActionEvent event){
+	public void accessTNPToggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference accessTNPToggle
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		
 		ReqNWConfigBean reqNetworkBean = (getNetworkConfigBean()!=null)?getNetworkConfigBean():new ReqNWConfigBean();
@@ -146,7 +146,7 @@ public class TabControlAction extends AbstractAction{
 		//tabAccessTNP.setDisabled(!bean.getAccessTNPCheck());	
 	}
 	
-	public void physicalToggle(ActionEvent event){
+	public void physicalToggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference physicalToggle
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		ReqNWConfigBean reqNetworkBean = (getNetworkConfigBean()!=null)?getNetworkConfigBean():new ReqNWConfigBean();
 
@@ -161,7 +161,7 @@ public class TabControlAction extends AbstractAction{
 		//tabPhysical.setDisabled(!bean.getPhysicalCheck());	
 	}
 	
-	public void gatewatToggle(ActionEvent event){
+	public void gatewatToggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference gatewatToggle
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		ReqNWConfigBean reqNetworkBean = (getNetworkConfigBean()!=null)?getNetworkConfigBean():new ReqNWConfigBean();
 
@@ -176,7 +176,7 @@ public class TabControlAction extends AbstractAction{
 		//tabGateway.setDisabled(!bean.getGatewayCheck());	
 	}
 	
-	public void routingToggle(ActionEvent event){
+	public void routingToggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference routingToggle
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		ReqNWConfigBean reqNetworkBean = (getNetworkConfigBean()!=null)?getNetworkConfigBean():new ReqNWConfigBean();
 
@@ -191,7 +191,7 @@ public class TabControlAction extends AbstractAction{
 		//tabRouting.setDisabled(!bean.getRoutingCheck());	
 	}
 	
-	public void f5Toggle(ActionEvent event){
+	public void f5Toggle(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference f5Toggle
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		ReqNWConfigBean reqNetworkBean = (getNetworkConfigBean()!=null)?getNetworkConfigBean():new ReqNWConfigBean();
 
@@ -214,32 +214,32 @@ public class TabControlAction extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 
-	public void changeTab(ActionEvent event){
+	public void changeTab(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference changeTab
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		bean.setCurrentTab(getRequestParameter("tabName"));
 		System.out.println("Change To >> "+bean.getCurrentTab());
 		setNetworkConfigBean(bean);
 	}
 
-	public void actionPerformed(java.awt.event.ActionEvent e) {
+	public void actionPerformed(java.awt.event.ActionEvent e) { // DMAP Comment : Dead Code Detected - The Following Method has no reference actionPerformed
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

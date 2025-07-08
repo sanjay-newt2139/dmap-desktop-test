@@ -14,19 +14,19 @@ public class IPRoleFunctionPK implements Serializable{
 	@Column(name="FUNC_ID", length=10)
     private String funcId;
 
-	public String getRoleId() {
+	public String getRoleId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleId
 		return roleId;
 	}
 
-	public void setRoleId(String roleId) {
+	public void setRoleId(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleId
 		this.roleId = roleId;
 	}
 
-	public String getFuncId() {
+	public String getFuncId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncId
 		return funcId;
 	}
 
-	public void setFuncId(String funcId) {
+	public void setFuncId(String funcId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncId
 		this.funcId = funcId;
 	}
 
@@ -55,7 +55,7 @@ public class IPRoleFunctionPK implements Serializable{
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain.IPRoleFunctionPK[roleId=" + roleId + ", funcId=" + funcId + "]";
     }
 }

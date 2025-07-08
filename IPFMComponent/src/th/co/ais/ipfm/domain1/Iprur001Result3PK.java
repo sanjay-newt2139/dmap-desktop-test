@@ -31,19 +31,19 @@ public class Iprur001Result3PK implements Serializable {
         this.groupSeq = groupSeq;
     }
 
-    public String getReportId() {
+    public String getReportId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportId
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportId
         this.reportId = reportId;
     }
 
-    public short getGroupSeq() {
+    public short getGroupSeq() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getGroupSeq
         return groupSeq;
     }
 
-    public void setGroupSeq(short groupSeq) {
+    public void setGroupSeq(short groupSeq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setGroupSeq
         this.groupSeq = groupSeq;
     }
 
@@ -72,7 +72,7 @@ public class Iprur001Result3PK implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain1.Iprur001Result3PK[reportId=" + reportId + ", groupSeq=" + groupSeq + "]";
     }
 

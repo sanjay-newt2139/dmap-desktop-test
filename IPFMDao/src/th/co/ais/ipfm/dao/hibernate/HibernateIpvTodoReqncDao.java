@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import th.co.ais.ipfm.domain1.IpvTodoReqnc;
 public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> implements IpvTodoReqncDao {
 
 	@Override
-	public List<IpvTodoReqnc> findTodoReqNC(String userId, String actionCode) throws Exception {
+	public List<IpvTodoReqnc> findTodoReqNC(String userId, String actionCode) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findTodoReqNC
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvTodoReqnc> result = new ArrayList<IpvTodoReqnc>();
 		String actionCodeSql = "";
@@ -30,6 +31,11 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 		sql.append(" where INSTR(';'|| t.actionUserId ||';' , ';'|| '"+userId+"' ||';' )> 0 " + actionCodeSql );
 		sql.append("  order by " );
 		sql.append((actionCode==null?"":(actionCode.trim().equals("")?"":(actionCode.trim().equals("10")?("lastUpd asc, "):"")))+" t.colCode asc, t.urNo desc, t.subUrNo asc ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier370
+DMAP ConvertedQuery - select distinct t from IpvTodoReqnc t order by (actionCode == null ? : actionCode.trim().equals() ? : actionCode.trim().equals(10) ? lastUpd asc, : )  t.colCode asc, t.urNo desc, t.subUrNo asc
+**/
+
 		result = session.createQuery(sql.toString()).list();
 		Hibernate.initialize(result);
 		
@@ -37,7 +43,7 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 	}
 	
 
-	public List<IpvTodoReqnc> findTodoReqNCUserVerify(String userId, String actionCode) throws Exception {
+	public List<IpvTodoReqnc> findTodoReqNCUserVerify(String userId, String actionCode) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findTodoReqNCUserVerify
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvTodoReqnc> result = new ArrayList<IpvTodoReqnc>();
 		String actionCodeSql = "";
@@ -51,6 +57,14 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 				//"where t.actionUserId = '"+userId+"' " + actionCodeSql +
 				"where INSTR(';'|| t.actionUserId ||';' , ';'|| '"+userId+"' ||';' )>0 " + actionCodeSql +
 				"order by t.colCode asc, t.urNo desc, t.subUrNo asc ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier369
+DMAP ConvertedQuery - select distinct t from IpvTodoReqnc t where position( CONCAT(';', 'userId' , ';') in CONCAT(';', t.actionUserId , ';')) >0 and t.colCode = 'actionCode' order by t.colCode asc, t.urNo desc, t.subUrNo asc
+**/
+
+/**
+**/
+
 		result = session.createQuery(sql.toString()).list();
 		Hibernate.initialize(result);
 		
@@ -58,7 +72,7 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 	}
 	
 	@Override
-	public List<IpvTodoReqnc> findTodoReqNCDraft(String userId, String actionCode) throws Exception {
+	public List<IpvTodoReqnc> findTodoReqNCDraft(String userId, String actionCode) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findTodoReqNCDraft
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvTodoReqnc> result = new ArrayList<IpvTodoReqnc>();
 		String actionCodeSql = "";
@@ -77,6 +91,14 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 				"and t.urNo = a.urNo "+
 				") "+
 				"order by t.colCode asc, t.urNo desc, t.subUrNo asc ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier368
+DMAP ConvertedQuery - select distinct t from IpvTodoReqnc t where position( CONCAT(';', 'userId' , ';') in CONCAT(';', t.actionUserId , ';')) >0 and t.colCode = 'actionCode' and t.created = (select max(CAST(a.created AS numeric)) from IpvTodoReqnc a WHERE position( CONCAT(';', 'userId', ';') in CONCAT(';', a.actionUserId, ';')) >0 and a.colCode='actionCode' and t.urNo = a.urNo ) order by t.colCode asc, t.urNo desc, t.subUrNo asc
+**/
+
+/**
+**/
+
 		result = session.createQuery(sql.toString()).list();
 		Hibernate.initialize(result);
 		
@@ -84,7 +106,7 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 	}
 	
 	@Override
-	public List<IpvTodoReqnc> findTodoReqNCNoRemark(String userId, String actionCode) throws Exception {
+	public List<IpvTodoReqnc> findTodoReqNCNoRemark(String userId, String actionCode) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findTodoReqNCNoRemark
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvTodoReqnc> result = new ArrayList<IpvTodoReqnc>();
 		String actionCodeSql = "";
@@ -108,6 +130,14 @@ public class HibernateIpvTodoReqncDao extends HibernateGenericDao<IpvTodoReqnc> 
 				"order by col_28_0_ asc, t.colCode asc, t.urNo desc, t.subUrNo asc ");
 //		result = session.createQuery(sql.toString()).list();
 		System.out.println("TEST ==> "+sql.toString());
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier367
+DMAP ConvertedQuery - select distinct t.actionName, t.actionSeq, t.actionUser, t.actionUserId, t.callFunctionId, t.callMode, t.colCode, t.created, t.createdBy, t.createUserName, t.lastUpd as lastUpd, t.lastUpdBy, t.olaDate, t.olaSts, t.reqDate, t.reqUser, t.reqUserId, t.slaDate, t.slaSts, t.subject, t.subUrNo, t.subUrType, t.title1, t.title2SubUr, t.title2Ur, t.urNo, t.urStatus, t.urType, (select max(CAST(lastUpd AS numeric)) from IpUrActionHistory h WHERE h.urNo = t.urNo and h.urStatus = 'APPROVE_OWNER') as col_28_0_ from IpvTodoReqnc t WHERE position( CONCAT(';', 'userId' , ';') in CONCAT(';', t.actionUserId , ';')) >0 and t.colCode = 'actionCode' order by col_28_0_ asc, t.colCode asc, t.urNo desc, t.subUrNo asc
+**/
+
+/**
+**/
+
 		List result1 = session.createQuery(sql.toString()).list();
 		Iterator iter = result1.iterator();
 		int i=0;

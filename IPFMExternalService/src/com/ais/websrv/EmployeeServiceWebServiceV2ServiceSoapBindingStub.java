@@ -20,7 +20,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc1
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -300,7 +300,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
         }
     }
 
-    public Permission.bean.ais.com.SSOResponse getUserEmailListOfSubmoduleOnProgramCode(java.lang.String moduleAbv, java.lang.String progCode) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getUserEmailListOfSubmoduleOnProgramCode(java.lang.String moduleAbv, java.lang.String progCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserEmailListOfSubmoduleOnProgramCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -334,7 +334,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse getProgCodeRoot(java.lang.String tokenId) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getProgCodeRoot(java.lang.String tokenId) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgCodeRoot
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -368,7 +368,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse syncUserSession(java.lang.String tokenId) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse syncUserSession(java.lang.String tokenId) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference syncUserSession
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -402,7 +402,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse decreaseCounter(java.lang.String tokenId) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse decreaseCounter(java.lang.String tokenId) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference decreaseCounter
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -436,7 +436,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse getAllPermission(java.lang.String tokenId) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getAllPermission(java.lang.String tokenId) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllPermission
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -470,7 +470,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse getAuthorizeOfSubmoduleOnProgramCode(java.lang.String moduleAbv, java.lang.String progCode) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getAuthorizeOfSubmoduleOnProgramCode(java.lang.String moduleAbv, java.lang.String progCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAuthorizeOfSubmoduleOnProgramCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -504,7 +504,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse logOut(java.lang.String tokenId) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse logOut(java.lang.String tokenId) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference logOut
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -538,7 +538,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse getProgCode(java.lang.String tokenId) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getProgCode(java.lang.String tokenId) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -572,7 +572,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse getPermission(java.lang.String tokenId, java.lang.String progCode) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getPermission(java.lang.String tokenId, java.lang.String progCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPermission
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -606,7 +606,7 @@ public class EmployeeServiceWebServiceV2ServiceSoapBindingStub extends org.apach
 }
     }
 
-    public Permission.bean.ais.com.SSOResponse getToken(java.lang.String username, java.lang.String password, java.lang.String module, java.lang.String ou_type, java.lang.String projectCode) throws java.rmi.RemoteException {
+    public Permission.bean.ais.com.SSOResponse getToken(java.lang.String username, java.lang.String password, java.lang.String module, java.lang.String ou_type, java.lang.String projectCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getToken
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }

@@ -41,7 +41,7 @@ import org.apache.commons.httpclient.util.ExceptionUtil;
  * for use without additional customization.
  * </p>
  */
-public class ProxyDetectionException extends Exception {
+public class ProxyDetectionException extends Exception { // DMAP Comment : Dead Code Detected - The Following Class has no reference ProxyDetectionException
 
     /**
      * Creates a new ProxyDetectionException with a <tt>null</tt> detail message. 

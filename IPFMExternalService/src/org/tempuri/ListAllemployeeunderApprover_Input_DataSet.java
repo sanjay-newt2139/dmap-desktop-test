@@ -42,7 +42,7 @@ public class ListAllemployeeunderApprover_Input_DataSet  implements java.io.Seri
      * 
      * @param pinManager
      */
-    public void setPinManager(java.lang.String pinManager) {
+    public void setPinManager(java.lang.String pinManager) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPinManager
         this.pinManager = pinManager;
     }
 
@@ -62,7 +62,7 @@ public class ListAllemployeeunderApprover_Input_DataSet  implements java.io.Seri
      * 
      * @param positionManager
      */
-    public void setPositionManager(java.lang.String positionManager) {
+    public void setPositionManager(java.lang.String positionManager) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPositionManager
         this.positionManager = positionManager;
     }
 
@@ -82,7 +82,7 @@ public class ListAllemployeeunderApprover_Input_DataSet  implements java.io.Seri
      * 
      * @param ds
      */
-    public void setDs(org.tempuri.ListAllemployeeunderApprover_Input_DataSetDs ds) {
+    public void setDs(org.tempuri.ListAllemployeeunderApprover_Input_DataSetDs ds) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDs
         this.ds = ds;
     }
 
@@ -163,14 +163,14 @@ public class ListAllemployeeunderApprover_Input_DataSet  implements java.io.Seri
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -182,7 +182,7 @@ public class ListAllemployeeunderApprover_Input_DataSet  implements java.io.Seri
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

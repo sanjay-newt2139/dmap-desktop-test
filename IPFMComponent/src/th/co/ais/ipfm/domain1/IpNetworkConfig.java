@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -247,579 +247,579 @@ public class IpNetworkConfig  implements java.io.Serializable {
     @Column(name="UPDATE_DATE", length=10)
 	private Date lastUpd;
 
-	public String getIpAddress() {
+	public String getIpAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpAddress
 		return ipAddress;
 	}
 
-	public void setIpAddress(String ipAddress) {
+	public void setIpAddress(String ipAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpAddress
 		this.ipAddress = ipAddress;
 	}
 
-	public String getMask() {
+	public String getMask() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMask
 		return mask;
 	}
 
-	public void setMask(String mask) {
+	public void setMask(String mask) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMask
 		this.mask = mask;
 	}
 
-	public String getVipPort() {
+	public String getVipPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVipPort
 		return vipPort;
 	}
 
-	public void setVipPort(String vipPort) {
+	public void setVipPort(String vipPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVipPort
 		this.vipPort = vipPort;
 	}
 
-	public String getSourceIp1() {
+	public String getSourceIp1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceIp1
 		return sourceIp1;
 	}
 
-	public void setSourceIp1(String sourceIp1) {
+	public void setSourceIp1(String sourceIp1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceIp1
 		this.sourceIp1 = sourceIp1;
 	}
 
-	public String getSourceIp2() {
+	public String getSourceIp2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceIp2
 		return sourceIp2;
 	}
 
-	public void setSourceIp2(String sourceIp2) {
+	public void setSourceIp2(String sourceIp2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceIp2
 		this.sourceIp2 = sourceIp2;
 	}
 
-	public String getSourceHostName() {
+	public String getSourceHostName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceHostName
 		return sourceHostName;
 	}
 
-	public void setSourceHostName(String sourceHostName) {
+	public void setSourceHostName(String sourceHostName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceHostName
 		this.sourceHostName = sourceHostName;
 	}
 
-	public String getSourceEmail() {
+	public String getSourceEmail() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceEmail
 		return sourceEmail;
 	}
 
-	public void setSourceEmail(String sourceEmail) {
+	public void setSourceEmail(String sourceEmail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceEmail
 		this.sourceEmail = sourceEmail;
 	}
 
-	public String getSourceVip() {
+	public String getSourceVip() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceVip
 		return sourceVip;
 	}
 
-	public void setSourceVip(String sourceVip) {
+	public void setSourceVip(String sourceVip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceVip
 		this.sourceVip = sourceVip;
 	}
 
-	public String getSourceNatIp() {
+	public String getSourceNatIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceNatIp
 		return sourceNatIp;
 	}
 
-	public void setSourceNatIp(String sourceNatIp) {
+	public void setSourceNatIp(String sourceNatIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceNatIp
 		this.sourceNatIp = sourceNatIp;
 	}
 
-	public String getSourceLocationName() {
+	public String getSourceLocationName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceLocationName
 		return sourceLocationName;
 	}
 
-	public void setSourceLocationName(String sourceLocationName) {
+	public void setSourceLocationName(String sourceLocationName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceLocationName
 		this.sourceLocationName = sourceLocationName;
 	}
 
-	public String getSourceNetworkIp() {
+	public String getSourceNetworkIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceNetworkIp
 		return sourceNetworkIp;
 	}
 
-	public void setSourceNetworkIp(String sourceNetworkIp) {
+	public void setSourceNetworkIp(String sourceNetworkIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceNetworkIp
 		this.sourceNetworkIp = sourceNetworkIp;
 	}
 
-	public String getSourceInterNode() {
+	public String getSourceInterNode() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceInterNode
 		return sourceInterNode;
 	}
 
-	public void setSourceInterNode(String sourceInterNode) {
+	public void setSourceInterNode(String sourceInterNode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceInterNode
 		this.sourceInterNode = sourceInterNode;
 	}
 
-	public String getSourceInterNw() {
+	public String getSourceInterNw() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSourceInterNw
 		return sourceInterNw;
 	}
 
-	public void setSourceInterNw(String sourceInterNw) {
+	public void setSourceInterNw(String sourceInterNw) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSourceInterNw
 		this.sourceInterNw = sourceInterNw;
 	}
 
-	public String getDestIp() {
+	public String getDestIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestIp
 		return destIp;
 	}
 
-	public void setDestIp(String destIp) {
+	public void setDestIp(String destIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestIp
 		this.destIp = destIp;
 	}
 
-	public String getDestIp1() {
+	public String getDestIp1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestIp1
 		return destIp1;
 	}
 
-	public void setDestIp1(String destIp1) {
+	public void setDestIp1(String destIp1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestIp1
 		this.destIp1 = destIp1;
 	}
 
-	public String getDestIp2() {
+	public String getDestIp2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestIp2
 		return destIp2;
 	}
 
-	public void setDestIp2(String destIp2) {
+	public void setDestIp2(String destIp2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestIp2
 		this.destIp2 = destIp2;
 	}
 
-	public String getDestHostName() {
+	public String getDestHostName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestHostName
 		return destHostName;
 	}
 
-	public void setDestHostName(String destHostName) {
+	public void setDestHostName(String destHostName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestHostName
 		this.destHostName = destHostName;
 	}
 
-	public String getDestEmail() {
+	public String getDestEmail() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestEmail
 		return destEmail;
 	}
 
-	public void setDestEmail(String destEmail) {
+	public void setDestEmail(String destEmail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestEmail
 		this.destEmail = destEmail;
 	}
 
-	public String getDestVip() {
+	public String getDestVip() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestVip
 		return destVip;
 	}
 
-	public void setDestVip(String destVip) {
+	public void setDestVip(String destVip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestVip
 		this.destVip = destVip;
 	}
 
-	public String getDestNatIp() {
+	public String getDestNatIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestNatIp
 		return destNatIp;
 	}
 
-	public void setDestNatIp(String destNatIp) {
+	public void setDestNatIp(String destNatIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestNatIp
 		this.destNatIp = destNatIp;
 	}
 
-	public String getDestLocationName() {
+	public String getDestLocationName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestLocationName
 		return destLocationName;
 	}
 
-	public void setDestLocationName(String destLocationName) {
+	public void setDestLocationName(String destLocationName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestLocationName
 		this.destLocationName = destLocationName;
 	}
 
-	public String getDestNetworkIp() {
+	public String getDestNetworkIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestNetworkIp
 		return destNetworkIp;
 	}
 
-	public void setDestNetworkIp(String destNetworkIp) {
+	public void setDestNetworkIp(String destNetworkIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestNetworkIp
 		this.destNetworkIp = destNetworkIp;
 	}
 
-	public String getDestInterNode() {
+	public String getDestInterNode() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestInterNode
 		return destInterNode;
 	}
 
-	public void setDestInterNode(String destInterNode) {
+	public void setDestInterNode(String destInterNode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestInterNode
 		this.destInterNode = destInterNode;
 	}
 
-	public String getDestInterNw() {
+	public String getDestInterNw() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDestInterNw
 		return destInterNw;
 	}
 
-	public void setDestInterNw(String destInterNw) {
+	public void setDestInterNw(String destInterNw) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDestInterNw
 		this.destInterNw = destInterNw;
 	}
 
-	public String getDescription() {
+	public String getDescription() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDescription
 		return description;
 	}
 
-	public void setDescription(String description) {
+	public void setDescription(String description) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDescription
 		this.description = description;
 	}
 
-	public String getReqImpact() {
+	public String getReqImpact() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqImpact
 		return reqImpact;
 	}
 
-	public void setReqImpact(String reqImpact) {
+	public void setReqImpact(String reqImpact) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqImpact
 		this.reqImpact = reqImpact;
 	}
 
-	public String getServiceStatus() {
+	public String getServiceStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceStatus
 		return serviceStatus;
 	}
 
-	public void setServiceStatus(String serviceStatus) {
+	public void setServiceStatus(String serviceStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceStatus
 		this.serviceStatus = serviceStatus;
 	}
 
-	public String getServiceId() {
+	public String getServiceId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceId
 		return serviceId;
 	}
 
-	public void setServiceId(String serviceId) {
+	public void setServiceId(String serviceId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceId
 		this.serviceId = serviceId;
 	}
 
-	public String getServiceName() {
+	public String getServiceName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceName
 		return serviceName;
 	}
 
-	public void setServiceName(String serviceName) {
+	public void setServiceName(String serviceName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceName
 		this.serviceName = serviceName;
 	}
 
-	public String getServiceDesc() {
+	public String getServiceDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceDesc
 		return serviceDesc;
 	}
 
-	public void setServiceDesc(String serviceDesc) {
+	public void setServiceDesc(String serviceDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceDesc
 		this.serviceDesc = serviceDesc;
 	}
 
-	public String getServiceTcpStatus() {
+	public String getServiceTcpStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceTcpStatus
 		return serviceTcpStatus;
 	}
 
-	public void setServiceTcpStatus(String serviceTcpStatus) {
+	public void setServiceTcpStatus(String serviceTcpStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceTcpStatus
 		this.serviceTcpStatus = serviceTcpStatus;
 	}
 
-	public String getServiceTcpPort() {
+	public String getServiceTcpPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceTcpPort
 		return serviceTcpPort;
 	}
 
-	public void setServiceTcpPort(String serviceTcpPort) {
+	public void setServiceTcpPort(String serviceTcpPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceTcpPort
 		this.serviceTcpPort = serviceTcpPort;
 	}
 
-	public String getServiceUdpStatus() {
+	public String getServiceUdpStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceUdpStatus
 		return serviceUdpStatus;
 	}
 
-	public void setServiceUdpStatus(String serviceUdpStatus) {
+	public void setServiceUdpStatus(String serviceUdpStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceUdpStatus
 		this.serviceUdpStatus = serviceUdpStatus;
 	}
 
-	public String getServiceUdpPort() {
+	public String getServiceUdpPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceUdpPort
 		return serviceUdpPort;
 	}
 
-	public void setServiceUdpPort(String serviceUdpPort) {
+	public void setServiceUdpPort(String serviceUdpPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceUdpPort
 		this.serviceUdpPort = serviceUdpPort;
 	}
 
-	public String getServiceOtherStatus() {
+	public String getServiceOtherStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceOtherStatus
 		return serviceOtherStatus;
 	}
 
-	public void setServiceOtherStatus(String serviceOtherStatus) {
+	public void setServiceOtherStatus(String serviceOtherStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceOtherStatus
 		this.serviceOtherStatus = serviceOtherStatus;
 	}
 
-	public String getServiceOtherPort() {
+	public String getServiceOtherPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceOtherPort
 		return serviceOtherPort;
 	}
 
-	public void setServiceOtherPort(String serviceOtherPort) {
+	public void setServiceOtherPort(String serviceOtherPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceOtherPort
 		this.serviceOtherPort = serviceOtherPort;
 	}
 
-	public String getMacAddress() {
+	public String getMacAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMacAddress
 		return macAddress;
 	}
 
-	public void setMacAddress(String macAddress) {
+	public void setMacAddress(String macAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMacAddress
 		this.macAddress = macAddress;
 	}
 
-	public String getFloor() {
+	public String getFloor() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFloor
 		return floor;
 	}
 
-	public void setFloor(String floor) {
+	public void setFloor(String floor) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFloor
 		this.floor = floor;
 	}
 
-	public String getReqVlanId() {
+	public String getReqVlanId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqVlanId
 		return reqVlanId;
 	}
 
-	public void setReqVlanId(String reqVlanId) {
+	public void setReqVlanId(String reqVlanId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqVlanId
 		this.reqVlanId = reqVlanId;
 	}
 
-	public String getInterfaceNodeDesc() {
+	public String getInterfaceNodeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInterfaceNodeDesc
 		return interfaceNodeDesc;
 	}
 
-	public void setInterfaceNodeDesc(String interfaceNodeDesc) {
+	public void setInterfaceNodeDesc(String interfaceNodeDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInterfaceNodeDesc
 		this.interfaceNodeDesc = interfaceNodeDesc;
 	}
 
-	public String getInterfaceDesc() {
+	public String getInterfaceDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInterfaceDesc
 		return interfaceDesc;
 	}
 
-	public void setInterfaceDesc(String interfaceDesc) {
+	public void setInterfaceDesc(String interfaceDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInterfaceDesc
 		this.interfaceDesc = interfaceDesc;
 	}
 
-	public String getPortStatusDesc() {
+	public String getPortStatusDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPortStatusDesc
 		return portStatusDesc;
 	}
 
-	public void setPortStatusDesc(String portStatusDesc) {
+	public void setPortStatusDesc(String portStatusDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPortStatusDesc
 		this.portStatusDesc = portStatusDesc;
 	}
 
-	public String getSpeedPortDesc() {
+	public String getSpeedPortDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSpeedPortDesc
 		return speedPortDesc;
 	}
 
-	public void setSpeedPortDesc(String speedPortDesc) {
+	public void setSpeedPortDesc(String speedPortDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSpeedPortDesc
 		this.speedPortDesc = speedPortDesc;
 	}
 
-	public String getEnclosure() {
+	public String getEnclosure() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEnclosure
 		return enclosure;
 	}
 
-	public void setEnclosure(String enclosure) {
+	public void setEnclosure(String enclosure) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEnclosure
 		this.enclosure = enclosure;
 	}
 
-	public String getReqRemarks() {
+	public String getReqRemarks() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqRemarks
 		return reqRemarks;
 	}
 
-	public void setReqRemarks(String reqRemarks) {
+	public void setReqRemarks(String reqRemarks) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqRemarks
 		this.reqRemarks = reqRemarks;
 	}
 
-	public String getNetworkTypeDesc() {
+	public String getNetworkTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkTypeDesc
 		return networkTypeDesc;
 	}
 
-	public void setNetworkTypeDesc(String networkTypeDesc) {
+	public void setNetworkTypeDesc(String networkTypeDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkTypeDesc
 		this.networkTypeDesc = networkTypeDesc;
 	}
 
-	public String getRoutingInterface() {
+	public String getRoutingInterface() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoutingInterface
 		return routingInterface;
 	}
 
-	public void setRoutingInterface(String routingInterface) {
+	public void setRoutingInterface(String routingInterface) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoutingInterface
 		this.routingInterface = routingInterface;
 	}
 
-	public String getRoutingNextHop() {
+	public String getRoutingNextHop() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoutingNextHop
 		return routingNextHop;
 	}
 
-	public void setRoutingNextHop(String routingNextHop) {
+	public void setRoutingNextHop(String routingNextHop) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoutingNextHop
 		this.routingNextHop = routingNextHop;
 	}
 
-	public String getRoutingReqDesc() {
+	public String getRoutingReqDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoutingReqDesc
 		return routingReqDesc;
 	}
 
-	public void setRoutingReqDesc(String routingReqDesc) {
+	public void setRoutingReqDesc(String routingReqDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoutingReqDesc
 		this.routingReqDesc = routingReqDesc;
 	}
 
-	public String getIsSnapIp() {
+	public String getIsSnapIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsSnapIp
 		return isSnapIp;
 	}
 
-	public void setIsSnapIp(String isSnapIp) {
+	public void setIsSnapIp(String isSnapIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsSnapIp
 		this.isSnapIp = isSnapIp;
 	}
 
-	public String getSnapIp() {
+	public String getSnapIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSnapIp
 		return snapIp;
 	}
 
-	public void setSnapIp(String snapIp) {
+	public void setSnapIp(String snapIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSnapIp
 		this.snapIp = snapIp;
 	}
 
-	public String getIsPersistence() {
+	public String getIsPersistence() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsPersistence
 		return isPersistence;
 	}
 
-	public void setIsPersistence(String isPersistence) {
+	public void setIsPersistence(String isPersistence) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsPersistence
 		this.isPersistence = isPersistence;
 	}
 
-	public String getMethod() {
+	public String getMethod() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMethod
 		return method;
 	}
 
-	public void setMethod(String method) {
+	public void setMethod(String method) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMethod
 		this.method = method;
 	}
 
-	public String getPoolIpAddress() {
+	public String getPoolIpAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPoolIpAddress
 		return poolIpAddress;
 	}
 
-	public void setPoolIpAddress(String poolIpAddress) {
+	public void setPoolIpAddress(String poolIpAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPoolIpAddress
 		this.poolIpAddress = poolIpAddress;
 	}
 
-	public String getPoolIpPort() {
+	public String getPoolIpPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPoolIpPort
 		return poolIpPort;
 	}
 
-	public void setPoolIpPort(String poolIpPort) {
+	public void setPoolIpPort(String poolIpPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPoolIpPort
 		this.poolIpPort = poolIpPort;
 	}
 
-	public String getPoolWeight() {
+	public String getPoolWeight() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPoolWeight
 		return poolWeight;
 	}
 
-	public void setPoolWeight(String poolWeight) {
+	public void setPoolWeight(String poolWeight) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPoolWeight
 		this.poolWeight = poolWeight;
 	}
 
-	public String getNetworkDevice() {
+	public String getNetworkDevice() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkDevice
 		return networkDevice;
 	}
 
-	public void setNetworkDevice(String networkDevice) {
+	public void setNetworkDevice(String networkDevice) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkDevice
 		this.networkDevice = networkDevice;
 	}
 
-	public String getNetworkLocationDesc() {
+	public String getNetworkLocationDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkLocationDesc
 		return networkLocationDesc;
 	}
 
-	public void setNetworkLocationDesc(String networkLocationDesc) {
+	public void setNetworkLocationDesc(String networkLocationDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkLocationDesc
 		this.networkLocationDesc = networkLocationDesc;
 	}
 
-	public String getNetworkFloor() {
+	public String getNetworkFloor() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkFloor
 		return networkFloor;
 	}
 
-	public void setNetworkFloor(String networkFloor) {
+	public void setNetworkFloor(String networkFloor) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkFloor
 		this.networkFloor = networkFloor;
 	}
 
-	public String getNetworkPort() {
+	public String getNetworkPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkPort
 		return networkPort;
 	}
 
-	public void setNetworkPort(String networkPort) {
+	public void setNetworkPort(String networkPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkPort
 		this.networkPort = networkPort;
 	}
 
-	public String getNetworkRackName() {
+	public String getNetworkRackName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkRackName
 		return networkRackName;
 	}
 
-	public void setNetworkRackName(String networkRackName) {
+	public void setNetworkRackName(String networkRackName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkRackName
 		this.networkRackName = networkRackName;
 	}
 
-	public String getUrNo() {
+	public String getUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNo
 		return urNo;
 	}
 
-	public void setUrNo(String urNo) {
+	public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
 		this.urNo = urNo;
 	}
 
-	public String getSubUrNo() {
+	public String getSubUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubUrNo
 		return subUrNo;
 	}
 
-	public void setSubUrNo(String subUrNo) {
+	public void setSubUrNo(String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubUrNo
 		this.subUrNo = subUrNo;
 	}
 
-	public String getReqUserId() {
+	public String getReqUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqUserId
 		return reqUserId;
 	}
 
-	public void setReqUserId(String reqUserId) {
+	public void setReqUserId(String reqUserId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqUserId
 		this.reqUserId = reqUserId;
 	}
 
-	public String getReqUserName() {
+	public String getReqUserName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqUserName
 		return reqUserName;
 	}
 
-	public void setReqUserName(String reqUserName) {
+	public void setReqUserName(String reqUserName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqUserName
 		this.reqUserName = reqUserName;
 	}
 
-	public String getReqFor() {
+	public String getReqFor() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqFor
 		return reqFor;
 	}
 
-	public void setReqFor(String reqFor) {
+	public void setReqFor(String reqFor) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqFor
 		this.reqFor = reqFor;
 	}
 
-	public String getRowId() {
+	public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
 		return rowId;
 	}
 
-	public void setRowId(String rowId) {
+	public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
 		this.rowId = rowId;
 	}
 
-	public Long getVersion() {
+	public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
 		return version;
 	}
 
-	public void setVersion(Long version) {
+	public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
 		this.version = version;
 	}
 
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
 

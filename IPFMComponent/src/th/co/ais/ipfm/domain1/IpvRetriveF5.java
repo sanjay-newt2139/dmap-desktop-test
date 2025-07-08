@@ -15,17 +15,17 @@ import javax.persistence.Table;
 )
 public class IpvRetriveF5 implements java.io.Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	
 	@Id 
 	@Column(name="ROW_ID", unique=true, length=50)
     private String rowId;
 
-	public String getRowId() {
+	public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
 		return rowId;
 	}
 
-	public void setRowId(String rowId) {
+	public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
 		this.rowId = rowId;
 	}
 
@@ -60,83 +60,83 @@ public class IpvRetriveF5 implements java.io.Serializable {
 	private String reqFor;
 	
 
-	public String getIpAddress() {
+	public String getIpAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpAddress
 		return ipAddress;
 	}
 
-	public void setIpAddress(String ipAddress) {
+	public void setIpAddress(String ipAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpAddress
 		this.ipAddress = ipAddress;
 	}
 
-	public String getVipPort() {
+	public String getVipPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVipPort
 		return vipPort;
 	}
 
-	public void setVipPort(String vipPort) {
+	public void setVipPort(String vipPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVipPort
 		this.vipPort = vipPort;
 	}
 
-	public String getIsSnapIp() {
+	public String getIsSnapIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsSnapIp
 		return isSnapIp;
 	}
 
-	public void setIsSnapIp(String isSnapIp) {
+	public void setIsSnapIp(String isSnapIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsSnapIp
 		this.isSnapIp = isSnapIp;
 	}
 
-	public String getSnapIp() {
+	public String getSnapIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSnapIp
 		return snapIp;
 	}
 
-	public void setSnapIp(String snapIp) {
+	public void setSnapIp(String snapIp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSnapIp
 		this.snapIp = snapIp;
 	}
 
-	public String getIsPersistence() {
+	public String getIsPersistence() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsPersistence
 		return isPersistence;
 	}
 
-	public void setIsPersistence(String isPersistence) {
+	public void setIsPersistence(String isPersistence) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsPersistence
 		this.isPersistence = isPersistence;
 	}
 
-	public String getMethod() {
+	public String getMethod() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMethod
 		return method;
 	}
 
-	public void setMethod(String method) {
+	public void setMethod(String method) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMethod
 		this.method = method;
 	}
 
-	public String getPoolIpAddress() {
+	public String getPoolIpAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPoolIpAddress
 		return poolIpAddress;
 	}
 
-	public void setPoolIpAddress(String poolIpAddress) {
+	public void setPoolIpAddress(String poolIpAddress) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPoolIpAddress
 		this.poolIpAddress = poolIpAddress;
 	}
 
-	public String getPoolIpPort() {
+	public String getPoolIpPort() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPoolIpPort
 		return poolIpPort;
 	}
 
-	public void setPoolIpPort(String poolIpPort) {
+	public void setPoolIpPort(String poolIpPort) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPoolIpPort
 		this.poolIpPort = poolIpPort;
 	}
 
-	public String getPoolWeight() {
+	public String getPoolWeight() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPoolWeight
 		return poolWeight;
 	}
 
-	public void setPoolWeight(String poolWeight) {
+	public void setPoolWeight(String poolWeight) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPoolWeight
 		this.poolWeight = poolWeight;
 	}
 
-	public String getReqFor() {
+	public String getReqFor() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqFor
 		return reqFor;
 	}
 
-	public void setReqFor(String reqFor) {
+	public void setReqFor(String reqFor) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqFor
 		this.reqFor = reqFor;
 	}
 	

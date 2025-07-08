@@ -30,35 +30,35 @@ public class HibernateGenericDao<T> implements IGenericDao<T, Long> {
 		return persistentClass;
 	}
 
-	public void setPersistentClass(Class<T> persistentClass) {
+	public void setPersistentClass(Class<T> persistentClass) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPersistentClass
 		this.persistentClass = persistentClass;
 	}
 
-	public SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSessionFactory
 		return sessionFactory;
 	}
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
+	public void setSessionFactory(SessionFactory sessionFactory) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSessionFactory
 		this.sessionFactory = sessionFactory;
 	}
 
-	public SessionFactory getVsfmSessionFactory() {
+	public SessionFactory getVsfmSessionFactory() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVsfmSessionFactory
 		return vsfmSessionFactory;
 	}
 
-	public void setVsfmSessionFactory(SessionFactory vsfmSessionFactory) {
+	public void setVsfmSessionFactory(SessionFactory vsfmSessionFactory) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVsfmSessionFactory
 		this.vsfmSessionFactory = vsfmSessionFactory;
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<T> getByHQLCriteria(String hql) throws DataAccessException {
+	public List<T> getByHQLCriteria(String hql) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getByHQLCriteria
 		Session session = sessionFactory.getCurrentSession();
 		List<T> entityList = session.createQuery(hql).list();
 		return entityList;
 	}
 
 	@SuppressWarnings("unchecked")
-	public T getByPrimaryKey(String rowId) throws DataAccessException {
+	public T getByPrimaryKey(String rowId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getByPrimaryKey
 		Session session = sessionFactory.getCurrentSession();
 
 		T entity = (T) session.get(getPersistentClass(), rowId);
@@ -75,14 +75,14 @@ public class HibernateGenericDao<T> implements IGenericDao<T, Long> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<T> getBySQLCriteria(String sql) throws DataAccessException {
+	public List<T> getBySQLCriteria(String sql) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getBySQLCriteria
 		Session session = sessionFactory.getCurrentSession();
 		List<T> entityList = session.createSQLQuery(sql).addEntity(
 				getPersistentClass()).list();
 		return entityList;
 	}
 
-	public void insert(T entity) throws DataAccessException {
+	public void insert(T entity) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference insert
 		Session session = sessionFactory.getCurrentSession();
 		try {
 			IPFMDataUtility.injectCreatDateToDomain(entity);
@@ -176,7 +176,7 @@ public class HibernateGenericDao<T> implements IGenericDao<T, Long> {
 		session.flush();
 	}
 
-	public void updateExceptInjectCreatDateToDomain(T entity) throws DataAccessException {
+	public void updateExceptInjectCreatDateToDomain(T entity) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateExceptInjectCreatDateToDomain
 		Session session = sessionFactory.getCurrentSession();
 		session.update(entity);
 //		Fix Bug JTA : Unknown Reason 

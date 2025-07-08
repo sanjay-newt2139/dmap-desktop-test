@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import th.co.ais.ipfm.domain1.IpvWatchPlanningReq;
 public class HibernateIpvWatchPlanningReqDao extends HibernateGenericDao<IpvWatchPlanningReq> implements IpvWatchPlanningReqDao {
 
 	@Override
-	public List<IpvWatchPlanningReq> findWatchPlanningReq(String userId){
+	public List<IpvWatchPlanningReq> findWatchPlanningReq(String userId){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findWatchPlanningReq
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpvWatchPlanningReq> result = new ArrayList<IpvWatchPlanningReq>();
 		StringBuffer sql = new StringBuffer();
@@ -24,6 +25,11 @@ public class HibernateIpvWatchPlanningReqDao extends HibernateGenericDao<IpvWatc
 				"where t.reqUserId = '"+userId+"' "  +
 				"order by t.urNo desc");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier374
+DMAP ConvertedQuery - select distinct t.title1,t.slaSts,t.urNo,t.subject,t.reqDate,t.slaDate, t.reqUserId,t.urStatus,t.urType,t.callFunctionId,t.callMode,t.actionUser from IpvWatchPlanningReq t where t.reqUserId = 'userId' order by t.urNo desc
+**/
+
 		List result1 = session.createQuery(sql.toString()).list();
 		Iterator iter = result1.iterator();
 		int i=0;

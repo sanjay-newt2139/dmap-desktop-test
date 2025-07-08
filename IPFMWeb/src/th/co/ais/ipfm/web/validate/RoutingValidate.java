@@ -24,11 +24,11 @@ public class RoutingValidate {
 		this.routing = routing;
 	}
 
-	public void setRouting(IPRoutingBean routing) {
+	public void setRouting(IPRoutingBean routing) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRouting
 		this.routing = routing;
 	}
 
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		
@@ -123,7 +123,7 @@ public class RoutingValidate {
         return IP_PATTERN.matcher(iPaddress).matches();
 	}
 	
-	private boolean isIpBrfore(String start,String end){
+	private boolean isIpBrfore(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isIpBrfore
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".")+1;
@@ -136,7 +136,7 @@ public class RoutingValidate {
 		return done;
 	}
 	
-	private boolean isSameIPGroup(String start,String end){
+	private boolean isSameIPGroup(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isSameIPGroup
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".");

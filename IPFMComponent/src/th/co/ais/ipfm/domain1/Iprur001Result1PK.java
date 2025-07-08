@@ -39,35 +39,35 @@ public class Iprur001Result1PK implements Serializable {
         this.userId = userId;
     }
 
-    public String getReportId() {
+    public String getReportId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportId
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportId
         this.reportId = reportId;
     }
 
-    public short getGroupSeq() {
+    public short getGroupSeq() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getGroupSeq
         return groupSeq;
     }
 
-    public void setGroupSeq(short groupSeq) {
+    public void setGroupSeq(short groupSeq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setGroupSeq
         this.groupSeq = groupSeq;
     }
 
-    public short getDataLevel() {
+    public short getDataLevel() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDataLevel
         return dataLevel;
     }
 
-    public void setDataLevel(short dataLevel) {
+    public void setDataLevel(short dataLevel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDataLevel
         this.dataLevel = dataLevel;
     }
 
-    public String getUserId() {
+    public String getUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserId
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
         this.userId = userId;
     }
 
@@ -104,7 +104,7 @@ public class Iprur001Result1PK implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain1.Iprur001Result1PK[reportId=" + reportId + ", groupSeq=" + groupSeq + ", dataLevel=" + dataLevel + ", userId=" + userId + "]";
     }
 

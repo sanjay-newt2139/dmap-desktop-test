@@ -17,13 +17,13 @@ public class SSOService {
 	public void setEndpoint(String endpoint) {
 		this.endpoint = endpoint;
 	}
-	public void setModule(String module) {
+	public void setModule(String module) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setModule
 		this.module = module;
 	}
-	public void setOuType(String ouType) {
+	public void setOuType(String ouType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOuType
 		this.ouType = ouType;
 	}
-	public void setProjectCode(String projectCode) {
+	public void setProjectCode(String projectCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectCode
 		this.projectCode = projectCode;
 	}
 	public SSOResponse getToken(String username, String password) throws IPFMBusinessException{

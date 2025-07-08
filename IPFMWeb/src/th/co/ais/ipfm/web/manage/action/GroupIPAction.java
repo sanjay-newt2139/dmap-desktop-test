@@ -21,7 +21,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 
 public class GroupIPAction  extends AbstractAction {
 	
-	SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", new Locale("en","EN"));
+	SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", new Locale("en","EN")); // DMAP Comment : Dead Code Detected - The Following Field has no reference formatDate
 	/********************** Bean ***********************/
 	public GroupIPBean groupIPBean;
 
@@ -88,7 +88,7 @@ public class GroupIPAction  extends AbstractAction {
 		return programID;
 	}
 	
-	public void search() throws Exception{
+	public void search() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference search
 		GroupIPBean groupIPBean = getGroupIPBean();
 		if(groupIPBean!=null){
 			IIPGroupService ipGroupService = (IIPGroupService)JSFServiceFinderUtil.getInstance().getBean("ipGroupService");			
@@ -154,7 +154,7 @@ public class GroupIPAction  extends AbstractAction {
 		}
 	}
 	
-	public void action_search1(){
+	public void action_search1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_search1
 		System.out.println("---------- action_search1 = ");
 		GroupIPBean bean = getGroupIPBean();
 		if (bean==null) bean = new GroupIPBean();
@@ -206,7 +206,7 @@ public class GroupIPAction  extends AbstractAction {
 		}
 	}
 	
-	public String action_popupEdit() {
+	public String action_popupEdit() { // DMAP Comment : Dead Code Detected - The Following Method has no reference action_popupEdit
 		GroupIPBean bean = getGroupIPBean();
 		//bean.getPopupIPDetail().setIpAddress(getRequestParameter("rowIndex"));
 		try{
@@ -465,7 +465,7 @@ public class GroupIPAction  extends AbstractAction {
 		}
 		
 	}
-	public String showAddGroup() throws Exception{
+	public String showAddGroup() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference showAddGroup
 		GroupIPBean groupIPBean = getGroupIPBean();
 		IIPGroupService ipGroupService = (IIPGroupService)JSFServiceFinderUtil.getInstance().getBean("ipGroupService");	
 		if(ipGroupService!=null){
@@ -486,7 +486,7 @@ public class GroupIPAction  extends AbstractAction {
 		}		
 		return "IPURS001_02";
 	}
-	public String addGroup() throws Exception{
+	public String addGroup() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference addGroup
 		GroupIPBean groupIPBean = getGroupIPBean();
 		IIPGroupService ipGroupService = (IIPGroupService)JSFServiceFinderUtil.getInstance().getBean("ipGroupService");	
 		if(ipGroupService!=null){
@@ -603,7 +603,7 @@ public class GroupIPAction  extends AbstractAction {
 		}
 		return null;		
 	}
-	public String showEdit() throws IPFMBusinessException, Exception{
+	public String showEdit() throws IPFMBusinessException, Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference showEdit
 		GroupIPBean groupIPBean = getGroupIPBean();
 		
 		   groupIPBean.setIpVersion(getRequestParameter("ipVersionParam"));
@@ -642,7 +642,7 @@ public class GroupIPAction  extends AbstractAction {
 	}
 	
 	
-	public String showView(){
+	public String showView(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference showView
 		GroupIPBean groupIPBean = getGroupIPBean();
 			groupIPBean.setIpVersion(getRequestParameter("ipVersionParam"));
 			
@@ -722,7 +722,7 @@ public class GroupIPAction  extends AbstractAction {
 //		return "IPURS001_01";
 //	}	
 	
-	public void updateGroup() throws Exception{
+	public void updateGroup() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateGroup
 		GroupIPBean groupIPBean = getGroupIPBean();
 		IIPGroupService ipGroupService = (IIPGroupService)JSFServiceFinderUtil.getInstance().getBean("ipGroupService");	
 		if(ipGroupService!=null){
@@ -747,7 +747,7 @@ public class GroupIPAction  extends AbstractAction {
 			}
 		}		
 	}
-	public void deleteGroup() throws Exception{
+	public void deleteGroup() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteGroup
 		GroupIPBean groupIPBean = getGroupIPBean();
 		IIPGroupService ipGroupService = (IIPGroupService)JSFServiceFinderUtil.getInstance().getBean("ipGroupService");	
 		if(ipGroupService!=null){
@@ -779,22 +779,22 @@ public class GroupIPAction  extends AbstractAction {
 		}		
 	}
 	String ipClassVal="";
-	public void setIPClass(){
+	public void setIPClass(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setIPClass
 		GroupIPBean groupIPBean = getGroupIPBean();
 		ipClassVal = groupIPBean.getIpClassComboItem().getValue();
 	}
 	
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public String getIpClassVal() {
+	public String getIpClassVal() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpClassVal
 		return ipClassVal;
 	}
 
-	public void setIpClassVal(String ipClassVal) {
+	public void setIpClassVal(String ipClassVal) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpClassVal
 		this.ipClassVal = ipClassVal;
 	}
 }

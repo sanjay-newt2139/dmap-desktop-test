@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class HibernateIPRoleDao extends HibernateGenericDao<IpRole> implements I
 
 
 	@Override
-	public List<IpRole> getRoleList(String userId, String role06, String role07) throws DataAccessException {
+	public List<IpRole> getRoleList(String userId, String role06, String role07) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleList
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpRole> result = new ArrayList<IpRole>();
 	
@@ -27,11 +28,29 @@ public class HibernateIPRoleDao extends HibernateGenericDao<IpRole> implements I
 		sql.append("where role_id in (select role_id from ip_role_member ");
 		sql.append("where user_id = '"+userId+"') ");
 		if(role06.equalsIgnoreCase("Y")){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier366
+DMAP ConvertedQuery - select role_id,role_name from ip_role where role_id in (select role_id from ip_role_member where user_id = 'userId') or role_id = 'R09'order by priority, role_name 
+**/
+
+/**
+**/
+
 			sql.append(" or role_id = 'R09'");
 		}
 		if(role07.equalsIgnoreCase("Y")){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier365
+DMAP ConvertedQuery - select role_id,role_name from ip_role where role_id in (select role_id from ip_role_member where user_id = 'userId') or role_id in ('R10','R11','R12','R13','R14','R15','R16','R17')order by priority, role_name 
+**/
+
 			sql.append(" or role_id in ('R10','R11','R12','R13','R14','R15','R16','R17')");
 		}
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier364
+DMAP ConvertedQuery - select role_id,role_name from ip_role where role_id in (select role_id from ip_role_member where user_id = 'userId') order by priority, role_name 
+**/
+
 		sql.append("order by priority, role_name ");
 
 		List list = session.createSQLQuery(sql.toString()).addScalar("role_id").addScalar("role_name").list();
@@ -48,7 +67,7 @@ public class HibernateIPRoleDao extends HibernateGenericDao<IpRole> implements I
 	}
 	
 	@Override
-	public List<IpRole> getRoleList(String userId) throws DataAccessException {
+	public List<IpRole> getRoleList(String userId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleList
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpRole> result = new ArrayList<IpRole>();
 	
@@ -59,6 +78,11 @@ public class HibernateIPRoleDao extends HibernateGenericDao<IpRole> implements I
 		sql.append("where user_id = '"+userId+"')");
 		sql.append("order by priority, role_name ");
 
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier363
+DMAP ConvertedQuery - select role_id,role_name from ip_role where role_id in (select role_id from ip_role_member where user_id = 'userId') order by priority, role_name
+**/
+
 		List list = session.createSQLQuery(sql.toString()).addScalar("role_id").addScalar("role_name").list();
 		Iterator iter = list.iterator();
 		IpRole ipRole;
@@ -74,7 +98,7 @@ public class HibernateIPRoleDao extends HibernateGenericDao<IpRole> implements I
 
 
 	@Override
-	public List<IpRole> getRoleAllList() throws DataAccessException {
+	public List<IpRole> getRoleAllList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleAllList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpRole.class);
 		  criteria.addOrder(Order.asc("priority"));
@@ -83,7 +107,7 @@ public class HibernateIPRoleDao extends HibernateGenericDao<IpRole> implements I
 	}
 	
 	@Override
-	public IpRole getIpRole(String roleId) throws DataAccessException {
+	public IpRole getIpRole(String roleId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpRole
 		Session session = getSessionFactory().getCurrentSession();
 			Criteria criteria = session.createCriteria(IpRole.class);	
 			criteria.add(Restrictions.eq("roleId", roleId));

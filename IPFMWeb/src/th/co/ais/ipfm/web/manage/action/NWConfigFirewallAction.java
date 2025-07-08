@@ -51,7 +51,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("networkConfigBean", networkConfigBean);
 	}
 	
-	public void toggleTCPField(ActionEvent event) {
+	public void toggleTCPField(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference toggleTCPField
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPFirewallBean fwBean = bean.getFirewall();
 		boolean t = fwBean.getTcpCheck();
@@ -61,7 +61,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		}
 	}
 
-	public void toggleUDPField(ActionEvent event) {
+	public void toggleUDPField(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference toggleUDPField
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPFirewallBean fwBean = bean.getFirewall();
 		boolean t = fwBean.getUdpCheck();
@@ -71,7 +71,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		}
 	}
 	
-	public void toggleOtherField(ActionEvent event) {
+	public void toggleOtherField(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference toggleOtherField
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPFirewallBean fwBean = bean.getFirewall();
 		boolean t = fwBean.getOtherCheck();
@@ -81,7 +81,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		}
 	}
 	
-	public void editFirewall(ActionEvent event) {
+	public void editFirewall(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference editFirewall
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
@@ -229,7 +229,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		
 	}
 	
-	public void addFirewall(ActionEvent event){
+	public void addFirewall(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addFirewall
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
@@ -390,7 +390,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		}
 	}
 	
-	public void findSourceIP(ActionEvent event){
+	public void findSourceIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSourceIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		IPFirewallBean firewall = bean.getFirewall();
@@ -506,7 +506,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		}
 	}
 	
-	public void findDestIP(ActionEvent event){
+	public void findDestIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findDestIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		IPFirewallBean firewall = bean.getFirewall();
@@ -629,7 +629,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		return resultString;
 	}
 	
-	public void findSubUr(){
+	public void findSubUr(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSubUr
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		
@@ -650,7 +650,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void listener(UploadEvent event) throws Exception{
+	public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService)JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
@@ -832,7 +832,7 @@ public class NWConfigFirewallAction extends AbstractAction{
         setNetworkConfigBean(bean);
     } 
 	
-	public void clearSourceIP(ActionEvent event){
+	public void clearSourceIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearSourceIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPFirewallBean firewall = bean.getFirewall();
 		firewall.setSourceIPStart("");
@@ -844,7 +844,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		setNetworkConfigBean(bean);		
 	}
 	
-	public void clearDestIP(ActionEvent event){
+	public void clearDestIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearDestIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPFirewallBean firewall = bean.getFirewall();
 		firewall.setDestIPStart("");
@@ -856,7 +856,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 		setNetworkConfigBean(bean);		
 	}
 	
-	public void editFirewallInit(){
+	public void editFirewallInit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editFirewallInit
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
@@ -1026,7 +1026,7 @@ public class NWConfigFirewallAction extends AbstractAction{
 //		setNetworkConfigBean(bean);
 //	}
 	
-	public void deleteFirewall(String urNo,String subUrNo){
+	public void deleteFirewall(String urNo,String subUrNo){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteFirewall
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		IPFirewallBean fwBean = bean.getFirewall();
@@ -1073,14 +1073,14 @@ public class NWConfigFirewallAction extends AbstractAction{
 		
 	}
 	
-	public void cleanSubUr(String urNo){
+	public void cleanSubUr(String urNo){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUr
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		firewallService.cleanSubUR(urNo);
 	}
 	
 	
 	
-	public void checkFileTemplate() {
+	public void checkFileTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFileTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -1094,7 +1094,7 @@ public class NWConfigFirewallAction extends AbstractAction{
     }
 
 	
-	public void downloadTemplate() {
+	public void downloadTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -1110,13 +1110,13 @@ public class NWConfigFirewallAction extends AbstractAction{
     }
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}

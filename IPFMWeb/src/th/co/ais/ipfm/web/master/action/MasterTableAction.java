@@ -185,7 +185,7 @@ public class MasterTableAction extends AbstractAction {
 	}
 	
 
-	public String initUpdate(){
+	public String initUpdate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference initUpdate
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		if(commonService!=null && rowId!=null){
 			try {
@@ -267,7 +267,7 @@ public class MasterTableAction extends AbstractAction {
 		return null;
 	}		
 	
-	public void updateValueBeforeDelete(){
+	public void updateValueBeforeDelete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDelete
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		String refTable = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("refTable").toString();
 		String shortDesc = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("shortDesc").toString();
@@ -280,7 +280,7 @@ public class MasterTableAction extends AbstractAction {
 
 	}
 	
-	public void delete(){
+	public void delete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference delete
 		MasterTableBean masterTableBean = getMasterTableBean();
 		if(masterTableBean!=null && masterTableBean.getRowId()!=null && masterTableBean.getRowId().trim().length()>0){
 			try {
@@ -373,7 +373,7 @@ public class MasterTableAction extends AbstractAction {
 		setMasterTableBean(bean);
 	}
 	
-	public String cancel(){
+	public String cancel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cancel
 		return init();
 	}
 	
@@ -408,7 +408,7 @@ public class MasterTableAction extends AbstractAction {
 	}
 
 	
-	public void editProperty(ActionEvent event) throws Exception{
+	public void editProperty(ActionEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference editProperty
 			String rowId = getRequestParameter("rowId");
 		System.out.println("editProperty rowID : "+rowId);
 		IpMasterTable master = commonService.getMasterTBL(rowId);
@@ -431,7 +431,7 @@ public class MasterTableAction extends AbstractAction {
 		setMasterTableBean(bean);
 	}
 	
-	public void cancel(ActionEvent event) throws Exception{
+	public void cancel(ActionEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference cancel
 		MasterTableBean bean = getMasterTableBean();
 		String refKey = bean.getRefKeyComboItem().getValue();
 		if (refKey.equalsIgnoreCase("NEWS")) changeRefKey();
@@ -444,7 +444,7 @@ public class MasterTableAction extends AbstractAction {
 		setMasterTableBean(bean);
 	}
     
-	public void listener(UploadEvent event) throws Exception{
+	public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
 		MasterTableBean bean = getMasterTableBean();
 	    
         UploadItem item = event.getUploadItem();

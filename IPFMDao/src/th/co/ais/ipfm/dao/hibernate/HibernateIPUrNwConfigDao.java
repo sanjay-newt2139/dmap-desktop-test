@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -22,16 +23,27 @@ import th.co.ais.ipfm.domain1.IpvJobAssign;
 
 public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> implements IPUrNwConfigDao{
 	
-	public String getTempURNo() throws DataAccessException {
+	public String getTempURNo() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTempURNo
 		Session session = getSessionFactory().getCurrentSession();
-		String urNo =  (String) session.createSQLQuery("SELECT 'TNC'||LPAD(UR_NW_TEMP_SEQ.NEXTVAL,7,'0') as urNo FROM DUAL")
+/**
+DMAP TAG: Query converted: Identifier99
+DMAP ConvertedQuery - SELECT CONCAT('TNC', LPAD(nextvalCAST(('ur_nw_temp_seq') AS text), 7, '0'::text) ) as urNo
+**/
+
+//		String urNo =  (String) session.createSQLQuery("SELECT 'TNC'||LPAD(UR_NW_TEMP_SEQ.NEXTVAL,7,'0') as urNo FROM DUAL")
+		String urNo =  (String) session.createSQLQuery("SELECT CONCAT('TNC', LPAD(nextvalCAST(('ur_nw_temp_seq') AS text), 7, '0'::text) ) as urNo")
 				.addScalar("urNo", Hibernate.STRING).uniqueResult();
 		return urNo;
 	}
 
 	@Override
-	public String getURNo() throws DataAccessException {
+	public String getURNo() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getURNo
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier98
+DMAP ConvertedQuery - select CONCAT('NC', TO_CHAR(statement_timestamp(), 'YYYY') , '-' , LPAD(coalesce(max((SUBSTRING(CAST(t.ur_no AS numeric), CAST(8 AS numeric)))::numeric +1), CAST(1 AS text)), 6, '0') ) as urNo from ip_ur_nw_config t WHERE substr(t.ur_no, 0, 6) = CONCAT('NC', TO_CHAR(statement_timestamp(), 'YYYY'))
+**/
+
 		String urNo =  (String) session.createSQLQuery(" select 'NC' || TO_CHAR(SYSDATE,'YYYY') || '-' || LPAD(nvl(max(to_number(substr(t.ur_no,8))+1),1) ,6,'0') as urNo from ip_ur_nw_config t where substr(t.ur_no,0,6) = 'NC'||TO_CHAR(SYSDATE,'YYYY') ")
 //		String urNo =  (String) session.createSQLQuery("SELECT 'NC'||TO_CHAR(SYSDATE,'YYYY')||'-'||LPAD( UR_NW_SEQ.NEXTVAL,6,'0') AS urNo FROM DUAL")
 				.addScalar("urNo", Hibernate.STRING).uniqueResult();
@@ -39,7 +51,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public IpUrNwConfig findByUrNo(String urNo) throws DataAccessException {
+	public IpUrNwConfig findByUrNo(String urNo) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByUrNo
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrNwConfig.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -48,7 +60,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public List<Map> listManager(IpUser user) {
+	public List<Map> listManager(IpUser user) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listManager
 		StringBuffer bf = new StringBuffer();
 		Session session = getSessionFactory().getCurrentSession();
 //		bf.append("SELECT DISTINCT T4.USER_ID , T4.USER_NAME ");
@@ -75,11 +87,21 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 		sql.append("(SELECT T2.DELEGATE_USER_ID FROM IP_DELEGATE_USER T2 WHERE T2.USER_ID= '"+user.getManagerId()+"' ");
 		sql.append("AND trunc(SYSDATE) BETWEEN T2.START_DATE AND nvl(T2.END_DATE,trunc(sysdate) )+1 ");
 		sql.append(")) T4 ORDER BY 2 ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier97
+DMAP ConvertedQuery - SELECT DISTINCT T4.USER_ID Manager_ID, T4.USER_NAME Manager_Name FROM (SELECT T3.USER_ID, T3.USER_NAME FROM IP_USER T3, IP_ROLE_MEMBER M3 WHERE T3.USER_ID= 'user.getManagerId()' AND T3.USER_ID=M3.USER_ID AND M3.ROLE_ID = 'R03' UNION SELECT T1.USER_ID, T1.USER_NAME FROM IP_USER T1 WHERE T1.USER_ID IN (SELECT T2.DELEGATE_USER_ID FROM IP_DELEGATE_USER T2 WHERE T2.USER_ID= 'user.getManagerId()' AND trunc(statement_timestamp()) BETWEEN T2.START_DATE AND coalesce(T2.END_DATE, trunc(statement_timestamp()))+1 )) T4 ORDER BY 2
+**/
+
 		List list = session.createSQLQuery(sql.toString()).addScalar("Manager_ID").addScalar("Manager_Name").list();		
 		
 		List<Map> map = new ArrayList<Map>();
 		
 		//SQLQuery query = (session.createSQLQuery(bf.toString())
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier96
+DMAP ConvertedQuery - SELECT DISTINCT T4.USER_ID Manager_ID, T4.USER_NAME Manager_Name FROM (SELECT T3.USER_ID, T3.USER_NAME FROM IP_USER T3, IP_ROLE_MEMBER M3 WHERE T3.USER_ID= 'user.getManagerId()' AND T3.USER_ID=M3.USER_ID AND M3.ROLE_ID = 'R03' UNION SELECT T1.USER_ID, T1.USER_NAME FROM IP_USER T1 WHERE T1.USER_ID IN (SELECT T2.DELEGATE_USER_ID FROM IP_DELEGATE_USER T2 WHERE T2.USER_ID= 'user.getManagerId()' AND trunc(statement_timestamp()) BETWEEN T2.START_DATE AND coalesce(T2.END_DATE, trunc(statement_timestamp()))+1 )) T4 ORDER BY 2
+**/
+
 		List listResult = session.createSQLQuery(sql.toString()).addScalar("Manager_ID").addScalar("Manager_Name").list();
 		//List listResult =query.list();
 		for(Object ls : listResult){
@@ -93,7 +115,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public IpvJobAssign getJobAssign(String urNo, String subUrNo) {
+	public IpvJobAssign getJobAssign(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getJobAssign
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpvJobAssign.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -112,7 +134,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public List<IpRoleMember> listPersonAssign(String teamId) {
+	public List<IpRoleMember> listPersonAssign(String teamId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listPersonAssign
 		Session session = getSessionFactory().getCurrentSession();
 		String [] listTeamId = teamId.split(";");
 		List<IpRoleMember> listResult = new ArrayList<IpRoleMember>();
@@ -126,7 +148,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public List<IpvJobAssign> getJobAssignDetail(String urNo, String subUrNo) {
+	public List<IpvJobAssign> getJobAssignDetail(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getJobAssignDetail
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpvJobAssign.class);
 		criteria.add(Restrictions.eq("urNo", urNo));
@@ -135,7 +157,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public boolean isJobComplete(String urNo,String subUrNo) {
+	public boolean isJobComplete(String urNo,String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isJobComplete
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpvJobAssign.class);
 		String [] status = {"COMPLETE_TEAM","REJECT_TEAM"}; 
@@ -148,7 +170,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public Map<String,String> getIpOwner(String ip) {
+	public Map<String,String> getIpOwner(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpOwner
 		Map<String,String> map = null;
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpInfo.class);
@@ -176,7 +198,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public IPRole getRoleData(String roleId) {
+	public IPRole getRoleData(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleData
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPRole.class);
 		criteria.add(Restrictions.eq("roleId", roleId));
@@ -185,7 +207,7 @@ public class HibernateIPUrNwConfigDao extends HibernateGenericDao<IpUrNwConfig> 
 	}
 
 	@Override
-	public IpRoleMember getRoleMemberData(String roleId, String userId) {
+	public IpRoleMember getRoleMemberData(String roleId, String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleMemberData
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpRoleMember.class);
 		criteria.add(Restrictions.eq("roleId", roleId));

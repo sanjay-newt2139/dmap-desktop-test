@@ -38,7 +38,7 @@ public class ProjectQuery  implements java.io.Serializable {
      * 
      * @param projectCode
      */
-    public void setProjectCode(java.lang.String projectCode) {
+    public void setProjectCode(java.lang.String projectCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectCode
         this.projectCode = projectCode;
     }
 
@@ -58,7 +58,7 @@ public class ProjectQuery  implements java.io.Serializable {
      * 
      * @param projectLevel
      */
-    public void setProjectLevel(java.lang.Integer projectLevel) {
+    public void setProjectLevel(java.lang.Integer projectLevel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectLevel
         this.projectLevel = projectLevel;
     }
 
@@ -125,14 +125,14 @@ public class ProjectQuery  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -144,7 +144,7 @@ public class ProjectQuery  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

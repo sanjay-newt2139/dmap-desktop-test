@@ -22,11 +22,11 @@ public class AccessListTNPValidate {
 		this.tnp = tnp;
 	}
 
-	public void setTNP(IPAccessListTNPBean tnp) {
+	public void setTNP(IPAccessListTNPBean tnp) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTNP
 		this.tnp = tnp;
 	}
 
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		
@@ -140,7 +140,7 @@ public class AccessListTNPValidate {
         return IP_PATTERN.matcher(iPaddress).matches();
 	}
 	
-	private boolean isIpBrfore(String start,String end){
+	private boolean isIpBrfore(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isIpBrfore
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".")+1;
@@ -153,7 +153,7 @@ public class AccessListTNPValidate {
 		return done;
 	}
 	
-	private boolean isSameIPGroup(String start,String end){
+	private boolean isSameIPGroup(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isSameIPGroup
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".");
@@ -175,7 +175,7 @@ public class AccessListTNPValidate {
 		return done;
 	}
 	
-	private boolean isServiceFound(String serviceName){
+	private boolean isServiceFound(String serviceName){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isServiceFound
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		IpMasterTable master = firewallService.getServiceByRefID(serviceName);
 		return (master!=null);

@@ -26,7 +26,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
         _initOperationDesc7();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc1
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -181,7 +181,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 
     }
 
-    private static void _initOperationDesc2(){
+    private static void _initOperationDesc2(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc2
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -372,7 +372,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 
     }
 
-    private static void _initOperationDesc3(){
+    private static void _initOperationDesc3(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc3
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -500,7 +500,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 
     }
 
-    private static void _initOperationDesc4(){
+    private static void _initOperationDesc4(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc4
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -643,7 +643,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 
     }
 
-    private static void _initOperationDesc5(){
+    private static void _initOperationDesc5(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc5
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -771,7 +771,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 
     }
 
-    private static void _initOperationDesc6(){
+    private static void _initOperationDesc6(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc6
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -947,7 +947,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 
     }
 
-    private static void _initOperationDesc7(){
+    private static void _initOperationDesc7(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference _initOperationDesc7
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -1178,7 +1178,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
         addBindings2();
     }
 
-    private void addBindings0() {
+    private void addBindings0() { // DMAP Comment : Dead Code Detected - The Following Method has no reference addBindings0
             java.lang.Class cls;
             javax.xml.namespace.QName qName;
             javax.xml.namespace.QName qName2;
@@ -1893,7 +1893,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
             cachedDeserFactories.add(beandf);
 
     }
-    private void addBindings1() {
+    private void addBindings1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference addBindings1
             java.lang.Class cls;
             javax.xml.namespace.QName qName;
             javax.xml.namespace.QName qName2;
@@ -2608,7 +2608,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
             cachedDeserFactories.add(beandf);
 
     }
-    private void addBindings2() {
+    private void addBindings2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference addBindings2
             java.lang.Class cls;
             javax.xml.namespace.QName qName;
             javax.xml.namespace.QName qName2;
@@ -2793,7 +2793,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
         }
     }
 
-    public org.tempuri.Get_LogK2_ChangeApprover_Input_DataSetResponseGet_LogK2_ChangeApprover_Input_DataSetResult get_LogK2_ChangeApprover_Input_DataSet(org.tempuri.Get_LogK2_ChangeApprover_Input_DataSetDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.Get_LogK2_ChangeApprover_Input_DataSetResponseGet_LogK2_ChangeApprover_Input_DataSetResult get_LogK2_ChangeApprover_Input_DataSet(org.tempuri.Get_LogK2_ChangeApprover_Input_DataSetDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference get_LogK2_ChangeApprover_Input_DataSet
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2827,7 +2827,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllemployeeunderApprover_Input_DataSetResponseListAllemployeeunderApprover_Input_DataSetResult listAllemployeeunderApprover_Input_DataSet(java.lang.String pinManager, java.lang.String positionManager, org.tempuri.ListAllemployeeunderApprover_Input_DataSetDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllemployeeunderApprover_Input_DataSetResponseListAllemployeeunderApprover_Input_DataSetResult listAllemployeeunderApprover_Input_DataSet(java.lang.String pinManager, java.lang.String positionManager, org.tempuri.ListAllemployeeunderApprover_Input_DataSetDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllemployeeunderApprover_Input_DataSet
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2861,7 +2861,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListEmployeeProfileByPIN_MultiPositionResponseListEmployeeProfileByPIN_MultiPositionResult listEmployeeProfileByPIN_MultiPosition(java.lang.String pin) throws java.rmi.RemoteException {
+    public org.tempuri.ListEmployeeProfileByPIN_MultiPositionResponseListEmployeeProfileByPIN_MultiPositionResult listEmployeeProfileByPIN_MultiPosition(java.lang.String pin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listEmployeeProfileByPIN_MultiPosition
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2895,7 +2895,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.List_EmpProfile_Time_ChangeApprover_Input_DataSetResponseList_EmpProfile_Time_ChangeApprover_Input_DataSetResult list_EmpProfile_Time_ChangeApprover_Input_DataSet(org.tempuri.List_EmpProfile_Time_ChangeApprover_Input_DataSetDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.List_EmpProfile_Time_ChangeApprover_Input_DataSetResponseList_EmpProfile_Time_ChangeApprover_Input_DataSetResult list_EmpProfile_Time_ChangeApprover_Input_DataSet(org.tempuri.List_EmpProfile_Time_ChangeApprover_Input_DataSetDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference list_EmpProfile_Time_ChangeApprover_Input_DataSet
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2929,7 +2929,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetChangeApproverK2_SummaryResponseGetChangeApproverK2_SummaryResult getChangeApproverK2_Summary(java.lang.String startDate, java.lang.String end_Date, java.lang.String status, java.lang.String type) throws java.rmi.RemoteException {
+    public org.tempuri.GetChangeApproverK2_SummaryResponseGetChangeApproverK2_SummaryResult getChangeApproverK2_Summary(java.lang.String startDate, java.lang.String end_Date, java.lang.String status, java.lang.String type) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getChangeApproverK2_Summary
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2963,7 +2963,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.List_LogK2_ChangeApprover_DetailResponseList_LogK2_ChangeApprover_DetailResult list_LogK2_ChangeApprover_Detail(java.lang.String log_Date, java.lang.String type, java.lang.String status) throws java.rmi.RemoteException {
+    public org.tempuri.List_LogK2_ChangeApprover_DetailResponseList_LogK2_ChangeApprover_DetailResult list_LogK2_ChangeApprover_Detail(java.lang.String log_Date, java.lang.String type, java.lang.String status) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference list_LogK2_ChangeApprover_Detail
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -2997,7 +2997,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrgInfobyOrgCode_IN_DataSetResponseGetOrgInfobyOrgCode_IN_DataSetResult getOrgInfobyOrgCode_IN_DataSet(org.tempuri.GetOrgInfobyOrgCode_IN_DataSetDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrgInfobyOrgCode_IN_DataSetResponseGetOrgInfobyOrgCode_IN_DataSetResult getOrgInfobyOrgCode_IN_DataSet(org.tempuri.GetOrgInfobyOrgCode_IN_DataSetDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrgInfobyOrgCode_IN_DataSet
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3031,7 +3031,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListEmployeeProfileByPIN_Input_DataSetResponseListEmployeeProfileByPIN_Input_DataSetResult listEmployeeProfileByPIN_Input_DataSet(org.tempuri.ListEmployeeProfileByPIN_Input_DataSetDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.ListEmployeeProfileByPIN_Input_DataSetResponseListEmployeeProfileByPIN_Input_DataSetResult listEmployeeProfileByPIN_Input_DataSet(org.tempuri.ListEmployeeProfileByPIN_Input_DataSetDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listEmployeeProfileByPIN_Input_DataSet
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3065,7 +3065,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListEmployeeProfileByPIN_Input_DataSetByPowerSearchResponseListEmployeeProfileByPIN_Input_DataSetByPowerSearchResult listEmployeeProfileByPIN_Input_DataSetByPowerSearch(org.tempuri.ListEmployeeProfileByPIN_Input_DataSetByPowerSearchDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.ListEmployeeProfileByPIN_Input_DataSetByPowerSearchResponseListEmployeeProfileByPIN_Input_DataSetByPowerSearchResult listEmployeeProfileByPIN_Input_DataSetByPowerSearch(org.tempuri.ListEmployeeProfileByPIN_Input_DataSetByPowerSearchDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listEmployeeProfileByPIN_Input_DataSetByPowerSearch
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3099,7 +3099,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.List_Log_OM_TransFormResponseList_Log_OM_TransFormResult list_Log_OM_TransForm(java.lang.String processID, java.lang.String status, java.lang.String startDate, java.lang.String endDate) throws java.rmi.RemoteException {
+    public org.tempuri.List_Log_OM_TransFormResponseList_Log_OM_TransFormResult list_Log_OM_TransForm(java.lang.String processID, java.lang.String status, java.lang.String startDate, java.lang.String endDate) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference list_Log_OM_TransForm
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3133,7 +3133,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrganizeResponseListOrganizeResult listOrganize(java.lang.String lowerOrgCode, java.lang.String higherOrgCode) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrganizeResponseListOrganizeResult listOrganize(java.lang.String lowerOrgCode, java.lang.String higherOrgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrganize
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3167,7 +3167,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrganizeLowerResponseListOrganizeLowerResult listOrganizeLower(java.lang.String orgCode, java.lang.String level) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrganizeLowerResponseListOrganizeLowerResult listOrganizeLower(java.lang.String orgCode, java.lang.String level) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrganizeLower
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3201,7 +3201,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetCostCenterResponseGetCostCenterResult getCostCenter(java.lang.String costcenter, java.lang.String companyCode) throws java.rmi.RemoteException {
+    public org.tempuri.GetCostCenterResponseGetCostCenterResult getCostCenter(java.lang.String costcenter, java.lang.String companyCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCostCenter
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3235,7 +3235,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrganizeLowerByListOrgResponseListOrganizeLowerByListOrgResult listOrganizeLowerByListOrg(org.tempuri.ListOrganizeLowerByListOrgDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrganizeLowerByListOrgResponseListOrganizeLowerByListOrgResult listOrganizeLowerByListOrg(org.tempuri.ListOrganizeLowerByListOrgDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrganizeLowerByListOrg
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3269,7 +3269,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrganizeUpperResponseListOrganizeUpperResult listOrganizeUpper(java.lang.String orgCode, java.lang.String level) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrganizeUpperResponseListOrganizeUpperResult listOrganizeUpper(java.lang.String orgCode, java.lang.String level) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrganizeUpper
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3337,7 +3337,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public java.lang.String getManagerByOrgCode(java.lang.String orgCode) throws java.rmi.RemoteException {
+    public java.lang.String getManagerByOrgCode(java.lang.String orgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getManagerByOrgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3371,7 +3371,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrgPersInfoByBossPostIDResponseGetOrgPersInfoByBossPostIDResult getOrgPersInfoByBossPostID(java.lang.String PIN, java.lang.String bossPosition, java.lang.String organization, java.lang.String name, java.lang.String nickName, java.lang.String position, java.lang.String tel, java.lang.String job) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrgPersInfoByBossPostIDResponseGetOrgPersInfoByBossPostIDResult getOrgPersInfoByBossPostID(java.lang.String PIN, java.lang.String bossPosition, java.lang.String organization, java.lang.String name, java.lang.String nickName, java.lang.String position, java.lang.String tel, java.lang.String job) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrgPersInfoByBossPostID
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3405,7 +3405,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrgPersInfoByOrgHRMPINResponseGetOrgPersInfoByOrgHRMPINResult getOrgPersInfoByOrgHRMPIN(java.lang.String PIN, java.lang.String organization, java.lang.String name, java.lang.String nickName, java.lang.String position, java.lang.String tel, java.lang.String job) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrgPersInfoByOrgHRMPINResponseGetOrgPersInfoByOrgHRMPINResult getOrgPersInfoByOrgHRMPIN(java.lang.String PIN, java.lang.String organization, java.lang.String name, java.lang.String nickName, java.lang.String position, java.lang.String tel, java.lang.String job) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrgPersInfoByOrgHRMPIN
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3439,7 +3439,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrgPersInfoResponseGetOrgPersInfoResult getOrgPersInfo(java.lang.String organization, java.lang.String name, java.lang.String nickName, java.lang.String position, java.lang.String tel, java.lang.String job) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrgPersInfoResponseGetOrgPersInfoResult getOrgPersInfo(java.lang.String organization, java.lang.String name, java.lang.String nickName, java.lang.String position, java.lang.String tel, java.lang.String job) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrgPersInfo
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3473,7 +3473,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListEmployee_By_CompanyCode_Name_PINResponseListEmployee_By_CompanyCode_Name_PINResult listEmployee_By_CompanyCode_Name_PIN(java.lang.String pin, java.lang.String name, java.lang.String companyCode) throws java.rmi.RemoteException {
+    public org.tempuri.ListEmployee_By_CompanyCode_Name_PINResponseListEmployee_By_CompanyCode_Name_PINResult listEmployee_By_CompanyCode_Name_PIN(java.lang.String pin, java.lang.String name, java.lang.String companyCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listEmployee_By_CompanyCode_Name_PIN
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3507,7 +3507,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetAllOrgInfobyEmpIDResponseGetAllOrgInfobyEmpIDResult getAllOrgInfobyEmpID(java.lang.String pin) throws java.rmi.RemoteException {
+    public org.tempuri.GetAllOrgInfobyEmpIDResponseGetAllOrgInfobyEmpIDResult getAllOrgInfobyEmpID(java.lang.String pin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllOrgInfobyEmpID
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3541,7 +3541,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrgInfobyOrgCodeResponseGetOrgInfobyOrgCodeResult getOrgInfobyOrgCode(java.lang.String orgCode) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrgInfobyOrgCodeResponseGetOrgInfobyOrgCodeResult getOrgInfobyOrgCode(java.lang.String orgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrgInfobyOrgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3575,7 +3575,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListPinsbyOrgCodeResponseListPinsbyOrgCodeResult listPinsbyOrgCode(java.lang.String orgCode) throws java.rmi.RemoteException {
+    public org.tempuri.ListPinsbyOrgCodeResponseListPinsbyOrgCodeResult listPinsbyOrgCode(java.lang.String orgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listPinsbyOrgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3609,7 +3609,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetStaffCountByPositionIDResponseGetStaffCountByPositionIDResult getStaffCountByPositionID(java.lang.String position) throws java.rmi.RemoteException {
+    public org.tempuri.GetStaffCountByPositionIDResponseGetStaffCountByPositionIDResult getStaffCountByPositionID(java.lang.String position) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStaffCountByPositionID
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3643,7 +3643,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetAllPGResponseGetAllPGResult getAllPG() throws java.rmi.RemoteException {
+    public org.tempuri.GetAllPGResponseGetAllPGResult getAllPG() throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllPG
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3677,7 +3677,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetApproverResponseGetApproverResult getApprover(java.lang.String empID) throws java.rmi.RemoteException {
+    public org.tempuri.GetApproverResponseGetApproverResult getApprover(java.lang.String empID) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getApprover
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3711,7 +3711,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetStaffCountbyOrgCodeResponseGetStaffCountbyOrgCodeResult getStaffCountbyOrgCode(java.lang.String orgcode) throws java.rmi.RemoteException {
+    public org.tempuri.GetStaffCountbyOrgCodeResponseGetStaffCountbyOrgCodeResult getStaffCountbyOrgCode(java.lang.String orgcode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStaffCountbyOrgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3745,7 +3745,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrganizationNameResponseGetOrganizationNameResult getOrganizationName(java.lang.String vOrgCode) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrganizationNameResponseGetOrganizationNameResult getOrganizationName(java.lang.String vOrgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrganizationName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3779,7 +3779,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetCompanyByOrgCodeResponseGetCompanyByOrgCodeResult getCompanyByOrgCode(java.lang.String vOrgID) throws java.rmi.RemoteException {
+    public org.tempuri.GetCompanyByOrgCodeResponseGetCompanyByOrgCodeResult getCompanyByOrgCode(java.lang.String vOrgID) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCompanyByOrgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3813,7 +3813,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeIDByEmailResponseGetEmployeeIDByEmailResult getEmployeeIDByEmail(java.lang.String vEmail) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeIDByEmailResponseGetEmployeeIDByEmailResult getEmployeeIDByEmail(java.lang.String vEmail) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeIDByEmail
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3847,7 +3847,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetListEmployeePositionAndOrganizationResponseGetListEmployeePositionAndOrganizationResult getListEmployeePositionAndOrganization(java.lang.String userStamp) throws java.rmi.RemoteException {
+    public org.tempuri.GetListEmployeePositionAndOrganizationResponseGetListEmployeePositionAndOrganizationResult getListEmployeePositionAndOrganization(java.lang.String userStamp) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getListEmployeePositionAndOrganization
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3881,7 +3881,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllPinsUnderOrgCodeResponseListAllPinsUnderOrgCodeResult listAllPinsUnderOrgCode(java.lang.String vOrgCode) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllPinsUnderOrgCodeResponseListAllPinsUnderOrgCodeResult listAllPinsUnderOrgCode(java.lang.String vOrgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllPinsUnderOrgCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3915,7 +3915,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixPinResponseListAllPinsUnderOrgCodeByPrefixPinResult listAllPinsUnderOrgCodeByPrefixPin(java.lang.String vOrgCode, java.lang.String vPin) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixPinResponseListAllPinsUnderOrgCodeByPrefixPinResult listAllPinsUnderOrgCodeByPrefixPin(java.lang.String vOrgCode, java.lang.String vPin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllPinsUnderOrgCodeByPrefixPin
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3949,7 +3949,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixEmailResponseListAllPinsUnderOrgCodeByPrefixEmailResult listAllPinsUnderOrgCodeByPrefixEmail(java.lang.String vOrgCode, java.lang.String vEmail) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixEmailResponseListAllPinsUnderOrgCodeByPrefixEmailResult listAllPinsUnderOrgCodeByPrefixEmail(java.lang.String vOrgCode, java.lang.String vEmail) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllPinsUnderOrgCodeByPrefixEmail
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -3983,7 +3983,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixThaiNameResponseListAllPinsUnderOrgCodeByPrefixThaiNameResult listAllPinsUnderOrgCodeByPrefixThaiName(java.lang.String vOrgCode, java.lang.String vThName) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixThaiNameResponseListAllPinsUnderOrgCodeByPrefixThaiNameResult listAllPinsUnderOrgCodeByPrefixThaiName(java.lang.String vOrgCode, java.lang.String vThName) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllPinsUnderOrgCodeByPrefixThaiName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4017,7 +4017,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixThaiSurNameResponseListAllPinsUnderOrgCodeByPrefixThaiSurNameResult listAllPinsUnderOrgCodeByPrefixThaiSurName(java.lang.String vOrgCode, java.lang.String vThSurname) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllPinsUnderOrgCodeByPrefixThaiSurNameResponseListAllPinsUnderOrgCodeByPrefixThaiSurNameResult listAllPinsUnderOrgCodeByPrefixThaiSurName(java.lang.String vOrgCode, java.lang.String vThSurname) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllPinsUnderOrgCodeByPrefixThaiSurName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4051,7 +4051,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetAllPositionResponseGetAllPositionResult getAllPosition(java.lang.String vPin) throws java.rmi.RemoteException {
+    public org.tempuri.GetAllPositionResponseGetAllPositionResult getAllPosition(java.lang.String vPin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllPosition
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4085,7 +4085,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.SearchOrgInfoByOrgCodeOrOrgDescResponseSearchOrgInfoByOrgCodeOrOrgDescResult searchOrgInfoByOrgCodeOrOrgDesc(java.lang.String vCompanyCode, java.lang.String vOrgDesc) throws java.rmi.RemoteException {
+    public org.tempuri.SearchOrgInfoByOrgCodeOrOrgDescResponseSearchOrgInfoByOrgCodeOrOrgDescResult searchOrgInfoByOrgCodeOrOrgDesc(java.lang.String vCompanyCode, java.lang.String vOrgDesc) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchOrgInfoByOrgCodeOrOrgDesc
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4119,7 +4119,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.SearchOrgInfoResponseSearchOrgInfoResult searchOrgInfo(java.lang.String vCompanyCode, java.lang.String vOrgDesc) throws java.rmi.RemoteException {
+    public org.tempuri.SearchOrgInfoResponseSearchOrgInfoResult searchOrgInfo(java.lang.String vCompanyCode, java.lang.String vOrgDesc) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchOrgInfo
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4153,7 +4153,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListTemporaryPinByNewPinResponseListTemporaryPinByNewPinResult listTemporaryPinByNewPin(java.lang.String pin) throws java.rmi.RemoteException {
+    public org.tempuri.ListTemporaryPinByNewPinResponseListTemporaryPinByNewPinResult listTemporaryPinByNewPin(java.lang.String pin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listTemporaryPinByNewPin
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4187,7 +4187,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetAllCompanyResponseGetAllCompanyResult getAllCompany() throws java.rmi.RemoteException {
+    public org.tempuri.GetAllCompanyResponseGetAllCompanyResult getAllCompany() throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllCompany
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4221,7 +4221,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileResponseGetEmployeeProfileResult getEmployeeProfile(java.lang.String vPin) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileResponseGetEmployeeProfileResult getEmployeeProfile(java.lang.String vPin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfile
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4255,7 +4255,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetOrganizationResponseGetOrganizationResult getOrganization(java.lang.String orgcode, java.lang.String orgname, java.lang.String orgdesc) throws java.rmi.RemoteException {
+    public org.tempuri.GetOrganizationResponseGetOrganizationResult getOrganization(java.lang.String orgcode, java.lang.String orgname, java.lang.String orgdesc) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getOrganization
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4289,7 +4289,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListEmployeeProfileByPINResponseListEmployeeProfileByPINResult listEmployeeProfileByPIN(java.lang.String pin) throws java.rmi.RemoteException {
+    public org.tempuri.ListEmployeeProfileByPINResponseListEmployeeProfileByPINResult listEmployeeProfileByPIN(java.lang.String pin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listEmployeeProfileByPIN
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4323,7 +4323,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetApproverProfileByPINResponseGetApproverProfileByPINResult getApproverProfileByPIN(java.lang.String pin) throws java.rmi.RemoteException {
+    public org.tempuri.GetApproverProfileByPINResponseGetApproverProfileByPINResult getApproverProfileByPIN(java.lang.String pin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getApproverProfileByPIN
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4357,7 +4357,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixEngNameResponseGetEmployeeProfileByPrefixEngNameResult getEmployeeProfileByPrefixEngName(java.lang.String empEngName) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixEngNameResponseGetEmployeeProfileByPrefixEngNameResult getEmployeeProfileByPrefixEngName(java.lang.String empEngName) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixEngName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4391,7 +4391,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixEngLastNameResponseGetEmployeeProfileByPrefixEngLastNameResult getEmployeeProfileByPrefixEngLastName(java.lang.String empEngLastName) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixEngLastNameResponseGetEmployeeProfileByPrefixEngLastNameResult getEmployeeProfileByPrefixEngLastName(java.lang.String empEngLastName) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixEngLastName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4425,7 +4425,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixThaiNameResponseGetEmployeeProfileByPrefixThaiNameResult getEmployeeProfileByPrefixThaiName(java.lang.String empThaiName) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixThaiNameResponseGetEmployeeProfileByPrefixThaiNameResult getEmployeeProfileByPrefixThaiName(java.lang.String empThaiName) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixThaiName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4459,7 +4459,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixThaiLastNameResponseGetEmployeeProfileByPrefixThaiLastNameResult getEmployeeProfileByPrefixThaiLastName(java.lang.String empThaiLastName) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixThaiLastNameResponseGetEmployeeProfileByPrefixThaiLastNameResult getEmployeeProfileByPrefixThaiLastName(java.lang.String empThaiLastName) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixThaiLastName
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4493,7 +4493,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixEmailResponseGetEmployeeProfileByPrefixEmailResult getEmployeeProfileByPrefixEmail(java.lang.String empEmail) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixEmailResponseGetEmployeeProfileByPrefixEmailResult getEmployeeProfileByPrefixEmail(java.lang.String empEmail) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixEmail
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4527,7 +4527,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixPinResponseGetEmployeeProfileByPrefixPinResult getEmployeeProfileByPrefixPin(java.lang.String empPin) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixPinResponseGetEmployeeProfileByPrefixPinResult getEmployeeProfileByPrefixPin(java.lang.String empPin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixPin
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4561,7 +4561,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixOrgcodeResponseGetEmployeeProfileByPrefixOrgcodeResult getEmployeeProfileByPrefixOrgcode(java.lang.String empOrgcode) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixOrgcodeResponseGetEmployeeProfileByPrefixOrgcodeResult getEmployeeProfileByPrefixOrgcode(java.lang.String empOrgcode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixOrgcode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4595,7 +4595,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixOrgnameResponseGetEmployeeProfileByPrefixOrgnameResult getEmployeeProfileByPrefixOrgname(java.lang.String empOrgname) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixOrgnameResponseGetEmployeeProfileByPrefixOrgnameResult getEmployeeProfileByPrefixOrgname(java.lang.String empOrgname) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixOrgname
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4629,7 +4629,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByPrefixOrgdescResponseGetEmployeeProfileByPrefixOrgdescResult getEmployeeProfileByPrefixOrgdesc(java.lang.String empOrgdesc) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByPrefixOrgdescResponseGetEmployeeProfileByPrefixOrgdescResult getEmployeeProfileByPrefixOrgdesc(java.lang.String empOrgdesc) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByPrefixOrgdesc
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4663,7 +4663,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByEmailResponseGetEmployeeProfileByEmailResult getEmployeeProfileByEmail(java.lang.String vEmail) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByEmailResponseGetEmployeeProfileByEmailResult getEmployeeProfileByEmail(java.lang.String vEmail) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByEmail
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4697,7 +4697,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListAllApproverResponseListAllApproverResult listAllApprover(java.lang.String pin, java.lang.String position) throws java.rmi.RemoteException {
+    public org.tempuri.ListAllApproverResponseListAllApproverResult listAllApprover(java.lang.String pin, java.lang.String position) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listAllApprover
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4731,7 +4731,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetListEmployeeUnderApproverResponseGetListEmployeeUnderApproverResult getListEmployeeUnderApprover(java.lang.String pin) throws java.rmi.RemoteException {
+    public org.tempuri.GetListEmployeeUnderApproverResponseGetListEmployeeUnderApproverResult getListEmployeeUnderApprover(java.lang.String pin) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getListEmployeeUnderApprover
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4765,7 +4765,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetJobKeyResponseGetJobKeyResult getJobKey(java.lang.String jobKey) throws java.rmi.RemoteException {
+    public org.tempuri.GetJobKeyResponseGetJobKeyResult getJobKey(java.lang.String jobKey) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getJobKey
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4799,7 +4799,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.SearchEmpDetailResponseSearchEmpDetailResult searchEmpDetail(java.lang.String co, java.lang.String bu, java.lang.String dp, java.lang.String sc, java.lang.String fc, java.lang.String engName, java.lang.String engSurName, java.lang.String thName, java.lang.String thSurName, java.lang.String pos, java.lang.String nickName, java.lang.String job, java.lang.String pin, java.lang.String userStamp, java.lang.String telNo, java.lang.String mobileNo, java.lang.String managerName) throws java.rmi.RemoteException {
+    public org.tempuri.SearchEmpDetailResponseSearchEmpDetailResult searchEmpDetail(java.lang.String co, java.lang.String bu, java.lang.String dp, java.lang.String sc, java.lang.String fc, java.lang.String engName, java.lang.String engSurName, java.lang.String thName, java.lang.String thSurName, java.lang.String pos, java.lang.String nickName, java.lang.String job, java.lang.String pin, java.lang.String userStamp, java.lang.String telNo, java.lang.String mobileNo, java.lang.String managerName) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchEmpDetail
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4833,7 +4833,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.Search_EmployeeResponseSearch_EmployeeResult search_Employee(java.lang.String employee_ID, java.lang.String emp_Name, java.lang.String emp_Last_Name, java.lang.String ENGEmp_Name, java.lang.String ENGEmp_Last_Name, java.lang.String org_ID, java.lang.String org_Name) throws java.rmi.RemoteException {
+    public org.tempuri.Search_EmployeeResponseSearch_EmployeeResult search_Employee(java.lang.String employee_ID, java.lang.String emp_Name, java.lang.String emp_Last_Name, java.lang.String ENGEmp_Name, java.lang.String ENGEmp_Last_Name, java.lang.String org_ID, java.lang.String org_Name) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference search_Employee
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4867,7 +4867,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.List_ActingApproverResponseList_ActingApproverResult list_ActingApprover(org.tempuri.List_ActingApproverDs ds) throws java.rmi.RemoteException {
+    public org.tempuri.List_ActingApproverResponseList_ActingApproverResult list_ActingApprover(org.tempuri.List_ActingApproverDs ds) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference list_ActingApprover
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4901,7 +4901,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrganizeByOrganizeLevelResponseListOrganizeByOrganizeLevelResult listOrganizeByOrganizeLevel(java.lang.String companyCode, java.lang.String organizeLevel, java.lang.String organizeCode) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrganizeByOrganizeLevelResponseListOrganizeByOrganizeLevelResult listOrganizeByOrganizeLevel(java.lang.String companyCode, java.lang.String organizeLevel, java.lang.String organizeCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrganizeByOrganizeLevel
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4935,7 +4935,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.SearchEmployeeOrgResponseSearchEmployeeOrgResult searchEmployeeOrg(java.lang.String employeeID, java.lang.String enName, java.lang.String enSurName, java.lang.String thName, java.lang.String thSurName, java.lang.String email, java.lang.String company, java.lang.String buname, java.lang.String buhname, java.lang.String orgname, java.lang.String dpname, java.lang.String positiondesc, java.lang.String positionid, java.lang.String EMPLOYEETYPE, java.lang.String EMPLOYEEGROUP) throws java.rmi.RemoteException {
+    public org.tempuri.SearchEmployeeOrgResponseSearchEmployeeOrgResult searchEmployeeOrg(java.lang.String employeeID, java.lang.String enName, java.lang.String enSurName, java.lang.String thName, java.lang.String thSurName, java.lang.String email, java.lang.String company, java.lang.String buname, java.lang.String buhname, java.lang.String orgname, java.lang.String dpname, java.lang.String positiondesc, java.lang.String positionid, java.lang.String EMPLOYEETYPE, java.lang.String EMPLOYEEGROUP) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchEmployeeOrg
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -4969,7 +4969,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.List_LineApproverPositionAVPUPResponseList_LineApproverPositionAVPUPResult list_LineApproverPositionAVPUP(java.lang.String pin, java.lang.String position) throws java.rmi.RemoteException {
+    public org.tempuri.List_LineApproverPositionAVPUPResponseList_LineApproverPositionAVPUPResult list_LineApproverPositionAVPUP(java.lang.String pin, java.lang.String position) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference list_LineApproverPositionAVPUP
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -5003,7 +5003,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrganizeLevelByCompanyResponseListOrganizeLevelByCompanyResult listOrganizeLevelByCompany(java.lang.String companyCode, java.lang.String organizeLevel) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrganizeLevelByCompanyResponseListOrganizeLevelByCompanyResult listOrganizeLevelByCompany(java.lang.String companyCode, java.lang.String organizeLevel) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrganizeLevelByCompany
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -5037,7 +5037,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.GetEmployeeProfileByUsernameResponseGetEmployeeProfileByUsernameResult getEmployeeProfileByUsername(java.lang.String username) throws java.rmi.RemoteException {
+    public org.tempuri.GetEmployeeProfileByUsernameResponseGetEmployeeProfileByUsernameResult getEmployeeProfileByUsername(java.lang.String username) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeProfileByUsername
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -5071,7 +5071,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListLineOrganizeByOrganizeCodeResponseListLineOrganizeByOrganizeCodeResult listLineOrganizeByOrganizeCode(java.lang.String orgCode) throws java.rmi.RemoteException {
+    public org.tempuri.ListLineOrganizeByOrganizeCodeResponseListLineOrganizeByOrganizeCodeResult listLineOrganizeByOrganizeCode(java.lang.String orgCode) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listLineOrganizeByOrganizeCode
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -5105,7 +5105,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListOrgDescByPrefixResponseListOrgDescByPrefixResult listOrgDescByPrefix(java.lang.String orgDesc) throws java.rmi.RemoteException {
+    public org.tempuri.ListOrgDescByPrefixResponseListOrgDescByPrefixResult listOrgDescByPrefix(java.lang.String orgDesc) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listOrgDescByPrefix
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -5139,7 +5139,7 @@ public class WS_OM_OMEHRServicesSoap12Stub extends org.apache.axis.client.Stub i
 }
     }
 
-    public org.tempuri.ListGradeDescByPrefixResponseListGradeDescByPrefixResult listGradeDescByPrefix(java.lang.String gradeDesc) throws java.rmi.RemoteException {
+    public org.tempuri.ListGradeDescByPrefixResponseListGradeDescByPrefixResult listGradeDescByPrefix(java.lang.String gradeDesc) throws java.rmi.RemoteException { // DMAP Comment : Dead Code Detected - The Following Method has no reference listGradeDescByPrefix
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }

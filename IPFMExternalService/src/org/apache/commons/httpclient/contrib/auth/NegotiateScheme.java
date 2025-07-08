@@ -119,7 +119,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @since 3.0
      */
-    public void processChallenge(final String challenge){
+    public void processChallenge(final String challenge){ // DMAP Comment : Dead Code Detected - The Following Method has no reference processChallenge
         LOG.debug("enter processChallenge(challenge=\""+challenge+"\")");
         if (challenge.startsWith("Negotiate")) {
             if(isComplete() == false)
@@ -150,7 +150,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @return <code>Negotiate</code>
      */
-    public String getSchemeName() {
+    public String getSchemeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSchemeName
         return "Negotiate";
     }
 
@@ -160,7 +160,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @return <code>null</code>
      */
-    public String getRealm() {
+    public String getRealm() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRealm
         return null;
     }
     
@@ -182,7 +182,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @deprecated no longer used
      */
-    public String getID() {
+    public String getID() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getID
         LOG.debug("enter getID(): " + challenge);
         return challenge;
     }
@@ -197,7 +197,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @return the parameter with the given name
      */
-    public String getParameter(String name) {
+    public String getParameter(String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getParameter
         LOG.debug("enter getParameter("+name+")");
         if (name == null) {
             throw new IllegalArgumentException("Parameter name may not be null"); 
@@ -213,7 +213,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @since 3.0
      */
-    public boolean isConnectionBased() {
+    public boolean isConnectionBased() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isConnectionBased
         LOG.info("enter isConnectionBased()");
         return true;
     }
@@ -225,7 +225,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @deprecated Use {@link #authenticate(Credentials, HttpMethod)}
      */
-    public String authenticate(Credentials credentials, String method, String uri) 
+    public String authenticate(Credentials credentials, String method, String uri)  // DMAP Comment : Dead Code Detected - The Following Method has no reference authenticate
       throws AuthenticationException {
         throw new AuthenticationException("method not supported by Negotiate scheme");
     }
@@ -245,7 +245,7 @@ public class NegotiateScheme implements AuthScheme {
      * 
      * @since 3.0
      */
-    public String authenticate(
+    public String authenticate( // DMAP Comment : Dead Code Detected - The Following Method has no reference authenticate
         Credentials credentials, 
         HttpMethod method
     ) throws AuthenticationException {

@@ -16,7 +16,7 @@ public class HibernateIPLogVerifyDao extends HibernateGenericDao<IpLogVerify>
 		implements IIPLogVerifyDAO {
 
 	@Override
-	public List<IpLogVerify> findIpLogVerify(String username){
+	public List<IpLogVerify> findIpLogVerify(String username){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpLogVerify
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpLogVerify.class);
 		criteria.add(Restrictions.eq("username",username));

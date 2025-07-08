@@ -8,7 +8,7 @@ package com.jivesoftware.authHelper.consts;
  * To change this template use File | Settings | File Templates.
  */
 public enum SecurityLogType {
-    ALL("javax.net.debug"), KERBEROS("sun.security.krb5.debug"), SSL("javax.net.debug");
+    ALL("javax.net.debug"), KERBEROS("sun.security.krb5.debug"), SSL("javax.net.debug"); // DMAP Comment : Dead Code Detected - The Following Field has no reference ALL // DMAP Comment : Dead Code Detected - The Following Field has no reference KERBEROS // DMAP Comment : Dead Code Detected - The Following Field has no reference SSL
 
     private String logtype;
 
@@ -16,7 +16,7 @@ public enum SecurityLogType {
         this.logtype = logtype;
     }
 
-    public String getLogtype() {
+    public String getLogtype() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLogtype
         return logtype;
     }
 

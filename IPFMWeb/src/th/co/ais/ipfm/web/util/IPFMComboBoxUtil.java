@@ -29,7 +29,7 @@ public class IPFMComboBoxUtil {
         return instance;
     }
 	
-	public static void reloadComponent(){
+	public static void reloadComponent(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference reloadComponent
 		instance = null;
 	}
 	
@@ -49,7 +49,7 @@ public class IPFMComboBoxUtil {
 	
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getLocationComboBoxItems(){
+	public List<SelectItem> getLocationComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getLocationComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -73,7 +73,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getDataCenterComboBoxItems(){
+	public List<SelectItem> getDataCenterComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getDataCenterComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -97,7 +97,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getOfficeUserComboBoxItems(){
+	public List<SelectItem> getOfficeUserComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getOfficeUserComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -121,7 +121,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getNWTypeComboBoxItems(){
+	public List<SelectItem> getNWTypeComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getNWTypeComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -145,7 +145,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getTier2TeamComboBoxItems(){
+	public List<SelectItem> getTier2TeamComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getTier2TeamComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -169,7 +169,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getZoneComboBoxItems(){
+	public List<SelectItem> getZoneComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getZoneComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -193,7 +193,7 @@ public class IPFMComboBoxUtil {
 	}	
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getIPStatusComboBoxItems(){
+	public List<SelectItem> getIPStatusComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPStatusComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -217,7 +217,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getCompanyComboBoxItems(){
+	public List<SelectItem> getCompanyComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getCompanyComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -241,7 +241,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getPriorityComboBoxItems(){
+	public List<SelectItem> getPriorityComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getPriorityComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -265,7 +265,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getInstallTypeComboBoxItems(){
+	public List<SelectItem> getInstallTypeComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getInstallTypeComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -290,7 +290,7 @@ public class IPFMComboBoxUtil {
 	
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getIPTypeListComboBoxItems(){
+	public List<SelectItem> getIPTypeListComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPTypeListComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -314,7 +314,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getIPClassComboBoxItems(){
+	public List<SelectItem> getIPClassComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPClassComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -337,31 +337,7 @@ public class IPFMComboBoxUtil {
 		return returnList;
 	}
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getIPClassComboBoxItemsShort(){
-		List returnList = new ArrayList();
-		IPFMRichComboItem cbitem = null;
-		if(componentMap==null){
-			loadComponent();
-		}
-		try {
-			if(componentMap.containsKey(IPFMConstant.MCODE_IPCLASS) && componentMap.get(IPFMConstant.MCODE_IPCLASS)!=null){
-				if(((List)componentMap.get(IPFMConstant.MCODE_IPCLASS)).size()>0){
-					for (IpMasterTable str:((List<IpMasterTable>)componentMap.get(IPFMConstant.MCODE_IPCLASS))) {
-						cbitem = new IPFMRichComboItem();
-						cbitem.setValue(str.getId().getRefKey());
-						cbitem.setLabel(str.getShortDesc());
-						returnList.add(new SelectItem(cbitem, cbitem.getLabel()));
-					}
-				}
-			}			
-		} catch (Exception e) {
-			log.error("ERROR IN IPFMComboBoxUtil.getIPClass : "+e);
-		}
-		return returnList;
-	}
-	
-	@SuppressWarnings("unchecked")
-	public List<SelectItem> getRequestFromTeamComboBoxItems(){
+	public List<SelectItem> getIPClassComboBoxItemsShort(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPClassComboBoxItemsShort
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -385,7 +361,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getProjectIdComboBoxItems(){
+	public List<SelectItem> getRequestFromTeamComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getRequestFromTeamComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -409,7 +385,7 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getProjectManagerComboBoxItems(){
+	public List<SelectItem> getProjectIdComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getProjectIdComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -433,7 +409,31 @@ public class IPFMComboBoxUtil {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getSystemOwnerComboBoxItems(){
+	public List<SelectItem> getProjectManagerComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getProjectManagerComboBoxItems
+		List returnList = new ArrayList();
+		IPFMRichComboItem cbitem = null;
+		if(componentMap==null){
+			loadComponent();
+		}
+		try {
+			if(componentMap.containsKey(IPFMConstant.MCODE_IPCLASS) && componentMap.get(IPFMConstant.MCODE_IPCLASS)!=null){
+				if(((List)componentMap.get(IPFMConstant.MCODE_IPCLASS)).size()>0){
+					for (IpMasterTable str:((List<IpMasterTable>)componentMap.get(IPFMConstant.MCODE_IPCLASS))) {
+						cbitem = new IPFMRichComboItem();
+						cbitem.setValue(str.getId().getRefKey());
+						cbitem.setLabel(str.getShortDesc());
+						returnList.add(new SelectItem(cbitem, cbitem.getLabel()));
+					}
+				}
+			}			
+		} catch (Exception e) {
+			log.error("ERROR IN IPFMComboBoxUtil.getIPClass : "+e);
+		}
+		return returnList;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<SelectItem> getSystemOwnerComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -456,7 +456,7 @@ public class IPFMComboBoxUtil {
 		return returnList;
 	}
 	@SuppressWarnings("unchecked")
-	public List<SelectItem> getSystemOwnerTeamComboBoxItems(){
+	public List<SelectItem> getSystemOwnerTeamComboBoxItems(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerTeamComboBoxItems
 		List returnList = new ArrayList();
 		IPFMRichComboItem cbitem = null;
 		if(componentMap==null){
@@ -479,7 +479,7 @@ public class IPFMComboBoxUtil {
 		return returnList;
 	}
 
-	public int getIPVersion(){
+	public int getIPVersion(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPVersion
 		int ipVersion = 4;
 		if(componentMap==null){
 			loadComponent();

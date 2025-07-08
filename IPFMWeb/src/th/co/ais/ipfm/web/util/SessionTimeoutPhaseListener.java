@@ -19,10 +19,10 @@ public class SessionTimeoutPhaseListener implements PhaseListener,Serializable{
     /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	private static final Logger logger = Logger.getLogger(SessionTimeoutPhaseListener.class);
 	
-	public void beforePhase(PhaseEvent event) {
+	public void beforePhase(PhaseEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference beforePhase
 			if(event.getPhaseId()== getPhaseId()) {
 		        FacesContext facesCtx = event
 	            .getFacesContext();
@@ -57,7 +57,7 @@ public class SessionTimeoutPhaseListener implements PhaseListener,Serializable{
 		}
     }
 
-    public void afterPhase(PhaseEvent event) {
+    public void afterPhase(PhaseEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference afterPhase
 //		if(event.getPhaseId()== getPhaseId()) {
 //	        FacesContext facesCtx = event
 //            .getFacesContext();

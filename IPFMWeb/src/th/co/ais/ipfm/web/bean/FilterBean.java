@@ -11,7 +11,7 @@ public class FilterBean implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -3669546309109117471L;
+	private static final long serialVersionUID = -3669546309109117471L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
 	protected String filterColumn1;
 	protected String filterColumn2;
@@ -39,90 +39,90 @@ public class FilterBean implements Serializable {
 		this.filterColumn11 = "";
 	}
 
-	public String getFilterColumn11() {
+	public String getFilterColumn11() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn11
 		return filterColumn11;
 	}
 
-	public void setFilterColumn11(String filterColumn11) {
+	public void setFilterColumn11(String filterColumn11) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn11
 		this.filterColumn11 = filterColumn11;
 	}
 
-	public String getFilterColumn9() {
+	public String getFilterColumn9() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn9
 		return filterColumn9;
 	}
 
-	public void setFilterColumn9(String filterColumn9) {
+	public void setFilterColumn9(String filterColumn9) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn9
 		this.filterColumn9 = filterColumn9;
 	}
 	
-	public String getFilterColumn1() {
+	public String getFilterColumn1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn1
 		return filterColumn1;
 	}
 
-	public void setFilterColumn1(String filterColumn1) {
+	public void setFilterColumn1(String filterColumn1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn1
 		this.filterColumn1 = filterColumn1;
 	}
 
-	public String getFilterColumn2() {
+	public String getFilterColumn2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn2
 		return filterColumn2;
 	}
 
-	public void setFilterColumn2(String filterColumn2) {
+	public void setFilterColumn2(String filterColumn2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn2
 		this.filterColumn2 = filterColumn2;
 	}
 
-	public String getFilterColumn3() {
+	public String getFilterColumn3() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn3
 		return filterColumn3;
 	}
 
-	public void setFilterColumn3(String filterColumn3) {
+	public void setFilterColumn3(String filterColumn3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn3
 		this.filterColumn3 = filterColumn3;
 	}
 
-	public String getFilterColumn4() {
+	public String getFilterColumn4() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn4
 		return filterColumn4;
 	}
 
-	public void setFilterColumn4(String filterColumn4) {
+	public void setFilterColumn4(String filterColumn4) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn4
 		this.filterColumn4 = filterColumn4;
 	}
 
-	public String getFilterColumn5() {
+	public String getFilterColumn5() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn5
 		return filterColumn5;
 	}
 
-	public void setFilterColumn5(String filterColumn5) {
+	public void setFilterColumn5(String filterColumn5) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn5
 		this.filterColumn5 = filterColumn5;
 	}
 
-	public String getFilterColumn6() {
+	public String getFilterColumn6() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn6
 		return filterColumn6;
 	}
 
-	public void setFilterColumn6(String filterColumn6) {
+	public void setFilterColumn6(String filterColumn6) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn6
 		this.filterColumn6 = filterColumn6;
 	}
 
-	public String getFilterColumn7() {
+	public String getFilterColumn7() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn7
 		return filterColumn7;
 	}
 
-	public void setFilterColumn7(String filterColumn7) {
+	public void setFilterColumn7(String filterColumn7) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn7
 		this.filterColumn7 = filterColumn7;
 	}
 
-	public String getFilterColumn8() {
+	public String getFilterColumn8() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn8
 		return filterColumn8;
 	}
 
-	public void setFilterColumn8(String filterColumn8) {
+	public void setFilterColumn8(String filterColumn8) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn8
 		this.filterColumn8 = filterColumn8;
 	}
-	public String getFilterColumn10() {
+	public String getFilterColumn10() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFilterColumn10
 		return filterColumn10;
 	}
 
-	public void setFilterColumn10(String filterColumn10) {
+	public void setFilterColumn10(String filterColumn10) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFilterColumn10
 		this.filterColumn10 = filterColumn10;
 	}
 

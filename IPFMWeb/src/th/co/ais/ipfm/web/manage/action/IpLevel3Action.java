@@ -57,7 +57,7 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 public class IpLevel3Action  extends AbstractAction {
 	private static Logger logger = Logger.getLogger(IpLevel3Action.class);
 	
-	SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", new Locale("en","EN"));
+	SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", new Locale("en","EN")); // DMAP Comment : Dead Code Detected - The Following Field has no reference formatDate
 	/********************** Bean ***********************/
 	public IpLevel3Bean ipLevel3Bean;
 	
@@ -73,7 +73,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		ipLevel3Bean = getIpLevel3Bean();		
@@ -236,7 +236,7 @@ public class IpLevel3Action  extends AbstractAction {
 		if (IPFMMessageUtils.hasMessages()) flgValid = false;
 		return flgValid;
 	}
-	public String searchNetworkIP(){
+	public String searchNetworkIP(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference searchNetworkIP
 		ipLevel3Bean = getIpLevel3Bean();
 		try{
 			UserSession userSession = IPFMWebUtil.getUserSession();
@@ -275,7 +275,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 		return null;
 	}
-	public void reset() {
+	public void reset() { // DMAP Comment : Dead Code Detected - The Following Method has no reference reset
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		ipLevel3Bean = getIpLevel3Bean();
 		try{
@@ -472,7 +472,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 	
-	public String popupDetail() {
+	public String popupDetail() { // DMAP Comment : Dead Code Detected - The Following Method has no reference popupDetail
 		ipLevel3Bean = getIpLevel3Bean();
 		try{
 			UserSession userSession = IPFMWebUtil.getUserSession();
@@ -553,7 +553,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return null;
 	}
 	
-	public String save(){
+	public String save(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference save
 		ipLevel3Bean = getIpLevel3Bean();
 		try{
 			if (validatePopUp()) {
@@ -788,7 +788,7 @@ public class IpLevel3Action  extends AbstractAction {
 	 }
 
 	
-	public void checkAll(){
+	public void checkAll(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkAll
 		ipLevel3Bean = getIpLevel3Bean();
 		try{
 			if (ipLevel3Bean.getIpInfoDataTable().getRowCount()>0) {
@@ -809,7 +809,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 
-	public String searchIP() {
+	public String searchIP() { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIP
 		ipLevel3Bean = getIpLevel3Bean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		try {
@@ -829,7 +829,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return null;
 	}
 	
-	public String popupExpireDate(){
+	public String popupExpireDate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference popupExpireDate
 		ipLevel3Bean = getIpLevel3Bean();
 		boolean haveRole04 = false;
 		boolean canUpdateNat = false;
@@ -975,7 +975,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return null;	
 	}
 	
-	public String updateExpireDate(){
+	public String updateExpireDate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateExpireDate
 		ipLevel3Bean = getIpLevel3Bean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		try{
@@ -1227,7 +1227,7 @@ public class IpLevel3Action  extends AbstractAction {
 	}
 	
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		return false;
 	}
 	public List<SelectItem> getProjectListSelecItem() throws Exception{
@@ -1259,7 +1259,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return projectListSelectItem;
 	}
 	
-	public String onChangeProject() throws IPFMBusinessException{
+	public String onChangeProject() throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference onChangeProject
 		IpLevel3Bean bean = getIpLevel3Bean();
 		//System.out.println("--- onChangeProject ---");
 		try{
@@ -1331,12 +1331,12 @@ public class IpLevel3Action  extends AbstractAction {
 		return null;
 	}
 	
-	public List<SelectItem> userSuggestion(Object event) throws Exception{
+	public List<SelectItem> userSuggestion(Object event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference userSuggestion
 		if (event.toString()==null) return new ArrayList<SelectItem>();
 		return getUserListSelectItem(event.toString());
 	}
 	
-	public void suggestManager() {
+	public void suggestManager() { // DMAP Comment : Dead Code Detected - The Following Method has no reference suggestManager
 		IpLevel3Bean bean = getIpLevel3Bean();
 		try{
 			if (bean.getSuggestProjManager().getRowIndex() < 0){
@@ -1355,7 +1355,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 	
-	public void suggestSysOwnerUpdate() {
+	public void suggestSysOwnerUpdate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference suggestSysOwnerUpdate
 		IpLevel3Bean bean = getIpLevel3Bean();
 		try{
 			if (bean.getSuggestSystemOwnerUpdate().getRowIndex() < 0){
@@ -1436,7 +1436,7 @@ public class IpLevel3Action  extends AbstractAction {
 	}	
 	
 	
-	public void suggestSysOwner() {
+	public void suggestSysOwner() { // DMAP Comment : Dead Code Detected - The Following Method has no reference suggestSysOwner
 		IpLevel3Bean bean = getIpLevel3Bean();
 		try{
 			if (bean.getSuggestSystemOwner().getRowIndex() < 0){
@@ -1521,7 +1521,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 	
-	public void suggestSysOwnerUpdateInfo() {
+	public void suggestSysOwnerUpdateInfo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference suggestSysOwnerUpdateInfo
 		IpLevel3Bean bean = getIpLevel3Bean();
 		try{
 			if (bean.getSuggestSystemOwnerUpdateInfo().getRowIndex() < 0){
@@ -1639,7 +1639,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return userListSelectItem;
 	}
 	
-	public void checkCompanyCombo(){
+	public void checkCompanyCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkCompanyCombo
 		ipLevel3Bean = getIpLevel3Bean();
         if((ipLevel3Bean.getCompanyComboItem().getValue()==null) && ipLevel3Bean.getCompanyComboItem().getLabel().trim().length()>0){
 			IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Company"));
@@ -1653,19 +1653,19 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 	
-	public void checkIpTypeCombo(){
+	public void checkIpTypeCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIpTypeCombo
 		ipLevel3Bean = getIpLevel3Bean();
             if((ipLevel3Bean.getIpTypeComboItem().getValue()==null) && ipLevel3Bean.getIpTypeComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "IP Type"));
 			}
 	}
-	public void checkLocationCombo(){
+	public void checkLocationCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkLocationCombo
 		ipLevel3Bean = getIpLevel3Bean();
             if((ipLevel3Bean.getLocationComboItem().getValue()==null) && ipLevel3Bean.getLocationComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Site/Location"));
 			}
 	}
-	public void checkSystemOwnerTeamCombo(){
+	public void checkSystemOwnerTeamCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkSystemOwnerTeamCombo
 		ipLevel3Bean = getIpLevel3Bean();
             if((ipLevel3Bean.getSysOwnerTeamComboItem().getValue()==null) && ipLevel3Bean.getSysOwnerTeamComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "System Owner Team"));
@@ -1677,7 +1677,7 @@ public class IpLevel3Action  extends AbstractAction {
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Network Type"));
 			}
 	}
-	public void checkNwZoneCombo(){
+	public void checkNwZoneCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkNwZoneCombo
 		ipLevel3Bean = getIpLevel3Bean();
             if((ipLevel3Bean.getNetworkZoneComboItem().getValue()==null) && ipLevel3Bean.getNetworkZoneComboItem().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Network Zone"));
@@ -1792,7 +1792,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}	
 	
-	public String exportIpLevel3() throws Exception{
+	public String exportIpLevel3() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference exportIpLevel3
 		logger.debug("===== exportIpLevel3 =====");
 		ipLevel3Bean = getIpLevel3Bean();
 		try{
@@ -1846,7 +1846,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 	
-	public String gotoImportUpdte(){
+	public String gotoImportUpdte(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference gotoImportUpdte
 		getIpLevel3Bean().setTemplateType("IPFM");
 		getIpLevel3Bean().setShowSaveBtn(false);
 		getIpLevel3Bean().setShowDownloadError(false);
@@ -1854,13 +1854,13 @@ public class IpLevel3Action  extends AbstractAction {
 		return "IPSIP003_IMPORT";
 	}
 	
-	public String backToIpLevel3(){
+	public String backToIpLevel3(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference backToIpLevel3
 		return init("IPSIP003");
 	}
 	
 	
 	@SuppressWarnings("unchecked")
-	public String importExcelUpdate(UploadEvent event) {
+	public String importExcelUpdate(UploadEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference importExcelUpdate
 		ipLevel3Bean= getIpLevel3Bean();
 		ManagementIpService managementIpService = (ManagementIpService)JSFServiceFinderUtil.getInstance().getBean("managementIpService");
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -1947,7 +1947,7 @@ public class IpLevel3Action  extends AbstractAction {
 		 return null;
 	}
 	
-	public void addErrorMsg(ExcelErrorMsg excelMsg, String errorMsg){		
+	public void addErrorMsg(ExcelErrorMsg excelMsg, String errorMsg){		 // DMAP Comment : Dead Code Detected - The Following Method has no reference addErrorMsg
 		if (excelMsg.getErrorMsg()==null || excelMsg.getErrorMsg().trim().length()==0) {
 			excelMsg.setErrorMsg(errorMsg);
 		}else{
@@ -1955,7 +1955,7 @@ public class IpLevel3Action  extends AbstractAction {
 		}
 	}
 	
-	public String downloadVerifyImportFile() throws Exception{
+	public String downloadVerifyImportFile() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadVerifyImportFile
 		logger.debug("===== downloadVerifyImportFile =====");
 		ipLevel3Bean = getIpLevel3Bean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -1986,7 +1986,7 @@ public class IpLevel3Action  extends AbstractAction {
 		return null;
 	}
 	
-	public String doSaveImportLv3(){
+	public String doSaveImportLv3(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference doSaveImportLv3
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		try{
 			ManagementIpService managementIpService = (ManagementIpService)JSFServiceFinderUtil.getInstance().getBean("managementIpService");

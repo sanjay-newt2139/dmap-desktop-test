@@ -34,42 +34,42 @@ public class IpMaskDisplay implements java.io.Serializable ,Cloneable{
 
 	@Id 
 	@Column(name="MASK", unique=true, nullable=false)
-	public Integer getMask() {
+	public Integer getMask() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMask
 		return mask;
 	}
 
 
-	public void setMask(Integer mask) {
+	public void setMask(Integer mask) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMask
 		this.mask = mask;
 	}
 
 	@Column(name="LENGTH")
-	public Integer getLength() {
+	public Integer getLength() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLength
 		return length;
 	}
 
 
-	public void setLength(Integer length) {
+	public void setLength(Integer length) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLength
 		this.length = length;
 	}
 
 	@Column(name="DIGIT")
-	public Integer getDigit() {
+	public Integer getDigit() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDigit
 		return digit;
 	}
 
 
-	public void setDigit(Integer digit) {
+	public void setDigit(Integer digit) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDigit
 		this.digit = digit;
 	}
 
 	@Column(name="SUBNET")
-	public Integer getSubnet() {
+	public Integer getSubnet() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubnet
 		return subnet;
 	}
 
 
-	public void setSubnet(Integer subnet) {
+	public void setSubnet(Integer subnet) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubnet
 		this.subnet = subnet;
 	}
 }

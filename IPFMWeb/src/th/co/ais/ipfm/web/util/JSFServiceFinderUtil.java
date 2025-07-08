@@ -10,7 +10,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class JSFServiceFinderUtil implements Serializable{
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	private static JSFServiceFinderUtil instance = null;
 	private ApplicationContext ctx = null;
 	
@@ -20,7 +20,7 @@ public class JSFServiceFinderUtil implements Serializable{
 		ctx = WebApplicationContextUtils.getWebApplicationContext(servletcontext);
 	}
 	
-	public static JSFServiceFinderUtil getInstance() {
+	public static JSFServiceFinderUtil getInstance() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInstance
         if (instance == null) {
             instance = new JSFServiceFinderUtil();
         }

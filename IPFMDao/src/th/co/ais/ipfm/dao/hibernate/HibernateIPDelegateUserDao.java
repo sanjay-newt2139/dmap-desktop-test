@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.ArrayList;
@@ -36,6 +37,11 @@ IPDelegateUserDao {
 		sql.append("and a.DELEGATE_USER_ID = b.USER_ID ");
 		sql.append("ORDER  BY DELEGATE_USER_ID ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier356
+DMAP ConvertedQuery - SELECT a.DELEGATE_USER_ID AS DELEGATE_USER_ID ,b.USER_NAME AS USER_NAME ,a.START_DATE AS START_DATE,a.end_date AS end_date FROM IP_DELEGATE_USER a,IP_USER b WHERE a.USER_ID = 'userId' and a.DELEGATE_USER_ID = b.USER_ID ORDER BY DELEGATE_USER_ID
+**/
+
 		List list = session.createSQLQuery(sql.toString()).addScalar("DELEGATE_USER_ID").addScalar("USER_NAME").addScalar("START_DATE")
 		.addScalar("end_date").list();
 		Iterator iter = list.iterator();
@@ -56,17 +62,27 @@ IPDelegateUserDao {
 	}
 
 	@Override
-	public String getCheckExistingData(IpDelegateUser ipDelegateUser,IpUser ipUser) throws DataAccessException {
+	public String getCheckExistingData(IpDelegateUser ipDelegateUser,IpUser ipUser) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCheckExistingData
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier355
+DMAP ConvertedQuery - select 'Found' AS result from ip_delegate_user where user_id = 'ipUser.getUserId()' and delegate_user_id = 'ipDelegateUser.getId().getDelegateUserId()' 
+**/
+
 		String result =  (String) session.createSQLQuery("  select 'Found' AS  result  from ip_delegate_user where user_id = '"+ipUser.getUserId()+"' and delegate_user_id = '"+ipDelegateUser.getId().getDelegateUserId()+"' ")
 				.addScalar("result", Hibernate.STRING).uniqueResult();
 		return result;
 	}
 
 	@Override
-	public List<IpDelegateUser> deleteDelegate(String delegateUserId,String userId)throws DataAccessException {
+	public List<IpDelegateUser> deleteDelegate(String delegateUserId,String userId)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteDelegate
 		Session session = getSessionFactory().getCurrentSession();
-		SQLQuery sqlQuery  =  session.createSQLQuery(" DELETE IP_DELEGATE_USER where user_id = '"+userId+"' and delegate_user_id = '"+delegateUserId+"'");
+/**
+DMAP TAG: Query converted: Identifier354
+DMAP ConvertedQuery - DELETE FROM IP_DELEGATE_USER where user_id = 'userId' and delegate_user_id = 'delegateUserId'
+**/
+
+		SQLQuery sqlQuery  =  session.createSQLQuery("DELETE FROM IP_DELEGATE_USER where user_id = '" + userId + "' and delegate_user_id = '" + delegateUserId + "'");
 		sqlQuery.executeUpdate();  
 		
 		List<IpDelegateUser> delegateDataList = getDelegateDataList(userId);
@@ -74,7 +90,7 @@ IPDelegateUserDao {
 	}
 
 	@Override
-	public List<IpDelegateUser> getDelegateAdminList(String userId)throws DataAccessException {
+	public List<IpDelegateUser> getDelegateAdminList(String userId)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDelegateAdminList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpDelegateUser.class);
 		 criteria.add(Restrictions.eq("id.userId", userId));
@@ -85,7 +101,7 @@ IPDelegateUserDao {
 	}
 		
 	@Override
-	public void updateDelegate(IpDelegateUser ipDelegateUser,IpUser ipUser) throws DataAccessException {
+	public void updateDelegate(IpDelegateUser ipDelegateUser,IpUser ipUser) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateDelegate
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql = new StringBuffer();
 		String startDate="";;
@@ -102,6 +118,11 @@ IPDelegateUserDao {
 			sql.append(" where user_id = '"+ipDelegateUser.getId().getUserId()+"' ");
 			sql.append(" and delegate_user_id = '"+ipDelegateUser.getId().getDelegateUserId()+"' ");
 			
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier353
+DMAP ConvertedQuery - UPDATE IP_DELEGATE_USER SET START_DATE = TO_DATE('1', '2') , END_DATE = TO_DATE('3', '2') , UPDATE_BY = 'ipUser.getUserId()' , UPDATE_DATE = TO_DATE(statement_timestamp(), '6') WHERE user_id = 'ipDelegateUser.getId().getUserId()' and delegate_user_id = 'ipDelegateUser.getId().getDelegateUserId()'
+**/
+
 			SQLQuery sqlQuery  =  session.createSQLQuery(sql.toString());
 			sqlQuery.executeUpdate();  
 			

@@ -11,14 +11,14 @@ public class FaceNavigatorMapping {
 		navigationCaseMap = new HashMap<String, String>();
 	}
 
-	public static FaceNavigatorMapping getInstance() {
+	public static FaceNavigatorMapping getInstance() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInstance
 		if (faceNavInstance == null) {
 			faceNavInstance = new FaceNavigatorMapping();
 		}
 		return faceNavInstance;
 	}
 
-	protected void putNavigationCaseMap(String formOutCome, String viewPath)
+	protected void putNavigationCaseMap(String formOutCome, String viewPath) // DMAP Comment : Dead Code Detected - The Following Method has no reference putNavigationCaseMap
 			throws Exception {
 		if (navigationCaseMap == null) {
 			throw new Exception(
@@ -27,7 +27,7 @@ public class FaceNavigatorMapping {
 		navigationCaseMap.put(formOutCome, viewPath);
 	}
 
-	protected void removeNavigationCaseMap() throws Exception {
+	protected void removeNavigationCaseMap() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference removeNavigationCaseMap
 		if (navigationCaseMap == null) {
 			throw new Exception(
 					" Data never been initialed by FaceConfiureParserListener............");
@@ -42,7 +42,7 @@ public class FaceNavigatorMapping {
 		navigationCaseMap = null;
 	}
 
-	public String urlPathViewFinder(String formOutComeMappCase)
+	public String urlPathViewFinder(String formOutComeMappCase) // DMAP Comment : Dead Code Detected - The Following Method has no reference urlPathViewFinder
 			throws Exception {
 		if (navigationCaseMap == null) {
 			throw new Exception(

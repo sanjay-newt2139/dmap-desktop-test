@@ -80,72 +80,72 @@ public class IPRoleMember  implements java.io.Serializable {
     }
    
     
-    public String getMemberId() {
+    public String getMemberId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMemberId
         return this.memberId;
     }
     
-    public void setMemberId(String memberId) {
+    public void setMemberId(String memberId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMemberId
         this.memberId = memberId;
     }
     
-    public Integer getVersion() {
+    public Integer getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Integer version) {
+    public void setVersion(Integer version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     
     
-    public String getCreateBy() {
+    public String getCreateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateBy
         return this.createBy;
     }
     
-    public void setCreateBy(String createBy) {
+    public void setCreateBy(String createBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateBy
         this.createBy = createBy;
     }
     
-    public Date getCreateDate() {
+    public Date getCreateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreateDate
         return this.createDate;
     }
     
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(Date createDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreateDate
         this.createDate = createDate;
     }
     
     
-    public String getUpdateBy() {
+    public String getUpdateBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateBy
         return this.updateBy;
     }
     
-    public void setUpdateBy(String updateBy) {
+    public void setUpdateBy(String updateBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateBy
         this.updateBy = updateBy;
     }
     
-    public Date getUpdateDate() {
+    public Date getUpdateDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUpdateDate
         return this.updateDate;
     }
     
-    public void setUpdateDate(Date updateDate) {
+    public void setUpdateDate(Date updateDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUpdateDate
         this.updateDate = updateDate;
     }
     
     
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
 
 
-	public IPRole getRoleId() {
+	public IPRole getRoleId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleId
 		return roleId;
 	}
 
 
-	public void setRoleId(IPRole roleId) {
+	public void setRoleId(IPRole roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleId
 		this.roleId = roleId;
 	}
 

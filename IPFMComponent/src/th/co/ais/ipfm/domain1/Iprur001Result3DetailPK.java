@@ -39,35 +39,35 @@ public class Iprur001Result3DetailPK implements Serializable {
         this.dueStatus = dueStatus;
     }
 
-    public String getReportId() {
+    public String getReportId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportId
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportId
         this.reportId = reportId;
     }
 
-    public short getGroupSeq() {
+    public short getGroupSeq() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getGroupSeq
         return groupSeq;
     }
 
-    public void setGroupSeq(short groupSeq) {
+    public void setGroupSeq(short groupSeq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setGroupSeq
         this.groupSeq = groupSeq;
     }
 
-    public String getUrStatus() {
+    public String getUrStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrStatus
         return urStatus;
     }
 
-    public void setUrStatus(String urStatus) {
+    public void setUrStatus(String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrStatus
         this.urStatus = urStatus;
     }
 
-    public String getDueStatus() {
+    public String getDueStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDueStatus
         return dueStatus;
     }
 
-    public void setDueStatus(String dueStatus) {
+    public void setDueStatus(String dueStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDueStatus
         this.dueStatus = dueStatus;
     }
 
@@ -104,7 +104,7 @@ public class Iprur001Result3DetailPK implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain1.Iprur001Result3DetailPK[reportId=" + reportId + ", groupSeq=" + groupSeq + ", urStatus=" + urStatus + ", dueStatus=" + dueStatus + "]";
     }
 

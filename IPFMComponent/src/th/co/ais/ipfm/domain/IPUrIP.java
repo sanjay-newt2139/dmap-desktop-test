@@ -30,7 +30,7 @@ public class IPUrIP extends MasterDomain implements java.io.Serializable {
      /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	private String rowId;
      private Long version;
      private String urNo;
@@ -158,542 +158,542 @@ public class IPUrIP extends MasterDomain implements java.io.Serializable {
 	@GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="ROW_ID", unique=true, nullable=false, length=50)
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
     @Version
     @Column(name="VERSION", precision=10, scale=0)
-    public Long getVersion() {
+    public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Long version) {
+    public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     
     @Column(name="UR_NO", nullable=false, length=30)
-    public String getUrNo() {
+    public String getUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNo
         return this.urNo;
     }
     
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
     
     @Column(name="REQ_TYPE", length=5)
-    public String getReqType() {
+    public String getReqType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqType
         return this.reqType;
     }
     
-    public void setReqType(String reqType) {
+    public void setReqType(String reqType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqType
         this.reqType = reqType;
     }
     
     @Column(name="REQ_USER_ID", length=20)
-    public String getReqUserId() {
+    public String getReqUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqUserId
         return this.reqUserId;
     }
     
-    public void setReqUserId(String reqUserId) {
+    public void setReqUserId(String reqUserId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqUserId
         this.reqUserId = reqUserId;
     }
     
     @Column(name="REQ_NAME", length=100)
-    public String getReqName() {
+    public String getReqName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqName
         return this.reqName;
     }
     
-    public void setReqName(String reqName) {
+    public void setReqName(String reqName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqName
         this.reqName = reqName;
     }
     
     @Column(name="REQ_SECTION", length=100)
-    public String getReqSection() {
+    public String getReqSection() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqSection
         return this.reqSection;
     }
     
-    public void setReqSection(String reqSection) {
+    public void setReqSection(String reqSection) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqSection
         this.reqSection = reqSection;
     }
     
     @Column(name="REQ_DEPT", length=100)
-    public String getReqDept() {
+    public String getReqDept() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqDept
         return this.reqDept;
     }
     
-    public void setReqDept(String reqDept) {
+    public void setReqDept(String reqDept) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqDept
         this.reqDept = reqDept;
     }
     
     @Column(name="REQ_EMAIL", length=100)
-    public String getReqEmail() {
+    public String getReqEmail() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqEmail
         return this.reqEmail;
     }
     
-    public void setReqEmail(String reqEmail) {
+    public void setReqEmail(String reqEmail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqEmail
         this.reqEmail = reqEmail;
     }
     
     @Column(name="REQ_POSITION", length=100)
-    public String getReqPosition() {
+    public String getReqPosition() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqPosition
         return this.reqPosition;
     }
     
-    public void setReqPosition(String reqPosition) {
+    public void setReqPosition(String reqPosition) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqPosition
         this.reqPosition = reqPosition;
     }
     
     @Column(name="REQ_MOBILE", length=100)
-    public String getReqMobile() {
+    public String getReqMobile() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqMobile
         return this.reqMobile;
     }
     
-    public void setReqMobile(String reqMobile) {
+    public void setReqMobile(String reqMobile) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqMobile
         this.reqMobile = reqMobile;
     }
     
     @Column(name="REQ_TEL", length=100)
-    public String getReqTel() {
+    public String getReqTel() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqTel
         return this.reqTel;
     }
     
-    public void setReqTel(String reqTel) {
+    public void setReqTel(String reqTel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqTel
         this.reqTel = reqTel;
     }
     
     @Column(name="REQ_TEAM", length=100)
-    public String getReqTeam() {
+    public String getReqTeam() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqTeam
         return this.reqTeam;
     }
     
-    public void setReqTeam(String reqTeam) {
+    public void setReqTeam(String reqTeam) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqTeam
         this.reqTeam = reqTeam;
     }
     
     @Column(name="REQ_SUBJECT", length=1000)
-    public String getReqSubject() {
+    public String getReqSubject() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqSubject
         return this.reqSubject;
     }
     
-    public void setReqSubject(String reqSubject) {
+    public void setReqSubject(String reqSubject) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqSubject
         this.reqSubject = reqSubject;
     }
     @Temporal(TemporalType.DATE)
     @Column(name="REQ_DATE", length=7)
-    public Date getReqDate() {
+    public Date getReqDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqDate
         return this.reqDate;
     }
     
-    public void setReqDate(Date reqDate) {
+    public void setReqDate(Date reqDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqDate
         this.reqDate = reqDate;
     }
     
     @Column(name="T2_TEAM_ID", length=10)
-    public String getT2TeamId() {
+    public String getT2TeamId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getT2TeamId
         return this.t2TeamId;
     }
     
-    public void setT2TeamId(String t2TeamId) {
+    public void setT2TeamId(String t2TeamId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setT2TeamId
         this.t2TeamId = t2TeamId;
     }
     
     @Column(name="T2_TEAM_NAME", length=1000)
-    public String getT2TeamName() {
+    public String getT2TeamName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getT2TeamName
         return this.t2TeamName;
     }
     
-    public void setT2TeamName(String t2TeamName) {
+    public void setT2TeamName(String t2TeamName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setT2TeamName
         this.t2TeamName = t2TeamName;
     }
     
     @Column(name="PROJECT_ID", length=30)
-    public String getProjectId() {
+    public String getProjectId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProjectId
         return this.projectId;
     }
     
-    public void setProjectId(String projectId) {
+    public void setProjectId(String projectId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectId
         this.projectId = projectId;
     }
     
     @Column(name="PROJECT_NAME", length=1000)
-    public String getProjectName() {
+    public String getProjectName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProjectName
         return this.projectName;
     }
     
-    public void setProjectName(String projectName) {
+    public void setProjectName(String projectName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectName
         this.projectName = projectName;
     }
     
     @Column(name="PRJ_MANAGER_ID", length=20)
-    public String getPrjManagerId() {
+    public String getPrjManagerId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPrjManagerId
         return this.prjManagerId;
     }
     
-    public void setPrjManagerId(String prjManagerId) {
+    public void setPrjManagerId(String prjManagerId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPrjManagerId
         this.prjManagerId = prjManagerId;
     }
     
     @Column(name="PRJ_MANAGER_NAME", length=1000)
-    public String getPrjManagerName() {
+    public String getPrjManagerName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPrjManagerName
         return this.prjManagerName;
     }
     
-    public void setPrjManagerName(String prjManagerName) {
+    public void setPrjManagerName(String prjManagerName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPrjManagerName
         this.prjManagerName = prjManagerName;
     }
     
     @Column(name="SYS_OWNER_ID", length=20)
-    public String getSysOwnerId() {
+    public String getSysOwnerId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSysOwnerId
         return this.sysOwnerId;
     }
     
-    public void setSysOwnerId(String sysOwnerId) {
+    public void setSysOwnerId(String sysOwnerId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSysOwnerId
         this.sysOwnerId = sysOwnerId;
     }
     
     @Column(name="SYS_OWNER_NAME", length=1000)
-    public String getSysOwnerName() {
+    public String getSysOwnerName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSysOwnerName
         return this.sysOwnerName;
     }
     
-    public void setSysOwnerName(String sysOwnerName) {
+    public void setSysOwnerName(String sysOwnerName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSysOwnerName
         this.sysOwnerName = sysOwnerName;
     }
     
     @Column(name="SYS_OWNER_TEAM_ID", length=10)
-    public String getSysOwnerTeamId() {
+    public String getSysOwnerTeamId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSysOwnerTeamId
         return this.sysOwnerTeamId;
     }
     
-    public void setSysOwnerTeamId(String sysOwnerTeamId) {
+    public void setSysOwnerTeamId(String sysOwnerTeamId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSysOwnerTeamId
         this.sysOwnerTeamId = sysOwnerTeamId;
     }
     
     @Column(name="SYS_OWNER_TEAM_NAME", length=1000)
-    public String getSysOwnerTeamName() {
+    public String getSysOwnerTeamName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSysOwnerTeamName
         return this.sysOwnerTeamName;
     }
     
-    public void setSysOwnerTeamName(String sysOwnerTeamName) {
+    public void setSysOwnerTeamName(String sysOwnerTeamName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSysOwnerTeamName
         this.sysOwnerTeamName = sysOwnerTeamName;
     }
     
     @Column(name="CONTACT_POINT", length=1000)
-    public String getContactPoint() {
+    public String getContactPoint() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getContactPoint
         return this.contactPoint;
     }
     
-    public void setContactPoint(String contactPoint) {
+    public void setContactPoint(String contactPoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setContactPoint
         this.contactPoint = contactPoint;
     }
     
     @Column(name="NW_SYS_DETAIL", length=1000)
-    public String getNwSysDetail() {
+    public String getNwSysDetail() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNwSysDetail
         return this.nwSysDetail;
     }
     
-    public void setNwSysDetail(String nwSysDetail) {
+    public void setNwSysDetail(String nwSysDetail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNwSysDetail
         this.nwSysDetail = nwSysDetail;
     }
     
     @Column(name="NETWORK_TYPE_ID", length=10)
-    public String getNetworkTypeId() {
+    public String getNetworkTypeId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkTypeId
         return this.networkTypeId;
     }
     
-    public void setNetworkTypeId(String networkTypeId) {
+    public void setNetworkTypeId(String networkTypeId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkTypeId
         this.networkTypeId = networkTypeId;
     }
     
     @Column(name="NETWORK_TYPE_NAME", length=1000)
-    public String getNetworkTypeName() {
+    public String getNetworkTypeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkTypeName
         return this.networkTypeName;
     }
     
-    public void setNetworkTypeName(String networkTypeName) {
+    public void setNetworkTypeName(String networkTypeName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkTypeName
         this.networkTypeName = networkTypeName;
     }
     
     @Column(name="NETWORK_TYPE", length=1)
-    public String getNetworkType() {
+    public String getNetworkType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNetworkType
         return this.networkType;
     }
     
-    public void setNetworkType(String networkType) {
+    public void setNetworkType(String networkType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNetworkType
         this.networkType = networkType;
     }
     
     @Column(name="IS_NEW_NETWORK", length=1)
-    public String getIsNewNetwork() {
+    public String getIsNewNetwork() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsNewNetwork
         return this.isNewNetwork;
     }
     
-    public void setIsNewNetwork(String isNewNetwork) {
+    public void setIsNewNetwork(String isNewNetwork) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsNewNetwork
         this.isNewNetwork = isNewNetwork;
     }
     
     @Column(name="IS_EXPAN_NETWORK", length=1)
-    public String getIsExpanNetwork() {
+    public String getIsExpanNetwork() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsExpanNetwork
         return this.isExpanNetwork;
     }
     
-    public void setIsExpanNetwork(String isExpanNetwork) {
+    public void setIsExpanNetwork(String isExpanNetwork) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsExpanNetwork
         this.isExpanNetwork = isExpanNetwork;
     }
     
     @Column(name="NEW_ZONE_ID", length=10)
-    public String getNewZoneId() {
+    public String getNewZoneId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewZoneId
         return this.newZoneId;
     }
     
-    public void setNewZoneId(String newZoneId) {
+    public void setNewZoneId(String newZoneId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewZoneId
         this.newZoneId = newZoneId;
     }
     
     @Column(name="NEW_ZONE_NAME", length=1000)
-    public String getNewZoneName() {
+    public String getNewZoneName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewZoneName
         return this.newZoneName;
     }
     
-    public void setNewZoneName(String newZoneName) {
+    public void setNewZoneName(String newZoneName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewZoneName
         this.newZoneName = newZoneName;
     }
     
     @Column(name="EXPAN_ZONE_ID", length=10)
-    public String getExpanZoneId() {
+    public String getExpanZoneId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanZoneId
         return this.expanZoneId;
     }
     
-    public void setExpanZoneId(String expanZoneId) {
+    public void setExpanZoneId(String expanZoneId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanZoneId
         this.expanZoneId = expanZoneId;
     }
     
     @Column(name="EXPAN_ZONE_NAME", length=1000)
-    public String getExpanZoneName() {
+    public String getExpanZoneName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanZoneName
         return this.expanZoneName;
     }
     
-    public void setExpanZoneName(String expanZoneName) {
+    public void setExpanZoneName(String expanZoneName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanZoneName
         this.expanZoneName = expanZoneName;
     }
     
     @Column(name="EXPAN_IP_REF", length=1000)
-    public String getExpanIpRef() {
+    public String getExpanIpRef() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanIpRef
         return this.expanIpRef;
     }
     
-    public void setExpanIpRef(String expanIpRef) {
+    public void setExpanIpRef(String expanIpRef) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanIpRef
         this.expanIpRef = expanIpRef;
     }
     
     @Column(name="NEW_DATA_CENTER_ID", length=10)
-    public String getNewDataCenterId() {
+    public String getNewDataCenterId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewDataCenterId
         return this.newDataCenterId;
     }
     
-    public void setNewDataCenterId(String newDataCenterId) {
+    public void setNewDataCenterId(String newDataCenterId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewDataCenterId
         this.newDataCenterId = newDataCenterId;
     }
     
     @Column(name="NEW_DATA_CENTER_NAME", length=1000)
-    public String getNewDataCenterName() {
+    public String getNewDataCenterName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewDataCenterName
         return this.newDataCenterName;
     }
     
-    public void setNewDataCenterName(String newDataCenterName) {
+    public void setNewDataCenterName(String newDataCenterName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewDataCenterName
         this.newDataCenterName = newDataCenterName;
     }
     
     @Column(name="NEW_OFFICE_ID", length=10)
-    public String getNewOfficeId() {
+    public String getNewOfficeId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewOfficeId
         return this.newOfficeId;
     }
     
-    public void setNewOfficeId(String newOfficeId) {
+    public void setNewOfficeId(String newOfficeId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewOfficeId
         this.newOfficeId = newOfficeId;
     }
     
     @Column(name="NEW_OFFICE_NAME", length=1000)
-    public String getNewOfficeName() {
+    public String getNewOfficeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewOfficeName
         return this.newOfficeName;
     }
     
-    public void setNewOfficeName(String newOfficeName) {
+    public void setNewOfficeName(String newOfficeName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewOfficeName
         this.newOfficeName = newOfficeName;
     }
     
     @Column(name="EXPAN_DATA_CENTER_ID", length=10)
-    public String getExpanDataCenterId() {
+    public String getExpanDataCenterId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanDataCenterId
         return this.expanDataCenterId;
     }
     
-    public void setExpanDataCenterId(String expanDataCenterId) {
+    public void setExpanDataCenterId(String expanDataCenterId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanDataCenterId
         this.expanDataCenterId = expanDataCenterId;
     }
     
     @Column(name="EXPAN_DATA_CENTER_NAME", length=1000)
-    public String getExpanDataCenterName() {
+    public String getExpanDataCenterName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanDataCenterName
         return this.expanDataCenterName;
     }
     
-    public void setExpanDataCenterName(String expanDataCenterName) {
+    public void setExpanDataCenterName(String expanDataCenterName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanDataCenterName
         this.expanDataCenterName = expanDataCenterName;
     }
     
     @Column(name="EXPAN_OFFICE_ID", length=10)
-    public String getExpanOfficeId() {
+    public String getExpanOfficeId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanOfficeId
         return this.expanOfficeId;
     }
     
-    public void setExpanOfficeId(String expanOfficeId) {
+    public void setExpanOfficeId(String expanOfficeId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanOfficeId
         this.expanOfficeId = expanOfficeId;
     }
     
     @Column(name="EXPAN_OFFICE_NAME", length=1000)
-    public String getExpanOfficeName() {
+    public String getExpanOfficeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getExpanOfficeName
         return this.expanOfficeName;
     }
     
-    public void setExpanOfficeName(String expanOfficeName) {
+    public void setExpanOfficeName(String expanOfficeName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpanOfficeName
         this.expanOfficeName = expanOfficeName;
     }
     
     @Column(name="TOTAL_NODE", length=10)
-    public String getTotalNode() {
+    public String getTotalNode() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTotalNode
         return this.totalNode;
     }
     
-    public void setTotalNode(String totalNode) {
+    public void setTotalNode(String totalNode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTotalNode
         this.totalNode = totalNode;
     }
     
     @Column(name="CLASSB", length=10)
-    public String getClassb() {
+    public String getClassb() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getClassb
         return this.classb;
     }
     
-    public void setClassb(String classb) {
+    public void setClassb(String classb) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setClassb
         this.classb = classb;
     }
     
     @Column(name="CLASSC", length=10)
-    public String getClassc() {
+    public String getClassc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getClassc
         return this.classc;
     }
     
-    public void setClassc(String classc) {
+    public void setClassc(String classc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setClassc
         this.classc = classc;
     }
     
     @Column(name="IS_NWDIAGRAM", length=1)
-    public String getIsNwdiagram() {
+    public String getIsNwdiagram() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsNwdiagram
         return this.isNwdiagram;
     }
     
-    public void setIsNwdiagram(String isNwdiagram) {
+    public void setIsNwdiagram(String isNwdiagram) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsNwdiagram
         this.isNwdiagram = isNwdiagram;
     }
     
     @Column(name="IS_APPDIAGRAM", length=1)
-    public String getIsAppdiagram() {
+    public String getIsAppdiagram() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIsAppdiagram
         return this.isAppdiagram;
     }
     
-    public void setIsAppdiagram(String isAppdiagram) {
+    public void setIsAppdiagram(String isAppdiagram) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIsAppdiagram
         this.isAppdiagram = isAppdiagram;
     }
     
     @Column(name="SYSTEM_PLANE", length=1000)
-    public String getSystemPlane() {
+    public String getSystemPlane() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemPlane
         return this.systemPlane;
     }
     
-    public void setSystemPlane(String systemPlane) {
+    public void setSystemPlane(String systemPlane) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSystemPlane
         this.systemPlane = systemPlane;
     }
     
     @Column(name="USER_PLANE")
-    public String getUserPlane() {
+    public String getUserPlane() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserPlane
         return this.userPlane;
     }
     
-    public void setUserPlane(String userPlane) {
+    public void setUserPlane(String userPlane) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserPlane
         this.userPlane = userPlane;
     }
     
     @Column(name="MRG_REMARK", length=1000)
-    public String getMrgRemark() {
+    public String getMrgRemark() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMrgRemark
         return this.mrgRemark;
     }
     
-    public void setMrgRemark(String mrgRemark) {
+    public void setMrgRemark(String mrgRemark) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMrgRemark
         this.mrgRemark = mrgRemark;
     }
     
     @Column(name="T2REMARK", length=1000)
-    public String getT2remark() {
+    public String getT2remark() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getT2remark
         return this.t2remark;
     }
     
-    public void setT2remark(String t2remark) {
+    public void setT2remark(String t2remark) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setT2remark
         this.t2remark = t2remark;
     }
     
     @Column(name="T1REMARK", length=1000)
-    public String getT1remark() {
+    public String getT1remark() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getT1remark
         return this.t1remark;
     }
     
-    public void setT1remark(String t1remark) {
+    public void setT1remark(String t1remark) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setT1remark
         this.t1remark = t1remark;
     }
     
     @Column(name="UR_STATUS", length=100)
-    public String getUrStatus() {
+    public String getUrStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrStatus
         return this.urStatus;
     }
     
-    public void setUrStatus(String urStatus) {
+    public void setUrStatus(String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrStatus
         this.urStatus = urStatus;
     }
     
     @Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
 	@Column(name="CREATE_DATE")
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
 	@Column(name="UPDATE_BY")
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 	
 	@Column(name="UPDATE_DATE")
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 	
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
 }

@@ -92,7 +92,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the errorCode.
      *  * /
      */
-    public void setErrorCode(java.lang.String errorCode) {
+    public void setErrorCode(java.lang.String errorCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setErrorCode
         this.errorCode = errorCode;
     }
 
@@ -118,7 +118,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the tokenId.
      *  * /
      */
-    public void setTokenId(java.lang.String tokenId) {
+    public void setTokenId(java.lang.String tokenId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTokenId
         this.tokenId = tokenId;
     }
 
@@ -144,7 +144,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the errorMesg.
      *  * /
      */
-    public void setErrorMesg(java.lang.String errorMesg) {
+    public void setErrorMesg(java.lang.String errorMesg) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setErrorMesg
         this.errorMesg = errorMesg;
     }
 
@@ -170,7 +170,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the flag.
      *  * /
      */
-    public void setFlag(boolean flag) {
+    public void setFlag(boolean flag) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFlag
         this.flag = flag;
     }
 
@@ -196,7 +196,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the serviceName.
      *  * /
      */
-    public void setServiceName(java.lang.String serviceName) {
+    public void setServiceName(java.lang.String serviceName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceName
         this.serviceName = serviceName;
     }
 
@@ -222,7 +222,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the type.
      *  * /
      */
-    public void setType(int type) {
+    public void setType(int type) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setType
         this.type = type;
     }
 
@@ -248,7 +248,7 @@ public class Message  implements java.io.Serializable {
      * @return Returns the serviceType.
      *  * /
      */
-    public void setServiceType(java.lang.String serviceType) {
+    public void setServiceType(java.lang.String serviceType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServiceType
         this.serviceType = serviceType;
     }
 
@@ -366,14 +366,14 @@ public class Message  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -385,7 +385,7 @@ public class Message  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

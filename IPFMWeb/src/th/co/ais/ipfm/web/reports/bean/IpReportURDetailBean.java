@@ -13,7 +13,7 @@ public final class IpReportURDetailBean implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7548956543524863222L;
+	private static final long serialVersionUID = 7548956543524863222L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
 	private int rowPerPage;
 	private int maxPage;
@@ -30,77 +30,77 @@ public final class IpReportURDetailBean implements Serializable {
 
 	private HtmlModalPanel popupModal;
 
-	public HtmlModalPanel getPopupModal() {
+	public HtmlModalPanel getPopupModal() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPopupModal
 		return popupModal;
 	}
-	public void setPopupModal(HtmlModalPanel popupModal) {
+	public void setPopupModal(HtmlModalPanel popupModal) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPopupModal
 		this.popupModal = popupModal;
 	}
 	
-	public int getRowPerPage() {
+	public int getRowPerPage() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowPerPage
 		return rowPerPage;
 	}
-	public void setRowPerPage(int rowPerPage) {
+	public void setRowPerPage(int rowPerPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowPerPage
 		this.rowPerPage = rowPerPage;
 	}
-	public int getMaxPage() {
+	public int getMaxPage() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMaxPage
 		return maxPage;
 	}
-	public void setMaxPage(int maxPage) {
+	public void setMaxPage(int maxPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMaxPage
 		this.maxPage = maxPage;
 	}
-	public int getMaxSearchResult() {
+	public int getMaxSearchResult() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMaxSearchResult
 		return maxSearchResult;
 	}
-	public void setMaxSearchResult(int maxSearchResult) {
+	public void setMaxSearchResult(int maxSearchResult) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMaxSearchResult
 		this.maxSearchResult = maxSearchResult;
 	}
-	public int getFastStepPage() {
+	public int getFastStepPage() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFastStepPage
 		return fastStepPage;
 	}
-	public void setFastStepPage(int fastStepPage) {
+	public void setFastStepPage(int fastStepPage) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFastStepPage
 		this.fastStepPage = fastStepPage;
 	}
-	public String getUrTypeName() {
+	public String getUrTypeName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrTypeName
 		return urTypeName;
 	}
-	public void setUrTypeName(String urTypeName) {
+	public void setUrTypeName(String urTypeName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrTypeName
 		this.urTypeName = urTypeName;
 	}
-	public String getUrTypeTab() {
+	public String getUrTypeTab() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrTypeTab
 		return urTypeTab;
 	}
-	public void setUrTypeTab(String urTypeTab) {
+	public void setUrTypeTab(String urTypeTab) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrTypeTab
 		this.urTypeTab = urTypeTab;
 	}
-	public String getAction() {
+	public String getAction() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAction
 		return action;
 	}
-	public void setAction(String action) {
+	public void setAction(String action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAction
 		this.action = action;
 	}
-	public String getStatus() {
+	public String getStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatus
 		return status;
 	}
-	public void setStatus(String status) {
+	public void setStatus(String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatus
 		this.status = status;
 	}
-	public String getTeamUser() {
+	public String getTeamUser() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTeamUser
 		return teamUser;
 	}
-	public void setTeamUser(String teamUser) {
+	public void setTeamUser(String teamUser) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTeamUser
 		this.teamUser = teamUser;
 	}
-	public List<String> getUrList() {
+	public List<String> getUrList() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrList
 		return urList;
 	}
-	public void setUrList(List<String> urList) {
+	public void setUrList(List<String> urList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrList
 		this.urList = urList;
 	}
-	public String getUserName() {
+	public String getUserName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserName
 		return userName;
 	}
-	public void setUserName(String userName) {
+	public void setUserName(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserName
 		this.userName = userName;
 	}
 	

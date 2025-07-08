@@ -24,7 +24,7 @@ public class AuthenticateServiceLocator extends org.apache.axis.client.Service i
     // Use to get a proxy class for AuthenticateServiceSoap
     private java.lang.String AuthenticateServiceSoap_address = "http://dev-ldapservicews.ais.co.th/Authenticate/authenticateservice.asmx";
 
-    public java.lang.String getAuthenticateServiceSoapAddress() {
+    public java.lang.String getAuthenticateServiceSoapAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAuthenticateServiceSoapAddress
         return AuthenticateServiceSoap_address;
     }
 
@@ -35,7 +35,7 @@ public class AuthenticateServiceLocator extends org.apache.axis.client.Service i
         return AuthenticateServiceSoapWSDDServiceName;
     }
 
-    public void setAuthenticateServiceSoapWSDDServiceName(java.lang.String name) {
+    public void setAuthenticateServiceSoapWSDDServiceName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAuthenticateServiceSoapWSDDServiceName
         AuthenticateServiceSoapWSDDServiceName = name;
     }
 
@@ -104,13 +104,13 @@ public class AuthenticateServiceLocator extends org.apache.axis.client.Service i
         }
     }
 
-    public javax.xml.namespace.QName getServiceName() {
+    public javax.xml.namespace.QName getServiceName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceName
         return new javax.xml.namespace.QName("http://authenldap.ais.co.th/", "AuthenticateService");
     }
 
     private java.util.HashSet ports = null;
 
-    public java.util.Iterator getPorts() {
+    public java.util.Iterator getPorts() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPorts
         if (ports == null) {
             ports = new java.util.HashSet();
             ports.add(new javax.xml.namespace.QName("http://authenldap.ais.co.th/", "AuthenticateServiceSoap"));

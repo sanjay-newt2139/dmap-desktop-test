@@ -23,11 +23,11 @@ public class NetworkConfigValidate {
 		this.bean = bean;
 	}
 
-	public void setBean(ReqNWConfigBean bean) {
+	public void setBean(ReqNWConfigBean bean) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setBean
 		this.bean = bean;
 	}
 	
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		boolean flagValid = true;
 		if((bean.getSubject()==null) || (bean.getSubject().equals(""))){
 			IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0001"), "Subject"));
@@ -133,7 +133,7 @@ public class NetworkConfigValidate {
 		
 	}
 	
-	public boolean validateSaveDraft(){
+	public boolean validateSaveDraft(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validateSaveDraft
 		boolean flagValid = true;
 		
 		if(!(bean.getFirewallCheck() || bean.getAccessListCheck() || bean.getAccessTNPCheck()
@@ -187,7 +187,7 @@ public class NetworkConfigValidate {
 		
 	}
 	
-	public String checkUnProcess(List list) throws Exception {
+	public String checkUnProcess(List list) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkUnProcess
 		String result = "";
 		int index = 0;
 		try{
@@ -227,7 +227,7 @@ public class NetworkConfigValidate {
 		return (result.equals(""))?result:result.substring(1); 
 	}
 	
-	public String checkUnProcessForTrunk(List list) throws Exception {
+	public String checkUnProcessForTrunk(List list) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkUnProcessForTrunk
 		String result = "";
 		int index = 0;
 		try{
@@ -283,7 +283,7 @@ public class NetworkConfigValidate {
 		return (result.equals(""))?result:result.substring(1); 
 	}
 	
-	public String checkRemark(List list , String urStatus)throws Exception {
+	public String checkRemark(List list , String urStatus)throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkRemark
 		String result = "";
 		int index = 0;
 		try{
@@ -349,7 +349,7 @@ public class NetworkConfigValidate {
 		return (result.equals(""))?result:result.substring(1); 
 	}
 	
-	public String checkRemarkForTrunk(List list , String urStatus)throws Exception {
+	public String checkRemarkForTrunk(List list , String urStatus)throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkRemarkForTrunk
 		String result = "";
 		int index = 0;
 		try{
@@ -415,7 +415,7 @@ public class NetworkConfigValidate {
 		return (result.equals(""))?result:result.substring(1); 
 	}
 	
-	public String checkACTMRemark(List list){
+	public String checkACTMRemark(List list){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkACTMRemark
 		String result = "";
 		int index = 0;
 		try{
@@ -469,7 +469,7 @@ public class NetworkConfigValidate {
 		return (result.equals(""))?result:result.substring(1); 
 	}
 	
-	public String checkPIAssignDetail(List list) {
+	public String checkPIAssignDetail(List list) { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkPIAssignDetail
 		String result = "";
 		int index = 0;
 		try{
@@ -557,7 +557,7 @@ public class NetworkConfigValidate {
 		return (result.equals(""))?result:result.substring(1); 		
 	}
 	
-	public String checkPIAssignDetailForTrunk(List list) {
+	public String checkPIAssignDetailForTrunk(List list) { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkPIAssignDetailForTrunk
 		String result = "";
 		int index = 0;
 		try{

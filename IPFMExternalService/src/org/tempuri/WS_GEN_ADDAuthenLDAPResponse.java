@@ -34,7 +34,7 @@ public class WS_GEN_ADDAuthenLDAPResponse  implements java.io.Serializable {
      * 
      * @param WS_GEN_ADDAuthenLDAPResult
      */
-    public void setWS_GEN_ADDAuthenLDAPResult(org.tempuri.WS_GEN_ADDAuthenLDAPResponseWS_GEN_ADDAuthenLDAPResult WS_GEN_ADDAuthenLDAPResult) {
+    public void setWS_GEN_ADDAuthenLDAPResult(org.tempuri.WS_GEN_ADDAuthenLDAPResponseWS_GEN_ADDAuthenLDAPResult WS_GEN_ADDAuthenLDAPResult) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setWS_GEN_ADDAuthenLDAPResult
         this.WS_GEN_ADDAuthenLDAPResult = WS_GEN_ADDAuthenLDAPResult;
     }
 
@@ -89,14 +89,14 @@ public class WS_GEN_ADDAuthenLDAPResponse  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -108,7 +108,7 @@ public class WS_GEN_ADDAuthenLDAPResponse  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

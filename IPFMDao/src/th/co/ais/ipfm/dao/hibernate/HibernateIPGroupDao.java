@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.math.BigDecimal;
@@ -20,12 +21,22 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
  	
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public List<String> getGroupIPVersion() throws DataAccessException {
+	public List<String> getGroupIPVersion() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getGroupIPVersion
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted but found same: Identifier386
+DMAP ConvertedQuery - SELECT DISTINCT T1.IP_VERSION FROM IP_GROUP T1 ORDER BY 1
+**/
+
 		List<String> groupIPVersion =session.createSQLQuery("SELECT DISTINCT T1.IP_VERSION FROM IP_GROUP T1 ORDER BY 1 ") 
 		.addScalar("IP_VERSION", Hibernate.STRING).list();
 		
 		if(groupIPVersion == null || groupIPVersion.size() == 0){
+/**
+DMAP TAG: Query converted but found same: Identifier385
+DMAP ConvertedQuery - SELECT STRING_VALUE FROM IPFM.IP_PARAMETER WHERE PARAMETER_GROUP='IP' AND PARAMETER_SUBGROUP='VERSION'
+**/
+
 			 groupIPVersion = session.createSQLQuery("SELECT STRING_VALUE FROM IPFM.IP_PARAMETER WHERE PARAMETER_GROUP='IP' AND PARAMETER_SUBGROUP='VERSION'  ") 
 			.addScalar("STRING_VALUE", Hibernate.STRING).list();
 		}
@@ -34,7 +45,7 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<IPGroup> searchIPGroup(String ipVersion,String tire1TeamID, String[] arrST,String[] arrED) throws Exception {
+	public List<IPGroup> searchIPGroup(String ipVersion,String tire1TeamID, String[] arrST,String[] arrED) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIPGroup
 		Session session = getSessionFactory().getCurrentSession();
 		
 		List<IPGroup> lstIPGroup = new ArrayList<IPGroup>();
@@ -58,6 +69,14 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
 				sql.append(" (SELECT * FROM");
 				sql.append(" (SELECT * FROM ");
 				sql.append(" (SELECT * FROM ");
+/**
+DMAP TAG: Query needs manual remediation: Identifier384
+DMAP ConvertedQuery - SELECT T7.ROW_ID, T7.IP_VERSION, T7.IP_CLASS, T7.COMPANY_ID , T7.GROUP_ID, T7.GROUP_IP_ST, T7.GROUP_IP_ED, T7.ST_IP_1, T7.ST_IP_2, T7.ST_IP_3, T7.ST_IP_4, T7.ST_IP_5, T7.ST_IP_6, T7.ED_IP_1, T7.ED_IP_2, T7.ED_IP_3, T7.ED_IP_4, T7.ED_IP_5, T7.ED_IP_6, T7.GROUP_DESC, T7.TOTAL_IP, T7.TOTAL_ASSIGN_T2 , T7.TOTAL_ASSIGN_T3, to_char(T7.CREATE_DATE, 'dd / mm/yyy') as CREATE_DATE, (coalesce(T7.TOTAL_IP, 0) - coalesce(T7.TOTAL_ASSIGN_T2, 0)) TOTAL_AVAIL, M.SHORT_DESC as COMPANY_NAME, I.SHORT_DESC as IPCLASS_NAME FROM ( SELECT * FROM ( SELECT * FROM ( SELECT * FROM ( SELECT * FROM ( SELECT * FROM ( SELECT * FROM IP_GROUP T1 ( SELECT * FROM IP_GROUP T1
+**/
+
+/**
+**/
+
 				sql.append(" (SELECT * FROM IP_GROUP T1 ");
 			}else{
 				sql.append(" SELECT T5.ROW_ID, T5.IP_VERSION , T5.IP_CLASS , T5.COMPANY_ID   ");
@@ -71,6 +90,11 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
 				sql.append("  SELECT * FROM");
 				sql.append(" (SELECT * FROM ");
 				sql.append(" (SELECT * FROM ");
+/**
+DMAP TAG: Query needs manual remediation: Identifier383
+DMAP ConvertedQuery - SELECT T5.ROW_ID, T5.IP_VERSION, T5.IP_CLASS, T5.COMPANY_ID , T5.GROUP_ID, T5.GROUP_IP_ST, T5.GROUP_IP_ED, T5.ST_IP_1, T5.ST_IP_2, T5.ST_IP_3, T5.ST_IP_4, T5.ST_IP_5, T5.ST_IP_6, T5.ED_IP_1, T5.ED_IP_2, T5.ED_IP_3, T5.ED_IP_4, T5.ED_IP_5, T5.ED_IP_6, T5.GROUP_DESC, T5.TOTAL_IP, T5.TOTAL_ASSIGN_T2 , T5.TOTAL_ASSIGN_T3, to_char(T5.CREATE_DATE, 'dd / mm/yyy') as CREATE_DATE, (coalesce(T5.TOTAL_IP, 0) - coalesce(T5.TOTAL_ASSIGN_T2, 0)) TOTAL_AVAIL, M.SHORT_DESC as COMPANY_NAME, I.SHORT_DESC as IPCLASS_NAME FROM ( SELECT * FROM ( SELECT * FROM ( SELECT * FROM ( SELECT * FROM IP_GROUP T1 ( SELECT * FROM IP_GROUP T1
+**/
+
 				sql.append(" (SELECT * FROM IP_GROUP T1");
 			}
 			
@@ -263,7 +287,7 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public IPGroup searchIPGroupById(String rowId,String grpId) throws Exception {
+	public IPGroup searchIPGroupById(String rowId,String grpId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIPGroupById
 		Session session = getSessionFactory().getCurrentSession();
 		
 		IPGroup group = new IPGroup();
@@ -283,8 +307,21 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
 			sql.append(" left  join IP_MASTER_TABLE cl");
 			sql.append(" on T1.IP_CLASS =cl.REF_KEY and cl.REF_TABLE='IP_CLASS'");
 			if(rowId!= null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier382
+DMAP ConvertedQuery - SELECT T1.ROW_ID, T1.IP_VERSION , T1.IP_CLASS ,cl.SHORT_DESC as CLASS_NAME, T1.COMPANY_ID ,c.SHORT_DESC as COMPANY_NAME , T1.GROUP_ID , T1.GROUP_IP_ST , T1.GROUP_IP_ED , T1.ST_IP_1,T1.ST_IP_2, T1.ST_IP_3, T1.ST_IP_4,T1.ST_IP_5, T1.ST_IP_6 , T1.ED_IP_1,T1.ED_IP_2, T1.ED_IP_3, T1.ED_IP_4,T1.ED_IP_5, T1.ED_IP_6 , T1.GROUP_DESC , T1.TOTAL_ASSIGN_T2 , T1.TOTAL_ASSIGN_T3,T1.TOTAL_IP,T1.CREATE_DATE FROM IP_GROUP T1 left join IP_MASTER_TABLE c on T1.COMPANY_ID =c.REF_KEY and c.REF_TABLE='COMPANY' left join IP_MASTER_TABLE cl on T1.IP_CLASS =cl.REF_KEY and cl.REF_TABLE='IP_CLASS' WHERE T1.ROW_ID='rowId'
+**/
+
+/**
+**/
+
 				sql.append(" WHERE T1.ROW_ID='"+rowId+"'");
 			}else if(grpId!= null){
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier381
+DMAP ConvertedQuery - SELECT T1.ROW_ID, T1.IP_VERSION , T1.IP_CLASS ,cl.SHORT_DESC as CLASS_NAME, T1.COMPANY_ID ,c.SHORT_DESC as COMPANY_NAME , T1.GROUP_ID , T1.GROUP_IP_ST , T1.GROUP_IP_ED , T1.ST_IP_1,T1.ST_IP_2, T1.ST_IP_3, T1.ST_IP_4,T1.ST_IP_5, T1.ST_IP_6 , T1.ED_IP_1,T1.ED_IP_2, T1.ED_IP_3, T1.ED_IP_4,T1.ED_IP_5, T1.ED_IP_6 , T1.GROUP_DESC , T1.TOTAL_ASSIGN_T2 , T1.TOTAL_ASSIGN_T3,T1.TOTAL_IP,T1.CREATE_DATE FROM IP_GROUP T1 left join IP_MASTER_TABLE c on T1.COMPANY_ID =c.REF_KEY and c.REF_TABLE='COMPANY' left join IP_MASTER_TABLE cl on T1.IP_CLASS =cl.REF_KEY and cl.REF_TABLE='IP_CLASS' WHERE T1.GROUP_ID='grpId'
+**/
+
 				sql.append(" WHERE T1.GROUP_ID='"+grpId+"'");
 			}
 			List lst  = session.createSQLQuery(sql.toString())
@@ -365,24 +402,35 @@ public class HibernateIPGroupDao extends HibernateGenericDao<IPGroup> implements
 	
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
-	public String getMaxGrpId() throws DataAccessException {
+	public String getMaxGrpId() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMaxGrpId
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query needs manual remediation: Identifier380
+DMAP ConvertedQuery - select CONCAT('G', LPAD(nextvalCAST(('seq_group_id') AS text), 4, CAST(0 AS text)) ) as maxid
+**/
+
 		String maxid =  (String) session.createSQLQuery("  select 'G'||LPAD(SEQ_GROUP_ID.Nextval,4,0) as maxid from dual ")
 				.addScalar("maxid", Hibernate.STRING).uniqueResult();
 		return maxid;
 	}
 
 	@Override
-	public IPGroup searchGroupEdit() throws DataAccessException {
+	public IPGroup searchGroupEdit() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchGroupEdit
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
 	@Override
-	public List<String> getGroupIPList()
+	public List<String> getGroupIPList() // DMAP Comment : Dead Code Detected - The Following Method has no reference getGroupIPList
 			throws DataAccessException {
 		Session session = getSessionFactory().getCurrentSession();
-		List<String> groupIPList = session.createSQLQuery("SELECT DISTINCT GROUP_IP_ST||' - '||GROUP_IP_ED AS GROUP_IP FROM IP_GROUP ORDER BY 1")		
+/**
+DMAP TAG: Query converted: Identifier379
+DMAP ConvertedQuery - SELECT DISTINCT CONCAT(GROUP_IP_ST, ' - ', GROUP_IP_ED) AS GROUP_IP FROM IP_GROUP ORDER BY 1
+**/
+
+//		List<String> groupIPList = session.createSQLQuery("SELECT DISTINCT GROUP_IP_ST||' - '||GROUP_IP_ED AS GROUP_IP FROM IP_GROUP ORDER BY 1")		
+		List<String> groupIPList = session.createSQLQuery("SELECT DISTINCT CONCAT(GROUP_IP_ST, ' - ', GROUP_IP_ED) AS GROUP_IP FROM IP_GROUP ORDER BY 1")		
 		.addScalar("GROUP_IP", Hibernate.STRING).list();
 		return groupIPList;
 	}

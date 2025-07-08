@@ -22,7 +22,7 @@ public class HibernateIPUserGroupDao extends HibernateGenericDao<IPUserGroup> im
 
 
 	@Override
-	public List<IPUserGroup> getUserGroupList()throws DataAccessException {
+	public List<IPUserGroup> getUserGroupList()throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserGroupList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPUserGroup.class);
 		

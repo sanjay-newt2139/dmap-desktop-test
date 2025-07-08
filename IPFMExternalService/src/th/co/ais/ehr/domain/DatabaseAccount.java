@@ -54,7 +54,7 @@ public class DatabaseAccount  implements java.io.Serializable {
      * 
      * @param databaseName
      */
-    public void setDatabaseName(java.lang.String databaseName) {
+    public void setDatabaseName(java.lang.String databaseName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDatabaseName
         this.databaseName = databaseName;
     }
 
@@ -74,7 +74,7 @@ public class DatabaseAccount  implements java.io.Serializable {
      * 
      * @param serverName
      */
-    public void setServerName(java.lang.String serverName) {
+    public void setServerName(java.lang.String serverName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServerName
         this.serverName = serverName;
     }
 
@@ -94,7 +94,7 @@ public class DatabaseAccount  implements java.io.Serializable {
      * 
      * @param userName
      */
-    public void setUserName(java.lang.String userName) {
+    public void setUserName(java.lang.String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserName
         this.userName = userName;
     }
 
@@ -114,7 +114,7 @@ public class DatabaseAccount  implements java.io.Serializable {
      * 
      * @param password
      */
-    public void setPassword(java.lang.String password) {
+    public void setPassword(java.lang.String password) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPassword
         this.password = password;
     }
 
@@ -134,7 +134,7 @@ public class DatabaseAccount  implements java.io.Serializable {
      * 
      * @param status
      */
-    public void setStatus(java.lang.String status) {
+    public void setStatus(java.lang.String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatus
         this.status = status;
     }
 
@@ -154,7 +154,7 @@ public class DatabaseAccount  implements java.io.Serializable {
      * 
      * @param detail
      */
-    public void setDetail(java.lang.String detail) {
+    public void setDetail(java.lang.String detail) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDetail
         this.detail = detail;
     }
 
@@ -274,14 +274,14 @@ public class DatabaseAccount  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -293,7 +293,7 @@ public class DatabaseAccount  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

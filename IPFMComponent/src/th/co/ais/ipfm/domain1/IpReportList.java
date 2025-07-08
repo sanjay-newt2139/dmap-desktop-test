@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 )
 public class IpReportList implements java.io.Serializable  {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	@Column(name = "REQ_DATETIME")
     @Temporal(TemporalType.TIMESTAMP)
     private Date reqDatetime;
@@ -50,84 +50,84 @@ public class IpReportList implements java.io.Serializable  {
         this.reportId = reportId;
     }
 
-    public Date getReqDatetime() {
+    public Date getReqDatetime() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReqDatetime
 //    	reqDatetime = new Date(IPFMUtils.dateSql2DateString(reqDatetime, IPFMConstant.DATETIME_FORMAT));
         return reqDatetime;
     }
 
-    public void setReqDatetime(Date reqDatetime) {
+    public void setReqDatetime(Date reqDatetime) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReqDatetime
         this.reqDatetime = reqDatetime;
     }
 
-    public String getUserId() {
+    public String getUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserId
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
         this.userId = userId;
     }
 
-    public Date getStartDate() {
+    public Date getStartDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStartDate
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(Date startDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStartDate
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public Date getEndDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndDate
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(Date endDate) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndDate
         this.endDate = endDate;
     }
 
-    public String getReportStatus() {
+    public String getReportStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportStatus
         return reportStatus;
     }
 
-    public void setReportStatus(String reportStatus) {
+    public void setReportStatus(String reportStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportStatus
         this.reportStatus = reportStatus;
     }
 
-    public String getReportName() {
+    public String getReportName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportName
         return reportName;
     }
 
-    public void setReportName(String reportName) {
+    public void setReportName(String reportName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportName
         this.reportName = reportName;
     }
 
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return rowId;
     }
 
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
 
-    public Date getRunAt() {
+    public Date getRunAt() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRunAt
         return runAt;
     }
 
-    public void setRunAt(Date runAt) {
+    public void setRunAt(Date runAt) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRunAt
         this.runAt = runAt;
     }
 
-    public String getErrorDesc() {
+    public String getErrorDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getErrorDesc
         return errorDesc;
     }
 
-    public void setErrorDesc(String errorDesc) {
+    public void setErrorDesc(String errorDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setErrorDesc
         this.errorDesc = errorDesc;
     }
 
-    public String getReportId() {
+    public String getReportId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportId
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportId
         this.reportId = reportId;
     }
 	  

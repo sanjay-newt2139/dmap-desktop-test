@@ -144,14 +144,14 @@ public class MenuAuthenticationAction extends AbstractAction{
 		return programID;
 	}
 	
-	public String action_addMenu(){
+	public String action_addMenu(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_addMenu
 		MenuAuthenticationBean menuAuthenticationBean = getMenuAuthenticationBean();
 			
 		setMenuAuthenticationBean(menuAuthenticationBean);
 		return null;
 	}
 	
-	public String action_selectRow(){
+	public String action_selectRow(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_selectRow
 		MenuAuthenticationBean menuAuthenticationBean = getMenuAuthenticationBean();
 		MainMenuService mainMenuService = (MainMenuService)JSFServiceFinderUtil.getInstance().getBean("mainMenuService");
 		try {
@@ -167,21 +167,21 @@ public class MenuAuthenticationAction extends AbstractAction{
 		return null;
 	}
 	
-	public String action_cancel(){
+	public String action_cancel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_cancel
 		MenuAuthenticationBean menuAuthenticationBean = getMenuAuthenticationBean();
 		init(null);
 		setMenuAuthenticationBean(menuAuthenticationBean);
 		return null;
 	}
 	
-	public void action_onchangeMenuLevel(){
+	public void action_onchangeMenuLevel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_onchangeMenuLevel
 		MenuAuthenticationBean menuAuthenticationBean = getMenuAuthenticationBean();
 		System.out.println("---- menu level = "+menuAuthenticationBean.getIpFucntion().getMenuLevel());
 		setMenuAuthenticationBean(menuAuthenticationBean);
 	}
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

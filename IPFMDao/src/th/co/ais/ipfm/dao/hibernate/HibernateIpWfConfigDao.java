@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import org.hibernate.Criteria;
@@ -13,7 +14,7 @@ import th.co.ais.ipfm.domain1.IpWfConfig;
 public class HibernateIpWfConfigDao  extends HibernateGenericDao<IpWfConfig> implements IPWfConfigDao{
 
 	@Override
-	public IpWfConfig getIpWfConfig(String urType) throws DataAccessException {
+	public IpWfConfig getIpWfConfig(String urType) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpWfConfig
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpWfConfig.class);
 		criteria.add(Restrictions.eq("urType", urType));
@@ -21,7 +22,7 @@ public class HibernateIpWfConfigDao  extends HibernateGenericDao<IpWfConfig> imp
 	}
 	
 	@Override
-	public void updateIpWfConfig(IpWfConfig ipWfConfig,String userId) throws DataAccessException {
+	public void updateIpWfConfig(IpWfConfig ipWfConfig,String userId) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpWfConfig
 		Session session = getSessionFactory().getCurrentSession();
 		StringBuffer sql1 = new StringBuffer();
 		StringBuffer sql2 = new StringBuffer();
@@ -64,9 +65,29 @@ public class HibernateIpWfConfigDao  extends HibernateGenericDao<IpWfConfig> imp
 		sql4.append(" AND PM_TEAM = 'TNP' ");
 		sql4.append(" AND IMPACT_STATUS = 'Y' ");
 		
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier333
+DMAP ConvertedQuery - UPDATE IP_WF_CONFIG SET SLA = 'ipWfConfig.getCdnWithoutImpact()' ,SMS_STATUS = 'ipWfConfig.getSmsStatus()' ,SMS_MOBILE_NO_LIST = 'ipWfConfig.getSmsMobileNoList()' ,UPDATE_BY = 'userId' WHERE UR_TYPE = 'NC' AND PM_TEAM = 'CDN' AND IMPACT_STATUS = 'N'
+**/
+
 		SQLQuery sqlQuery1  =  session.createSQLQuery(sql1.toString());
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier332
+DMAP ConvertedQuery - UPDATE IP_WF_CONFIG SET SLA = 'ipWfConfig.getCdnWithImpact()' ,SMS_STATUS = 'ipWfConfig.getSmsStatus()' ,SMS_MOBILE_NO_LIST = 'ipWfConfig.getSmsMobileNoList()' ,UPDATE_BY = 'userId' WHERE UR_TYPE = 'NC' AND PM_TEAM = 'CDN' AND IMPACT_STATUS = 'Y'
+**/
+
 		SQLQuery sqlQuery2  =  session.createSQLQuery(sql2.toString());
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier331
+DMAP ConvertedQuery - UPDATE IP_WF_CONFIG SET SLA = 'ipWfConfig.getSlaTnpWithoutImpact()' ,SMS_STATUS = 'ipWfConfig.getSmsStatus()' ,SMS_MOBILE_NO_LIST = 'ipWfConfig.getSmsMobileNoList()' ,UPDATE_BY = 'userId' WHERE UR_TYPE = 'NC' AND PM_TEAM = 'TNP' AND IMPACT_STATUS = 'N'
+**/
+
 		SQLQuery sqlQuery3  =  session.createSQLQuery(sql3.toString());
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier330
+DMAP ConvertedQuery - UPDATE IP_WF_CONFIG SET SLA = 'ipWfConfig.getSlaTnpWithImpact()' ,SMS_STATUS = 'ipWfConfig.getSmsStatus()' ,SMS_MOBILE_NO_LIST = 'ipWfConfig.getSmsMobileNoList()' ,UPDATE_BY = 'userId' WHERE UR_TYPE = 'NC' AND PM_TEAM = 'TNP' AND IMPACT_STATUS = 'Y'
+**/
+
 		SQLQuery sqlQuery4  =  session.createSQLQuery(sql4.toString());
 		
 		sqlQuery1.executeUpdate();

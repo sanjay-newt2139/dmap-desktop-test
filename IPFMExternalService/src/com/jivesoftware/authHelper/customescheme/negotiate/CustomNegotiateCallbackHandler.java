@@ -58,7 +58,7 @@ public class CustomNegotiateCallbackHandler implements CallbackHandler {
      * @throws javax.security.auth.callback.UnsupportedCallbackException if the callback is not an
      * instance of NameCallback or PasswordCallback
      */
-    public void handle(Callback[] callbacks)
+    public void handle(Callback[] callbacks) // DMAP Comment : Dead Code Detected - The Following Method has no reference handle
             throws IOException, UnsupportedCallbackException {
         ConfirmationCallback confirmation = null;
 
@@ -145,7 +145,7 @@ public class CustomNegotiateCallbackHandler implements CallbackHandler {
     }
 
     /* Reads a user password from an input stream */
-    private char[] readPassword(InputStream in) throws IOException {
+    private char[] readPassword(InputStream in) throws IOException { // DMAP Comment : Dead Code Detected - The Following Method has no reference readPassword
 
         char[] lineBuffer;
         char[] buf;

@@ -35,7 +35,7 @@ public class AuthUtils {
     add to java.security.Provider encryption algorithms that might not be
     available in your default JVM settings
      */
-    public static void addEncryptionProviders() {
+    public static void addEncryptionProviders() { // DMAP Comment : Dead Code Detected - The Following Method has no reference addEncryptionProviders
         try {
             java.security.Provider secProvider1 = (java.security.Provider) Class
                     .forName("com.sun.crypto.provider.SunJCE").newInstance();
@@ -69,7 +69,7 @@ public class AuthUtils {
     /*
     enable\disable logging for different security mechanisms
      */
-    public static void securityLogging(SecurityLogType logType, boolean enable) {
+    public static void securityLogging(SecurityLogType logType, boolean enable) { // DMAP Comment : Dead Code Detected - The Following Method has no reference securityLogging
         String value = String.valueOf(enable);
         if (enable && logType.equals(SecurityLogType.ALL) || logType.equals(SecurityLogType.SSL)) {
             value = logType.toString().toLowerCase();
@@ -81,7 +81,7 @@ public class AuthUtils {
     /*
     return the response as a String, if the response is a GZIPed stream, it will be ungizped
     */
-    public static String getResponseAsStringAndHandleGzip(HttpMethodBase httpget) throws IOException {
+    public static String getResponseAsStringAndHandleGzip(HttpMethodBase httpget) throws IOException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getResponseAsStringAndHandleGzip
         Header contentEncodingHeader = httpget.getResponseHeader(CONTENT_ENCODING_HEADER);
         InputStream stream = httpget.getResponseBodyAsStream();
         if (contentEncodingHeader != null && contentEncodingHeader.getValue().equalsIgnoreCase(GZIP)) {
@@ -97,7 +97,7 @@ public class AuthUtils {
      The mixed authentication can be for example NTLM and Forms based
      http://buyevich.blogspot.co.il/2011/03/accessing-mixed-authentication-web-app.html
      */
-    public static void useNTLMforMixedAuth(HttpClient httpClient) {
+    public static void useNTLMforMixedAuth(HttpClient httpClient) { // DMAP Comment : Dead Code Detected - The Following Method has no reference useNTLMforMixedAuth
         if (!registeredCLAIMS) {
             logger.info(" adding header to avoid forms based auth");
             addDefaultHeader(httpClient, false, FORMS_BASED_AUTH_ACCEPTED_HEADER, "f");
@@ -108,7 +108,7 @@ public class AuthUtils {
     /*
     make all requests with a user agent of a browser, some endpoints serve only requests with a browser user agent
      */
-    public static void useBrowserUserAgent(HttpClient httpClient) {
+    public static void useBrowserUserAgent(HttpClient httpClient) { // DMAP Comment : Dead Code Detected - The Following Method has no reference useBrowserUserAgent
         logger.info(" adding user agent of a browser");
         addDefaultHeader(httpClient, false, USER_AGENT,
                 AuthConsts.BROWSER_USER_AGENT_VALUE);
@@ -117,7 +117,7 @@ public class AuthUtils {
     /*
     pring all headers of a response for debugging
     */
-    public static Header[] printResponseHeaders(HttpMethodBase httpget) throws IOException {
+    public static Header[] printResponseHeaders(HttpMethodBase httpget) throws IOException { // DMAP Comment : Dead Code Detected - The Following Method has no reference printResponseHeaders
         System.out.println("Printing Response Header...\n");
 
         Header[] headers = httpget.getResponseHeaders();

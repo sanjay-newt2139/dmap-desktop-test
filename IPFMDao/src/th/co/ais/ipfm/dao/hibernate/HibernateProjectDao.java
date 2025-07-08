@@ -15,7 +15,7 @@ public class HibernateProjectDao extends HibernateGenericDao<Project> implements
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Project> getProjectList() throws DataAccessException {
+	public List<Project> getProjectList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getProjectList
 		Session session = this.getVsfmSessionFactory().getCurrentSession();
 		List<Project> projectList = new ArrayList<Project>();
 		try{

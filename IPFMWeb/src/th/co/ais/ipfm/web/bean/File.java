@@ -7,16 +7,16 @@ public class File implements Serializable{
     private String mime;
     private long length;
     private byte[] data;
-    public byte[] getData() {
+    public byte[] getData() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getData
         return data;
     }
-    public void setData(byte[] data) {
+    public void setData(byte[] data) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setData
         this.data = data;
     }
-    public String getName() {
+    public String getName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getName
         return Name;
     }
-    public void setName(String name) {
+    public void setName(String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setName
         Name = name;
         int extDot = name.lastIndexOf('.');
         if(extDot > 0){
@@ -38,14 +38,14 @@ public class File implements Serializable{
             }
         }
     }
-    public long getLength() {
+    public long getLength() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLength
         return length;
     }
-    public void setLength(long length) {
+    public void setLength(long length) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLength
         this.length = length;
     }
     
-    public String getMime(){
+    public String getMime(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getMime
         return mime;
     }
 }

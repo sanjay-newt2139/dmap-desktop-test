@@ -10,7 +10,7 @@ import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;
 public class HttpHostFactory
 {
     /** The default factory. */
-    public static final HttpHostFactory DEFAULT = new HttpHostFactory(null, // httpProtocol
+    public static final HttpHostFactory DEFAULT = new HttpHostFactory(null, // httpProtocol // DMAP Comment : Dead Code Detected - The Following Field has no reference DEFAULT
             new Protocol(new String(HttpsURL.DEFAULT_SCHEME),
                     (ProtocolSocketFactory) new EasySSLProtocolSocketFactory(),
                     HttpsURL.DEFAULT_PORT));
@@ -26,7 +26,7 @@ public class HttpHostFactory
     protected final Protocol httpsProtocol;
 
     /** Get a host for the given parameters. This method need not be thread-safe. */
-    public HttpHost getHost(HostConfiguration old, String scheme, String host, int port)
+    public HttpHost getHost(HostConfiguration old, String scheme, String host, int port) // DMAP Comment : Dead Code Detected - The Following Method has no reference getHost
     {
         return new HttpHost(host, port, getProtocol(old, scheme, host, port));
     }

@@ -19,7 +19,7 @@ public class HibernateIIPUserDao extends HibernateGenericDao<IpUser> implements 
 
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public List<IpUser> getSystemOwnerList() throws DataAccessException {
+	public List<IpUser> getSystemOwnerList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUser.class);
 
@@ -30,7 +30,7 @@ public class HibernateIIPUserDao extends HibernateGenericDao<IpUser> implements 
 	
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public List<IpTeam> getSystemOwnerTeamList() throws DataAccessException {
+	public List<IpTeam> getSystemOwnerTeamList() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerTeamList
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpTeam.class);
 		criteria.add(Restrictions.eq("activeStatus", "Y"));
@@ -41,7 +41,7 @@ public class HibernateIIPUserDao extends HibernateGenericDao<IpUser> implements 
 
 	@SuppressWarnings({ "unchecked" })
 	@Override
-	public List<IpTeam> getSystemOwnerTeamTier2List() throws DataAccessException {
+	public List<IpTeam> getSystemOwnerTeamTier2List() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerTeamTier2List
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpTeam.class);
 		criteria.add(Restrictions.eq("activeStatus", "Y"));

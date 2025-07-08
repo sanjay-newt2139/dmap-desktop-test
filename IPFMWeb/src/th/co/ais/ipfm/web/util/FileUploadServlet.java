@@ -25,7 +25,7 @@ import th.co.ais.ipfm.web.bean.IPFMConfigBean;
 import com.oreilly.servlet.MultipartRequest;
 
 public class FileUploadServlet extends HttpServlet implements Servlet{
-	private static final long serialVersionUID = 2740693677625051632L;
+	private static final long serialVersionUID = 2740693677625051632L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
 	public FileUploadServlet(){
 	      super();

@@ -63,82 +63,82 @@ public class IpUrAttachment  extends MasterDomain  implements java.io.Serializab
     }
     @Version
     @Column(name="VERSION", precision=10, scale=0)
-    public Long getVersion() {
+    public Long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
     
-    public void setVersion(Long version) {
+    public void setVersion(Long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     
     @Column(name="ROW_ID", unique=true, length=50)
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
     
     @Column(name="DESCRIPTION", length=1000)
-    public String getDescription() {
+    public String getDescription() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDescription
         return this.description;
     }
     
-    public void setDescription(String description) {
+    public void setDescription(String description) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setDescription
         this.description = description;
     }
     
     @Column(name="FILE_LOCATION", length=200)
-    public String getFileLocation() {
+    public String getFileLocation() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFileLocation
         return this.fileLocation;
     }
     
-    public void setFileLocation(String fileLocation) {
+    public void setFileLocation(String fileLocation) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFileLocation
         this.fileLocation = fileLocation;
     }
     
     @Column(name="FILE_NAME", length=100)
-    public String getFileName() {
+    public String getFileName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFileName
         return this.fileName;
     }
     
-    public void setFileName(String fileName) {
+    public void setFileName(String fileName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFileName
         this.fileName = fileName;
     }
 	@Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
 	@Column(name="CREATE_DATE")
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
 	@Column(name="UPDATE_BY")
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 	
 	@Column(name="UPDATE_DATE")
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 	
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
 

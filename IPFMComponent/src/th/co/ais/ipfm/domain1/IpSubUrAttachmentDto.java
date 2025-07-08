@@ -16,7 +16,7 @@ public class IpSubUrAttachmentDto implements java.io.Serializable,Cloneable {
      /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	
 	 private String urNo;
 	 private String subUrNo;
@@ -33,79 +33,79 @@ public class IpSubUrAttachmentDto implements java.io.Serializable,Cloneable {
     }
        
     @Column(name="UR_NO")
-    public String getUrNo() {
+    public String getUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNo
 		return urNo;
 	}
-	public void setUrNo(String urNo) {
+	public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
 		this.urNo = urNo;
 	}
 
 	@Column(name="SUB_UR_NO")
-	public String getSubUrNo() {
+	public String getSubUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubUrNo
 		return subUrNo;
 	}
-	public void setSubUrNo(String subUrNo) {
+	public void setSubUrNo(String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubUrNo
 		this.subUrNo = subUrNo;
 	}
 
 	@Column(name="CATEGORY")
-	public String getCategory() {
+	public String getCategory() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCategory
 		return category;
 	}
-	public void setCategory(String category) {
+	public void setCategory(String category) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCategory
 		this.category = category;
 	}
 
 	@Id
 	@Column(name="FILE_NAME")
-	public String getFileName() {
+	public String getFileName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFileName
 		return fileName;
 	}
-	public void setFileName(String fileName) {
+	public void setFileName(String fileName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFileName
 		this.fileName = fileName;
 	}
 
 	@Column(name="FILE_LOCATION")
-    public String getFileLocation() {
+    public String getFileLocation() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFileLocation
         return this.fileLocation;
     }
-    public void setFileLocation(String fileLocation) {
+    public void setFileLocation(String fileLocation) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFileLocation
         this.fileLocation = fileLocation;
     }
        
 	@Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 	
 	@Column(name="UR_STATUS")
-	public String getUrStatus() {
+	public String getUrStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrStatus
 		return urStatus;
 	}
 	
-	public void setUrStatus(String urStatus) {
+	public void setUrStatus(String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrStatus
 		this.urStatus = urStatus;
 	}
 	
 	@Column(name="SUB_UR_STATUS")
-	public String getSubUrStatus() {
+	public String getSubUrStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubUrStatus
 		return subUrStatus;
 	}
 	
-	public void setSubUrStatus(String subUrStatus) {
+	public void setSubUrStatus(String subUrStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubUrStatus
 		this.subUrStatus = subUrStatus;
 	}
 	
 	@Column(name="ACTION")
-	public String getAction() {
+	public String getAction() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAction
 		return action;
 	}
 	
-	public void setAction(String action) {
+	public void setAction(String action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAction
 		this.action = action;
 	}
 

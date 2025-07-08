@@ -48,11 +48,11 @@ public class InboxAction extends AbstractAction {
 	}
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		return false;
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		inboxBean = getInboxBean();		
@@ -114,7 +114,7 @@ public class InboxAction extends AbstractAction {
 	}
 	
 		
-	public String showInbox(){
+	public String showInbox(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference showInbox
 		String treeType = getRequestParameter("treeType");
 		String treeLevel = getRequestParameter("treeLevel");
 		String urType = getRequestParameter("urType");
@@ -260,7 +260,7 @@ public class InboxAction extends AbstractAction {
 		return "inbox";
 	}
 	
-	public String navigation(){
+	public String navigation(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference navigation
 		String urNo = getRequestParameter("URNo");
 		String mode = getRequestParameter("MODE");
 		String funcId = getRequestParameter("FuncID");

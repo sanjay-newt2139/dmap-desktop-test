@@ -22,11 +22,11 @@ public class AccessListValidate {
 		this.cdn = cdn;
 	}
 
-	public void setCdn(IPAccessListBean cdn) {
+	public void setCdn(IPAccessListBean cdn) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCdn
 		this.cdn = cdn;
 	}
 
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		
@@ -173,7 +173,7 @@ public class AccessListValidate {
 		return done;
 	}
 	
-	private boolean isServiceFound(String serviceName){
+	private boolean isServiceFound(String serviceName){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isServiceFound
 		FirewallService firewallService = (FirewallService)JSFServiceFinderUtil.getInstance().getBean("firewallService");
 		IpMasterTable master = firewallService.getServiceByRefID(serviceName);
 		return (master!=null);

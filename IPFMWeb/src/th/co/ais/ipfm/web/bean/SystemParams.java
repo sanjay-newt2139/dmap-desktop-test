@@ -12,9 +12,9 @@ import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 
 public class SystemParams extends AbstractAction implements Serializable{
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
-	public void checkFile() {
+	public void checkFile() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFile
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	         File file = new File(ipfmConfigBean.getIpfmUserManualPath(),ipfmConfigBean.getIpfmUserManualFile());
@@ -26,7 +26,7 @@ public class SystemParams extends AbstractAction implements Serializable{
 			IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0066")));
 		}
     }
-	public String getManualDownloadURL(){
+	public String getManualDownloadURL(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getManualDownloadURL
 //		System.out.println("------------getManualDownloadURL------------");
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 		try {
@@ -46,7 +46,7 @@ public class SystemParams extends AbstractAction implements Serializable{
 		
 	}
 		
-	public String getManualDownloadURL2(){
+	public String getManualDownloadURL2(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getManualDownloadURL2
 //		System.out.println("------------getManualDownloadURL------------");
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 		try {
@@ -66,7 +66,7 @@ public class SystemParams extends AbstractAction implements Serializable{
 		
 	}
 	
-	public String getDownloadIPFMtraining(){
+	public String getDownloadIPFMtraining(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getDownloadIPFMtraining
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 		try {
 			File file = new File(ipfmConfigBean.getIpfmUserManualPath(),ipfmConfigBean.getIpfmtraininglFile());
@@ -83,7 +83,7 @@ public class SystemParams extends AbstractAction implements Serializable{
 		
 	}
 	
-	public String getDownloadNWRequest(){
+	public String getDownloadNWRequest(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getDownloadNWRequest
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 		try {
 			File file = new File(ipfmConfigBean.getIpfmUserManualPath(),ipfmConfigBean.getIpfmRequestNwFile());
@@ -100,7 +100,7 @@ public class SystemParams extends AbstractAction implements Serializable{
 		
 	}
 	
-	public String getDownloadURStatus(){
+	public String getDownloadURStatus(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getDownloadURStatus
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 		try {
 			File file = new File(ipfmConfigBean.getIpfmUserManualPath(),ipfmConfigBean.getIpfmUrStatusFile());
@@ -117,24 +117,24 @@ public class SystemParams extends AbstractAction implements Serializable{
 		
 	}
 	
-	public String getUserProfileProgram(){
+	public String getUserProfileProgram(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserProfileProgram
 		return "IPURS007_01";
 	}
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

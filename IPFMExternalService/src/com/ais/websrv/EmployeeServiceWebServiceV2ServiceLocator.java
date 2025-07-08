@@ -24,7 +24,7 @@ public class EmployeeServiceWebServiceV2ServiceLocator extends org.apache.axis.c
     // Use to get a proxy class for EmployeeServiceWebServiceV2SoapPort
     private java.lang.String EmployeeServiceWebServiceV2SoapPort_address = "http://10.240.1.101:7201/EmployeeServiceWebServiceV2/EmployeeServiceWebServiceV2.jws";
 
-    public java.lang.String getEmployeeServiceWebServiceV2SoapPortAddress() {
+    public java.lang.String getEmployeeServiceWebServiceV2SoapPortAddress() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEmployeeServiceWebServiceV2SoapPortAddress
         return EmployeeServiceWebServiceV2SoapPort_address;
     }
 
@@ -35,7 +35,7 @@ public class EmployeeServiceWebServiceV2ServiceLocator extends org.apache.axis.c
         return EmployeeServiceWebServiceV2SoapPortWSDDServiceName;
     }
 
-    public void setEmployeeServiceWebServiceV2SoapPortWSDDServiceName(java.lang.String name) {
+    public void setEmployeeServiceWebServiceV2SoapPortWSDDServiceName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEmployeeServiceWebServiceV2SoapPortWSDDServiceName
         EmployeeServiceWebServiceV2SoapPortWSDDServiceName = name;
     }
 
@@ -104,13 +104,13 @@ public class EmployeeServiceWebServiceV2ServiceLocator extends org.apache.axis.c
         }
     }
 
-    public javax.xml.namespace.QName getServiceName() {
+    public javax.xml.namespace.QName getServiceName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceName
         return new javax.xml.namespace.QName("http://com/ais/websrv", "EmployeeServiceWebServiceV2Service");
     }
 
     private java.util.HashSet ports = null;
 
-    public java.util.Iterator getPorts() {
+    public java.util.Iterator getPorts() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPorts
         if (ports == null) {
             ports = new java.util.HashSet();
             ports.add(new javax.xml.namespace.QName("http://com/ais/websrv", "EmployeeServiceWebServiceV2SoapPort"));

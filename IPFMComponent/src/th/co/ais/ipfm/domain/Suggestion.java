@@ -12,16 +12,16 @@ public class Suggestion {
 		this.value=value;
 	}
 	
-	public String getKey() {
+	public String getKey() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getKey
 		return key;
 	}
-	public void setKey(String key) {
+	public void setKey(String key) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setKey
 		this.key = key;
 	}
-	public String getValue() {
+	public String getValue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getValue
 		return value;
 	}
-	public void setValue(String value) {
+	public void setValue(String value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setValue
 		this.value = value;
 	}
 	

@@ -35,7 +35,7 @@ public class EHRXMLUtil {
 		}
 	}
 	
-	public static final DiffgramApprover parserApproverMSXML(String xmlstr){
+	public static final DiffgramApprover parserApproverMSXML(String xmlstr){ // DMAP Comment : Dead Code Detected - The Following Method has no reference parserApproverMSXML
 		DiffgramApprover diffgram = null;
 		try {
 			if (approverunmar==null) init();
@@ -47,7 +47,7 @@ public class EHRXMLUtil {
 		return diffgram;
 	}
 	
-	public static final DiffgramEmployeeProfile parserEmployeeMSXML(String xmlstr){
+	public static final DiffgramEmployeeProfile parserEmployeeMSXML(String xmlstr){ // DMAP Comment : Dead Code Detected - The Following Method has no reference parserEmployeeMSXML
 		DiffgramEmployeeProfile diffgram = null;
 		try {
 			if (employeeunmar==null) init(); 

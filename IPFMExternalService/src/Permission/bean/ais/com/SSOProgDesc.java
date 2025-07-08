@@ -45,7 +45,7 @@ public class SSOProgDesc  implements java.io.Serializable {
      * 
      * @param progCode
      */
-    public void setProgCode(java.lang.String progCode) {
+    public void setProgCode(java.lang.String progCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgCode
         this.progCode = progCode;
     }
 
@@ -65,7 +65,7 @@ public class SSOProgDesc  implements java.io.Serializable {
      * 
      * @param progDesc
      */
-    public void setProgDesc(java.lang.String progDesc) {
+    public void setProgDesc(java.lang.String progDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgDesc
         this.progDesc = progDesc;
     }
 
@@ -131,14 +131,14 @@ public class SSOProgDesc  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -150,7 +150,7 @@ public class SSOProgDesc  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

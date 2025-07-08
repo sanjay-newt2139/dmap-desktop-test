@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao;
 
 import java.sql.CallableStatement;
@@ -18,23 +19,28 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 	private SessionFactory sessionFactory;
 	private TempIPLevel2Dao tempIpLevel2Dao;
 
-	public void setTempIpLevel2Dao(TempIPLevel2Dao tempIpLevel2Dao) {
+	public void setTempIpLevel2Dao(TempIPLevel2Dao tempIpLevel2Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTempIpLevel2Dao
 		this.tempIpLevel2Dao = tempIpLevel2Dao;
 	}
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
+	public void setSessionFactory(SessionFactory sessionFactory) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSessionFactory
 		this.sessionFactory = sessionFactory;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void processIpLevel2(String ip1, String ip2, String ip3, String ip4, String mask, String teamId) throws Exception {
+	public void processIpLevel2(String ip1, String ip2, String ip3, String ip4, String mask, String teamId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference processIpLevel2
 		Connection connection = null;
 		CallableStatement stmt = null;
 		try{
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
 			 
-			 String procedureName = "{call List_IP_Level2(?,?,?,?,?,?)}";
+String procedureName = "call List_IP_Level2(?,?,?,?,?,?)";//String procedureName = "{call List_IP_Level2(?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier106
+DMAP ConvertedQuery - call List_IP_Level2(?,?,?,?,?,?)
+**/
+
 			 stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setLong(1,Long.parseLong(ip1));
@@ -88,7 +94,12 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
 			 
-			 String procedureName = "{call GET_IP_START_END(?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+String procedureName = "call GET_IP_START_END(?,?,?,?,?,?,?,?,?,?,?,?,?)";//String procedureName = "{call GET_IP_START_END(?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier105
+DMAP ConvertedQuery - call GET_IP_START_END(?,?,?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 			 CallableStatement stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setLong(1,Long.parseLong(ip1));
@@ -129,7 +140,12 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
 			 
-			 String procedureName = "{call GET_IP_START_END2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+String procedureName = "call GET_IP_START_END2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";//String procedureName = "{call GET_IP_START_END2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+/**
+DMAP TAG: Query converted: Identifier104
+DMAP ConvertedQuery - call GET_IP_START_END2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+**/
+
 			 CallableStatement stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setLong(1,Long.parseLong(ip1));
@@ -166,7 +182,7 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 		return ipMap;
 	}
 	@Override
-	public IpLevel1 getIpLevel1StartEnd(String ip1, String ip2, String ip3, String ip4, String mask) throws Exception {
+	public IpLevel1 getIpLevel1StartEnd(String ip1, String ip2, String ip3, String ip4, String mask) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpLevel1StartEnd
 		IpLevel1 ipLevel1 = new IpLevel1();
 		try{
 			Map ipMap = getIpStartEnd(ip1, ip2, ip3, ip4, mask);
@@ -180,7 +196,7 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 	}
 	
 	@Override
-	public IpLevel2 getIpLevel2StartEnd(String ip1, String ip2, String ip3, String ip4, String mask) throws Exception {
+	public IpLevel2 getIpLevel2StartEnd(String ip1, String ip2, String ip3, String ip4, String mask) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpLevel2StartEnd
 		IpLevel2 ipLevel2 = new IpLevel2();
 		try{
 			Map ipMap = getIpStartEnd(ip1, ip2, ip3, ip4, mask);
@@ -194,7 +210,7 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 	}
 	
 	@Override
-	public IpInfo getIpInfoStartEnd(String ip1, String ip2, String ip3, String ip4, String mask) throws Exception {
+	public IpInfo getIpInfoStartEnd(String ip1, String ip2, String ip3, String ip4, String mask) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpInfoStartEnd
 		IpInfo ipInfo = new IpInfo();
 		try{
 			Map ipMap = getIpStartEnd2(ip1, ip2, ip3, ip4, mask);
@@ -208,13 +224,19 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 	}
 	
 	@Override
-	public String checkIsTnp(String urNo) throws Exception {
+	public String checkIsTnp(String urNo) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIsTnp
 		String result = "";
 		Connection connection = null;
 		try{
 			 Session session = sessionFactory.getCurrentSession();
 			 connection = session.connection();
-			 CallableStatement stmt = connection.prepareCall("{call check_is_tnp(?,?)}");
+/**
+DMAP TAG: Query converted: Identifier103
+DMAP ConvertedQuery - call check_is_tnp(?,?)
+**/
+
+//			 CallableStatement stmt = connection.prepareCall("{call check_is_tnp(?,?)}");
+			 CallableStatement stmt = connection.prepareCall("call check_is_tnp(?,?)");
 
 			 stmt.setString(1,urNo);
 			 stmt.registerOutParameter(2, OracleTypes.VARCHAR);
@@ -234,14 +256,19 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 		return result;
 	}
 	
-	public Map verifyImportLv3(String username, String userRole) throws Exception {
+	public Map verifyImportLv3(String username, String userRole) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference verifyImportLv3
 		Map resultMap = new HashedMap();
 		Connection connection = null;
 		try{
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
 			 
-			 String procedureName = "{call VERIFY_IMPORT_LV3(? ,? ,? ,?)}";
+String procedureName = "call VERIFY_IMPORT_LV3(? ,? ,? ,?)";//String procedureName = "{call VERIFY_IMPORT_LV3(? ,? ,? ,?)}";
+/**
+DMAP TAG: Query converted: Identifier102
+DMAP ConvertedQuery - call VERIFY_IMPORT_LV3(? ,? ,? ,?)
+**/
+
 			 CallableStatement stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setString(1,username);
@@ -265,14 +292,19 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 		return resultMap;
 	}
 	
-	public void updateImportLv3(String username) throws Exception {
+	public void updateImportLv3(String username) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateImportLv3
 		Map resultMap = new HashedMap();
 		Connection connection = null;
 		try{
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
 			 
-			 String procedureName = "{call UPDATE_IMPORT_LV3(? )}";
+String procedureName = "call UPDATE_IMPORT_LV3(? )";//String procedureName = "{call UPDATE_IMPORT_LV3(? )}";
+/**
+DMAP TAG: Query converted: Identifier101
+DMAP ConvertedQuery - call UPDATE_IMPORT_LV3(? )
+**/
+
 			 CallableStatement stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setString(1,username);
@@ -289,13 +321,18 @@ public class CallProcedureDaoImpl implements CallProcedureDao {
 		}
 	}
 	
-	public void updateTrunkFlag(String urNo, String type) throws Exception {
+	public void updateTrunkFlag(String urNo, String type) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateTrunkFlag
 		Connection connection = null;
 		try{
 			Session session = sessionFactory.getCurrentSession();
 			connection = session.connection();
 			 
-			 String procedureName = "{call UPDATE_TRUNK_FLAG(?, ? )}";
+String procedureName = "call UPDATE_TRUNK_FLAG(?, ? )";//String procedureName = "{call UPDATE_TRUNK_FLAG(?, ? )}";
+/**
+DMAP TAG: Query converted: Identifier100
+DMAP ConvertedQuery - call UPDATE_TRUNK_FLAG(?, ? )
+**/
+
 			 CallableStatement stmt = connection.prepareCall(procedureName);
 			 //set PL parameter &amp; value
 			 stmt.setString(1,urNo);

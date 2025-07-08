@@ -23,12 +23,12 @@ public class KerberosCredentials extends NTCredentials {
 
     }
 
-    public void setKdc(String kdc) {
+    public void setKdc(String kdc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setKdc
         this.kdc = kdc;
     }
 
 
-    public String getKdc() {
+    public String getKdc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getKdc
         return kdc;
     }
 }

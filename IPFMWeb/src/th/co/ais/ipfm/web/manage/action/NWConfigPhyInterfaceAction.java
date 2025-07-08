@@ -41,10 +41,10 @@ import th.co.ais.ipfm.web.validate.PhysicalInterfaceValidate;
 
 
 public class NWConfigPhyInterfaceAction extends AbstractAction{
-	private List<SelectItem> nodeType;
-	private List<SelectItem> portStatus;
-	private List<SelectItem> speedPort;
-	private List<SelectItem> trunkNo;
+	private List<SelectItem> nodeType; // DMAP Comment : Dead Code Detected - The Following Field has no reference nodeType
+	private List<SelectItem> portStatus; // DMAP Comment : Dead Code Detected - The Following Field has no reference portStatus
+	private List<SelectItem> speedPort; // DMAP Comment : Dead Code Detected - The Following Field has no reference speedPort
+	private List<SelectItem> trunkNo; // DMAP Comment : Dead Code Detected - The Following Field has no reference trunkNo
 	
 	public NWConfigPhyInterfaceAction(){
 	}
@@ -57,7 +57,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("networkConfigBean", networkConfigBean);
 	}
 	
-	public void addPhyInterface(ActionEvent event){
+	public void addPhyInterface(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference addPhyInterface
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 	 try{
@@ -164,7 +164,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		}
 	}
 	
-	public void editPhyInterface(ActionEvent event){
+	public void editPhyInterface(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editPhyInterface
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
 	 try{
@@ -251,7 +251,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		}
 	}
 	
-	public void findIPNode(ActionEvent event){
+	public void findIPNode(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findIPNode
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		PhyInterfaceService phyIntfService = (PhyInterfaceService)JSFServiceFinderUtil.getInstance().getBean("phyInterfaceService");
 		IPPhyInterfaceBean phyIntf = bean.getPhyInterface();
@@ -286,7 +286,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		return resultString;
 	}
 	
-	public List<SelectItem> getNodeType(){
+	public List<SelectItem> getNodeType(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getNodeType
 		PhyInterfaceService phyIntfService = (PhyInterfaceService)JSFServiceFinderUtil.getInstance().getBean("phyInterfaceService");
 		List<SelectItem> listResult = new ArrayList<SelectItem>();
 		List<IpMasterTable> listNodeType = phyIntfService.getProperty("ND_TYPE");
@@ -329,7 +329,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		return listResult;
 	}
 	
-	public void findSubUr(){
+	public void findSubUr(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference findSubUr
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 		
@@ -348,7 +348,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		setNetworkConfigBean(bean);
 	}
 	
-	public void listener(UploadEvent event) throws Exception{
+	public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService)JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		PhyInterfaceService phyIntfService = (PhyInterfaceService)JSFServiceFinderUtil.getInstance().getBean("phyInterfaceService");
 		UserSession sessionUser = IPFMWebUtil.getUserSession();
@@ -475,7 +475,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
         setNetworkConfigBean(bean);
     } 
 	
-	public void editPhyInterfaceInit(){
+	public void editPhyInterfaceInit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference editPhyInterfaceInit
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
@@ -574,7 +574,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 //		setNetworkConfigBean(bean);
 //	}
 	
-	public void deleteInterface(String urNo,String subUrNo){
+	public void deleteInterface(String urNo,String subUrNo){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteInterface
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		PhyInterfaceService phyIntfService = (PhyInterfaceService)JSFServiceFinderUtil.getInstance().getBean("phyInterfaceService");
 		IpUrPhysicalInterface intf = phyIntfService.findPhyInterface(urNo, subUrNo);
@@ -613,7 +613,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		
 	}
 	
-	public void clearSourceIP(ActionEvent event){
+	public void clearSourceIP(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clearSourceIP
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPPhyInterfaceBean intf = bean.getPhyInterface();
 		intf.setIpFound("0");
@@ -628,7 +628,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 		setNetworkConfigBean(bean);		
 	}
 	
-	public void checkFileTemplate() {
+	public void checkFileTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkFileTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -642,7 +642,7 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
     }
 
 	
-	public void downloadTemplate() {
+	public void downloadTemplate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference downloadTemplate
 		try{
 	        IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
 	        String path = ipfmConfigBean.getTemplatePath();
@@ -674,13 +674,13 @@ public class NWConfigPhyInterfaceAction extends AbstractAction{
 
 
 	@Override
-	public String init() {
+	public String init() { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String init(String programID) {
+	public String init(String programID) { // DMAP Comment : Dead Code Detected - The Following Method has no reference init
 		// TODO Auto-generated method stub
 		return null;
 	}

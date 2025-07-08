@@ -27,11 +27,11 @@ public class CorporateSoapProxy implements org.tempuri.CorporateSoap {
     catch (javax.xml.rpc.ServiceException serviceException) {}
   }
   
-  public String getEndpoint() {
+  public String getEndpoint() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndpoint
     return _endpoint;
   }
   
-  public void setEndpoint(String endpoint) {
+  public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
     _endpoint = endpoint;
     if (corporateSoap != null)
       ((javax.xml.rpc.Stub)corporateSoap)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);

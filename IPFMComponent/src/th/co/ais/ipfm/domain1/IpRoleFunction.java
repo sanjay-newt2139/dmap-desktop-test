@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -30,7 +30,7 @@ public class IpRoleFunction extends MasterDomain implements java.io.Serializable
      /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 //	private IpRoleFunctionId id = new IpRoleFunctionId();
 	private String roleId;
     private String funcId;
@@ -43,100 +43,100 @@ public class IpRoleFunction extends MasterDomain implements java.io.Serializable
 	
 	@JoinColumn(name = "FUNC_ID", referencedColumnName = "FUNC_ID", nullable = false ,insertable=false, updatable=false)
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-    public IpFunction getIpFunction() {
+    public IpFunction getIpFunction() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpFunction
 		return ipFunction;
 	}
-	public void setIpFunction(IpFunction ipFunction) {
+	public void setIpFunction(IpFunction ipFunction) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpFunction
 		this.ipFunction = ipFunction;
 	}
 	
 	@JoinColumn(name = "ROLE_ID", referencedColumnName = "ROLE_ID", nullable = false ,insertable=false, updatable=false)
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-    public IpRole getIpRole() {
+    public IpRole getIpRole() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpRole
 		return ipRole;
 	}
-	public void setIpRole(IpRole ipRole) {
+	public void setIpRole(IpRole ipRole) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpRole
 		this.ipRole = ipRole;
 	}
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "roleId", fetch = FetchType.LAZY)			
-	public List<IpRoleMember> getMemberCollection() {
+	public List<IpRoleMember> getMemberCollection() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMemberCollection
 		return memberCollection;
 	}
-	public void setMemberCollection(List<IpRoleMember> memberCollection) {
+	public void setMemberCollection(List<IpRoleMember> memberCollection) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMemberCollection
 		this.memberCollection = memberCollection;
 	}
 	public IpRoleFunction() {}
 
 	@Column(name="ROLE_ID", nullable=false, length=10)
-	public String getRoleId() {
+	public String getRoleId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRoleId
         return this.roleId;
     }
     
-    public void setRoleId(String roleId) {
+    public void setRoleId(String roleId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleId
         this.roleId = roleId;
     }
     @Column(name="FUNC_ID", nullable=false, length=10)
-    public String getFuncId() {
+    public String getFuncId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFuncId
         return this.funcId;
     }
     
-    public void setFuncId(String funcId) {
+    public void setFuncId(String funcId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFuncId
         this.funcId = funcId;
     }
 	
     @Version
     @Column(name="VERSION", precision=10, scale=0)
-    public Integer getVersion() {
+    public Integer getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return this.version;
     }
 	
-	public void setVersion(Integer version) {
+	public void setVersion(Integer version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
     @Column(name="CREATE_BY")
-	public String getCreatedBy() {
+	public String getCreatedBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreatedBy
 		return createdBy;
 	}
 
-	public void setCreatedBy(String createdBy) {
+	public void setCreatedBy(String createdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreatedBy
 		this.createdBy = createdBy;
 	}
 
 	@Column(name="CREATE_DATE")
-	public Date getCreated() {
+	public Date getCreated() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCreated
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(Date created) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCreated
 		this.created = created;
 	}
 
 	@Column(name="UPDATE_BY")
-	public String getLastUpdBy() {
+	public String getLastUpdBy() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpdBy
 		return lastUpdBy;
 	}
 
-	public void setLastUpdBy(String lastUpdBy) {
+	public void setLastUpdBy(String lastUpdBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpdBy
 		this.lastUpdBy = lastUpdBy;
 	}
 	
 	@Column(name="UPDATE_DATE")
-	public Date getLastUpd() {
+	public Date getLastUpd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUpd
 		return lastUpd;
 	}
 	
-	public void setLastUpd(Date lastUpd) {
+	public void setLastUpd(Date lastUpd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUpd
 		this.lastUpd = lastUpd;
 	}
     
     @Id
     @Column(name="ROW_ID", unique=true, length=50)    
-    public String getRowId() {
+    public String getRowId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRowId
         return this.rowId;
     }
     
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRowId
         this.rowId = rowId;
     }
     

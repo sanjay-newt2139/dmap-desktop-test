@@ -24,7 +24,7 @@ import th.co.ais.ipfm.web.bean.UserSession;
 public class IPFMWebUtil implements Serializable{
 
 	public static String USER_SESSION = "userSession";
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	
 	public static UserSession getUserSession() {
 		FacesContext facesContext = FacesContext.getCurrentInstance();
@@ -32,12 +32,12 @@ public class IPFMWebUtil implements Serializable{
 				.getSession(true);
 		return (UserSession) session.getAttribute(USER_SESSION);
 	}
-	public static void storeOnSession(String key, Object object) {
+	public static void storeOnSession(String key, Object object) { // DMAP Comment : Dead Code Detected - The Following Method has no reference storeOnSession
 	    FacesContext ctx = FacesContext.getCurrentInstance();
 	    Map sessionState = ctx.getExternalContext().getSessionMap();
 	    sessionState.put(key, object);
 	}
-	public static Object getObjFromSession(String key) {
+	public static Object getObjFromSession(String key) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getObjFromSession
 	    FacesContext ctx = FacesContext.getCurrentInstance();
 	    Map sessionState = ctx.getExternalContext().getSessionMap();
 	    return sessionState.get(key);
@@ -59,7 +59,7 @@ public class IPFMWebUtil implements Serializable{
 		return loginName;
 	}
 	
-	public static String getHeader(){
+	public static String getHeader(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getHeader
 		FacesContext context = FacesContext.getCurrentInstance();
 		ServletContext servletcontext = (ServletContext)context.getExternalContext().getContext();
 		String filename = servletcontext.getRealPath("/home/ipfm/logo/header.jpg");
@@ -70,7 +70,7 @@ public class IPFMWebUtil implements Serializable{
 		return filename;
 	}
 
-	public static String getHeadMenu() throws Exception{
+	public static String getHeadMenu() throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getHeadMenu
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		//System.out.println("--------------getHeadMenu-----------"+userSession.getNewUser());
 		Map listMenu = userSession.getObjUserMenu();
@@ -106,7 +106,7 @@ public class IPFMWebUtil implements Serializable{
 		return sb.toString();
 	}
 	
-	public static Integer webConfigMaxRecord(){
+	public static Integer webConfigMaxRecord(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference webConfigMaxRecord
 		int count = 80;
 		try {
 			IPFMConfigBean ipfmConfigBean = (IPFMConfigBean)JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");

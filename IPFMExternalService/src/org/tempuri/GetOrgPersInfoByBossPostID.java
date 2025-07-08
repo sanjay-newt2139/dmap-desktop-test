@@ -62,7 +62,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param PIN
      */
-    public void setPIN(java.lang.String PIN) {
+    public void setPIN(java.lang.String PIN) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPIN
         this.PIN = PIN;
     }
 
@@ -82,7 +82,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param bossPosition
      */
-    public void setBossPosition(java.lang.String bossPosition) {
+    public void setBossPosition(java.lang.String bossPosition) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setBossPosition
         this.bossPosition = bossPosition;
     }
 
@@ -102,7 +102,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param organization
      */
-    public void setOrganization(java.lang.String organization) {
+    public void setOrganization(java.lang.String organization) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOrganization
         this.organization = organization;
     }
 
@@ -122,7 +122,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param name
      */
-    public void setName(java.lang.String name) {
+    public void setName(java.lang.String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setName
         this.name = name;
     }
 
@@ -142,7 +142,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param nickName
      */
-    public void setNickName(java.lang.String nickName) {
+    public void setNickName(java.lang.String nickName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNickName
         this.nickName = nickName;
     }
 
@@ -162,7 +162,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param position
      */
-    public void setPosition(java.lang.String position) {
+    public void setPosition(java.lang.String position) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPosition
         this.position = position;
     }
 
@@ -182,7 +182,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param tel
      */
-    public void setTel(java.lang.String tel) {
+    public void setTel(java.lang.String tel) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTel
         this.tel = tel;
     }
 
@@ -202,7 +202,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
      * 
      * @param job
      */
-    public void setJob(java.lang.String job) {
+    public void setJob(java.lang.String job) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setJob
         this.job = job;
     }
 
@@ -348,14 +348,14 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -367,7 +367,7 @@ public class GetOrgPersInfoByBossPostID  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

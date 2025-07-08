@@ -20,15 +20,15 @@ public class AuthenDBService {
 	private String endpoint;
 	private String projectid;
 	
-	public void setProjectid(String projectid) {
+	public void setProjectid(String projectid) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectid
 		this.projectid = projectid;
 	}
 
-	public void setEndpoint(String endpoint) {
+	public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
 		this.endpoint = endpoint;
 	}
 
-	public void setUsername(String username) {
+	public void setUsername(String username) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUsername
 		this.username = username;
 	}
 
@@ -37,7 +37,7 @@ public class AuthenDBService {
 	}
 	
 	@SuppressWarnings("unused")
-	public UserAccount getAuthenUserConfig() throws IPFMBusinessException {
+	public UserAccount getAuthenUserConfig() throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAuthenUserConfig
 		UserAccount usr = null;
 		try {
 			// get config

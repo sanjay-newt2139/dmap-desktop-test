@@ -2,7 +2,7 @@ package th.co.ais.ipfm.domain1;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 
@@ -30,7 +30,7 @@ public class IpUrFirewallId  implements java.io.Serializable {
         return this.urNo;
     }
     
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
 
@@ -39,7 +39,7 @@ public class IpUrFirewallId  implements java.io.Serializable {
         return this.subUrNo;
     }
     
-    public void setSubUrNo(String subUrNo) {
+    public void setSubUrNo(String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubUrNo
         this.subUrNo = subUrNo;
     }
 

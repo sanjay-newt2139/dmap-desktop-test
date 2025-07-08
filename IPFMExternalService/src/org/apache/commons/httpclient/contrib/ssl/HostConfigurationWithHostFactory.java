@@ -35,7 +35,7 @@ class HostConfigurationWithHostFactory extends HostConfiguration
 
     private final HttpHostFactory factory;
 
-    public Object clone()
+    public Object clone() // DMAP Comment : Dead Code Detected - The Following Method has no reference clone
     {
         return new HostConfigurationWithHostFactory(this);
     }

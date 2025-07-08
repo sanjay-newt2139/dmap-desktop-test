@@ -7,26 +7,26 @@ public class IPFMBusinessException extends Exception {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	
 	private String messageCode;
 	private String language;
 	private String[] arguments;
 	private Object obj;
 	
-	public String[] getArguments() {
+	public String[] getArguments() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getArguments
 		return arguments;
 	}
 
-	public String getLanguage() {
+	public String getLanguage() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLanguage
 		return language;
 	}
 	
-	public String getMessageCode() {
+	public String getMessageCode() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMessageCode
 		return messageCode;
 	}
 	
-	public Object getObj() {
+	public Object getObj() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getObj
 		return obj;
 	}
 

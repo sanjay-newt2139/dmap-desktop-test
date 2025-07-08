@@ -21,7 +21,7 @@ public class HibernateIPDetailDao extends HibernateGenericDao<IPDetail> implemen
 
 	
 	@Override
-	public List<IPDetail> search(IPDetailVO DTO, int maxResult) throws DataAccessException {
+	public List<IPDetail> search(IPDetailVO DTO, int maxResult) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference search
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPDetail.class);
 		if(maxResult>0){
@@ -97,7 +97,7 @@ public class HibernateIPDetailDao extends HibernateGenericDao<IPDetail> implemen
 	}
 
 	@Override
-	public int countSearchIPDetail(IPDetailVO DTO) throws DataAccessException {
+	public int countSearchIPDetail(IPDetailVO DTO) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference countSearchIPDetail
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPDetail.class);
 		String ipadress1="";
@@ -174,7 +174,7 @@ public class HibernateIPDetailDao extends HibernateGenericDao<IPDetail> implemen
 	
 	
 	@Override
-	public IPDetail searchIPDetail(IPDetailVO DTO)throws DataAccessException {
+	public IPDetail searchIPDetail(IPDetailVO DTO)throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIPDetail
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IPDetail.class);
 		

@@ -45,7 +45,7 @@ public class ManageDataIPAction extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		manageDataIPBean = getManageDataIPBean();		
@@ -156,7 +156,7 @@ public class ManageDataIPAction extends AbstractAction {
 		}
 	}
 		
-	public String initIPDetailAdd() {
+	public String initIPDetailAdd() { // DMAP Comment : Dead Code Detected - The Following Method has no reference initIPDetailAdd
 			ManageDataIPBean manageDataIPBean = getManageDataIPBean();
 			
 			manageDataIPBean.setIpDetail(new IPDetail());	
@@ -220,7 +220,7 @@ public class ManageDataIPAction extends AbstractAction {
 		}
 	}
 	
-	public String initUpdate(){
+	public String initUpdate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference initUpdate
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		ManageDataIPService manageDataIPService = (ManageDataIPService)JSFServiceFinderUtil.getInstance().getBean("manageDataIPService");	
 		if(manageDataIPService!=null && rowId!=null){
@@ -303,7 +303,7 @@ public class ManageDataIPAction extends AbstractAction {
 	}
 	
 	
-	public void updateIPDetail(){
+	public void updateIPDetail(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIPDetail
 		try {
 			if(validate()){
 				ManageDataIPService manageDataIPService = (ManageDataIPService)JSFServiceFinderUtil.getInstance().getBean("manageDataIPService");

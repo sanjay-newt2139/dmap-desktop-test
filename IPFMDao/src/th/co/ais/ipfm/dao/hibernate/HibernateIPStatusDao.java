@@ -9,7 +9,7 @@ import th.co.ais.ipfm.domain1.IpUrStatus;
 
 public class HibernateIPStatusDao extends HibernateGenericDao<IpUrStatus> implements IIPStatusDAO{
 
-	public IpUrStatus getSubStatus(String urType,String subUrStatus){
+	public IpUrStatus getSubStatus(String urType,String subUrStatus){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubStatus
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrStatus.class);
 		criteria.add(Restrictions.eq("urType",urType));
@@ -18,7 +18,7 @@ public class HibernateIPStatusDao extends HibernateGenericDao<IpUrStatus> implem
 	}
 
 	@Override
-	public IpUrStatus getStatus(String urType, String urStatus) {
+	public IpUrStatus getStatus(String urType, String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStatus
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpUrStatus.class);
 		criteria.add(Restrictions.eq("urType",urType));

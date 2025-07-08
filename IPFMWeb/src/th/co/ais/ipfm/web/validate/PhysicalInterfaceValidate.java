@@ -21,11 +21,11 @@ public class PhysicalInterfaceValidate {
 		this.phyInterface = phyInterface;
 	}
 
-	public void setPhyInterface(IPPhyInterfaceBean phyInterface){
+	public void setPhyInterface(IPPhyInterfaceBean phyInterface){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setPhyInterface
 		this.phyInterface = phyInterface;
 	}
 
-	public String validate(){
+	public String validate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		StringBuffer result = new StringBuffer("");
 		boolean blank = false;
 		if(isEmpty(phyInterface.getIpNode())){
@@ -182,7 +182,7 @@ public class PhysicalInterfaceValidate {
         return IP_PATTERN.matcher(iPaddress).matches();
 	}
 	
-	private boolean isIpBrfore(String start,String end){
+	private boolean isIpBrfore(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isIpBrfore
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".")+1;
@@ -195,7 +195,7 @@ public class PhysicalInterfaceValidate {
 		return done;
 	}
 	
-	private boolean isSameIPGroup(String start,String end){
+	private boolean isSameIPGroup(String start,String end){ // DMAP Comment : Dead Code Detected - The Following Method has no reference isSameIPGroup
 		boolean done = false;
 		if(isIpAddress(start) && isIpAddress(end)){
 			int pos1 = start.lastIndexOf(".");

@@ -97,7 +97,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param userGid
      */
-    public void setUserGid(long userGid) {
+    public void setUserGid(long userGid) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserGid
         this.userGid = userGid;
     }
 
@@ -117,7 +117,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param subMid
      */
-    public void setSubMid(long subMid) {
+    public void setSubMid(long subMid) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubMid
         this.subMid = subMid;
     }
 
@@ -137,7 +137,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param progCodeId
      */
-    public void setProgCodeId(long progCodeId) {
+    public void setProgCodeId(long progCodeId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgCodeId
         this.progCodeId = progCodeId;
     }
 
@@ -157,7 +157,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param compCode
      */
-    public void setCompCode(java.lang.String compCode) {
+    public void setCompCode(java.lang.String compCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCompCode
         this.compCode = compCode;
     }
 
@@ -177,7 +177,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param compDesc
      */
-    public void setCompDesc(java.lang.String compDesc) {
+    public void setCompDesc(java.lang.String compDesc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCompDesc
         this.compDesc = compDesc;
     }
 
@@ -197,7 +197,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param visible
      */
-    public void setVisible(java.lang.String visible) {
+    public void setVisible(java.lang.String visible) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVisible
         this.visible = visible;
     }
 
@@ -217,7 +217,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param enable
      */
-    public void setEnable(java.lang.String enable) {
+    public void setEnable(java.lang.String enable) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEnable
         this.enable = enable;
     }
 
@@ -237,7 +237,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param edit
      */
-    public void setEdit(java.lang.String edit) {
+    public void setEdit(java.lang.String edit) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEdit
         this.edit = edit;
     }
 
@@ -257,7 +257,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param oth1
      */
-    public void setOth1(java.lang.String oth1) {
+    public void setOth1(java.lang.String oth1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOth1
         this.oth1 = oth1;
     }
 
@@ -277,7 +277,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param oth2
      */
-    public void setOth2(java.lang.String oth2) {
+    public void setOth2(java.lang.String oth2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOth2
         this.oth2 = oth2;
     }
 
@@ -297,7 +297,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param oth3
      */
-    public void setOth3(java.lang.String oth3) {
+    public void setOth3(java.lang.String oth3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOth3
         this.oth3 = oth3;
     }
 
@@ -317,7 +317,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param oth1_desc
      */
-    public void setOth1_desc(java.lang.String oth1_desc) {
+    public void setOth1_desc(java.lang.String oth1_desc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOth1_desc
         this.oth1_desc = oth1_desc;
     }
 
@@ -337,7 +337,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param oth2_desc
      */
-    public void setOth2_desc(java.lang.String oth2_desc) {
+    public void setOth2_desc(java.lang.String oth2_desc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOth2_desc
         this.oth2_desc = oth2_desc;
     }
 
@@ -357,7 +357,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param oth3_desc
      */
-    public void setOth3_desc(java.lang.String oth3_desc) {
+    public void setOth3_desc(java.lang.String oth3_desc) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setOth3_desc
         this.oth3_desc = oth3_desc;
     }
 
@@ -377,7 +377,7 @@ public class SSOCompCode  implements java.io.Serializable {
      * 
      * @param progCodeName
      */
-    public void setProgCodeName(java.lang.String progCodeName) {
+    public void setProgCodeName(java.lang.String progCodeName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProgCodeName
         this.progCodeName = progCodeName;
     }
 
@@ -587,14 +587,14 @@ public class SSOCompCode  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -606,7 +606,7 @@ public class SSOCompCode  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

@@ -65,40 +65,40 @@ public abstract class AbstractAction {
 		return str;
 	}
 
-	public static SortColumnBean getRequestParameterBean(ActionEvent event,String name) {
+	public static SortColumnBean getRequestParameterBean(ActionEvent event,String name) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getRequestParameterBean
 		return (SortColumnBean) event.getComponent().getAttributes().get(name);
 	}
 
-	public static IPFMConfigBean getIPFMConfig() {
+	public static IPFMConfigBean getIPFMConfig() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPFMConfig
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean) JSFServiceFinderUtil
 				.getInstance().getBean("ipfmConfigBean");
 		return ipfmConfigBean;
 	}
 
-	public static void setRequestParameter(String key, String value) {
+	public static void setRequestParameter(String key, String value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRequestParameter
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		ServletRequest request = (ServletRequest) facesContext
 				.getExternalContext().getRequest();
 		request.setAttribute(key, value);
 	}
 
-	public void onChangeComboBox(IPFMRichComboItem comboItem) {
+	public void onChangeComboBox(IPFMRichComboItem comboItem) { // DMAP Comment : Dead Code Detected - The Following Method has no reference onChangeComboBox
 		if (comboItem == null) {
 			comboItem = new IPFMRichComboItem();
 		}
 	}
 
-	public void alertErrorMsg(ActionEvent event) {
+	public void alertErrorMsg(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference alertErrorMsg
 		String errorMessage = getRequestParameter("errorMessage");
 		IPFMMessageUtils.addMessageError(errorMessage);
 	}
 
-	public void alertErrorMsg() {
+	public void alertErrorMsg() { // DMAP Comment : Dead Code Detected - The Following Method has no reference alertErrorMsg
 		String errorMessage = getRequestParameter("errorMessage");
 		IPFMMessageUtils.addMessageError(errorMessage);
 	}
 
-	public String download() {
+	public String download() { // DMAP Comment : Dead Code Detected - The Following Method has no reference download
 		try {
 			String path = getRequestParameter("path");
 			String fileName = getRequestParameter("fileName");
@@ -117,7 +117,7 @@ public abstract class AbstractAction {
 		return null;
 	}
 
-	public void deleteFile() {
+	public void deleteFile() { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteFile
 
 	}
 
@@ -206,7 +206,7 @@ public abstract class AbstractAction {
 		}
 	}
 
-	protected void unsortedAllColumnRichDataTable(HtmlDataTable richDataTable) {
+	protected void unsortedAllColumnRichDataTable(HtmlDataTable richDataTable) { // DMAP Comment : Dead Code Detected - The Following Method has no reference unsortedAllColumnRichDataTable
 		List richColumnList = richDataTable.getChildren();
 		// System.out.println("richColumnList.size() = " +
 		// richColumnList.size());
@@ -219,7 +219,7 @@ public abstract class AbstractAction {
 		}
 	}
 
-	public void uploadAttachFile(UploadEvent event) {
+	public void uploadAttachFile(UploadEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference uploadAttachFile
 		try {
 			// System.out.println("====== uploadDiagram ======");
 			UploadItem item = event.getUploadItem();
@@ -309,7 +309,7 @@ public abstract class AbstractAction {
 		attachmentService.saveAttachFile(attachFile);
 	}
 
-	public void attachFileLogo(UploadItem item) throws Exception {
+	public void attachFileLogo(UploadItem item) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference attachFileLogo
 		BufferedOutputStream outputFile = null;
 		try {
 			IPFMConfigBean ipfmConfigBean = (IPFMConfigBean) JSFServiceFinderUtil
@@ -415,7 +415,7 @@ public abstract class AbstractAction {
 
 	}
 
-	public String perform(String actionName, String programID) throws Exception {
+	public String perform(String actionName, String programID) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference perform
 		String returnPage = null;
 		try {
 			if (actionName != null) {
@@ -444,7 +444,7 @@ public abstract class AbstractAction {
 		return returnPage;
 	}
 
-	public boolean isRejecMode(ReqNWConfigBean bean) {
+	public boolean isRejecMode(ReqNWConfigBean bean) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isRejecMode
 		if (bean == null) {
 			return false;
 		}
@@ -464,7 +464,7 @@ public abstract class AbstractAction {
 
 	}
 	
-	public SortColumnBean sortColumnChange() {
+	public SortColumnBean sortColumnChange() { // DMAP Comment : Dead Code Detected - The Following Method has no reference sortColumnChange
 		
 		SortColumnBean sc = new SortColumnBean();
 		String sortColumn = getRequestParameter("sortColumn");

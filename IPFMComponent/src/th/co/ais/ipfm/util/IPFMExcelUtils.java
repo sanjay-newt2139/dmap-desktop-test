@@ -28,11 +28,11 @@ public class IPFMExcelUtils {
 		this.inputWorkbook=fp;
 	}
 	
-	public String getInputFile() {
+	public String getInputFile() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInputFile
 		return inputFile;
 	}
 
-	public void setInputFile(String inputFile) {
+	public void setInputFile(String inputFile) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInputFile
 		this.inputFile = inputFile;
 	} 
 	
@@ -62,7 +62,7 @@ public class IPFMExcelUtils {
 		return listResult;
 	}
 	@SuppressWarnings("unchecked")
-	public ArrayList getData(File file,String sheetName) throws IOException  {
+	public ArrayList getData(File file,String sheetName) throws IOException  { // DMAP Comment : Dead Code Detected - The Following Method has no reference getData
 		ArrayList listResult = new ArrayList();
 		Workbook w;
 		try {
@@ -110,7 +110,7 @@ public class IPFMExcelUtils {
 		return listResult;
 	}
 	@SuppressWarnings("unchecked")
-	public ArrayList getData(String inputFile, String sheetName) throws IOException  {
+	public ArrayList getData(String inputFile, String sheetName) throws IOException  { // DMAP Comment : Dead Code Detected - The Following Method has no reference getData
 		File inputWorkbook = new File(inputFile);
 		Workbook w;
 		ArrayList listResult = new ArrayList();

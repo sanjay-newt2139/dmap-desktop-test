@@ -32,7 +32,7 @@ public class IpUrIpResultId  implements java.io.Serializable {
         return this.urNo;
     }
     
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
 
@@ -41,7 +41,7 @@ public class IpUrIpResultId  implements java.io.Serializable {
         return this.seq;
     }
     
-    public void setSeq(BigDecimal seq) {
+    public void setSeq(BigDecimal seq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSeq
         this.seq = seq;
     }
 

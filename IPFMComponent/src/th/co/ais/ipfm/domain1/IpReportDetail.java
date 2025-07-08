@@ -10,7 +10,7 @@ import javax.persistence.Table;
 )
 public class IpReportDetail implements java.io.Serializable  {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
     @Id
     @Column(name = "REPORT_ID", nullable = false, length = 10)
@@ -43,83 +43,83 @@ public class IpReportDetail implements java.io.Serializable  {
         this.reportId = reportId;
     }
 
-    public String getReportId() {
+    public String getReportId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportId
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportId
         this.reportId = reportId;
     }
 
-    public String getUserRole() {
+    public String getUserRole() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserRole
         return userRole;
     }
 
-    public void setUserRole(String userRole) {
+    public void setUserRole(String userRole) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserRole
         this.userRole = userRole;
     }
 
-    public String getUserId() {
+    public String getUserId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserId
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUserId
         this.userId = userId;
     }
 
-    public String getUrType() {
+    public String getUrType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrType
         return urType;
     }
 
-    public void setUrType(String urType) {
+    public void setUrType(String urType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrType
         this.urType = urType;
     }
 
-    public String getUrNo() {
+    public String getUrNo() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNo
         return urNo;
     }
 
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
 
-    public String getInOverDue() {
+    public String getInOverDue() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInOverDue
         return inOverDue;
     }
 
-    public void setInOverDue(String inOverDue) {
+    public void setInOverDue(String inOverDue) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInOverDue
         this.inOverDue = inOverDue;
     }
 
-    public String getInReportStatus() {
+    public String getInReportStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInReportStatus
         return inReportStatus;
     }
 
-    public void setInReportStatus(String inReportStatus) {
+    public void setInReportStatus(String inReportStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInReportStatus
         this.inReportStatus = inReportStatus;
     }
 
-    public Integer getTotalCount() {
+    public Integer getTotalCount() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTotalCount
         return totalCount;
     }
 
-    public void setTotalCount(Integer totalCount) {
+    public void setTotalCount(Integer totalCount) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTotalCount
         this.totalCount = totalCount;
     }
 
-    public String getSubUrType() {
+    public String getSubUrType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSubUrType
         return subUrType;
     }
 
-    public void setSubUrType(String subUrType) {
+    public void setSubUrType(String subUrType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSubUrType
         this.subUrType = subUrType;
     }
 
-    public Integer getTotalUr() {
+    public Integer getTotalUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTotalUr
         return totalUr;
     }
 
-    public void setTotalUr(Integer totalUr) {
+    public void setTotalUr(Integer totalUr) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTotalUr
         this.totalUr = totalUr;
     }
 	

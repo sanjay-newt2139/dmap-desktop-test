@@ -10,7 +10,7 @@ import javax.faces.model.SelectItem;
 public class IPFMRichComboItemConverter implements javax.faces.convert.Converter{
 
 	@SuppressWarnings("unchecked")
-	public Object getAsObject(FacesContext context, UIComponent component, String value) {
+	public Object getAsObject(FacesContext context, UIComponent component, String value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAsObject
 		//System.out.println("IPFMRichComboItemConverter value = " + value);
 		List<SelectItem> selectItems = (List<SelectItem>)component.getAttributes().get("selectItems");
 		Iterator<SelectItem> iterator = selectItems.iterator();
@@ -28,7 +28,7 @@ public class IPFMRichComboItemConverter implements javax.faces.convert.Converter
 		return comboBoxItem;
 	}
 
-	public String getAsString(FacesContext context, UIComponent component, Object value) {
+	public String getAsString(FacesContext context, UIComponent component, Object value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAsString
 //		System.out.println("IPFMRichComboItemConverter getAsString = " + value);
 		if(value == null) {
 			return "";

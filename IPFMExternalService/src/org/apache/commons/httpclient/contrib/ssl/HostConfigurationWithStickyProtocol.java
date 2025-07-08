@@ -35,7 +35,7 @@ public class HostConfigurationWithStickyProtocol extends HostConfiguration
         super(hostConfiguration);
     }
 
-    public Object clone()
+    public Object clone() // DMAP Comment : Dead Code Detected - The Following Method has no reference clone
     {
         return new HostConfigurationWithStickyProtocol(this);
     }

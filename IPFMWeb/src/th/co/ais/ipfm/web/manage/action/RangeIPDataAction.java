@@ -39,7 +39,7 @@ public class RangeIPDataAction extends AbstractAction {
 		return init(getRequestParameter("programIDParam"));
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		rangeIPDataBean = getRangeIPDataBean();		
@@ -113,7 +113,7 @@ public class RangeIPDataAction extends AbstractAction {
 		return programID;
 	}
 	
-	public String action_popupEdit(){
+	public String action_popupEdit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_popupEdit
 		System.out.println("---------action_popupEdit---------");
 		RangeIPDataBean rangeIPDataBean = getRangeIPDataBean();
 		rangeIPDataBean.getPopupIPRange().setStIp1(getRequestParameter("rangeIP"));
@@ -127,7 +127,7 @@ public class RangeIPDataAction extends AbstractAction {
 		return null;
 	}
 	
-	public String action_popupDetailEdit(){
+	public String action_popupDetailEdit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_popupDetailEdit
 		System.out.println("---------action_popupDetailEdit---------");
 		GroupIPBean groupIPBean = getGgroupIPBean();
 		groupIPBean.getPopupIPDetail().setIpAddress(getRequestParameter("rangeIP"));
@@ -147,7 +147,7 @@ public class RangeIPDataAction extends AbstractAction {
 		return null;
 	}
 	
-	public String action_viewDetail(){
+	public String action_viewDetail(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference action_viewDetail
 		RangeIPDataBean rangeIPDataBean = getRangeIPDataBean();
 		List<IPRange> ipRangeList = new ArrayList<IPRange>();
 		IPRange ipRange1;
@@ -172,7 +172,7 @@ public class RangeIPDataAction extends AbstractAction {
 		return "IPSIP002_VIEW_DETAIL";
 	}
 		
-	public void search(){
+	public void search(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference search
 		RangeIPDataBean rangeIPDataBean = getRangeIPDataBean();
 		try {
 			if(validate()){
@@ -231,7 +231,7 @@ public class RangeIPDataAction extends AbstractAction {
 		
 	}
 	
-	public void search1(){
+	public void search1(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference search1
 		RangeIPDataBean rangeIPDataBean = getRangeIPDataBean();
 		try {
 			if(validate()){

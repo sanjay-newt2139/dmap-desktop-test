@@ -15,14 +15,14 @@ public class WorkflowManageAction  extends AbstractAction {
 	 return programID;
 	}
 	
-	public String initRequestNetworkConfig() {
+	public String initRequestNetworkConfig() { // DMAP Comment : Dead Code Detected - The Following Method has no reference initRequestNetworkConfig
 		
 		
 		
 	      return "IPURS011_2";
     }
 	
-	public String initPlanningRequestIp() {
+	public String initPlanningRequestIp() { // DMAP Comment : Dead Code Detected - The Following Method has no reference initPlanningRequestIp
 		
 		
 		
@@ -31,7 +31,7 @@ public class WorkflowManageAction  extends AbstractAction {
 	
 	
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}

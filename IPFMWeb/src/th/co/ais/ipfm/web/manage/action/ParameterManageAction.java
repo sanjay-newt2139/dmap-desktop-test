@@ -31,7 +31,7 @@ public class ParameterManageAction extends AbstractAction {
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("parameterManageBean", parameterManageBean);
 	}
 
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		parameterManageBean = getParameterManageBean();		
@@ -94,7 +94,7 @@ public class ParameterManageAction extends AbstractAction {
 		}
 	}
 	
-	public String initAdd(){
+	public String initAdd(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference initAdd
 		
 		ParameterManageBean parameterManageBean = getParameterManageBean();
 		parameterManageBean.setDisplayForCreate(true);
@@ -103,7 +103,7 @@ public class ParameterManageAction extends AbstractAction {
 	}
 	
 	
-	public String createSystemParameter(){
+	public String createSystemParameter(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference createSystemParameter
 		ParameterManageBean parameterManageBean = getParameterManageBean();
 		try {
 			if(validate()){
@@ -134,7 +134,7 @@ public class ParameterManageAction extends AbstractAction {
 		return "IPURS014";
 	}
 	
-	public String initUpdate(){
+	public String initUpdate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference initUpdate
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		IIPParameterService ipParameterService = (IIPParameterService)JSFServiceFinderUtil.getInstance().getBean("ipParameterService");	
 		if(ipParameterService!=null && rowId!=null){
@@ -190,7 +190,7 @@ public class ParameterManageAction extends AbstractAction {
 	
 	
 	
-	public void updateValueBeforeDelete(){
+	public void updateValueBeforeDelete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDelete
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		ParameterManageBean parameterManageBean = getParameterManageBean();
 		parameterManageBean.setRowId(rowId);
@@ -198,7 +198,7 @@ public class ParameterManageAction extends AbstractAction {
 
 	}
 	
-	public void delete(){
+	public void delete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference delete
 		ParameterManageBean parameterManageBean = getParameterManageBean();
 		if(parameterManageBean!=null && parameterManageBean.getRowId()!=null && parameterManageBean.getRowId().trim().length()>0){
 			IIPParameterService ipParameterService = (IIPParameterService)JSFServiceFinderUtil.getInstance().getBean("ipParameterService");
@@ -214,7 +214,7 @@ public class ParameterManageAction extends AbstractAction {
 	}
 	
 	
-	public void changeGroup(){
+	public void changeGroup(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference changeGroup
 		ParameterManageBean parameterManageBean = getParameterManageBean();
 		List<SelectItem> subGroupList = new ArrayList<SelectItem>();		
 		if(parameterManageBean!=null){
@@ -239,7 +239,7 @@ public class ParameterManageAction extends AbstractAction {
 		}
 	}
 	
-	public String cancel(){
+	public String cancel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cancel
 		return init();
 	}
 	

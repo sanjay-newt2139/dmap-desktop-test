@@ -50,66 +50,66 @@ public class Stats {
         super();
     }
 
-    public void start() {
+    public void start() { // DMAP Comment : Dead Code Detected - The Following Method has no reference start
         this.startTime = System.currentTimeMillis();
     }
 
-    public void finish() {
+    public void finish() { // DMAP Comment : Dead Code Detected - The Following Method has no reference finish
         this.finishTime = System.currentTimeMillis();
     }
 
-    public long getFinishTime() {
+    public long getFinishTime() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFinishTime
         return this.finishTime;
     }
 
-    public long getStartTime() {
+    public long getStartTime() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getStartTime
         return this.startTime;
     }
 
-    public long getDuration() {
+    public long getDuration() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getDuration
         if (this.startTime < 0 || this.finishTime < 0) {
             throw new IllegalStateException();
         }
         return this.finishTime - this.startTime; 
     }
     
-    public void incSuccessCount() {
+    public void incSuccessCount() { // DMAP Comment : Dead Code Detected - The Following Method has no reference incSuccessCount
         this.successCount++;
     }
     
-    public void incFailureCount() {
+    public void incFailureCount() { // DMAP Comment : Dead Code Detected - The Following Method has no reference incFailureCount
         this.failureCount++;
     }
 
-    public int getFailureCount() {
+    public int getFailureCount() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getFailureCount
         return this.failureCount;
     }
 
-    public int getSuccessCount() {
+    public int getSuccessCount() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSuccessCount
         return this.successCount;
     }
 
-    public long getTotal() {
+    public long getTotal() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTotal
         return this.total;
     }
     
-    public void incTotal(int n) {
+    public void incTotal(int n) { // DMAP Comment : Dead Code Detected - The Following Method has no reference incTotal
         this.total += n;
     }
     
-    public long getContentLength() {
+    public long getContentLength() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getContentLength
         return this.contentLength;
     }
 
-    public void setContentLength(long contentLength) {
+    public void setContentLength(long contentLength) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setContentLength
         this.contentLength = contentLength;
     }
 
-    public String getServerName() {
+    public String getServerName() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServerName
         return this.serverName;
     }
 
-    public void setServerName(final String serverName) {
+    public void setServerName(final String serverName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setServerName
         this.serverName = serverName;
     }   
     

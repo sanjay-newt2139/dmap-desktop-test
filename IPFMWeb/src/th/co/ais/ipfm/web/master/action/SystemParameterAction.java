@@ -75,7 +75,7 @@ public class SystemParameterAction extends AbstractAction {
 		return programID;
 	}
 	
-	public String indexSort() {			
+	public String indexSort() {			 // DMAP Comment : Dead Code Detected - The Following Method has no reference indexSort
 		String TablSort = getRequestParameter("TablSort");
 		
 		systemParameterBean = getSystemParameterBean();
@@ -89,7 +89,7 @@ public class SystemParameterAction extends AbstractAction {
 	public String init() {
 		return null;
 	}
-	public void search(){
+	public void search(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference search
 		SystemParameterBean systemParameterBean = getSystemParameterBean();
 		if(systemParameterBean!=null){
 			SearchResult searchResult = null;
@@ -109,7 +109,7 @@ public class SystemParameterAction extends AbstractAction {
 		}
 	}
 	
-	public void clear(){
+	public void clear(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clear
 		SystemParameterBean systemParameterBean = getSystemParameterBean();
 		List<SelectItem> subGroupList = new ArrayList<SelectItem>();
 		systemParameterBean.setSubGroupList(subGroupList);
@@ -119,17 +119,17 @@ public class SystemParameterAction extends AbstractAction {
 		setSystemParameterBean(systemParameterBean);
 	}
 
-	public void clickReImport(){
+	public void clickReImport(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clickReImport
 		clearUploadData();
 		//return "system_parameter_import";
 	}
 	
-	public String clickImport(){
+	public String clickImport(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clickImport
 		clearUploadData();
 		return "system_parameter_import";
 	}	
 	
-	public String clickAdd(){
+	public String clickAdd(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference clickAdd
 		IIPParameterService ipParameterService = (IIPParameterService)JSFServiceFinderUtil.getInstance().getBean("ipParameterService");
 		if(ipParameterService!=null){
 			try {
@@ -163,7 +163,7 @@ public class SystemParameterAction extends AbstractAction {
 		return "system_parameter_detail";
 	}	
 	
-	public void updateValueBeforeDelete(){
+	public void updateValueBeforeDelete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateValueBeforeDelete
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		SystemParameterBean systemParameterBean = getSystemParameterBean();
 		systemParameterBean.setRowId(rowId);
@@ -171,7 +171,7 @@ public class SystemParameterAction extends AbstractAction {
 
 	}
 		
-	public void changeGroup(){
+	public void changeGroup(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference changeGroup
 		SystemParameterBean systemParameterBean = getSystemParameterBean();
 		List<SelectItem> subGroupList = new ArrayList<SelectItem>();		
 		if(systemParameterBean!=null){
@@ -196,7 +196,7 @@ public class SystemParameterAction extends AbstractAction {
 		}
 	}
 	
-	public void checkMaxlength(){
+	public void checkMaxlength(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkMaxlength
 		String maxlength = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("maxlength").toString();
 		if(maxlength!=null && maxlength.trim().length()>0){
 			SystemParameterBean systemParameterBean = getSystemParameterBean();
@@ -209,7 +209,7 @@ public class SystemParameterAction extends AbstractAction {
 		}
 	}
 	
-	public void delete(){
+	public void delete(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference delete
 		SystemParameterBean systemParameterBean = getSystemParameterBean();
 		if(systemParameterBean!=null && systemParameterBean.getRowId()!=null && systemParameterBean.getRowId().trim().length()>0){
 			IIPParameterService ipParameterService = (IIPParameterService)JSFServiceFinderUtil.getInstance().getBean("ipParameterService");
@@ -224,7 +224,7 @@ public class SystemParameterAction extends AbstractAction {
 		}
 	}
 	
-	public String initUpdate(){
+	public String initUpdate(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference initUpdate
 		String rowId = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("rowId").toString();
 		IIPParameterService ipParameterService = (IIPParameterService)JSFServiceFinderUtil.getInstance().getBean("ipParameterService");
 		if(ipParameterService!=null && rowId!=null){
@@ -259,7 +259,7 @@ public class SystemParameterAction extends AbstractAction {
 		return "system_parameter_detail";
 	}
 	
-	public void createSystemParameter(){
+	public void createSystemParameter(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference createSystemParameter
 		SystemParameterBean systemParameter = getSystemParameterBean(); 
 		try {
 			if(validate()){
@@ -282,7 +282,7 @@ public class SystemParameterAction extends AbstractAction {
 		}
 	}
 
-	public void updateSystemParameter(){
+	public void updateSystemParameter(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateSystemParameter
 		try {
 			if(validate()){
 				IIPParameterService ipParameterService = (IIPParameterService)JSFServiceFinderUtil.getInstance().getBean("ipParameterService");
@@ -313,11 +313,11 @@ public class SystemParameterAction extends AbstractAction {
 		return flgValid;
 	}
 	
-	public String cancel(){
+	public String cancel(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference cancel
 		return init();
 	}
 	
-    public void listener(UploadEvent event) throws Exception{
+    public void listener(UploadEvent event) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference listener
     	SystemParameterFileUploadBean systemParameterFileUploadBean = getSystemParameterFileUploadBean();
     	UploadItem item = event.getUploadItem();
         if(item!=null && item.getData()!=null){
@@ -331,7 +331,7 @@ public class SystemParameterAction extends AbstractAction {
         setSystemParameterFileUploadBean(systemParameterFileUploadBean);
     }  
     
-    public void paint(OutputStream stream, Object object) throws IOException {
+    public void paint(OutputStream stream, Object object) throws IOException { // DMAP Comment : Dead Code Detected - The Following Method has no reference paint
     	SystemParameterFileUploadBean systemParameterFileUploadBean = getSystemParameterFileUploadBean();
     	stream.write(systemParameterFileUploadBean.getFiles().get((Integer)object).getData());
     }

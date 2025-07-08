@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import th.co.ais.ipfm.domain1.IpWfConfigDetail;
 public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify> implements IPEmailNotifyDao{
 
 	@Override
-	public IpEmailNotify findByResponce(String urNo, String userId) {
+	public IpEmailNotify findByResponce(String urNo, String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByResponce
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpEmailNotify.class);
 		criteria.add(Restrictions.eq("userId", userId));
@@ -26,7 +27,7 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 	}
 	
 	@Override
-	public IpEmailNotify findByResponce(String emailCode) {
+	public IpEmailNotify findByResponce(String emailCode) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByResponce
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpEmailNotify.class);
 		criteria.add(Restrictions.eq("emailCode", emailCode));
@@ -36,7 +37,7 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 	}
 
 	@Override
-	public boolean isSendEmail(String type, String id) {
+	public boolean isSendEmail(String type, String id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference isSendEmail
 		Session session = getSessionFactory().getCurrentSession();
 		Criteria criteria = session.createCriteria(IpWfConfigDetail.class);
 		criteria.add(Restrictions.eq("id.urType", type));
@@ -47,9 +48,14 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 	}
 
 	@Override
-	public void deleteNotibyByStatus(String urNo, String urStatus) {
+	public void deleteNotibyByStatus(String urNo, String urStatus) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteNotibyByStatus
 		Session session = getSessionFactory().getCurrentSession();
-		String sql = "DELETE IP_EMAIL_NOTIFY WHERE (UR_NO = ?) AND (UR_STATUS=?)";
+String sql = "DELETE FROM IP_EMAIL_NOTIFY WHERE (UR_NO = ?) AND (UR_STATUS=?)";//String sql = "DELETE IP_EMAIL_NOTIFY WHERE (UR_NO = ?) AND (UR_STATUS=?)";
+/**
+DMAP TAG: Query converted: Identifier63
+DMAP ConvertedQuery - DELETE FROM IP_EMAIL_NOTIFY WHERE (UR_NO = ?) AND (UR_STATUS=?)
+**/
+
 		session.createSQLQuery(sql)
 			.setString(0,urNo)
 			.setString(1,urStatus)
@@ -57,21 +63,31 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 	}
 
 	@Override
-	public void deleteNotibyByUrNo(String urNo) {
+	public void deleteNotibyByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteNotibyByUrNo
 		Session session = getSessionFactory().getCurrentSession();
-		String sql = "DELETE IP_EMAIL_NOTIFY WHERE (UR_NO = ?)";
+String sql = "DELETE FROM IP_EMAIL_NOTIFY WHERE (UR_NO = ?)";//String sql = "DELETE IP_EMAIL_NOTIFY WHERE (UR_NO = ?)";
+/**
+DMAP TAG: Query converted: Identifier62
+DMAP ConvertedQuery - DELETE FROM IP_EMAIL_NOTIFY WHERE (UR_NO = ?)
+**/
+
 		session.createSQLQuery(sql)
 			.setString(0,urNo)
 			.executeUpdate();
 	}
 
 	@Override
-	public void deleteByUser(String urNo, String userId, String status) {
+	public void deleteByUser(String urNo, String userId, String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByUser
 		// TODO Auto-generated method stub
 		StringBuffer sql = new StringBuffer();
 		sql.append("delete  IP_EMAIL_NOTIFY ");
 		sql.append("Where (UR_NO = ?)	and (UR_STATUS = ?) and (USER_ID = ?) ");
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier61
+DMAP ConvertedQuery - delete FROM IP_EMAIL_NOTIFY Where (UR_NO = ?) and (UR_STATUS = ?) and (USER_ID = ?)
+**/
+
 		session.createSQLQuery(sql.toString())
 			.setString(0,urNo)
 			.setString(1,status)
@@ -81,12 +97,17 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 	}
 	
 	@Override
-	public void deleteByUser(String userId, String status) {
+	public void deleteByUser(String userId, String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByUser
 		// TODO Auto-generated method stub
 		StringBuffer sql = new StringBuffer();
 		sql.append("delete  IP_EMAIL_NOTIFY ");
 		sql.append("Where (EMAIL_LINK_STATUS = ?) and (USER_ID = ?) ");
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier60
+DMAP ConvertedQuery - delete FROM IP_EMAIL_NOTIFY Where (EMAIL_LINK_STATUS = ?) and (USER_ID = ?)
+**/
+
 		session.createSQLQuery(sql.toString())
 			.setString(0,status)
 			.setString(1,userId)
@@ -96,7 +117,7 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public IpEmailNotify findLastEmailNotifyByUserId(String userId) {
+	public IpEmailNotify findLastEmailNotifyByUserId(String userId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findLastEmailNotifyByUserId
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT t.* ");
 		sql.append("FROM IP_EMAIL_NOTIFY t ");
@@ -105,6 +126,11 @@ public class HibernateIPEmailNotifyDao extends HibernateGenericDao<IpEmailNotify
 		sql.append("ORDER BY t.UPDATE_DATE DESC ");
 		System.out.println(" sql = "+sql.toString());
 		Session session = getSessionFactory().getCurrentSession();
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier59
+DMAP ConvertedQuery - SELECT t.* FROM IP_EMAIL_NOTIFY t WHERE t.USER_ID='userId' AND t.EMAIL_LINK_STATUS='Y' ORDER BY t.UPDATE_DATE DESC
+**/
+
 		List<IpEmailNotify> result = session.createSQLQuery(sql.toString()).addEntity(IpEmailNotify.class).list();
 		if (result.size()>0) {
 			return (IpEmailNotify)result.get(0);

@@ -18,11 +18,11 @@ import th.co.ais.ipfm.web.util.IPFMMessageUtils;
 import th.co.ais.ipfm.web.util.JSFServiceFinderUtil;
 
 public class IpReportListAction  extends AbstractAction {
-		private static Logger log = Logger.getLogger(IpReportCriteriaAction.class); 	
+		private static Logger log = Logger.getLogger(IpReportCriteriaAction.class); 	 // DMAP Comment : Dead Code Detected - The Following Field has no reference log
 		IPReportService service = (IPReportService)JSFServiceFinderUtil.getInstance().getBean("iPReportService");
 		
-		IpReportListBean ipReportListBean;
-		public IpReportListBean getIpReportListBean() {
+		IpReportListBean ipReportListBean; // DMAP Comment : Dead Code Detected - The Following Field has no reference ipReportListBean
+		public IpReportListBean getIpReportListBean() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpReportListBean
 			return (IpReportListBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("ipReportListBean");
 		}
 		public void setIpReportListBean(IpReportListBean ipReportListBean) {
@@ -78,7 +78,7 @@ public class IpReportListAction  extends AbstractAction {
 		
 		
 		@Override
-		public boolean validate() {
+		public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 			// TODO Auto-generated method stub
 			return false;
 		}

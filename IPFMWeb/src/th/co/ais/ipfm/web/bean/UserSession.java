@@ -16,7 +16,7 @@ public class UserSession implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1416678821907119223L;
+	private static final long serialVersionUID = 1416678821907119223L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	private IpUser ipUser;
 	private String loginDateTime; 
 	private String newUser = "N";
@@ -30,40 +30,40 @@ public class UserSession implements Serializable{
 	private IpEmailNotify lastEmailNotify;
 	private IpUrAction lastUrActionNotify;
 	
-	public IpUser getIpUser() {
+	public IpUser getIpUser() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUser
 		return ipUser;
 	}
-	public void setIpUser(IpUser ipUser) {
+	public void setIpUser(IpUser ipUser) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUser
 		this.ipUser = ipUser;
 	}
-	public String getLoginDateTime() {
+	public String getLoginDateTime() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLoginDateTime
 		return loginDateTime;
 	}
-	public void setLoginDateTime(String loginDateTime) {
+	public void setLoginDateTime(String loginDateTime) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLoginDateTime
 		this.loginDateTime = loginDateTime;
 	}
-	public Map getObjUserMenu() {
+	public Map getObjUserMenu() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getObjUserMenu
 		return ObjUserMenu;
 	}
-	public void setObjUserMenu(Map objUserMenu) {
+	public void setObjUserMenu(Map objUserMenu) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setObjUserMenu
 		ObjUserMenu = objUserMenu;
 	}
-	public String getNewUser() {
+	public String getNewUser() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNewUser
 		return newUser;
 	}
-	public void setNewUser(String newUser) {
+	public void setNewUser(String newUser) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNewUser
 		this.newUser = newUser;
 	}
-	public String getNews() {
+	public String getNews() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNews
 		return news;
 	}
-	public void setNews(String news) {
+	public void setNews(String news) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNews
 		this.news = news;
 	}
-	public void setMaxReqIP4T2(int maxReqIP4T2) {
+	public void setMaxReqIP4T2(int maxReqIP4T2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMaxReqIP4T2
 		this.maxReqIP4T2 = maxReqIP4T2;
 	}
-	public void setMaxReqIP4T3(int maxReqIP4T3) {
+	public void setMaxReqIP4T3(int maxReqIP4T3) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMaxReqIP4T3
 		this.maxReqIP4T3 = maxReqIP4T3;
 	}
 	public Date getPlanningEffectiveDate() {
@@ -76,7 +76,7 @@ public class UserSession implements Serializable{
 		}
 		return effectiveDate;
 	}
-	public Date getPlanningExpireDate() {
+	public Date getPlanningExpireDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPlanningExpireDate
 		Date expireDate = new Date();
 		try {
 			expireDate = IPFMDataUtility.shiftMonthUp(getPlanningEffectiveDate(), maxReqIP4T2);
@@ -96,7 +96,7 @@ public class UserSession implements Serializable{
 		}
 		return effectiveDate;
 	}
-	public Date getUserReqExpireDate() {
+	public Date getUserReqExpireDate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUserReqExpireDate
 		Date expireDate = new Date();
 		try {
 			expireDate = IPFMDataUtility.shiftMonthUp(getUserReqEffectiveDate(), maxReqIP4T3);
@@ -106,34 +106,34 @@ public class UserSession implements Serializable{
 		}
 		return expireDate;
 	}
-	public boolean isRoleMonitor() {
+	public boolean isRoleMonitor() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isRoleMonitor
 		return roleMonitor;
 	}
-	public void setRoleMonitor(boolean roleMonitor) {
+	public void setRoleMonitor(boolean roleMonitor) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoleMonitor
 		this.roleMonitor = roleMonitor;
 	}
-	public IpEmailNotify getLastEmailNotify() {
+	public IpEmailNotify getLastEmailNotify() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastEmailNotify
 		return lastEmailNotify;
 	}
-	public void setLastEmailNotify(IpEmailNotify lastEmailNotify) {
+	public void setLastEmailNotify(IpEmailNotify lastEmailNotify) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastEmailNotify
 		this.lastEmailNotify = lastEmailNotify;
 	}
-	public IpUrAction getLastUrActionNotify() {
+	public IpUrAction getLastUrActionNotify() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getLastUrActionNotify
 		return lastUrActionNotify;
 	}
-	public void setLastUrActionNotify(IpUrAction lastUrActionNotify) {
+	public void setLastUrActionNotify(IpUrAction lastUrActionNotify) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLastUrActionNotify
 		this.lastUrActionNotify = lastUrActionNotify;
 	}
-	public String getNotifyProgramId() {
+	public String getNotifyProgramId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getNotifyProgramId
 		return notifyProgramId;
 	}
-	public void setNotifyProgramId(String notifyProgramId) {
+	public void setNotifyProgramId(String notifyProgramId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setNotifyProgramId
 		this.notifyProgramId = notifyProgramId;
 	}
-	public List<IpFunction> getMenuLevel1List() {
+	public List<IpFunction> getMenuLevel1List() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMenuLevel1List
 		return menuLevel1List;
 	}
-	public void setMenuLevel1List(List<IpFunction> menuLevel1List) {
+	public void setMenuLevel1List(List<IpFunction> menuLevel1List) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMenuLevel1List
 		this.menuLevel1List = menuLevel1List;
 	}
 }

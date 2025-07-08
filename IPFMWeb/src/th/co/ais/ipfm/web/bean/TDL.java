@@ -22,7 +22,7 @@ public class TDL implements TreeNode {
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = -3530085227471752526L;
+	private static final long serialVersionUID = -3530085227471752526L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 	protected Map tdlRoots = null;
 	protected Object state1;
 	protected Object state2;
@@ -43,7 +43,7 @@ public class TDL implements TreeNode {
 		return this.tdlRoots;
 	}
 
-	public void setTdlRoots(Map tdlRoots) {
+	public void setTdlRoots(Map tdlRoots) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTdlRoots
 		this.tdlRoots = tdlRoots;
 	}
 
@@ -56,7 +56,7 @@ public class TDL implements TreeNode {
 		child.setParent(this);
 	}
 
-	public TreeNode getChild(Object id) {
+	public TreeNode getChild(Object id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getChild
 		return (TreeNode) getTdlRoots().get(id);
 	}
 
@@ -64,30 +64,30 @@ public class TDL implements TreeNode {
 		return getTdlRoots().entrySet().iterator();
 	}
 
-	public Object getData() {
+	public Object getData() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getData
 		//initData();
 		return this;
 	}
 
-	public TreeNode getParent() {
+	public TreeNode getParent() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getParent
 		return null;
 	}
 
-	public boolean isLeaf() {
+	public boolean isLeaf() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isLeaf
 		return getTdlRoots().isEmpty();
 	}
 
-	public void removeChild(Object id) {
+	public void removeChild(Object id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference removeChild
 		getTdlRoots().remove(id);
 	}
 
-	public void setData(Object data) {
+	public void setData(Object data) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setData
 	}
 
 	public void setParent(TreeNode parent) {
 	}
 
-	public String getType() {
+	public String getType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getType
 		return "tdl";
 	}
 	
@@ -175,37 +175,37 @@ public class TDL implements TreeNode {
 		expandAll = true;
 	}
 	
-	public boolean isExpandAll() {
+	public boolean isExpandAll() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isExpandAll
 		return expandAll;
 	}
 
-	public void setExpandAll(boolean expandAll) {
+	public void setExpandAll(boolean expandAll) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setExpandAll
 		this.expandAll = expandAll;
 	}
 
 
 	protected boolean expandAll = false;
 
-	public Boolean nodeOpened(UITree tree) {
+	public Boolean nodeOpened(UITree tree) { // DMAP Comment : Dead Code Detected - The Following Method has no reference nodeOpened
 		 if (expandAll) {
 			 return Boolean.TRUE;
 		 }
 		 	return null;
 	}
 	
-	public Object getState1() {
+	public Object getState1() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getState1
 		return state1;
 	}
 	
-	public void setState1(Object state1) {
+	public void setState1(Object state1) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setState1
 		this.state1 = state1;
 	}
 	
-	public Object getState2() {
+	public Object getState2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getState2
 		return state2;
 	}
 	
-	public void setState2(Object state2) {
+	public void setState2(Object state2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setState2
 		this.state2 = state2;
 	}
 	
@@ -220,38 +220,38 @@ public class TDL implements TreeNode {
 		
 	}
 	
-	public ArrayList getTDLAsList(){
+	public ArrayList getTDLAsList(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference getTDLAsList
 		ArrayList appendTo = new ArrayList();
 		walk(this, appendTo, TDLStatus.class);
 		return appendTo;
 	}
 	
-	public List<TDLStatus> getTdlStatusList() {
+	public List<TDLStatus> getTdlStatusList() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTdlStatusList
 		return tdlStatusList;
 	}
 
-	public void setTdlStatusList(List<TDLStatus> tdlStatusList) {
+	public void setTdlStatusList(List<TDLStatus> tdlStatusList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTdlStatusList
 		this.tdlStatusList = tdlStatusList;
 	}
 
-	public void takeSelection() {
+	public void takeSelection() { // DMAP Comment : Dead Code Detected - The Following Method has no reference takeSelection
 		selectedTdlStatusList.clear();
 		selectedTdlStatusList.addAll(selectedTdlStatusSet);
 	}
 
-	public Set<TDLStatus> getSelectedTdlStatusSet() {
+	public Set<TDLStatus> getSelectedTdlStatusSet() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSelectedTdlStatusSet
 		return selectedTdlStatusSet;
 	}
 
-	public void setSelectedTdlStatusSet(Set<TDLStatus> selectedTdlStatusSet) {
+	public void setSelectedTdlStatusSet(Set<TDLStatus> selectedTdlStatusSet) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSelectedTdlStatusSet
 		this.selectedTdlStatusSet = selectedTdlStatusSet;
 	}
 
-	public List<TDLStatus> getSelectedTdlStatusList() {
+	public List<TDLStatus> getSelectedTdlStatusList() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSelectedTdlStatusList
 		return selectedTdlStatusList;
 	}
 
-	public void setSelectedTdlStatusList(List<TDLStatus> selectedTdlStatusList) {
+	public void setSelectedTdlStatusList(List<TDLStatus> selectedTdlStatusList) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSelectedTdlStatusList
 		this.selectedTdlStatusList = selectedTdlStatusList;
 	}
 	

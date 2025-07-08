@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public final class CharArrayBuffer implements Serializable {
 
-    private static final long serialVersionUID = -6208952725094867135L;
+    private static final long serialVersionUID = -6208952725094867135L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
     private char[] buffer;
     private int len;
@@ -204,7 +204,7 @@ public final class CharArrayBuffer implements Serializable {
     /**
      * Clears content of the buffer. The underlying char array is not resized.
      */
-    public void clear() {
+    public void clear() { // DMAP Comment : Dead Code Detected - The Following Method has no reference clear
         this.len = 0;
     }
 
@@ -213,7 +213,7 @@ public final class CharArrayBuffer implements Serializable {
      *
      * @return char array
      */
-    public char[] toCharArray() {
+    public char[] toCharArray() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toCharArray
         char[] b = new char[this.len];
         if (this.len > 0) {
             System.arraycopy(this.buffer, 0, b, 0, this.len);
@@ -231,7 +231,7 @@ public final class CharArrayBuffer implements Serializable {
      * @throws IndexOutOfBoundsException  if <code>index</code> is
      *             negative or greater than or equal to {@link #length()}.
      */
-    public char charAt(int i) {
+    public char charAt(int i) { // DMAP Comment : Dead Code Detected - The Following Method has no reference charAt
         return this.buffer[i];
     }
 
@@ -251,7 +251,7 @@ public final class CharArrayBuffer implements Serializable {
      *
      * @return the current capacity
      */
-    public int capacity() {
+    public int capacity() { // DMAP Comment : Dead Code Detected - The Following Method has no reference capacity
         return this.buffer.length;
     }
 
@@ -272,7 +272,7 @@ public final class CharArrayBuffer implements Serializable {
      *
      * @param   required   the minimum required capacity.
      */
-    public void ensureCapacity(int required) {
+    public void ensureCapacity(int required) { // DMAP Comment : Dead Code Detected - The Following Method has no reference ensureCapacity
         if (required <= 0) {
             return;
         }
@@ -292,7 +292,7 @@ public final class CharArrayBuffer implements Serializable {
      *               <code>len</code> argument is greater than the current
      *               capacity of the buffer or less than <code>0</code>.
      */
-    public void setLength(int len) {
+    public void setLength(int len) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLength
         if (len < 0 || len > this.buffer.length) {
             throw new IndexOutOfBoundsException("len: " + len + " < 0 or > buffer len: " + this.buffer.length);
         }
@@ -305,7 +305,7 @@ public final class CharArrayBuffer implements Serializable {
      * @return <code>true</code> if this buffer is empty, <code>false</code>
      *   otherwise.
      */
-    public boolean isEmpty() {
+    public boolean isEmpty() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isEmpty
         return this.len == 0;
     }
 
@@ -315,7 +315,7 @@ public final class CharArrayBuffer implements Serializable {
      * @return <code>true</code> if this buffer is full, <code>false</code>
      *   otherwise.
      */
-    public boolean isFull() {
+    public boolean isFull() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isFull
         return this.len == this.buffer.length;
     }
 
@@ -386,7 +386,7 @@ public final class CharArrayBuffer implements Serializable {
      *             buffer, or <code>beginIndex</code> is larger than
      *             <code>endIndex</code>.
      */
-    public String substring(int beginIndex, int endIndex) {
+    public String substring(int beginIndex, int endIndex) { // DMAP Comment : Dead Code Detected - The Following Method has no reference substring
         return new String(this.buffer, beginIndex, endIndex - beginIndex);
     }
 
@@ -406,7 +406,7 @@ public final class CharArrayBuffer implements Serializable {
      *             buffer, or <code>beginIndex</code> is larger than
      *             <code>endIndex</code>.
      */
-    public String substringTrimmed(int beginIndex, int endIndex) {
+    public String substringTrimmed(int beginIndex, int endIndex) { // DMAP Comment : Dead Code Detected - The Following Method has no reference substringTrimmed
         if (beginIndex < 0) {
             throw new IndexOutOfBoundsException("Negative beginIndex: " + beginIndex);
         }
@@ -426,7 +426,7 @@ public final class CharArrayBuffer implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return new String(this.buffer, 0, this.len);
     }
 

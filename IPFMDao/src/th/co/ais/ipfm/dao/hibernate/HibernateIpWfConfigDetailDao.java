@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v9.1.0.1_v8.4.2.9 on Date: 27-Jun-2025 */
 package th.co.ais.ipfm.dao.hibernate;
 
 import java.math.BigDecimal;
@@ -21,7 +22,7 @@ import th.co.ais.ipfm.domain1.IpWfConfigDetailId;
 public class HibernateIpWfConfigDetailDao  extends HibernateGenericDao<IpWfConfigDetail> implements IPUrWfConfigDetailDao{
 
 	@Override
-	public List<IpWfConfigDetail> getIpWfConfigDetailList(String urType) throws DataAccessException {
+	public List<IpWfConfigDetail> getIpWfConfigDetailList(String urType) throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpWfConfigDetailList
 		Session session = getSessionFactory().getCurrentSession();
 		List<IpWfConfigDetail> result = new ArrayList<IpWfConfigDetail>();
 	
@@ -29,6 +30,11 @@ public class HibernateIpWfConfigDetailDao  extends HibernateGenericDao<IpWfConfi
 		sql.append("Select NODE_ID, UR_TYPE, ROW_ID,NODE_DESC, OLA, EMAIL_STATUS, VERSION, CREATE_DATE, CREATE_BY, UPDATE_BY, UPDATE_DATE   FROM  IP_WF_CONFIG_DETAIL "); 
 		sql.append("WHERE  UR_TYPE ='"+urType+"' ");
 		sql.append("ORDER BY to_number(substr(NODE_ID,2)) ");
+/**
+DMAP TAG: Query converted Needs Manual Intervention : Identifier161
+DMAP ConvertedQuery - Select NODE_ID, UR_TYPE, ROW_ID, NODE_DESC, OLA, EMAIL_STATUS, VERSION, CREATE_DATE, CREATE_BY, UPDATE_BY, UPDATE_DATE FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE ='urType' ORDER BY (SUBSTRING(NODE_ID, 2))::numeric
+**/
+
 		List list = session.createSQLQuery(sql.toString()).addScalar("NODE_ID").addScalar("UR_TYPE").addScalar("ROW_ID")
 		.addScalar("NODE_DESC").addScalar("OLA").addScalar("EMAIL_STATUS").addScalar("VERSION").addScalar("CREATE_DATE").addScalar("CREATE_BY").addScalar("UPDATE_BY").addScalar("UPDATE_DATE").list();
 		Iterator iter = list.iterator();
@@ -54,9 +60,15 @@ public class HibernateIpWfConfigDetailDao  extends HibernateGenericDao<IpWfConfi
 	}
 	
 	@Override
-	public int  maxOla() throws DataAccessException {
+	public int  maxOla() throws DataAccessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference maxOla
 		Session session = getSessionFactory().getCurrentSession();
-		Integer  maxOla =  (Integer) session.createSQLQuery("SELECT MAX(OLA) AS maxOla  FROM IP_WF_CONFIG_DETAIL  WHERE UR_TYPE = 'NC' AND STEP >= 500 AND STEP <600")
+/**
+DMAP TAG: Query converted: Identifier160
+DMAP ConvertedQuery - SELECT MAX(CAST(OLA AS numeric)) AS maxOla FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE = 'NC' AND STEP >= 500 AND STEP <600
+**/
+
+//		Integer  maxOla =  (Integer) session.createSQLQuery("SELECT MAX(OLA) AS maxOla  FROM IP_WF_CONFIG_DETAIL  WHERE UR_TYPE = 'NC' AND STEP >= 500 AND STEP <600")
+		Integer  maxOla =  (Integer) session.createSQLQuery("SELECT MAX(CAST(OLA AS numeric)) AS maxOla FROM IP_WF_CONFIG_DETAIL WHERE UR_TYPE = 'NC' AND STEP >= 500 AND STEP <600")
 				.addScalar("maxOla", Hibernate.INTEGER).uniqueResult();
 		return maxOla;
 	}

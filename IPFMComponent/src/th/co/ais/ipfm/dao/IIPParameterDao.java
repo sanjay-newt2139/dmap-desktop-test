@@ -7,8 +7,8 @@ import org.springframework.dao.DataAccessException;
 import th.co.ais.ipfm.domain.IPParameter;
 
 public interface IIPParameterDao extends IGenericDao<IPParameter, Long> {
-	public static final String BOOLEAN_VALUE_TRUE = "T";
-	public static final String BOOLEAN_VALUE_FALSE = "F";
+	public static final String BOOLEAN_VALUE_TRUE = "T"; // DMAP Comment : Dead Code Detected - The Following Field has no reference BOOLEAN_VALUE_TRUE
+	public static final String BOOLEAN_VALUE_FALSE = "F"; // DMAP Comment : Dead Code Detected - The Following Field has no reference BOOLEAN_VALUE_FALSE
 	
 	public List<IPParameter> searchIPParameter(String parameterGroup, String parameterSubGroup) throws DataAccessException;
 	public List<String> getParameterGroupList() throws DataAccessException;

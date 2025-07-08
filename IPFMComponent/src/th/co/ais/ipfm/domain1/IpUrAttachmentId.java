@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import java.math.BigDecimal;
@@ -33,7 +33,7 @@ public class IpUrAttachmentId  implements java.io.Serializable , Cloneable {
         return this.urNo;
     }
     
-    public void setUrNo(String urNo) {
+    public void setUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNo
         this.urNo = urNo;
     }
 
@@ -42,7 +42,7 @@ public class IpUrAttachmentId  implements java.io.Serializable , Cloneable {
         return this.seq;
     }
     
-    public void setSeq(BigDecimal seq) {
+    public void setSeq(BigDecimal seq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSeq
         this.seq = seq;
     }
 
@@ -51,7 +51,7 @@ public class IpUrAttachmentId  implements java.io.Serializable , Cloneable {
         return this.category;
     }
     
-    public void setCategory(String category) {
+    public void setCategory(String category) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCategory
         this.category = category;
     }
 

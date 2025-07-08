@@ -35,27 +35,27 @@ public class Iprur001Result2PK implements Serializable {
         this.urType = urType;
     }
 
-    public String getReportId() {
+    public String getReportId() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getReportId
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setReportId
         this.reportId = reportId;
     }
 
-    public long getVersion() {
+    public long getVersion() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getVersion
         return version;
     }
 
-    public void setVersion(long version) {
+    public void setVersion(long version) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setVersion
         this.version = version;
     }
 
-    public String getUrType() {
+    public String getUrType() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrType
         return urType;
     }
 
-    public void setUrType(String urType) {
+    public void setUrType(String urType) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrType
         this.urType = urType;
     }
 
@@ -88,7 +88,7 @@ public class Iprur001Result2PK implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toString
         return "th.co.ais.ipfm.domain1.Iprur001Result2PK[reportId=" + reportId + ", version=" + version + ", urType=" + urType + "]";
     }
 

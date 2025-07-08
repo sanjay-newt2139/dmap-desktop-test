@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public final class ByteArrayBuffer implements Serializable {
 
-    private static final long serialVersionUID = 4359112959524048036L;
+    private static final long serialVersionUID = 4359112959524048036L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
     private byte[] buffer;
     private int len;
@@ -141,7 +141,7 @@ public final class ByteArrayBuffer implements Serializable {
     /**
      * Clears content of the buffer. The underlying byte array is not resized.
      */
-    public void clear() {
+    public void clear() { // DMAP Comment : Dead Code Detected - The Following Method has no reference clear
         this.len = 0;
     }
 
@@ -150,7 +150,7 @@ public final class ByteArrayBuffer implements Serializable {
      *
      * @return byte array
      */
-    public byte[] toByteArray() {
+    public byte[] toByteArray() { // DMAP Comment : Dead Code Detected - The Following Method has no reference toByteArray
         byte[] b = new byte[this.len];
         if (this.len > 0) {
             System.arraycopy(this.buffer, 0, b, 0, this.len);
@@ -168,7 +168,7 @@ public final class ByteArrayBuffer implements Serializable {
      * @throws IndexOutOfBoundsException  if <code>index</code> is
      *             negative or greater than or equal to {@link #length()}.
      */
-    public int byteAt(int i) {
+    public int byteAt(int i) { // DMAP Comment : Dead Code Detected - The Following Method has no reference byteAt
         return this.buffer[i];
     }
 
@@ -179,7 +179,7 @@ public final class ByteArrayBuffer implements Serializable {
      *
      * @return the current capacity
      */
-    public int capacity() {
+    public int capacity() { // DMAP Comment : Dead Code Detected - The Following Method has no reference capacity
         return this.buffer.length;
     }
 
@@ -202,7 +202,7 @@ public final class ByteArrayBuffer implements Serializable {
      *
      * @since 4.1
      */
-    public void ensureCapacity(int required) {
+    public void ensureCapacity(int required) { // DMAP Comment : Dead Code Detected - The Following Method has no reference ensureCapacity
         if (required <= 0) {
             return;
         }
@@ -231,7 +231,7 @@ public final class ByteArrayBuffer implements Serializable {
      *               <code>len</code> argument is greater than the current
      *               capacity of the buffer or less than <code>0</code>.
      */
-    public void setLength(int len) {
+    public void setLength(int len) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLength
         if (len < 0 || len > this.buffer.length) {
             throw new IndexOutOfBoundsException("len: " + len + " < 0 or > buffer len: " + this.buffer.length);
         }
@@ -244,7 +244,7 @@ public final class ByteArrayBuffer implements Serializable {
      * @return <code>true</code> if this buffer is empty, <code>false</code>
      *   otherwise.
      */
-    public boolean isEmpty() {
+    public boolean isEmpty() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isEmpty
         return this.len == 0;
     }
 
@@ -254,7 +254,7 @@ public final class ByteArrayBuffer implements Serializable {
      * @return <code>true</code> if this buffer is full, <code>false</code>
      *   otherwise.
      */
-    public boolean isFull() {
+    public boolean isFull() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isFull
         return this.len == this.buffer.length;
     }
 

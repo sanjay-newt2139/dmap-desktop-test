@@ -90,8 +90,8 @@ import th.co.ais.ipfm.web.validate.NetworkConfigValidate;
 public class ReqNWConfigAction extends AbstractAction {
 
 	private String urNoSearch;
-	private List<SelectItem> jobStatus;
-	public ReqNWConfigBean networkConfigBean;
+	private List<SelectItem> jobStatus; // DMAP Comment : Dead Code Detected - The Following Field has no reference jobStatus
+	public ReqNWConfigBean networkConfigBean; // DMAP Comment : Dead Code Detected - The Following Field has no reference networkConfigBean
 	private boolean hasError = false;
 	private String msgError = "";
 	
@@ -718,7 +718,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(reqNetworkBean);
 	}
 
-	public static void setRequestParameter(String name, String value) {
+	public static void setRequestParameter(String name, String value) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRequestParameter
 		FacesContext.getCurrentInstance().getExternalContext()
 				.getRequestParameterMap().put(name, value);
 	}
@@ -864,7 +864,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return flgValid;
 	}
 
-	public String saveDraft() throws Exception {
+	public String saveDraft() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveDraft
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil
@@ -978,7 +978,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return "";
 	}
 
-	public void addConfigNetwork(ActionEvent event) {
+	public void addConfigNetwork(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference addConfigNetwork
 		String reqType = getRequestParameter("reqType");
 		if (reqType.equals("FW")) {
 			new NWConfigFirewallAction().addFirewall(event);
@@ -997,7 +997,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 	}
 	
-	public void editConfigNetwork(ActionEvent event) {
+	public void editConfigNetwork(ActionEvent event) { // DMAP Comment : Dead Code Detected - The Following Method has no reference editConfigNetwork
 		String reqType = getRequestParameter("reqType");
 		if (reqType.equals("FW")) {
 			new NWConfigFirewallAction().editFirewall(event);
@@ -1017,7 +1017,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	}	
 
 	// deleteUR
-	public void deleteSubUr() {
+	public void deleteSubUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteSubUr
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		// String reqType = bean.getCurrentTab();
 		String urNo = bean.getDeleteUrNo();
@@ -1040,7 +1040,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 	}
 
-	public void deleteSomeSelectUr() {
+	public void deleteSomeSelectUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteSomeSelectUr
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String subUrNo = bean.getCurrentTab();		
 		if (subUrNo.startsWith("FW")) {
@@ -1112,7 +1112,7 @@ public class ReqNWConfigAction extends AbstractAction {
 //		}
 
 	
-	public void confirmDeleteSubUr() {
+	public void confirmDeleteSubUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference confirmDeleteSubUr
 	  try{
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String urNo = getRequestParameter("urNo");
@@ -1126,7 +1126,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	  }
 	}
 
-	public IpUrNwConfig saveURNWConfig(IPUrNwConfigService service,
+	public IpUrNwConfig saveURNWConfig(IPUrNwConfigService service, // DMAP Comment : Dead Code Detected - The Following Method has no reference saveURNWConfig
 			ReqNWConfigBean bean, IpUser user) throws Exception {
 
 		IpUrStatus subUrStatus = service.getSubUrStatus("NC", "WAIT_MRG");
@@ -1411,15 +1411,15 @@ public class ReqNWConfigAction extends AbstractAction {
 		return listObj;
 	}
 
-	public String getUrNoSearch() {
+	public String getUrNoSearch() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrNoSearch
 		return urNoSearch;
 	}
 
-	public void setUrNoSearch(String urNoSearch) {
+	public void setUrNoSearch(String urNoSearch) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setUrNoSearch
 		this.urNoSearch = urNoSearch;
 	}
 
-	public void managerApprove() {
+	public void managerApprove() { // DMAP Comment : Dead Code Detected - The Following Method has no reference managerApprove
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
@@ -1475,7 +1475,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 
-	public void managerReject() {
+	public void managerReject() { // DMAP Comment : Dead Code Detected - The Following Method has no reference managerReject
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
@@ -1627,7 +1627,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void sendEmailOwnerApprove(ReqNWConfigBean bean, EmailDetail email)throws Exception {
+	public void sendEmailOwnerApprove(ReqNWConfigBean bean, EmailDetail email)throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference sendEmailOwnerApprove
 		
 		EMailService emailService = (EMailService) JSFServiceFinderUtil.getInstance().getBean("emailService");
 		IPUserService userService = (IPUserService) JSFServiceFinderUtil.getInstance().getBean("ipUserService");
@@ -1967,7 +1967,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	 * @throws Exception
 	 */
 	@SuppressWarnings({ "unchecked", "unused" })
-	public void ownerApprove() throws Exception {
+	public void ownerApprove() throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference ownerApprove
 		System.out.println("Validate Owner State");
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -2588,7 +2588,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	
 	
 	
-	public String showDelegatePM() {
+	public String showDelegatePM() { // DMAP Comment : Dead Code Detected - The Following Method has no reference showDelegatePM
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil
 				.getInstance().getBean("ipUrNwConfigService");
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -2724,7 +2724,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	}
 
 
-	public String delegatePM() {
+	public String delegatePM() { // DMAP Comment : Dead Code Detected - The Following Method has no reference delegatePM
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil
 				.getInstance().getBean("ipUrNwConfigService");
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -2753,7 +2753,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return null;
 	}
 	
-	public void showRejectWin() {
+	public void showRejectWin() { // DMAP Comment : Dead Code Detected - The Following Method has no reference showRejectWin
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil
 				.getInstance().getBean("ipUrNwConfigService");
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -2825,7 +2825,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	}
 	
 	
-	public String rejectPM() {
+	public String rejectPM() { // DMAP Comment : Dead Code Detected - The Following Method has no reference rejectPM
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		
@@ -2930,7 +2930,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	}
 
 	
-	public void setMessageError() {
+	public void setMessageError() { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMessageError
 		String errNo = getRequestParameter("errNo");
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		bean.setErrorFlag(true);
@@ -2938,7 +2938,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 
-	public void selectAssignType(ActionEvent action) {
+	public void selectAssignType(ActionEvent action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference selectAssignType
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil
 				.getInstance().getBean("ipUrNwConfigService");
 		ReqNWConfigBean bean = getNetworkConfigBean();
@@ -3013,7 +3013,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 
-	public void addAssignPerson(ActionEvent action) {
+	public void addAssignPerson(ActionEvent action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference addAssignPerson
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil
 				.getInstance().getBean("ipUrNwConfigService");
@@ -3038,7 +3038,7 @@ public class ReqNWConfigAction extends AbstractAction {
 
 	}
 	
-	public void addDelegatePerson(ActionEvent action) {
+	public void addDelegatePerson(ActionEvent action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference addDelegatePerson
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
@@ -3147,7 +3147,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 	}
 
-	public String pmAssignment() {
+	public String pmAssignment() { // DMAP Comment : Dead Code Detected - The Following Method has no reference pmAssignment
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		IPUserService userService = (IPUserService) JSFServiceFinderUtil.getInstance().getBean("ipUserService");
@@ -3404,7 +3404,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return null;
 	}
 
-	public String navigateHomepage(){
+	public String navigateHomepage(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference navigateHomepage
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		if ((bean.getListFirewall()==null || bean.getListFirewall().size()==0)
 				&& (bean.getListAccessList()==null || bean.getListAccessList().size() == 0)
@@ -3531,7 +3531,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return result;
 	}
 
-	public void showAssignWin() {
+	public void showAssignWin() { // DMAP Comment : Dead Code Detected - The Following Method has no reference showAssignWin
 		System.out.println("Show Assign window");
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		ReqNWConfigBean bean = getNetworkConfigBean();
@@ -3651,7 +3651,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return source;
 	}
 
-	public void findAssignDateil() {
+	public void findAssignDateil() { // DMAP Comment : Dead Code Detected - The Following Method has no reference findAssignDateil
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
 
@@ -3683,7 +3683,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 
-	public List<SelectItem> getJobStatus() {
+	public List<SelectItem> getJobStatus() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getJobStatus
 		List<SelectItem> listResult = new ArrayList<SelectItem>();
 		IPFMRichComboItem cbitem1 = new IPFMRichComboItem();
 		cbitem1.setLabel("Completed");
@@ -3698,7 +3698,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return listResult;
 	}
 
-	public String forceComplete() {
+	public String forceComplete() { // DMAP Comment : Dead Code Detected - The Following Method has no reference forceComplete
 		try{
 			String urNo = getRequestParameter("urNo");
 			String subUrNo = getRequestParameter("subUrNo");
@@ -3760,7 +3760,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 		return null;
 	}
-	public void deleteSelectedSubUr() {
+	public void deleteSelectedSubUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteSelectedSubUr
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String urType = bean.getCurrentTab();
 		if (urType.equals("FW")) {
@@ -3966,7 +3966,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 
-	public void getSelectedSubUR() {
+	public void getSelectedSubUR() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSelectedSubUR
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String urNo = getRequestParameter("urNo");
 		String subUrNo = getRequestParameter("subUrNo");
@@ -4058,7 +4058,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 
-	public void setImpactUR() {
+	public void setImpactUR() { // DMAP Comment : Dead Code Detected - The Following Method has no reference setImpactUR
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		String selectImpact =	getRequestParameter("selectImpact");
@@ -4388,7 +4388,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 	}
 
-	public String cancelUr() {
+	public String cancelUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference cancelUr
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		cleanSubUr(bean.getUrNo());
 		return "homePage";
@@ -4407,7 +4407,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		return "homePage";
 	}
 
-	public void deleteUr() {
+	public void deleteUr() { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteUr
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
@@ -4517,7 +4517,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 	
-	public boolean isHasError() {
+	public boolean isHasError() { // DMAP Comment : Dead Code Detected - The Following Method has no reference isHasError
 		return hasError;
 	}
 
@@ -4525,7 +4525,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		this.hasError = hasError;
 	}
 
-	public String getMsgError() {
+	public String getMsgError() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMsgError
 		return msgError;
 	}
 	
@@ -4699,36 +4699,36 @@ public class ReqNWConfigAction extends AbstractAction {
 			
 	 }
 	
-	public void alertErrorMsg(ActionEvent event){
+	public void alertErrorMsg(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference alertErrorMsg
 		String errorMessage = getRequestParameter("errorMessage");
 		IPFMMessageUtils.addMessageError(errorMessage);
 	}
 	
-	public void checkNetworkTypeCombo(){
+	public void checkNetworkTypeCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkNetworkTypeCombo
 		 ReqNWConfigBean bean = getNetworkConfigBean();
             if((bean.getGateway().getNetworkType().getValue()==null) && bean.getGateway().getNetworkType().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Network Type"));
 			}
 	}
-	public void checkIntfNodeTypeCombo(){
+	public void checkIntfNodeTypeCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIntfNodeTypeCombo
 		 ReqNWConfigBean bean = getNetworkConfigBean();
            if((bean.getPhyInterface().getIntfNodeType().getValue()==null) && bean.getPhyInterface().getIntfNodeType().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Interface Node Type"));
 			}
 	}
-	public void checkPortStatus(){
+	public void checkPortStatus(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkPortStatus
 		 ReqNWConfigBean bean = getNetworkConfigBean();
           if((bean.getPhyInterface().getPortStatus().getValue()==null) && bean.getPhyInterface().getPortStatus().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Status"));
 			}
 	}
-	public void checkSpeedPort(){
+	public void checkSpeedPort(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkSpeedPort
 		 ReqNWConfigBean bean = getNetworkConfigBean();
          if((bean.getPhyInterface().getSpeedPort().getValue()==null) && bean.getPhyInterface().getSpeedPort().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Speed Port"));
 			}
 	}
-	public void checkNetworkLocationCombo(){
+	public void checkNetworkLocationCombo(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkNetworkLocationCombo
 		 ReqNWConfigBean bean = getNetworkConfigBean();
         if((bean.getPhyInterface().getSpeedPort().getValue()==null) && bean.getPhyInterface().getSpeedPort().getLabel().trim().length()>0){
 				IPFMMessageUtils.addMessageError(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0095"), "Network Location"));
@@ -4745,7 +4745,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	    return getParentDatatable(compo.getParent());
 	}
 	
-	public void selectRadio(ActionEvent evt){
+	public void selectRadio(ActionEvent evt){ // DMAP Comment : Dead Code Detected - The Following Method has no reference selectRadio
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String currentTab = getRequestParameter("currentTab");
 		String type = getRequestParameter("type");
@@ -5029,7 +5029,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 	}
 	
-	public void checkSelectAll(ActionEvent evt){
+	public void checkSelectAll(ActionEvent evt){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkSelectAll
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String currentTab = getRequestParameter("currentTab");
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean) JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
@@ -5166,7 +5166,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		}
 	}
 
-	public void selectAll(ActionEvent evt){
+	public void selectAll(ActionEvent evt){ // DMAP Comment : Dead Code Detected - The Following Method has no reference selectAll
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		String currentTab = getRequestParameter("currentTab");
 		IPFMConfigBean ipfmConfigBean = (IPFMConfigBean) JSFServiceFinderUtil.getInstance().getBean("ipfmConfigBean");
@@ -5574,7 +5574,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	
 	
 	
-	public void showDelegateWin2() {
+	public void showDelegateWin2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference showDelegateWin2
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
@@ -5658,7 +5658,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	
 	
 	
-	public void showDelegateWin() {
+	public void showDelegateWin() { // DMAP Comment : Dead Code Detected - The Following Method has no reference showDelegateWin
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
@@ -5703,7 +5703,7 @@ public class ReqNWConfigAction extends AbstractAction {
 		setNetworkConfigBean(bean);
 	}
 	
-	public void selectDelegateType(ActionEvent action) {
+	public void selectDelegateType(ActionEvent action) { // DMAP Comment : Dead Code Detected - The Following Method has no reference selectDelegateType
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		ReqNWConfigBean bean = getNetworkConfigBean();
 		UserSession userSession = IPFMWebUtil.getUserSession();
@@ -5748,7 +5748,7 @@ public class ReqNWConfigAction extends AbstractAction {
 	}
 	
 	
-	public String delegatePMNew() {
+	public String delegatePMNew() { // DMAP Comment : Dead Code Detected - The Following Method has no reference delegatePMNew
 		IPUrNwConfigService nwConfigService = (IPUrNwConfigService) JSFServiceFinderUtil.getInstance().getBean("ipUrNwConfigService");
 		UserSession userSession = IPFMWebUtil.getUserSession();
 		ReqNWConfigBean bean = getNetworkConfigBean();

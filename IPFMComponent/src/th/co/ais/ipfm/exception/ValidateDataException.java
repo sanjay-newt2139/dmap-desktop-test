@@ -6,7 +6,7 @@ public class ValidateDataException extends RemoteException {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7487494290994350651L;
+	private static final long serialVersionUID = 7487494290994350651L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
 
 	public ValidateDataException(String message) {
 		super(message);

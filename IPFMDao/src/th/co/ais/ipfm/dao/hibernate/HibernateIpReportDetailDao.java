@@ -9,7 +9,7 @@ import org.springframework.dao.DataAccessException;
 
 import th.co.ais.ipfm.dao.IPReportDetailDao;
 import th.co.ais.ipfm.domain1.IpReportDetail;
-public class HibernateIpReportDetailDao extends HibernateGenericDao<IpReportDetail> implements IPReportDetailDao {
+public class HibernateIpReportDetailDao extends HibernateGenericDao<IpReportDetail> implements IPReportDetailDao { // DMAP Comment : Dead Code Detected - The Following Class has no reference HibernateIpReportDetailDao
 
 //	@Override
 //	public IpReportDetail addIpReportDetail(IpReportDetail ipReportDetail)

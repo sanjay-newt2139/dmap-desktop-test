@@ -16,7 +16,7 @@ import th.co.ais.ipfm.web.bean.IPFMConfigBean;
  * Servlet implementation class ExportDownload
  */
 public class ExportDownload extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // DMAP Comment : Dead Code Detected - The Following Field has no reference serialVersionUID
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -29,7 +29,7 @@ public class ExportDownload extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { // DMAP Comment : Dead Code Detected - The Following Method has no reference doGet
 		doPost(request, response);
 	}
 

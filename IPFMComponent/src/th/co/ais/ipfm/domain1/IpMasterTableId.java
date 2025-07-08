@@ -1,5 +1,5 @@
 package th.co.ais.ipfm.domain1;
-// Generated 27 Ê.¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
+// Generated 27 ÃŠ.Â¤. 2553, 17:13:55 by Hibernate Tools 3.2.1.GA
 
 
 import javax.persistence.Column;
@@ -29,7 +29,7 @@ public class IpMasterTableId  implements java.io.Serializable {
         return this.refTable;
     }
     
-    public void setRefTable(String refTable) {
+    public void setRefTable(String refTable) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRefTable
         this.refTable = refTable;
     }
 
@@ -38,7 +38,7 @@ public class IpMasterTableId  implements java.io.Serializable {
         return this.refKey;
     }
     
-    public void setRefKey(String refKey) {
+    public void setRefKey(String refKey) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRefKey
         this.refKey = refKey;
     }
 

@@ -25,13 +25,13 @@ public class AttachFileAFAction {
 		setConfirmMsg(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("CF0001")));
 	}
 
-	public void refresh(){
+	public void refresh(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference refresh
 		String urNo = getRequestParameter("urNo");
 		IpUrAttachmentService attachmentService = (IpUrAttachmentService)JSFServiceFinderUtil.getInstance().getBean("ipUrAttachmentService");
 		setListAttach(attachmentService.listFilesByUrNo(urNo));
 	}
 	
-	public void refreshByCategory(){
+	public void refreshByCategory(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference refreshByCategory
 		String urNo = getRequestParameter("urNo");
 		String category = getRequestParameter("category");
 		IpUrAttachmentService attachmentService = (IpUrAttachmentService)JSFServiceFinderUtil.getInstance().getBean("ipUrAttachmentService");
@@ -56,7 +56,7 @@ public class AttachFileAFAction {
 		setListAttach(attachmentService.listFilesByUrNo(urNo));
 	}
 	
-	public void deleteByCategory(){
+	public void deleteByCategory(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteByCategory
 		String urNo = getRequestParameter("urNo");
 		String seq = getRequestParameter("seqNo");
 		String category = getRequestParameter("category");
@@ -80,7 +80,7 @@ public class AttachFileAFAction {
 		setListAttach(attachmentService.listFilesByCategory(urNo,category));
 	}
 	
-	public String getErrorMsg() {
+	public String getErrorMsg() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getErrorMsg
 		//return IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0033"));
 		return this.errorMsg;
 	}
@@ -95,7 +95,7 @@ public class AttachFileAFAction {
             .getRequestParameterMap().get(name);
     }
 
-	public List<IpUrAttachment> getListAttach() {
+	public List<IpUrAttachment> getListAttach() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getListAttach
 		return listAttach;
 	}
 
@@ -103,15 +103,15 @@ public class AttachFileAFAction {
 		this.listAttach = listAttach;
 	}
 
-	public String getConfirmMsg() {
+	public String getConfirmMsg() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getConfirmMsg
 		return this.confirmMsg;
 	}
 
-	public void setConfirmMsg(String confirmMsg) {
+	public void setConfirmMsg(String confirmMsg) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setConfirmMsg
 		this.confirmMsg = confirmMsg;
 	}
 	
-	public Boolean getErrorFlag() {
+	public Boolean getErrorFlag() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getErrorFlag
 		return errorFlag;
 	}
 
@@ -119,7 +119,7 @@ public class AttachFileAFAction {
 		this.errorFlag = errorFlag;
 	}
 
-	public void setMessageError(){
+	public void setMessageError(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setMessageError
 		String errNo = getRequestParameter("errNo");
 		setErrorFlag(true);
 		setErrorMsg(IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage(errNo)));

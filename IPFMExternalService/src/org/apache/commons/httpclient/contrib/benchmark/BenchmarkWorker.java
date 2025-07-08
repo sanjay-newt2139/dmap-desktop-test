@@ -57,7 +57,7 @@ public class BenchmarkWorker {
         this.verbosity = verbosity;
     }
     
-    public Stats execute(
+    public Stats execute( // DMAP Comment : Dead Code Detected - The Following Method has no reference execute
             final HostConfiguration hostconf,
             final HttpMethod method, 
             int count,

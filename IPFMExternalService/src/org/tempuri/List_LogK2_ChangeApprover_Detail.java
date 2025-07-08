@@ -42,7 +42,7 @@ public class List_LogK2_ChangeApprover_Detail  implements java.io.Serializable {
      * 
      * @param log_Date
      */
-    public void setLog_Date(java.lang.String log_Date) {
+    public void setLog_Date(java.lang.String log_Date) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLog_Date
         this.log_Date = log_Date;
     }
 
@@ -62,7 +62,7 @@ public class List_LogK2_ChangeApprover_Detail  implements java.io.Serializable {
      * 
      * @param type
      */
-    public void setType(java.lang.String type) {
+    public void setType(java.lang.String type) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setType
         this.type = type;
     }
 
@@ -82,7 +82,7 @@ public class List_LogK2_ChangeApprover_Detail  implements java.io.Serializable {
      * 
      * @param status
      */
-    public void setStatus(java.lang.String status) {
+    public void setStatus(java.lang.String status) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setStatus
         this.status = status;
     }
 
@@ -163,14 +163,14 @@ public class List_LogK2_ChangeApprover_Detail  implements java.io.Serializable {
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getTypeDesc
         return typeDesc;
     }
 
     /**
      * Get Custom Serializer
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
+    public static org.apache.axis.encoding.Serializer getSerializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getSerializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
@@ -182,7 +182,7 @@ public class List_LogK2_ChangeApprover_Detail  implements java.io.Serializable {
     /**
      * Get Custom Deserializer
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
+    public static org.apache.axis.encoding.Deserializer getDeserializer( // DMAP Comment : Dead Code Detected - The Following Method has no reference getDeserializer
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {

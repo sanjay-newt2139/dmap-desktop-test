@@ -11,7 +11,7 @@ public class EHRDataUtil {
 	//	jxpContext = JXPath
 	}
 	
-	public static EHRDataUtil getInstance(EHRDataContainer ehrContainer) {
+	public static EHRDataUtil getInstance(EHRDataContainer ehrContainer) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getInstance
 		if(ehrDataUtil == null) {
 			ehrDataUtil = new EHRDataUtil();
 		}
@@ -23,11 +23,11 @@ public class EHRDataUtil {
 		return ehrDataUtil;
 	}
 
-	protected static EHRDataUtil getEhrDataUtil() {
+	protected static EHRDataUtil getEhrDataUtil() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEhrDataUtil
 		return ehrDataUtil;
 	}
 
-	protected static void setEhrDataUtil(EHRDataUtil ehrDataUtil) {
+	protected static void setEhrDataUtil(EHRDataUtil ehrDataUtil) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEhrDataUtil
 		EHRDataUtil.ehrDataUtil = ehrDataUtil;
 	}
 	

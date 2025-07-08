@@ -13,7 +13,7 @@ import th.co.ais.ipfm.web.manage.bean.WFUserBean;
 
 public class WFUserAction  extends AbstractAction {
 	
-	public WFUserBean wfUserBean;
+	public WFUserBean wfUserBean; // DMAP Comment : Dead Code Detected - The Following Field has no reference wfUserBean
 
 	public WFUserBean getWfUserBean() {
 		return (WFUserBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("wfUserBean");
@@ -42,12 +42,12 @@ public class WFUserAction  extends AbstractAction {
 	}
 	
 	@Override
-	public boolean validate() {
+	public boolean validate() { // DMAP Comment : Dead Code Detected - The Following Method has no reference validate
 		// TODO Auto-generated method stub
 		return false;
 	}
 	
-	public void showUser(ActionEvent event){
+	public void showUser(ActionEvent event){ // DMAP Comment : Dead Code Detected - The Following Method has no reference showUser
 		WFUserBean bean = getWfUserBean();
 		List<TempTable> temp = new ArrayList<TempTable>();
 		temp.add(new TempTable("1","Boongkiat Ngouvisikul","DP-CSS","","Engineer Specialist"));

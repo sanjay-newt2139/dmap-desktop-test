@@ -48,11 +48,11 @@ public class WebDBConfigServiceSoapProxy implements org.tempuri.WebDBConfigServi
 	    catch (javax.xml.rpc.ServiceException serviceException) {}
 	  }
   
-  public String getEndpoint() {
+  public String getEndpoint() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEndpoint
     return _endpoint;
   }
   
-  public void setEndpoint(String endpoint) {
+  public void setEndpoint(String endpoint) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEndpoint
     _endpoint = endpoint;
     if (webDBConfigServiceSoap != null)
       ((javax.xml.rpc.Stub)webDBConfigServiceSoap)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
