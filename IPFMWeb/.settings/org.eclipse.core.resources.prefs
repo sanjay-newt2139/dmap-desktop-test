@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebContent/errorBrowser.jsp=UTF-8
+encoding//WebContent/js/attach_file.js=UTF-8
+encoding//src/th/co/ais/ipfm/web/action/InboxAction.java=UTF-8
+encoding//src/th/co/ais/ipfm/web/bean/InboxBean.java=UTF-8
+encoding//src/th/co/ais/ipfm/web/manage/action/HistoryNwConfigAction.java=UTF-8
+encoding//src/th/co/ais/ipfm/web/manage/action/IpLevel3Action.java=UTF-8
+encoding//src/th/co/ais/ipfm/web/manage/action/PlanningReqIPAction.java=UTF-8
+encoding/<project>=UTF-8

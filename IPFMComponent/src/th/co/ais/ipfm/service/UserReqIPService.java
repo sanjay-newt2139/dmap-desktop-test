@@ -1,0 +1,65 @@
+package th.co.ais.ipfm.service;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
+
+import th.co.ais.ipfm.domain1.IpInfo;
+import th.co.ais.ipfm.domain1.IpLevel1;
+import th.co.ais.ipfm.domain1.IpLevel2;
+import th.co.ais.ipfm.domain1.IpMaskDisplay;
+import th.co.ais.ipfm.domain1.IpMasterTable;
+import th.co.ais.ipfm.domain1.IpTeam;
+import th.co.ais.ipfm.domain1.IpUrAction;
+import th.co.ais.ipfm.domain1.IpUrActionHistory;
+import th.co.ais.ipfm.domain1.IpUrAttachment;
+import th.co.ais.ipfm.domain1.IpUrIpDetail;
+import th.co.ais.ipfm.domain1.IpUrIpResult;
+import th.co.ais.ipfm.domain1.IpUser;
+import th.co.ais.ipfm.exception.IPFMBusinessException;
+
+public interface UserReqIPService {
+	public IpUrIpDetail createDraft(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException;
+	public IpUrIpDetail updateDraft(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException;
+	public IpUrIpDetail createSendForApprove(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException;
+	public IpUrIpDetail updateSendForApprove(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException;
+	public IpUrIpDetail deleteUR(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException;
+	public IpUrIpDetail getIpUrIpDetail(String URNo) throws IPFMBusinessException;
+	public List<IpUser> getSystemOwnerList() throws IPFMBusinessException;
+	public List<IpTeam> getSystemOwnerTeamList() throws IPFMBusinessException;
+	public String getURNo() throws IPFMBusinessException;
+	public String getTempURNo() throws IPFMBusinessException;
+	public List<IpMasterTable> getMaster_activeStatus_List(String refTable) throws IPFMBusinessException;
+	public List<IpUrActionHistory> getHistoryList(String urNo) throws IPFMBusinessException;
+	public List<IpUrAction> getURActionList(String urNo) throws IPFMBusinessException;
+	public String getUrStatusDesc(String urType,String urStatus) throws IPFMBusinessException;
+	public IpUrIpDetail approveUR(IpUrIpDetail ipUrIpdetail, String actionType) throws IPFMBusinessException;
+	public IpUrIpDetail rejectUR(IpUrIpDetail ipUrIpdetail, String actionType) throws IPFMBusinessException;
+	public IpUrIpDetail rejectURAssignIP(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException;
+	public IpUrIpDetail assignIP(IpUrIpDetail ipUrIpdetail, List<IpUrIpResult> ipUrIpResultList, String actionType, String userId) throws IPFMBusinessException;
+	public List<IpUrAttachment> getIpUrAttachmentList(String urNo, String category) throws IPFMBusinessException;
+	public List<IpUrIpResult> getIpUrIpResultList(String urNo) throws IPFMBusinessException;
+	public String reCheck_ip_range23(IpUrIpResult ipUrIpResult) throws IPFMBusinessException;
+	public String getLevel2_ID() throws IPFMBusinessException;
+	public IpUrIpResult checkIPRange23(IpUrIpResult ipUrIpResult) throws IPFMBusinessException;
+	public IpUrIpResult checkIPRange23_2(IpUrIpResult ipUrIpResult) throws IPFMBusinessException;
+	public IpUrIpResult checkIPRange23_3(IpUrIpResult ipUrIpResult) throws IPFMBusinessException;
+	public String checkDuplicateIP(String binSt, String binEd, String option) throws IPFMBusinessException;
+	public String getOlaDate(Date reqDate, String urType, String nodeId) throws IPFMBusinessException;
+	public String getSlaDate(Date reqDate, String urType, String pm) throws IPFMBusinessException;
+	public String isOverSla(String urNo) throws IPFMBusinessException;
+	public IpUrAction getIpUrAction(String urNo, String subUrNo) throws IPFMBusinessException;
+	public IpMaskDisplay findIpMaskDisplayByMask(String mask)throws IPFMBusinessException;
+	public IpInfo checkIPRange23SearchL1(IpInfo ipInfo) throws IPFMBusinessException;
+	public IpInfo checkStatusDataIpInfo(String ipDigit1, String ipDigit2, String ipDigit3, String ipDigit4) throws IPFMBusinessException;
+	public BigDecimal checkIpInfoAvailable(IpInfo ipInfo) throws IPFMBusinessException;
+	public List<IpInfo> getIpInfoAssignIp(String binary2Start, String binary2End) throws IPFMBusinessException;
+	public List<IpInfo> searchIpInfo(String ipAddress) throws IPFMBusinessException;
+	public IpUrIpResult checkIPRange(IpUrIpResult ipUrIpResult) throws IPFMBusinessException;
+	public IpUser checkNewUser(String userId) throws IPFMBusinessException;
+	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException;
+	public IpLevel2 findIpLevel2ByLevel2Id(String level2Id) throws IPFMBusinessException;
+	//public List<IpLevel1> searchIpLevel1ByBinIpAndTeam(String binaryIp, String team2Id) throws IPFMBusinessException;
+	public List<IpLevel1> searchByIpWithMark(String ip1, String ip2, String ip3, String ip4, String mark, String team2Id) throws IPFMBusinessException;
+	public List<IpLevel1> searchIpLevel1ByBinIpAndTeam(String ip1, String ip2, String ip3, String ip4,int mask, String team2Id) throws IPFMBusinessException;
+}

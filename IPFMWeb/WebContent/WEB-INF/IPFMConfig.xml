@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+		
+	<!--  IPFMConfig File-->
+	<bean id="ipfmConfigBean" class="th.co.ais.ipfm.web.bean.IPFMConfigBean" scope="session">
+<!--	<property name="homeUrl" value="http://10.239.109.63:8080/IPFMWeb" />-->
+	<!--	 <property name="homeUrl" value="http://10.208.152.22:8780/IPFMWeb" /> -->
+		<property name="homeUrl" value="http://ipfm.ais.co.th/IPFMWeb" />
+<!--		<property name="homeUrl" value="http://172.16.34.222:8080/IPFMWeb" />-->
+		<!-- Prod  -->
+<!-- 		<property name="homeUrl" value="http://10.217.243.195:8080/IPFMWeb" /> -->
+		<!-- DEV  -->
+<!-- 		  <property name="homeUrl" value="http://10.104.240.16:8180/IPFMWeb" /> -->
+		<!-- STG  -->
+<!--		<property name="homeUrl" value="http://10.104.244.157:8080/IPFMWeb" />-->
+<!-- PC  -->
+<!-- 		  <property name="homeUrl" value="http://172.16.34.121:8080/IPFMWeb" /> -->
+		
+		<property name="rowPerPage" value="20" />
+		<property name="maxPage" value="5" />
+		<property name="maxSearchResult" value="1000" />
+		<property name="fastStepPage" value="5" />
+		<property name="suggestSize" value="20" />
+		
+<!-- 		<property name="attachPath" value="D:/data/ipfm/attachment" /> -->
+<!-- 		<property name="webCounterPath" value="D:/data/ipfm/counter" /> -->
+<!-- 		<property name="webCounterFile" value="IPFMCounter.txt" /> -->
+<!-- 		<property name="ipfmUserManualPath" value="D:/data/ipfm/usermanual" /> -->
+	
+<!-- comment for test by pakasit -->
+		<property name="attachPath" value="/data/ipfm/attachment" />
+		<property name="webCounterPath" value="/data/ipfm/counter" />
+		<property name="webCounterFile" value="IPFMCounter.txt" />
+		<property name="ipfmUserManualPath" value="/data/ipfm/usermanual" />
+		
+		
+			
+		<property name="ipfmUserManualFile" value="AIS-IPFM-UM.pdf" />
+		<property name="ipfmUserManualFile2" value="AIS-IPFM-UM2.doc" />
+		<property name="ipfmtraininglFile" value="AIS-IPFM-UM-TRAINING.doc" />
+		<property name="ipfmRequestNwFile" value="AIS-IPFM-UM-REQ_NW.doc" />
+		<property name="ipfmUrStatusFile" value="AIS-IPFM-UM-UR_STATUS.doc" />
+		<property name="userOnlineTime" value="5" /> <!-- Minute -->
+		<property name="treesTime" value="5" /> <!-- Minute -->
+		<property name="maxReqIP4T2" value="12" /> <!-- Month -->
+		<property name="maxReqIP4T3" value="6" /> <!-- Month -->
+		<property name="assingIpUserRequestIP" value="AssignIP_UserRequestIP" />
+		<property name="templateUR23Assign" value="AssignIP_UserRequestIP.xls" />
+		<property name="assingIpPlanningRequestIP" value="AssignIP_PlanningRequestIP" />
+		<property name="templateUR12Assign" value="AssignIP_PlanningRequestIP.xls" />
+		<property name="ipfmTemplate" value="IPFMTemplate.xlsx" />
+		
+		<property name="requestFirewall" value="Request_Firewall" />
+		<property name="templateRequestFirewall" value="Request_Firewall.xls" />
+		
+		<property name="requestAccessListTNP" value="Request_AccessList_TNP" />
+		<property name="templateRequestAccessListTNP" value="Request_AccessList-TNP.xls" />
+		
+		<property name="requestAcessListCDN" value="Request_AcessList_CDN" />
+		<property name="templateRequestAcessListCDN" value="Request_AcessList-CDN.xls" />
+		
+		<property name="requestInterfaceGateway" value="Request_InterfaceGateway" />
+		<property name="templateRequestInterfaceGateway" value="Request_InterfaceGateway.xls" />
+		
+		<property name="requestPhysicalInterface" value="Request_PhysicalInterface" />
+		<property name="templateRequestPhysicalInterface" value="Request_PhysicalInterface.xls" />
+		
+		<property name="requestRequestRouting" value="Request_Routing" />
+		<property name="templateRequestRouting" value="Request_Routing.xls" />
+		
+		<property name="requestF5" value="Request_F5" />
+		<property name="templateRequestF5" value="Request_F5.xls" />
+ 		
+<!-- <property name="templatePath" value="D:\Project_AIS\IPFM\config\template" /> -->
+<!-- 		<property name="logoPath" value="D:\Project_AIS\IPFM\config\logo/header.jpg" /> -->
+<!-- 		<property name="logoBackupPath" value="D:\Project_AIS\IPFM\config\logobackup" /> -->
+<!-- 		<property name="maxRecordPath" value="D:\Project_AIS\IPFM\config\maxrecord" /> -->
+	
+			<property name="templatePath" value="/data/ipfm/template" />
+		<property name="logoPath" value="/data/ipfm/logo/header.jpg" />
+		<property name="logoBackupPath" value="/data/ipfm/logobackup" />
+		<property name="maxRecordPath" value="/data/ipfm/config/maxrecord" />
+		<property name="maxRecordFile" value="maxrecord.txt" />
+	</bean>
+	<!--  IPFMConfig File Finish -->
+</beans>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+
+<mapping>
+  <class name="th.co.ais.ehr.domain.DiffgramApprover">
+  	<map-to xml="diffgram"/>
+  	<field name="NewDataSet"
+           type="th.co.ais.ehr.domain.NewDataSetApprover">
+      <bind-xml name="NewDataSet"/>
+    </field>
+  </class>
+
+  <class name="th.co.ais.ehr.domain.NewDataSetApprover">
+    <field name="Approvers"
+           type="th.co.ais.ehr.domain.Approver"
+              collection="collection">
+      <bind-xml name="Table"/>
+    </field>
+  </class>
+
+  <class name="th.co.ais.ehr.domain.Approver">
+    <field name="PinManager"
+           type="java.lang.String">
+      <bind-xml name="PinManager" node="element"/>
+    </field>
+    <field name="PositionManager"
+           type="java.lang.String">
+      <bind-xml name="PositionManager" node="element"/>
+    </field>
+    <field name="Level"
+           type="java.lang.String">
+      <bind-xml name="level" node="element"/>
+    </field>
+    <field name="Employeetype"
+           type="java.lang.String">
+      <bind-xml name="employeetype" node="element"/>
+    </field>
+    <field name="Email"
+           type="java.lang.String">
+      <bind-xml name="Email" node="element"/>
+    </field>
+    <field name="Name"
+           type="java.lang.String">
+      <bind-xml name="Name" node="element"/>
+    </field>
+    <field name="Surname"
+           type="java.lang.String">
+      <bind-xml name="Surname" node="element"/>
+    </field>
+    <field name="ENGName"
+           type="java.lang.String">
+      <bind-xml name="ENGName" node="element"/>
+    </field>
+    <field name="ENGSurname"
+           type="java.lang.String">
+      <bind-xml name="ENGSurname" node="element"/>
+    </field>
+    <field name="UserStamp"
+           type="java.lang.String">
+      <bind-xml name="UserStamp" node="element"/>
+    </field>
+    <field name="PositionDescription"
+           type="java.lang.String">
+      <bind-xml name="PositionDescription" node="element"/>
+    </field>   
+    <field name="PositionbyExpense"
+           type="java.lang.String">
+      <bind-xml name="PositionbyExpense" node="element"/>
+    </field>                                    
+  </class>
+</mapping>

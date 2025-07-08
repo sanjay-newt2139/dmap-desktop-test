@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+
+<mapping>
+  <class name="th.co.ais.ehr.domain.DiffgramEmployeeProfile">
+  	<map-to xml="diffgr:diffgram"/>
+  	<field name="NewDataSet"
+           type="th.co.ais.ehr.domain.NewDataSetEmployeeProfile">
+      <bind-xml name="NewDataSet"/>
+    </field>
+  </class>
+
+  <class name="th.co.ais.ehr.domain.NewDataSetEmployeeProfile">
+    <field name="EmployeeProfiles"
+           type="th.co.ais.ehr.domain.EmployeeProfile"
+              collection="collection">
+      <bind-xml name="Table"/>
+    </field>
+  </class>
+
+  <class name="th.co.ais.ehr.domain.EmployeeProfile">
+    <field name="PIN"
+           type="java.lang.String">
+      <bind-xml name="PIN" node="element"/>
+    </field>
+    <field name="EmployeeType"
+           type="java.lang.String">
+      <bind-xml name="EmployeeType" node="element"/>
+    </field>    
+    <field name="Email"
+           type="java.lang.String">
+      <bind-xml name="Email" node="element"/>
+    </field>	
+    <field name="Gender"
+           type="java.lang.String">
+      <bind-xml name="Gender" node="element"/>
+    </field>	
+    <field name="THPrefix"
+           type="java.lang.String">
+      <bind-xml name="THPrefix" node="element"/>
+    </field>	
+    <field name="Name"
+           type="java.lang.String">
+      <bind-xml name="Name" node="element"/>
+    </field>	
+    <field name="Surname"
+           type="java.lang.String">
+      <bind-xml name="Surname" node="element"/>
+    </field>	
+    <field name="ENPrefix"
+           type="java.lang.String">
+      <bind-xml name="ENPrefix" node="element"/>
+    </field>	
+    <field name="ENFirstName"
+           type="java.lang.String">
+      <bind-xml name="ENFIRSTNAME" node="element"/>
+    </field>	
+     <field name="ENLastname"
+           type="java.lang.String">
+      <bind-xml name="ENLASTNAME" node="element"/>
+    </field>
+    <field name="ENGName"
+           type="java.lang.String">
+      <bind-xml name="ENGName" node="element"/>
+    </field>	
+    <field name="ENGSurname"
+           type="java.lang.String">
+      <bind-xml name="ENGSurname" node="element"/>
+    </field>	
+    <field name="HiringDate"
+           type="java.lang.String">
+      <bind-xml name="HiringDate" node="element"/>
+    </field>	
+    <field name="EndDateOfWork"
+           type="java.lang.String">
+      <bind-xml name="EndDateOfWork" node="element"/>
+    </field>	
+    <field name="ORGCODE"
+           type="java.lang.String">
+      <bind-xml name="ORGCODE" node="element"/>
+    </field>	
+    <field name="ORGNAME"
+           type="java.lang.String">
+      <bind-xml name="ORGNAME" node="element"/>
+    </field>	
+    <field name="ORGDESC"
+           type="java.lang.String">
+      <bind-xml name="ORGDESC" node="element"/>
+    </field>	
+    <field name="PositionID"
+           type="java.lang.String">
+      <bind-xml name="PositionID" node="element"/>
+    </field>	
+    <field name="Position"
+           type="java.lang.String">
+      <bind-xml name="Position" node="element"/>
+    </field>	
+    <field name="TelNo"
+           type="java.lang.String">
+      <bind-xml name="TelNo" node="element"/>
+    </field>	
+    <field name="MobileNo"
+           type="java.lang.String">
+      <bind-xml name="MobileNo" node="element"/>
+    </field>	
+    <field name="PGGroup"
+           type="java.lang.String">
+      <bind-xml name="PGGroup" node="element"/>
+    </field>	
+    <field name="EmployeeGroup"
+           type="java.lang.String">
+      <bind-xml name="EmployeeGroup" node="element"/>
+    </field>	
+    <field name="NickName"
+           type="java.lang.String">
+      <bind-xml name="NickName" node="element"/>
+    </field>	
+    <field name="BankAccountNo"
+           type="java.lang.String">
+      <bind-xml name="BankAccountNo" node="element"/>
+    </field>	
+    <field name="JobKey"
+           type="java.lang.String">
+      <bind-xml name="JobKey" node="element"/>
+    </field>
+    <field name="Jobdesc"
+           type="java.lang.String">
+      <bind-xml name="Jobdesc" node="element"/>
+    </field>    
+    <field name="IDCard"
+           type="java.lang.String">
+      <bind-xml name="IDCard" node="element"/>
+    </field>	
+    <field name="Fccode"
+           type="java.lang.String">
+      <bind-xml name="Fccode" node="element"/>
+    </field>	
+    <field name="Fcname"
+           type="java.lang.String">
+      <bind-xml name="Fcname" node="element"/>
+    </field>	
+    <field name="Fcdesc"
+           type="java.lang.String">
+      <bind-xml name="Fcdesc" node="element"/>
+    </field>	
+    <field name="Fchcode"
+           type="java.lang.String">
+      <bind-xml name="Fchcode" node="element"/>
+    </field>	
+    <field name="Fchname"
+           type="java.lang.String">
+      <bind-xml name="Fchname" node="element"/>
+    </field>	
+    <field name="Fchdesc"
+           type="java.lang.String">
+      <bind-xml name="Fchdesc" node="element"/>
+    </field>	
+    <field name="Sccode"
+           type="java.lang.String">
+      <bind-xml name="sccode" node="element"/>
+    </field>	
+    <field name="Scname"
+           type="java.lang.String">
+      <bind-xml name="scname" node="element"/>
+    </field>	
+    <field name="Scdesc"
+           type="java.lang.String">
+      <bind-xml name="Scdesc" node="element"/>
+    </field>	
+    <field name="Schcode"
+           type="java.lang.String">
+      <bind-xml name="Schcode" node="element"/>
+    </field>	
+    <field name="Schname"
+           type="java.lang.String">
+      <bind-xml name="Schname" node="element"/>
+    </field>	
+    <field name="Schdesc"
+           type="java.lang.String">
+      <bind-xml name="Schdesc" node="element"/>
+    </field>	
+    <field name="Dpcode"
+           type="java.lang.String">
+      <bind-xml name="dpcode" node="element"/>
+    </field>    
+    <field name="Dpname"
+           type="java.lang.String">
+      <bind-xml name="dpname" node="element"/>
+    </field>	
+    <field name="Dpdesc"
+           type="java.lang.String">
+      <bind-xml name="Dpdesc" node="element"/>
+    </field>	
+    <field name="Dphcode"
+           type="java.lang.String">
+      <bind-xml name="Dphcode" node="element"/>
+    </field>	
+    <field name="Dphname"
+           type="java.lang.String">
+      <bind-xml name="Dphname" node="element"/>
+    </field>	
+    <field name="Dphdesc"
+           type="java.lang.String">
+      <bind-xml name="Dphdesc" node="element"/>
+    </field>	
+    <field name="Bucode"
+           type="java.lang.String">
+      <bind-xml name="Bucode" node="element"/>
+    </field>	
+    <field name="Buname"
+           type="java.lang.String">
+      <bind-xml name="Buname" node="element"/>
+    </field>	
+    <field name="Budesc"
+           type="java.lang.String">
+      <bind-xml name="Budesc" node="element"/>
+    </field>	
+    <field name="Buhcode"
+           type="java.lang.String">
+      <bind-xml name="Buhcode" node="element"/>
+    </field>	
+    <field name="Buhname"
+           type="java.lang.String">
+      <bind-xml name="Buhname" node="element"/>
+    </field>	
+    <field name="Buhdesc"
+           type="java.lang.String">
+      <bind-xml name="Buhdesc" node="element"/>
+    </field>
+    <field name="Cocode"
+           type="java.lang.String">
+      <bind-xml name="Cocode" node="element"/>
+    </field>
+    <field name="CompanyCode"
+           type="java.lang.String">
+      <bind-xml name="CompanyCode" node="element"/>
+    </field>	
+    <field name="Coname"
+           type="java.lang.String">
+      <bind-xml name="Coname" node="element"/>
+    </field>	
+    <field name="Codesc"
+           type="java.lang.String">
+      <bind-xml name="Codesc" node="element"/>
+    </field>	
+    <field name="BirthDate"
+           type="java.lang.String">
+      <bind-xml name="BirthDate" node="element"/>
+    </field>	
+    <field name="CostCenter"
+           type="java.lang.String">
+      <bind-xml name="CostCenter" node="element"/>
+    </field>	
+    <field name="PositionshotName"
+           type="java.lang.String">
+      <bind-xml name="PositionshotName" node="element"/>
+    </field>	
+    <field name="UserStamp"
+           type="java.lang.String">
+      <bind-xml name="UserStamp" node="element"/>
+    </field>	
+    <field name="SubArea"
+           type="java.lang.String">
+      <bind-xml name="SubArea" node="element"/>
+    </field>	
+    <field name="Image"
+           type="java.lang.String">
+      <bind-xml name="Image" node="element"/>
+    </field>	
+    <field name="StartDateOfWork"
+           type="java.lang.String">
+      <bind-xml name="StartDateOfWork" node="element"/>
+    </field>	
+  </class>
+</mapping>

@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+#alwayTopMenu {
+	display: block;
+	width:100% !importanct;
+}
+input[readonly="readonly"],
+input[readonly]
+{
+    background-color:blue;
+}
+
+
+.menu:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; font-weight:bold; color: #3c3c3c; text-decoration: none}
+.menu:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #3c3c3c; font-weight:bold; text-decoration: none}
+.menu:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #D42F2F; font-weight:bold; text-decoration: none}
+
+.menu2:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; font-weight:bold; color: #24dce5; text-decoration: none}
+.menu2:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; color: #24dce5; font-weight:bold; text-decoration: none}
+.menu2:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; color: #d0d0d0; font-weight:bold; text-decoration: none}
+
+.faq:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #000000; text-decoration: none}
+.faq:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #000000;text-decoration: none}
+.faq:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #24dce5;text-decoration: none}
+
+.player:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #06b4bc; text-decoration: none}
+.player:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #06b4bc;text-decoration: none}
+.player:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #3c3c3c;text-decoration: none}
+
+.th:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #E40E62; text-decoration: none}
+.th:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #E40E62;text-decoration: none}
+.th:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #FFFFFF;text-decoration: none}
+
+.more:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #F10281; text-decoration: none}
+.more:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #F10281;text-decoration: none}
+.more:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #05b5f2;text-decoration: none}
+
+.thmore:link {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:bold; color: #f64f0e; text-decoration: none}
+.thmore:visited {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight: bold; color: #f64f0e;text-decoration: none}
+.thmore:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight: bold;color: #3c3c3c;text-decoration: none}
+
+.thmore2:link {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #f64f0e; text-decoration: none}
+.thmore2:visited {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight: normal; color: #f64f0e;text-decoration: none}
+.thmore2:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #3c3c3c;text-decoration: none}
+
+.download:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #3c3c3c; text-decoration: none}
+.download:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #3c3c3c;text-decoration: none}
+.download:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #f64f0e;text-decoration: none}
+
+.music:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #FFFFFF; text-decoration: none}
+.music:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #FFFFFF;text-decoration: none}
+.music:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal;color: #000000;text-decoration: none}
+
+.button:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #FFFFFF; text-decoration: none}
+.button:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #363636;text-decoration: none}
+.button:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal;color: #363636;text-decoration: none}

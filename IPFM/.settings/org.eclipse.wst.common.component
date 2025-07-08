@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="IPFM">
+        <wb-resource deploy-path="/" source-path="/EarContent"/>
+        <dependent-module archiveName="IPFMWeb.war" deploy-path="/" handle="module:/resource/IPFMWeb/IPFMWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="IPFMService.jar" deploy-path="/" handle="module:/resource/IPFMService/IPFMService">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="IPFMBatch.jar" deploy-path="/" handle="module:/resource/IPFMBatch/IPFMBatch">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="IPFMComponent.jar" deploy-path="/" handle="module:/resource/IPFMComponent/IPFMComponent">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="IPFMExternalService.jar" deploy-path="/" handle="module:/resource/IPFMExternalService/IPFMExternalService">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="IPFMDao.jar" deploy-path="/" handle="module:/resource/IPFMDao/IPFMDao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

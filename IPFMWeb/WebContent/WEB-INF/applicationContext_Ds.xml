@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<jee:jndi-lookup id="dataSource" jndi-name="java:ipfmDS"/>
+<!--	<jee:jndi-lookup id="vsfmDataSource" jndi-name="java:vsfmDS"/>-->
+	<jee:jndi-lookup id="vsfmDataSource" jndi-name="java:ipfmDS"/>
+<!-- 	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg>
+			<ref bean="dataSource"/>
+		</constructor-arg>
+	</bean>
+-->
+	<!-- Hibernate config -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+ 			
+				<value>th.co.ais.ipfm.domain.IPParameter</value>
+				<value>th.co.ais.ipfm.domain.IPUser</value>
+				<value>th.co.ais.ipfm.domain.IPRange</value>	
+				<value>th.co.ais.ipfm.domain.MasterTBL</value>
+				<value>th.co.ais.ipfm.domain.IPGroup</value>		
+				<value>th.co.ais.ipfm.domain.IPDetail</value>
+				
+				<value>th.co.ais.ipfm.domain.IPFunction</value>
+				<value>th.co.ais.ipfm.domain.IPRoleFunction</value>
+				<value>th.co.ais.ipfm.domain.IPRoleMember</value>
+				<value>th.co.ais.ipfm.domain.IPRole</value>
+				<value>th.co.ais.ipfm.domain.IPGroupMember</value>
+				<value>th.co.ais.ipfm.domain.IPFirewall</value>
+				<value>th.co.ais.ipfm.domain.IPFMSourceIP</value>
+				<value>th.co.ais.ipfm.domain.IPFMDestIP</value>
+				<value>th.co.ais.ipfm.domain.IPFMServiceInfo</value>
+				<value>th.co.ais.ipfm.domain.IPGroupMembers</value>
+				<value>th.co.ais.ipfm.domain.IPGroupMemberUser</value>
+				<value>th.co.ais.ipfm.domain.IPUserGroup</value>
+				<value>th.co.ais.ipfm.domain.IPUrIP</value>
+				
+				<value>th.co.ais.ipfm.domain.Inbox</value>
+				<value>th.co.ais.ipfm.domain.TempInbox</value>
+				<value>th.co.ais.ipfm.domain.NCData</value>
+				<value>th.co.ais.ipfm.domain.NCAssign</value>
+				
+				
+				
+				<!-- new Database Version  -->
+				<value>th.co.ais.ipfm.domain1.IpLevel1</value>
+    			<value>th.co.ais.ipfm.domain1.IpUrAttachmentId</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrAccessListCdn</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrPhysicalInterfaceId</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrRoutingId</value>
+			    <value>th.co.ais.ipfm.domain1.IpRoleFunctionId</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrAction</value>
+			    <value>th.co.ais.ipfm.domain1.IpRole</value>
+			    <value>th.co.ais.ipfm.domain1.IpRoleFunction</value>
+			    <value>th.co.ais.ipfm.domain1.IpFunction</value>
+			    <value>th.co.ais.ipfm.domain1.IpRoleMember</value>
+			    <value>th.co.ais.ipfm.domain1.IpRoleMemberId</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrFirewallId</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrRouting</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrFirewall</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrAccessListTnp</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrAttachment</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrF5Id</value>
+			    <value>th.co.ais.ipfm.domain1.IpWfConfigDetail</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrAccessListCdnId</value>
+			    <value>th.co.ais.ipfm.domain1.IpWfConfig</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrInterfaceGatewayId</value>
+			    <value>th.co.ais.ipfm.domain1.IpInfo</value>
+			    <value>th.co.ais.ipfm.domain1.IpInfoTemp</value>
+			    <value>th.co.ais.ipfm.domain1.IpLogVerify</value>
+			    <value>th.co.ais.ipfm.domain1.IpInfoHistory</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrInterfaceGateway</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrF5</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrAccessListTnpId</value>
+			    <value>th.co.ais.ipfm.domain1.IpWfConfigDetailId</value>
+			    <value>th.co.ais.ipfm.domain1.IpUser</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrIpResultId</value>
+			    <value>th.co.ais.ipfm.domain1.IpNetworkConfig</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrNwConfig</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrIpDetail</value>
+			    <value>th.co.ais.ipfm.domain1.IpFunction</value>
+			    <value>th.co.ais.ipfm.domain1.IpMasterTableId</value>
+			    <value>th.co.ais.ipfm.domain1.IpNetworkConfigId</value>
+			    <value>th.co.ais.ipfm.domain1.IpMasterTable</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrActionHistory</value>
+			    <value>th.co.ais.ipfm.domain1.IpLevel2</value>
+			    <value>th.co.ais.ipfm.domain1.IpLevel2History</value>
+			    <value>th.co.ais.ipfm.domain1.TempIpLevel2</value>			    
+			    <value>th.co.ais.ipfm.domain1.IpUrIpResult</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrPhysicalInterface</value>
+			    <value>th.co.ais.ipfm.domain1.IpTeam</value>
+			    <value>th.co.ais.ipfm.domain1.IpvRetriveF5</value>
+			    <value>th.co.ais.ipfm.domain1.IpUrStatus</value>
+			    <value>th.co.ais.ipfm.domain1.IpvJobAssign</value>
+				
+				<value>th.co.ais.ipfm.domain1.IpvTodoUserReq</value>
+				<value>th.co.ais.ipfm.domain1.IpvTodoPlanningReq</value>
+				<value>th.co.ais.ipfm.domain1.IpvTodoReqnc</value>
+				<value>th.co.ais.ipfm.domain1.IpvWatchUserReq</value>
+				<value>th.co.ais.ipfm.domain1.IpvWatchPlanningReq</value>
+				<value>th.co.ais.ipfm.domain1.IpvWatchReqnc</value>
+				<value>th.co.ais.ipfm.domain1.IpvMonitorReqnc</value>
+				<value>th.co.ais.ipfm.domain1.IpvNetworkIp</value>
+				<value>th.co.ais.ipfm.domain1.IpUrStatus</value>
+				<value>th.co.ais.ipfm.domain1.IpDelegateUser</value>
+				<value>th.co.ais.ipfm.domain1.IpDelegateUserId</value>
+				<value>th.co.ais.ipfm.domain1.IpEmailNotify</value>
+				<value>th.co.ais.ipfm.domain1.IpMaskDisplay</value>
+				
+				<!--  for report -->
+				<value>th.co.ais.ipfm.domain1.IpReportList</value>
+				<value>th.co.ais.ipfm.domain1.IpReportDetail</value>
+				<value>th.co.ais.ipfm.domain1.IpReportLayout</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result1</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result1Detail</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result1DetailPK</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result2</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result2PK</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result3</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result3Detail</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result3DetailPK</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result4</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result4PK</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result4Detail</value>
+				<value>th.co.ais.ipfm.domain1.Iprur001Result4DetailPK</value>
+				
+				<value>th.co.ais.ipfm.domain1.IpUrAttachmentId</value>
+				<value>th.co.ais.ipfm.domain1.IpUrAttachment</value>
+				
+				<value>th.co.ais.ipfm.domain1.IpSubUrAttachmentId</value>
+				<value>th.co.ais.ipfm.domain1.IpSubUrAttachment</value>
+				<value>th.co.ais.ipfm.domain1.IpSubUrAttachmentDto</value>
+				
+				
+				<!-- ===================== -->
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<util:properties>
+			<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+			<prop key="hibernate.jdbc.batch_size">30</prop>
+			<prop key="hibernate.show_sql">true</prop>
+			</util:properties>
+		</property>
+	</bean>
+	<bean id="vsfmSessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="vsfmDataSource" />
+		
+
+		<property name="hibernateProperties">
+			<util:properties>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+			 	<prop key="hibernate.show_sql">true</prop>
+			</util:properties>
+		</property>
+	</bean>
+	<!-- Transaction Manager -->
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean> 
+	<bean id="vsfmTxManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="vsfmSessionFactory" />
+	</bean>
+	
+	<tx:advice id="hibernateTxAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED" rollback-for="th.co.ais.ipfm.exception.IPFMBusinessException" timeout="500"/>
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:advisor pointcut="execution(* th.co.ais.ipfm.service.impl..*(..))" advice-ref="hibernateTxAdvice"/>
+	</aop:config>
+
+
+</beans>

@@ -1,0 +1,640 @@
+/* CSS Document */
+html {
+	min-height: 100%;
+}
+
+.displayRow{
+	height: 20px;
+}
+
+.inputRow{
+	height: 25px;
+}
+.warning-red { color: #990033 }
+
+.labelStyle{
+	width: 150px;
+	text-align: right;
+	background-color: #b8ccea;
+	font-weight: bold;
+}
+
+.valueStyle{
+	width: 230px;
+	text-align: left;
+}
+
+.valignTop{
+	vertical-align:top;
+}
+
+.panelBackground{
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.mainFrame{
+	background-image:url("../images/b_bg.jpg"); 
+}
+
+.mainTitleHeader{
+	background-image:url("../images/bg-blue-m.png");
+}
+
+.mainTitleL{
+	background-image:url("../images/bg-blue-l.png");
+	width: 7px;
+	height: 32px;
+}
+
+.mainTitleR{
+	background-image:url("../images/bg-blue-r.png");
+	width: 7px;
+	height: 32px;
+}
+
+.titleBar{
+	background-image: url("../images/bg_mr.jpg");
+	text-align:left;
+	vertical-align: middle;;
+}
+
+.odd{
+	background-color:#ffffff;
+}
+
+.even{
+	background-color:#c9d6e8;
+}
+
+.hilight{
+	background-color:#4c75b3;
+}
+.tableHeader{
+	background-color: #315e9f;
+	height: 20;
+	padding: 0px;
+}
+
+.tableHeaderText{
+	color: #ffffff;
+}
+
+.statusID{
+	font-size: 14px;
+	font-family: Arial, Verdana, sans-serif ;
+	text-align :center;
+	color:#FF0000;
+	font-weight: bold;	
+}
+
+.HeaderLabel{
+	font-size: 14px;
+	font-family: Arial, Verdana, sans-serif ;
+	text-align :center;
+	color:#0000FF;
+}
+
+.icoCell{
+	vertical-align: bottom;
+}
+
+#alwayTopMenu{
+	position: absolute; top: 0; left: 0; z-index: 2;
+	width: 100%;
+	display: block;
+}
+
+#container {
+	height:95%; overflow: auto; position: relative; z-index: 1;
+}
+
+.footerPage{
+	background-color: #cccccc;
+}
+
+.txtDescription {
+	font-size: 10px;
+	font-family: Arial, Verdana, sans-serif ;
+	text-align :center;
+	color: #0000ff;
+}
+/*
+input {
+	background-color: expression(( this . disabled == true) ? '#EFEEF2' :  
+		( this . readOnly == true ) ?   '#E3E3E3' :   '' );
+}
+textarea {
+	background-color: expression(( this . disabled == true) ? '#EFEEF2' :  
+		( this . readOnly == true ) ?   '#E3E3E3' :   '' );
+}
+select {
+	background-color: expression(( this . disabled == true) ? '#EFEEF2' :  
+		( this . readOnly == true ) ?   '#E3E3E3' :   '' );	
+}
+*/
+
+select:disabled,
+textarea:disabled,
+input:disabled{background-color:#EFEEF2;}
+
+select:-moz-read-only,
+textarea:-moz-read-only,
+input:-moz-read-only { /* For Firefox */
+    background-color: #E3E3E3;
+}
+
+select:-moz-read-only,
+textarea:-moz-read-only {
+    background-color: #E3E3E3;
+    background-image: none;
+}
+
+select:read-only,
+textarea:read-only,
+input:read-only {
+    background-color: #E3E3E3;
+}
+
+/*Form*/
+.contentform {
+	font-size: 9px;
+	font-family: "MS Sans Serif", Arial, Verdana, sans-serif;
+	text-align: left;
+}
+
+.contentlabelform {
+	font-size: 9px;
+	font-family: "MS Sans Serif", Arial, Verdana, sans-serif;
+	font-weight: bold;
+	text-align: left;
+}
+
+.contentlabelMessageError {
+	font-size: 9px;
+	font-family: "MS Sans Serif", Arial, Verdana, sans-serif;
+	font-weight: bold;
+	color: red;
+}
+
+.contentlabelform_comment {
+	font-size: 11px;
+	color: #0000ff;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+/*Data Scroller*/
+.selectScroll {
+	/*background-color: #C6E2FF;*/
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.rich-datascr {
+	background-color: #ffffff;
+}
+
+/*Link*/
+.linkMenu {
+	text-decoration: none;
+	color: black;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border: 0;
+}
+
+/*TextBox*/
+.readonly {
+	text-decoration: none;
+	color: gray;
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+/* footer */
+.footer {
+	font-size: 10px;
+	font-family: Arial, Verdana, sans-serif ;
+	text-align :         center;
+}
+
+.footerinfo {
+	font-weight: bold;
+}
+
+.footer a,.footer a:hover {
+	color: black;
+}
+
+.centerOutput {
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif ;
+	text-align :         center;
+}
+
+.rightOutput {
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif ;
+	text-align :         right;
+}
+
+.dataTable {
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif
+}
+
+.dataTable .unClick {
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif ;
+	padding :         3px;
+}
+
+.dataTable .onClick {
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif ;
+	padding :         3px;
+	background-color: #FFFFCC;
+}
+
+.a4jLink {
+	text-decoration: none;
+	color: white;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border: 0;
+	/* width: 16px ;
+	height: 16px; */
+}
+
+.ms8 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; color: #333333; font-size: 9pt; text-decoration:none}
+.ms8n {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8pt; color: #666666; text-decoration:none}
+.ms8blue {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8pt; color: #0589C1; text-decoration:none}
+.ms8red {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8pt; color: #D3000F; text-decoration:none}
+.ms8w {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #FFFFFF; text-decoration:none}
+.ms10 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; color: #333333; font-size: 10pt; text-decoration:none}
+.ms10w {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10pt; color: #FFFFFF; text-decoration:none}
+.ms10red {font-family: "Arial, Helvetica, Microsoft Sans Serif"; color: #D3000F; font-size: 10pt; text-decoration:none}
+.ms10blue {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10pt; color: #0589C1; text-decoration:none}
+.ms12 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; color: #333333; font-size: 12pt; text-decoration:none}
+.ms14 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; color: #333333; font-size: 14pt; text-decoration:none}
+
+.a1:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #00CCFF; text-decoration: none;}
+.a1:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #00CCFF; text-decoration: none;}
+.a1:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #1991BE;}
+
+.a2:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#CFCFCF; text-decoration: none;}
+.a2:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#CFCFCF; text-decoration: none;}
+.a2:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#40A2D3;}
+
+.a3:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#FFFFFF; text-decoration: none;}
+.a3:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#FFFFFF; text-decoration: none;}
+.a3:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#78C931;}
+
+.a4:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#A7A7A7; text-decoration: none;}
+.a4:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#A7A7A7; text-decoration: none;}
+.a4:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#FFFFFF;}
+
+.a5:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#FFFFFF; text-decoration: none;}
+.a5:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#FFFFFF; text-decoration: none;}
+.a5:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#333333;}
+
+.a6:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8pt; color:#333333; text-decoration: none;}
+.a6:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8pt; color:#333333; text-decoration: none;}
+.a6:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8pt; color:#000000;}
+
+/*.a7:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#B72113; text-decoration: none;}
+.a7:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#B72113; text-decoration: none;}
+.a7:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#000000;}*/
+.a7:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#0b63af; text-decoration: none;}
+.a7:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#0b63af; text-decoration: none;}
+.a7:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#ed1c24;}
+
+.a8:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#00CC99; text-decoration: none;}
+.a8:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#00CC99; text-decoration: none;}
+.a8:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color:#00CC99;}
+
+	
+.textbox {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60;}
+
+.box80 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 80px;}
+	
+.cbox {border-color:bdbdbd; }
+
+.box {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 85px;}
+	
+.box120 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 120px;}
+	
+.box130 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 130px;}
+	
+.box240 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 240px;}
+	
+.box2_drop {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 130px;}
+	
+.box2_drop2 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 40px;}
+
+.box2_drop3 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 55px;}
+
+.box2_dropM {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 80px;}
+
+.box2_dropU {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60;	width: 100px;}
+	
+.box2_input {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 250px;}
+	
+.boxsms_count2 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 30px;}
+
+.boxsms_count {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #5E9E07; width: 30px;}
+	
+.boxsms_sender {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 50px;}
+	
+.boxsms_text {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 8px; color: #555D60; width: 150px;}
+	
+/* CSS Document */
+body { 
+  margin:0;
+  padding:0;'
+  scrollbar-face-color: #f2f2f2;
+  scrollbar-shadow-color: #c5c5c5;
+  scrollbar-highlight-color: #c5c5c5;
+  scrollbar-3dlight-color: #dedede;
+  scrollbar-darkshadow-color: #bfbfbf;
+  scrollbar-track-color: #cacaca;
+  scrollbar-arrow-color: #2FBBD4;
+
+}
+
+/*.menu:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:bold; color: #3c3c3c; text-decoration: none}
+.menu:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; color: #3c3c3c; font-weight:bold; text-decoration: none}
+.menu:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; color: #D42F2F; font-weight:bold; text-decoration: none}*/
+
+.menu:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; font-weight:bold; color: #3c3c3c; text-decoration: none}
+.menu:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #3c3c3c; font-weight:bold; text-decoration: none}
+.menu:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 9pt; color: #D42F2F; font-weight:bold; text-decoration: none}
+
+.menu2:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; font-weight:bold; color: #24dce5; text-decoration: none}
+.menu2:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; color: #24dce5; font-weight:bold; text-decoration: none}
+.menu2:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; color: #d0d0d0; font-weight:bold; text-decoration: none}
+
+.faq:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #000000; text-decoration: none}
+.faq:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #000000;text-decoration: none}
+.faq:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #24dce5;text-decoration: none}
+
+.player:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #06b4bc; text-decoration: none}
+.player:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #06b4bc;text-decoration: none}
+.player:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #3c3c3c;text-decoration: none}
+
+.th:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #E40E62; text-decoration: none}
+.th:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #E40E62;text-decoration: none}
+.th:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #FFFFFF;text-decoration: none}
+
+.more:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #F10281; text-decoration: none}
+.more:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #F10281;text-decoration: none}
+.more:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #05b5f2;text-decoration: none}
+
+.thmore:link {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:bold; color: #f64f0e; text-decoration: none}
+.thmore:visited {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight: bold; color: #f64f0e;text-decoration: none}
+.thmore:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight: bold;color: #3c3c3c;text-decoration: none}
+
+.thmore2:link {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #f64f0e; text-decoration: none}
+.thmore2:visited {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight: normal; color: #f64f0e;text-decoration: none}
+.thmore2:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #3c3c3c;text-decoration: none}
+
+.download:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #3c3c3c; text-decoration: none}
+.download:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #3c3c3c;text-decoration: none}
+.download:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal;color: #f64f0e;text-decoration: none}
+
+.music:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #FFFFFF; text-decoration: none}
+.music:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #FFFFFF;text-decoration: none}
+.music:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal;color: #000000;text-decoration: none}
+
+.button:link {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #FFFFFF; text-decoration: none}
+.button:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #363636;text-decoration: none}
+.button:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal;color: #363636;text-decoration: none}
+
+.music_th:link {font-family: "Arial, Helvetica, Microsoft Sans Serif" ; font-size: 11px; font-weight:normal; color: #FFFFFF; text-decoration: none}
+.music_th:visited {font-family: "Arial, Helvetica, Microsoft Sans Serif" ; font-size: 11px; font-weight:normal; color: #FFFFFF;text-decoration: none}
+.music_th:hover {font-family: "Arial, Helvetica, Microsoft Sans Serif" ; font-size: 11px; font-weight:normal;color: #000000;text-decoration: none}
+.music2 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #000000; text-decoration: none}
+.th2 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #FFFF05; text-decoration: none}
+.text_menu {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 13px; font-weight:bold; color: #FFFF05; text-decoration: none}
+.text_music {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 10px; font-weight:normal; color: #003249; text-decoration: none}
+.text_faq {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #000000; text-decoration: none}
+.text_copy {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #d0d0d0; text-decoration: none}
+.text_user {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 12px; font-weight:normal; color: #d0d0d0; text-decoration: none}
+.text_detail {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #3c3c3c; text-decoration: none}
+.text_detail2 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:bold; color: #E40E62; text-decoration: none}
+.text_detail3 {font-family: "Arial, Helvetica, Microsoft Sans Serif"; font-size: 11px; font-weight:normal; color: #FFFFFF; text-decoration: none}
+.box_search{ border: 1px solid; color:0ba6b4; background-color:#FFFFFF; font-family:"Arial, Helvetica, Microsoft Sans Serif"; color:#333333; font-size: 9pt;}
+.box_login{ border: 1px solid; border-color:bdbdbd; background-color:#FFFFFF; font-family:"Arial, Helvetica, Microsoft Sans Serif"; color:#333333; font-size: 11px;}
+
+.thtext_detail {font-family:"Arial, Helvetica, Microsoft Sans Serif";font-size: 11px; font-weight:normal; color: #3c3c3c; }
+
+.thtext_detail2 {font-family:"Arial, Helvetica, Microsoft Sans Serif";font-size: 11px; font-weight:normal; color: #3c3c3c; border: 3px solid; border-color:bdbdbd;}
+
+.thtext_user {font-family:"Arial, Helvetica, Microsoft Sans Serif"; font-size: 12px; font-weight:normal; color: #d0d0d0;}
+
+.copy {font-family:"Microsoft Sans Serif"; font-size: 8pt; font-weight:normal; color: #d0d0d0;}
+
+
+.black_border{border:solid 2px; border-color:#000000;}
+.grey_border{ border: solid 2px; border-color:d6d6d6;}
+.grey2_border{ border: solid 2px; border-color: #dfdfdf;}
+
+.a:link {
+	font-family: "Microsoft Sans Serif"; 
+	font-size: 9pt; 
+	color: #FFFFFF;
+	text-decoration: none; 
+	}
+.a:visited {
+	font-family: "Microsoft Sans Serif"; 
+	font-size: 9pt; 
+	color: #FFFFFF; 
+	text-decoration: none; 
+	}
+.a:hover {
+	font-family: "Microsoft Sans Serif";
+	font-size: 9pt;
+	color: #00CCFF;
+	text-decoration: none; 
+	}
+	
+.thtext_th {font-family:"Arial, Helvetica, Microsoft Sans Serif";font-size: 9pt; font-weight:normal; color: #3c3c3c;}
+.thtext_color {font-family:"Arial, Helvetica, Microsoft Sans Serif";font-size: 9pt; font-weight:normal; color: #0b63af;}
+.tree_link {
+	font-family: "Microsoft Sans Serif"; 
+	font-size: 8pt; 
+	color: #000000;
+	text-decoration: none; 
+	}
+.menu_link {
+	font-family: "Microsoft Sans Serif"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-decoration: none; 
+	}
+
+.borderLT {
+	border-top: 1px solid #888888;
+	border-right: 1px none #888888;
+	border-bottom: 1px none #888888;
+	border-left: 1px solid #888888;
+}	
+
+.borderT {
+	border-top: 1px solid #888888;
+	border-right: 1px none #888888;
+	border-bottom: 1px none #888888;
+	border-left: 1px none #888888;
+}
+
+.borderTR {
+	border-top: 1px solid #888888;
+	border-right: 1px solid #888888;
+	border-bottom: 1px none #888888;
+	border-left: 1px none #888888;
+}
+
+.borderLB {
+	border-top: 1px none #888888;
+	border-right: 1px none #888888;
+	border-bottom: 1px solid #888888;
+	border-left: 1px solid #888888;
+}	
+
+.borderB {
+	border-top: 1px none #888888;
+	border-right: 1px none #888888;
+	border-bottom: 1px solid #888888;
+	border-left: 1px none #888888;
+}
+
+.borderBR {
+	border-top: 1px none #888888;
+	border-right: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+	border-left: 1px none #888888;
+}
+
+.borderL {
+	border-top: 1px none #888888;
+	border-right: 1px none #888888;
+	border-bottom: 1px none #888888;
+	border-left: 1px solid #888888;
+}
+
+.borderR {
+	border-top: 1px none #888888;
+	border-right: 1px solid #888888;
+	border-bottom: 1px none #888888;
+	border-left: 1px none #888888;
+}
+.borderL {
+	border-top: 1px none #888888;
+	border-right: 1px none #888888;
+	border-bottom: 1px none #888888;
+	border-left: 1px solid #888888;
+}
+
+.border4 {
+	border: 1px solid #888888;
+}
+
+/* Hidden Input File */
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	z-index: 1;
+}
+
+.column1{
+    width:30%;
+}
+.column2{
+    width:70%;
+}
+
+.hiddenInputFile{
+	position: relative;
+	text-align: right;
+	opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+
+/* Override rich:datascroller */
+.rich-dtascroller-table {color:black; width:120px; margin:0px; padding:0; background-color:#cccccc; border:none; background-image: url(''); border:none;}
+.rich-datascr-button {color:black; background-color:#cccccc; background-image: url(''); border:none;}
+.rich-datascr-act {background-image: url(''); border:none;}
+.rich-datascr-inact {background-image: url(''); border:none;}
+
+.rich-panel-body {padding:2px 10px 2px 10px; background-color: #fafafa; background-image: url(''); width:100%;}
+.rich-panel {margin-bottom: 0; }
+.rich-panel-header{height: 20px; padding: 0 0 0 5px; width:100%; background-image: url('');}
+.rich-stglpanel-header{height: 20px; padding: 0 0 0 5px; width:100%;}
+.rich-stglpanel-body{padding:2px 10px 2px 10px; background-color: #fafafa; background-image: url(''); width:100%;}
+.rich-tabpanel-content{padding:2px 2px 2px 2px;}
+.rich-combobox-item-selected {right:8px;}
+.rich-table-header{background-image:url(''); }
+input.rich-combobox-button, input.rich-combobox-button-inactive, input.rich-combobox-button-disabled,
+input.rich-combobox-button-background, input.rich-combobox-button-background-disabled, input.rich-combobox-button-background-inactive{right:5px;}
+
+.rich-fileupload-anc {vertical-align:top; background-image:url('../images/ico_delete.png'); width:24px; height:24px;}
+
+.rich-tree-node-handleicon-collapsed{background-image:url('../images/bullet_blue_arrow.png');}
+.rich-tree-node-handleicon-expanded{background-image:url('../images/bullet_blue_collapse.png');}
+rich-tree-node-handleicon rich-tree-h-ic-line-node{background-image:url('../images/bullet_blue.png');}
+
+<!-- Update -->
+#alwayTopMenu {
+	display: block;
+	width:100% !important;
+}
+input[readonly="readonly"],
+input[readonly]
+{
+    background-color:#ccc;
+}
+
+
+@-moz-document url-prefix() { 
+	html,body{
+		/* background-color: red; */
+	}
+	
+	div.fileinputs {
+		position: relative;
+		display: block;
+		width: 50px;
+	}
+	
+	.rich-button{padding: 4px 8px !important}
+	.rich-panel-body {padding:10px 0; background-color: #fafafa; background-image: url(''); width:100%;}
+	.rich-panel {margin-bottom: 0; }
+	.rich-panel-header{height: 20px; padding: 0 0 0 5px; width:100%; background-image: url('');}
+	.rich-stglpanel-header{height: 20px; padding:0;margin:0; width:100%;display: block;}
+	.rich-stglpanel-body{ padding:0;margin:0; background-color: #fafafa; background-image: url(''); width:100%;display: block;}
+	.rich-tabpanel-content{padding:2px 2px 2px 2px;}
+	.rich-combobox-item-selected {right:8px;}
+	.rich-table{margin: 5px 0;}
+	.rich-table-header{background-image:url(''); }
+	.rich-fileupload-del .rich-fileupload-anc{display: block;}
+}
+
+input[readonly="readonly"][type="text"]:not(.rich-combobox-font-inactive):not(.rich-combobox-font):not(.rich-combobox-font-disabled),
+input[readonly][type="text"]:not(.rich-combobox-font-inactive):not(.rich-combobox-font):not(.rich-combobox-font-disabled)
+{
+	background-color: #ccc;
+	background-image: url('');
+}
+

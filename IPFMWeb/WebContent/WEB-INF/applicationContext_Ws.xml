@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+		
+	<!--  SSO -->
+	<bean id="ssoService" class="th.co.ais.sso.service.SSOService">
+		<!--  Test  -->
+<!--		<property name="endpoint" value="http://10.240.1.101:7201/EmployeeServiceWebServiceV2/EmployeeServiceWebServiceV2.jws"/>-->
+		<property name="module" value="IPFM" />
+		<property name="ouType" value="2" />
+		<property name="projectCode" value="TIPFMAUTHEN" />
+		<!-- Product -->
+		 <property name="endpoint" value="https://empws.ais.co.th/EmployeeServiceWebService/EmployeeServiceWebService.jws"/>
+	</bean>
+	<!--  SSO Finish -->
+		
+	<!--  LDAP -->
+	<bean id="ldapService" class="th.co.ais.ldap.service.LDAPService">
+		<!--  Test  -->
+<!-- 		<property name="endpoint" value="http://dev-authenldapws.ais.co.th/corporate.asmx"/>		 -->
+<!-- 		<property name="endpoint" value="http://dev-ldapservicews.ais.co.th/Authenticate/authenticateservice.asmx"/> -->
+<!-- 		<property name="projectCode" value="TIPFMAUTHEN" /> -->
+		
+		<!-- Product -->  
+	 	<property name="endpoint" value="http://ldapservicews.ais.co.th/Authenticate/authenticateservice.asmx"/>
+		<property name="projectCode" value="PIPFMAUTHEN" />
+		
+	</bean>
+	<!--  LDAP Finish -->
+	
+	<!--  E-HR -->
+	<bean id="ehrService" class="th.co.ais.ehr.service.EmployeeProfileService">
+		<!-- Test -->
+<!--		<property name="endpoint" value="http://test-omservices.ais.co.th/ExternalServices/WS_OM_OMEHRServices.asmx"/>-->
+<!--		<property name="username" value="corp-aispilot\ehr_test1"/>-->
+<!--		<property name="password" value="Ais.co.th"/>-->
+		<!-- Product -->
+		<property name="endpoint" value="http://omservices.ais.co.th/ExternalServices/WS_OM_OMEHRServices.asmx"/> 
+		
+		<property name="username" value="corp-ais900\ipfmservice"/>
+		<property name="password" value="IPS#serv3"/>
+	</bean>
+	<!--  E-HR Finish -->
+	
+	<!--  AuthenDB -->
+	<bean id="authService" class="th.co.ais.ehr.service.AuthenDBService">
+		<property name="endpoint" value=""/>
+		<property name="username" value=""/>
+		<property name="password" value=""/>
+		<property name="projectid" value=""/>
+	</bean>
+	<!--  AuthenDB Finish -->
+	
+	<!--  E-HR -->
+	<bean id="ehrService2" class="th.co.ais.ehr.service.EmployeeProfileService2">
+		<property name="endpoint" value=""/>
+		<property name="omcode" value=""/>
+	</bean>
+	<!--  E-HR Finish -->
+	
+	<!-- main & sms by  Velocity -->	
+	<!-- Mail Sender -->	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="mail.corp.ais900.org"/>
+		<property name="port" value="25"/>
+	</bean>
+	<bean id="emailService" class="th.co.ais.email.service.EMailService">
+		<property name="sender" ref="mailSender"/>
+		<property name="velocityEngine" ref="velocityEngine"/>
+	</bean>
+	<!-- Mail Sender Finish -->	
+	<!--  SMS -->
+	<bean id="smsService" class="th.co.ais.sms.service.SMSService">
+		<property name="shellcommand" value="./home/ipfm/sms/sendsms"/>
+		<property name="velocityEngine" ref="velocityEngine"/>
+	</bean>
+	<!--  SMS Finish -->
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+			</value>
+		</property>
+	</bean>	
+	<!-- main & sms by  Velocity Finish -->	
+</beans>

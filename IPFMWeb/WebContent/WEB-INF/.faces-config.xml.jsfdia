@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.jsp" PATH="/login.jsp"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.jsp:0" NAME="item" PATH="/login.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#frame.jsp" NAME="output"
+    PATH="/frame.jsp" TARGET="rules:#frame.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="failure::#login.jsp" NAME="output1"
+    PATH="/login.jsp" TARGET="rules:#login.jsp" TITLE="failure" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="forceLogOutPage::#forceLogOutPage.jsp"
+    NAME="output2" PATH="/forceLogOutPage.jsp"
+    TARGET="rules:#forceLogOutPage.jsp" TITLE="forceLogOutPage" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="frameProfile::#frameProfile.jsp"
+    NAME="output3" PATH="/frameProfile.jsp"
+    TARGET="rules:#frameProfile.jsp" TITLE="frameProfile" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,193,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="homePage::#home#main.jsp" NAME="output"
+    PATH="/home/main.jsp" TARGET="rules:#home#main.jsp" TITLE="homePage" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inbox::#home#inbox.jsp" NAME="output1"
+    PATH="/home/inbox.jsp" TARGET="rules:#home#inbox.jsp" TITLE="inbox" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="tree::#home#tree.jsp" NAME="output2"
+    PATH="/home/tree.jsp" TARGET="rules:#home#tree.jsp" TITLE="tree" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="system_parameter::#master#system_parameter.jsp" NAME="output3"
+    PATH="/master/system_parameter.jsp"
+    TARGET="rules:#master#system_parameter.jsp" TITLE="system_parameter" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="system_parameter_detail::#master#system_parameter_detail.jsp"
+    NAME="output4" PATH="/master/system_parameter_detail.jsp"
+    TARGET="rules:#master#system_parameter_detail.jsp"
+    TITLE="system_parameter_detail" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="system_parameter_import::#master#system_parameter_import.jsp"
+    NAME="output5" PATH="/master/system_parameter_import.jsp"
+    TARGET="rules:#master#system_parameter_import.jsp"
+    TITLE="system_parameter_import" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="workflow_management::#master#workflow_management.jsp"
+    NAME="output6" PATH="/master/workflow_management.jsp"
+    TARGET="rules:#master#workflow_management.jsp"
+    TITLE="workflow_management" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS001_01::#manage#IPURS001_01.jsp"
+    NAME="output7" PATH="/manage/IPURS001_01.jsp"
+    TARGET="rules:#manage#IPURS001_01.jsp" TITLE="IPURS001_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS001_02::#manage#IPURS001_02.jsp"
+    NAME="output8" PATH="/manage/IPURS001_02.jsp"
+    TARGET="rules:#manage#IPURS001_02.jsp" TITLE="IPURS001_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS002_01::#manage#IPURS002_01.jsp"
+    NAME="output9" PATH="/manage/IPURS002_01.jsp"
+    TARGET="rules:#manage#IPURS002_01.jsp" TITLE="IPURS002_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS002_02::#manage#IPURS002_02.jsp"
+    NAME="output10" PATH="/manage/IPURS002_02.jsp"
+    TARGET="rules:#manage#IPURS002_02.jsp" TITLE="IPURS002_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS003_01::#manage#IPURS003_01.jsp"
+    NAME="output11" PATH="/manage/IPURS003_01.jsp"
+    TARGET="rules:#manage#IPURS003_01.jsp" TITLE="IPURS003_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS003_02::#manage#IPURS003_02.jsp"
+    NAME="output12" PATH="/manage/IPURS003_02.jsp"
+    TARGET="rules:#manage#IPURS003_02.jsp" TITLE="IPURS003_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="frameIPSUR001::#frame#frameIPSUR001.jsp"
+    NAME="output13" PATH="/frame/frameIPSUR001.jsp"
+    TARGET="rules:#frame#frameIPSUR001.jsp" TITLE="frameIPSUR001" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSUR001::#manage#IPSUR001_ADD.jsp"
+    NAME="output14" PATH="/manage/IPSUR001_ADD.jsp"
+    TARGET="rules:#manage#IPSUR001_ADD.jsp" TITLE="IPSUR001" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR001_MRGAPPR::#frame#frameIPSUR001_MRGAPPR.jsp"
+    NAME="output15" PATH="/frame/frameIPSUR001_MRGAPPR.jsp"
+    TARGET="rules:#frame#frameIPSUR001_MRGAPPR.jsp"
+    TITLE="frameIPSUR001_MRGAPPR" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR001_MRGAPPR::#manage#IPSUR001_MANAGER_APPROVE.jsp"
+    NAME="output16" PATH="/manage/IPSUR001_MANAGER_APPROVE.jsp"
+    TARGET="rules:#manage#IPSUR001_MANAGER_APPROVE.jsp"
+    TITLE="IPSUR001_MRGAPPR" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR001_VIEW::#frame#frameIPSUR001_VIEW.jsp"
+    NAME="output17" PATH="/frame/frameIPSUR001_VIEW.jsp"
+    TARGET="rules:#frame#frameIPSUR001_VIEW.jsp"
+    TITLE="frameIPSUR001_VIEW" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSUR001_VIEW::#manage#IPSUR001_VIEW.jsp"
+    NAME="output18" PATH="/manage/IPSUR001_VIEW.jsp"
+    TARGET="rules:#manage#IPSUR001_VIEW.jsp" TITLE="IPSUR001_VIEW" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR001_ASSIGNIP::#frame#frameIPSUR001_ASSIGNIP.jsp"
+    NAME="output19" PATH="/frame/frameIPSUR001_ASSIGNIP.jsp"
+    TARGET="rules:#frame#frameIPSUR001_ASSIGNIP.jsp"
+    TITLE="frameIPSUR001_ASSIGNIP" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR001_ASSIGNIP::#manage#IPSUR001_ASSIGN_IP.jsp"
+    NAME="output20" PATH="/manage/IPSUR001_ASSIGN_IP.jsp"
+    TARGET="rules:#manage#IPSUR001_ASSIGN_IP.jsp"
+    TITLE="IPSUR001_ASSIGNIP" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS004_02::#manage#IPURS004_02.jsp"
+    NAME="output21" PATH="/manage/IPURS004_02.jsp"
+    TARGET="rules:#manage#IPURS004_02.jsp" TITLE="IPURS004_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS004_03::#manage#IPURS004_03.jsp"
+    NAME="output22" PATH="/manage/IPURS004_03.jsp"
+    TARGET="rules:#manage#IPURS004_03.jsp" TITLE="IPURS004_03" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS004_06::#manage#IPURS004_06.jsp"
+    NAME="output23" PATH="/manage/IPURS004_06.jsp"
+    TARGET="rules:#manage#IPURS004_06.jsp" TITLE="IPURS004_06" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS004_08::#manage#IPURS004_08.jsp"
+    NAME="output24" PATH="/manage/IPURS004_08.jsp"
+    TARGET="rules:#manage#IPURS004_08.jsp" TITLE="IPURS004_08" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS004_10::#manage#IPURS004_10.jsp"
+    NAME="output25" PATH="/manage/IPURS004_10.jsp"
+    TARGET="rules:#manage#IPURS004_10.jsp" TITLE="IPURS004_10" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS004_11::#manage#IPURS004_11.jsp"
+    NAME="output26" PATH="/manage/IPURS004_11.jsp"
+    TARGET="rules:#manage#IPURS004_11.jsp" TITLE="IPURS004_11" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS012::#manage#IPURS012.jsp"
+    NAME="output27" PATH="/manage/IPURS012.jsp"
+    TARGET="rules:#manage#IPURS012.jsp" TITLE="IPURS012" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSSR001::#search#IPURS007.jsp"
+    NAME="output28" PATH="/search/IPURS007.jsp"
+    TARGET="rules:#search#IPURS007.jsp" TITLE="IPSSR001" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS007_01::#master#IPURS007_01.jsp"
+    NAME="output29" PATH="/master/IPURS007_01.jsp"
+    TARGET="rules:#master#IPURS007_01.jsp" TITLE="IPURS007_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS008_01::#master#IPURS008_01.jsp"
+    NAME="output30" PATH="/master/IPURS008_01.jsp"
+    TARGET="rules:#master#IPURS008_01.jsp" TITLE="IPURS008_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS008_03::#master#IPURS008_03.jsp"
+    NAME="output31" PATH="/master/IPURS008_03.jsp"
+    TARGET="rules:#master#IPURS008_03.jsp" TITLE="IPURS008_03" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ISSMS003::#manage#IPURS009.jsp"
+    NAME="output32" PATH="/manage/IPURS009.jsp"
+    TARGET="rules:#manage#IPURS009.jsp" TITLE="ISSMS003" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS009_01::#master#IPURS009_01.jsp"
+    NAME="output33" PATH="/master/IPURS009_01.jsp"
+    TARGET="rules:#master#IPURS009_01.jsp" TITLE="IPURS009_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="frameIPSUR003::#frame#frameIPSUR003.jsp"
+    NAME="output34" PATH="/frame/frameIPSUR003.jsp"
+    TARGET="rules:#frame#frameIPSUR003.jsp" TITLE="frameIPSUR003" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSUR003::#manage#IPSUR003_ADD.jsp"
+    NAME="output35" PATH="/manage/IPSUR003_ADD.jsp"
+    TARGET="rules:#manage#IPSUR003_ADD.jsp" TITLE="IPSUR003" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR003_VIEW::#frame#frameIPSUR003_VIEW.jsp"
+    NAME="output36" PATH="/frame/frameIPSUR003_VIEW.jsp"
+    TARGET="rules:#frame#frameIPSUR003_VIEW.jsp"
+    TITLE="frameIPSUR003_VIEW" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSUR003_VIEW::#manage#IPSUR003_VIEW.jsp"
+    NAME="output37" PATH="/manage/IPSUR003_VIEW.jsp"
+    TARGET="rules:#manage#IPSUR003_VIEW.jsp" TITLE="IPSUR003_VIEW" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR003_MGR_APPROVE::#frame#frameIPSUR003_MGR_APPROVE.jsp"
+    NAME="output38" PATH="/frame/frameIPSUR003_MGR_APPROVE.jsp"
+    TARGET="rules:#frame#frameIPSUR003_MGR_APPROVE.jsp"
+    TITLE="frameIPSUR003_MGR_APPROVE" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR003_SysOwnerApp::#frame#frameIPSUR003_SysOwnerApp.jsp"
+    NAME="output39" PATH="/frame/frameIPSUR003_SysOwnerApp.jsp"
+    TARGET="rules:#frame#frameIPSUR003_SysOwnerApp.jsp"
+    TITLE="frameIPSUR003_SysOwnerApp" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR003_SysOwnerApp::#manage#IPSUR003_OWNER_APPROVE.jsp"
+    NAME="output40" PATH="/manage/IPSUR003_OWNER_APPROVE.jsp"
+    TARGET="rules:#manage#IPSUR003_OWNER_APPROVE.jsp"
+    TITLE="IPSUR003_SysOwnerApp" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR003_PM::#frame#frameIPSUR003_PM.jsp" NAME="output41"
+    PATH="/frame/frameIPSUR003_PM.jsp"
+    TARGET="rules:#frame#frameIPSUR003_PM.jsp" TITLE="frameIPSUR003_PM" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSUR003_PM::#manage#IPSUR003_PM_ASSIGN.jsp"
+    NAME="output42" PATH="/manage/IPSUR003_PM_ASSIGN.jsp"
+    TARGET="rules:#manage#IPSUR003_PM_ASSIGN.jsp" TITLE="IPSUR003_PM" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR003_ACTM::#frame#frameIPSUR003_ACTM.jsp"
+    NAME="output43" PATH="/frame/frameIPSUR003_ACTM.jsp"
+    TARGET="rules:#frame#frameIPSUR003_ACTM.jsp"
+    TITLE="frameIPSUR003_ACTM" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR003_ACTM::#manage#IPSUR003_IMAPCT_ANALYSIS.jsp"
+    NAME="output44" PATH="/manage/IPSUR003_IMAPCT_ANALYSIS.jsp"
+    TARGET="rules:#manage#IPSUR003_IMAPCT_ANALYSIS.jsp"
+    TITLE="IPSUR003_ACTM" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR003_TEAM::#manage#IPSUR003_TEAM_PROCESS.jsp"
+    NAME="output45" PATH="/manage/IPSUR003_TEAM_PROCESS.jsp"
+    TARGET="rules:#manage#IPSUR003_TEAM_PROCESS.jsp"
+    TITLE="IPSUR003_TEAM" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR003_USER::#manage#IPSUR003_USER_VERIFY.jsp" NAME="output46"
+    PATH="/manage/IPSUR003_USER_VERIFY.jsp"
+    TARGET="rules:#manage#IPSUR003_USER_VERIFY.jsp"
+    TITLE="IPSUR003_USER" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPURS006_07::#manage#IPSUR003_VERIFY_JOB.jsp" NAME="output47"
+    PATH="/manage/IPSUR003_VERIFY_JOB.jsp"
+    TARGET="rules:#manage#IPSUR003_VERIFY_JOB.jsp" TITLE="IPURS006_07" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS010_01::#manage#IPURS010_01.jsp"
+    NAME="output48" PATH="/manage/IPURS010_01.jsp"
+    TARGET="rules:#manage#IPURS010_01.jsp" TITLE="IPURS010_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS010_02::#manage#IPURS010_02.jsp"
+    NAME="output49" PATH="/manage/IPURS010_02.jsp"
+    TARGET="rules:#manage#IPURS010_02.jsp" TITLE="IPURS010_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS011_1::#manage#IPURS011_1.jsp"
+    NAME="output50" PATH="/manage/IPURS011_1.jsp"
+    TARGET="rules:#manage#IPURS011_1.jsp" TITLE="IPURS011_1" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS010_03::#manage#IPURS010_03.jsp"
+    NAME="output51" PATH="/manage/IPURS010_03.jsp"
+    TARGET="rules:#manage#IPURS010_03.jsp" TITLE="IPURS010_03" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS010_04::#manage#IPURS010_04.jsp"
+    NAME="output52" PATH="/manage/IPURS010_04.jsp"
+    TARGET="rules:#manage#IPURS010_04.jsp" TITLE="IPURS010_04" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS010_06::#manage#IPURS010_06.jsp"
+    NAME="output53" PATH="/manage/IPURS010_06.jsp"
+    TARGET="rules:#manage#IPURS010_06.jsp" TITLE="IPURS010_06" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS010_07::#manage#IPURS010_07.jsp"
+    NAME="output54" PATH="/manage/IPURS010_07.jsp"
+    TARGET="rules:#manage#IPURS010_07.jsp" TITLE="IPURS010_07" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS014::#manage#IPURS014.jsp"
+    NAME="output55" PATH="/manage/IPURS014.jsp"
+    TARGET="rules:#manage#IPURS014.jsp" TITLE="IPURS014" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS014_02::#manage#IPURS014_02.jsp"
+    NAME="output56" PATH="/manage/IPURS014_02.jsp"
+    TARGET="rules:#manage#IPURS014_02.jsp" TITLE="IPURS014_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSMS001::#master#IPSMS001.jsp"
+    NAME="output57" PATH="/master/IPSMS001.jsp"
+    TARGET="rules:#master#IPSMS001.jsp" TITLE="IPSMS001" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSMS006::#master#IPSMS006.jsp"
+    NAME="output58" PATH="/master/IPSMS006.jsp"
+    TARGET="rules:#master#IPSMS006.jsp" TITLE="IPSMS006" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS013_01::#manage#IPURS013_01.jsp"
+    NAME="output59" PATH="/manage/IPURS013_01.jsp"
+    TARGET="rules:#manage#IPURS013_01.jsp" TITLE="IPURS013_01" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ISSMS001_Add::#master#IPURS013_02.jsp"
+    NAME="output60" PATH="/master/IPURS013_02.jsp"
+    TARGET="rules:#master#IPURS013_02.jsp" TITLE="ISSMS001_Add" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="frameIPSUR002::#frame#frameIPSUR002.jsp"
+    NAME="output61" PATH="/frame/frameIPSUR002.jsp"
+    TARGET="rules:#frame#frameIPSUR002.jsp" TITLE="frameIPSUR002" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR002_ADD_ASSIGN::#frame#frameIPSUR002_ADD_ASSIGN.jsp"
+    NAME="output62" PATH="/frame/frameIPSUR002_ADD_ASSIGN.jsp"
+    TARGET="rules:#frame#frameIPSUR002_ADD_ASSIGN.jsp"
+    TITLE="frameIPSUR002_ADD_ASSIGN" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="frameIPSUR002_VIEW::#frame#frameIPSUR002_VIEW.jsp"
+    NAME="output63" PATH="/frame/frameIPSUR002_VIEW.jsp"
+    TARGET="rules:#frame#frameIPSUR002_VIEW.jsp"
+    TITLE="frameIPSUR002_VIEW" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSUR002_VIEW::#manage#IPSUR002_View.jsp"
+    NAME="output64" PATH="/manage/IPSUR002_View.jsp"
+    TARGET="rules:#manage#IPSUR002_View.jsp" TITLE="IPSUR002_VIEW" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS017::#report#IPURS017.jsp"
+    NAME="output65" PATH="/report/IPURS017.jsp"
+    TARGET="rules:#report#IPURS017.jsp" TITLE="IPURS017" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS019::#report#IPURS019.jsp"
+    NAME="output66" PATH="/report/IPURS019.jsp"
+    TARGET="rules:#report#IPURS019.jsp" TITLE="IPURS019" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPURS021::#report#IPURS021.jsp"
+    NAME="output67" PATH="/report/IPURS021.jsp"
+    TARGET="rules:#report#IPURS021.jsp" TITLE="IPURS021" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSIP001::#manage#IPSIP001_VIEW.jsp"
+    NAME="output68" PATH="/manage/IPSIP001_VIEW.jsp"
+    TARGET="rules:#manage#IPSIP001_VIEW.jsp" TITLE="IPSIP001" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSIP002::#manage#IPSIP002_VIEW.jsp"
+    NAME="output69" PATH="/manage/IPSIP002_VIEW.jsp"
+    TARGET="rules:#manage#IPSIP002_VIEW.jsp" TITLE="IPSIP002" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSIP003::#manage#IPSIP003_VIEW.jsp"
+    NAME="output70" PATH="/manage/IPSIP003_VIEW.jsp"
+    TARGET="rules:#manage#IPSIP003_VIEW.jsp" TITLE="IPSIP003" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSIP003_IMPORT::#manage#IPSIP003_IMPORT.jsp" NAME="output71"
+    PATH="/manage/IPSIP003_IMPORT.jsp"
+    TARGET="rules:#manage#IPSIP003_IMPORT.jsp" TITLE="IPSIP003_IMPORT" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ISSMS002::#master#team#ISSMS002_01_ADD.jsp"
+    NAME="output72" PATH="/master/team/ISSMS002_01_ADD.jsp"
+    TARGET="rules:#master#team#ISSMS002_01_ADD.jsp" TITLE="ISSMS002" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="ISSMS002_02::#master#team#ISSMS002_02_ADD.jsp" NAME="output73"
+    PATH="/master/team/ISSMS002_02_ADD.jsp"
+    TARGET="rules:#master#team#ISSMS002_02_ADD.jsp" TITLE="ISSMS002_02" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ISSMS003::#master#ISSMS003.jsp"
+    NAME="output74" PATH="/master/ISSMS003.jsp"
+    TARGET="rules:#master#ISSMS003.jsp" TITLE="ISSMS003" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ISSMS006::#master#MenuAuthentication.jsp"
+    NAME="output75" PATH="/master/MenuAuthentication.jsp"
+    TARGET="rules:#master#MenuAuthentication.jsp" TITLE="ISSMS006" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPSMS002::#master#IPSMS002.jsp"
+    NAME="output76" PATH="/master/IPSMS002.jsp"
+    TARGET="rules:#master#IPSMS002.jsp" TITLE="IPSMS002" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPSUR003_09_History::#manage#popup#ReqNWConfigHistory.jsp"
+    NAME="output77" PATH="/manage/popup/ReqNWConfigHistory.jsp"
+    TARGET="rules:#manage#popup#ReqNWConfigHistory.jsp"
+    TITLE="IPSUR003_09_History" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="forcelogout::#forceLogOutPage.jsp"
+    NAME="output78" PATH="/forceLogOutPage.jsp"
+    TARGET="rules:#forceLogOutPage.jsp" TITLE="forcelogout" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPRUR001::#report#IPRUR001_Report_Criteria.jsp" NAME="output79"
+    PATH="/report/IPRUR001_Report_Criteria.jsp"
+    TARGET="rules:#report#IPRUR001_Report_Criteria.jsp" TITLE="IPRUR001" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="IPRUR002::#report#IPRUR002_Report_List.jsp"
+    NAME="output80" PATH="/report/IPRUR002_Report_List.jsp"
+    TARGET="rules:#report#IPRUR002_Report_List.jsp" TITLE="IPRUR002" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPRUR003::#report#IPRUR003_Report_Layout.jsp" NAME="output81"
+    PATH="/report/IPRUR003_Report_Layout.jsp"
+    TARGET="rules:#report#IPRUR003_Report_Layout.jsp" TITLE="IPRUR003" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="IPRUR004::#report#IPRUR004_Report_URList.jsp" NAME="output82"
+    PATH="/report/IPRUR004_Report_URList.jsp"
+    TARGET="rules:#report#IPRUR004_Report_URList.jsp" TITLE="IPRUR004" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#report#IPURS017.jsp"
+  PATH="/report/IPURS017.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_MANAGER_APPROVE.jsp"
+  PATH="/manage/IPSUR003_MANAGER_APPROVE.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_PM_ASSIGN.jsp"
+  PATH="/manage/IPSUR003_PM_ASSIGN.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR001_ASSIGNIP.jsp"
+  PATH="/frame/frameIPSUR001_ASSIGNIP.jsp" SHAPE="304,3361,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_05.jsp"
+  PATH="/manage/IPURS010_05.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_07.jsp"
+  PATH="/manage/IPURS004_07.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_ADD.jsp"
+  PATH="/manage/IPSUR003_ADD.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_10.jsp"
+  PATH="/manage/IPURS004_10.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR002.jsp"
+  PATH="/frame/frameIPSUR002.jsp" SHAPE="304,4369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPURS007_01.jsp"
+  PATH="/master/IPURS007_01.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_04.jsp"
+  PATH="/manage/IPURS004_04.jsp" SHAPE="304,4769,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPURS016.jsp"
+  PATH="/report/IPURS016.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS001_02.jsp"
+  PATH="/manage/IPURS001_02.jsp" SHAPE="304,3537,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_06.jsp"
+  PATH="/manage/IPURS010_06.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_03.jsp"
+  PATH="/manage/IPURS004_03.jsp" SHAPE="304,4657,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_OWNER_APPROVE.jsp"
+  PATH="/manage/IPSUR003_OWNER_APPROVE.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS012.jsp"
+  PATH="/manage/IPURS012.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_01.jsp"
+  PATH="/manage/IPURS010_01.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003.jsp"
+  PATH="/frame/frameIPSUR003.jsp" SHAPE="304,3473,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSIP001_VIEW.jsp"
+  PATH="/manage/IPSIP001_VIEW.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_PM.jsp"
+  PATH="/frame/frameIPSUR003_PM.jsp" SHAPE="304,3921,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS003_02.jsp"
+  PATH="/manage/IPURS003_02.jsp" SHAPE="304,3985,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPSMS002.jsp"
+  PATH="/master/IPSMS002.jsp" SHAPE="304,3185,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_VIEW.jsp"
+  PATH="/frame/frameIPSUR003_VIEW.jsp" SHAPE="304,3585,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_TEAM.jsp"
+  PATH="/frame/frameIPSUR003_TEAM.jsp" SHAPE="304,4145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPURS018.jsp"
+  PATH="/report/IPURS018.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS014.jsp"
+  PATH="/manage/IPURS014.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPURS019.jsp"
+  PATH="/report/IPURS019.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#ISSMS007.jsp"
+  PATH="/master/ISSMS007.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS009.jsp"
+  PATH="/manage/IPURS009.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#redirect.jsp" PATH="/redirect.jsp"
+  SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS001_01.jsp"
+  PATH="/manage/IPURS001_01.jsp" SHAPE="304,3425,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_ACTM.jsp"
+  PATH="/frame/frameIPSUR003_ACTM.jsp" SHAPE="304,4033,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_08.jsp"
+  PATH="/manage/IPURS004_08.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#workflow_management.jsp"
+  PATH="/master/workflow_management.jsp" SHAPE="304,3313,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS002_01.jsp"
+  PATH="/manage/IPURS002_01.jsp" SHAPE="304,3649,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPURS008_03.jsp"
+  PATH="/master/IPURS008_03.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#MenuAuthentication.jsp"
+  PATH="/master/MenuAuthentication.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_02.jsp"
+  PATH="/manage/IPURS010_02.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#team#ISSMS002_02_ADD.jsp"
+  PATH="/master/team/ISSMS002_02_ADD.jsp" SHAPE="304,3073,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPURS021.jsp"
+  PATH="/report/IPURS021.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_MGR_APPROVE.jsp"
+  PATH="/frame/frameIPSUR003_MGR_APPROVE.jsp" SHAPE="304,3697,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_11.jsp"
+  PATH="/manage/IPURS004_11.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPRUR001_Report_Criteria.jsp"
+  PATH="/report/IPRUR001_Report_Criteria.jsp" SHAPE="304,2849,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPRUR003_Report_Layout.jsp"
+  PATH="/report/IPRUR003_Report_Layout.jsp" SHAPE="304,3137,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR001_VIEW.jsp"
+  PATH="/frame/frameIPSUR001_VIEW.jsp" SHAPE="304,3249,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#search#IPURS007.jsp"
+  PATH="/search/IPURS007.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_05_UR.jsp"
+  PATH="/manage/IPURS004_05_UR.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_SysOwnerApp.jsp"
+  PATH="/frame/frameIPSUR003_SysOwnerApp.jsp" SHAPE="304,3809,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_06.jsp"
+  PATH="/manage/IPURS004_06.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_02.jsp"
+  PATH="/manage/IPURS004_02.jsp" SHAPE="304,4545,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_IMAPCT_ANALYSIS.jsp"
+  PATH="/manage/IPSUR003_IMAPCT_ANALYSIS.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPURS013_02.jsp"
+  PATH="/master/IPURS013_02.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS014_02.jsp"
+  PATH="/manage/IPURS014_02.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR002_VIEW.jsp"
+  PATH="/frame/frameIPSUR002_VIEW.jsp" SHAPE="304,4593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_04.jsp"
+  PATH="/manage/IPURS010_04.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#team#ISSMS002_01_ADD.jsp"
+  PATH="/master/team/ISSMS002_01_ADD.jsp" SHAPE="304,2961,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSIP003_VIEW.jsp"
+  PATH="/manage/IPSIP003_VIEW.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_03.jsp"
+  PATH="/manage/IPURS010_03.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS004_09.jsp"
+  PATH="/manage/IPURS004_09.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_CONFIG_NETWORK.jsp"
+  PATH="/manage/IPSUR003_CONFIG_NETWORK.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR002_ADD_ASSIGN.jsp"
+  PATH="/frame/frameIPSUR002_ADD_ASSIGN.jsp" SHAPE="304,4481,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_VIEW.jsp"
+  PATH="/manage/IPSUR003_VIEW.jsp" SHAPE="304,2753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS010_07.jsp"
+  PATH="/manage/IPURS010_07.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_TEAM_PROCESS.jsp"
+  PATH="/manage/IPSUR003_TEAM_PROCESS.jsp" SHAPE="304,2849,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR003_USER.jsp"
+  PATH="/frame/frameIPSUR003_USER.jsp" SHAPE="304,4257,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR001.jsp"
+  PATH="/frame/frameIPSUR001.jsp" SHAPE="304,3025,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#ISSMS003.jsp"
+  PATH="/master/ISSMS003.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPURS009_01.jsp"
+  PATH="/master/IPURS009_01.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPRUR002_Report_List.jsp"
+  PATH="/report/IPRUR002_Report_List.jsp" SHAPE="304,3025,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#system_parameter_import.jsp"
+  PATH="/master/system_parameter_import.jsp" SHAPE="304,3201,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPURS008_01.jsp"
+  PATH="/master/IPURS008_01.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frameProfile.jsp" PATH="/frameProfile.jsp"
+  SHAPE="272,2913,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS003_01.jsp"
+  PATH="/manage/IPURS003_01.jsp" SHAPE="304,3873,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#system_parameter.jsp"
+  PATH="/master/system_parameter.jsp" SHAPE="304,2977,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSIP002_VIEW.jsp"
+  PATH="/manage/IPSIP002_VIEW.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#system_parameter_detail.jsp"
+  PATH="/master/system_parameter_detail.jsp" SHAPE="304,3089,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_VERIFY_JOB.jsp"
+  PATH="/manage/IPSUR003_VERIFY_JOB.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#home#main.jsp" PATH="/home/main.jsp"
+  SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#search#IPSSR002.jsp"
+  PATH="/search/IPSSR002.jsp" SHAPE="304,2753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS013_01.jsp"
+  PATH="/manage/IPURS013_01.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#popup#ReqNWConfigHistory.jsp"
+  PATH="/manage/popup/ReqNWConfigHistory.jsp" SHAPE="304,3297,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#home#tree.jsp" PATH="/home/tree.jsp"
+  SHAPE="304,2865,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS002_02.jsp"
+  PATH="/manage/IPURS002_02.jsp" SHAPE="304,3761,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR003_USER_VERIFY.jsp"
+  PATH="/manage/IPSUR003_USER_VERIFY.jsp" SHAPE="304,2913,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#home#inbox.jsp" PATH="/home/inbox.jsp"
+  SHAPE="304,2753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame#frameIPSUR001_MRGAPPR.jsp"
+  PATH="/frame/frameIPSUR001_MRGAPPR.jsp" SHAPE="304,3137,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS011_2.jsp"
+  PATH="/manage/IPURS011_2.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#frame.jsp" PATH="/frame.jsp"
+  SHAPE="272,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPURS011_1.jsp"
+  PATH="/manage/IPURS011_1.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#report#IPRUR004_Report_URList.jsp"
+  PATH="/report/IPRUR004_Report_URList.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPSMS006.jsp"
+  PATH="/master/IPSMS006.jsp" SHAPE="304,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR002_ADD_ASSIGN.jsp"
+  PATH="/manage/IPSUR002_ADD_ASSIGN.jsp" SHAPE="304,3697,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR001_VIEW.jsp"
+  PATH="/manage/IPSUR001_VIEW.jsp" SHAPE="304,3249,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#forceLogOutPage.jsp"
+  PATH="/forceLogOutPage.jsp" SHAPE="304,2913,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR002_ADD.jsp"
+  PATH="/manage/IPSUR002_ADD.jsp" SHAPE="304,3585,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR001_ASSIGN_IP.jsp"
+  PATH="/manage/IPSUR001_ASSIGN_IP.jsp" SHAPE="304,3361,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR001_MANAGER_APPROVE.jsp"
+  PATH="/manage/IPSUR001_MANAGER_APPROVE.jsp" SHAPE="304,3137,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR001_ADD.jsp"
+  PATH="/manage/IPSUR001_ADD.jsp" SHAPE="304,3025,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSUR002_View.jsp"
+  PATH="/manage/IPSUR002_View.jsp" SHAPE="304,3809,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#master#IPSMS001.jsp"
+  PATH="/master/IPSMS001.jsp" SHAPE="304,3473,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#manage#IPSIP003_IMPORT.jsp"
+  PATH="/manage/IPSIP003_IMPORT.jsp" SHAPE="304,2977,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

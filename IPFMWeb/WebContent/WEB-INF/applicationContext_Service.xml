@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+	
+<!--    <bean name="batchProcessBean" class="org.springframework.scheduling.quartz.JobDetailBean">-->
+<!--        <property name="jobClass" value="th.co.ais.ipfm.bean.BatchProcessBean" />-->
+<!--    </bean>-->
+<!--	<bean id="BatchProcessBeanTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">-->
+<!--        <property name="jobDetail" ref="batchProcessBean" />-->
+<!--        <property name="cronExpression" value="0 10 0 * * ?" />-->
+<!--    </bean>-->
+     
+<!--    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false">-->
+<!--        <property name="triggers">-->
+<!--            <list>-->
+<!--                <ref bean="BatchProcessBeanTrigger" />-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="applicationContextSchedulerContextKey">-->
+<!--            <value>applicationContext</value>-->
+<!--        </property>-->
+<!--    </bean>-->
+    
+    
+    <!-- DAO -->
+    <bean id="callProcedureDao" class="th.co.ais.ipfm.dao.CallProcedureDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="tempIpLevel2Dao" ref="tempIpLevel2Dao" />
+	</bean>
+    <bean id="projectDao" class="th.co.ais.ipfm.dao.hibernate.HibernateProjectDao">
+		<property name="vsfmSessionFactory" ref="vsfmSessionFactory" />
+	</bean>	
+	<bean id="ipFunctionDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPFunctionDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipTeamDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPTeamDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvNetworkIpDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvNetworkIpDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- Service -->
+	<bean id="projectService" class="th.co.ais.ipfm.service.impl.ProjectServiceImpl">
+		<property name="projectDao" ref="projectDao" />
+	</bean>	
+	<bean id="ipTeamService" class="th.co.ais.ipfm.service.impl.IPTeamServiceImpl">
+		<property name="ipTeamDao" ref="ipTeamDao" />
+	</bean>	
+	
+
+	<bean id="ipParameterDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPParameterDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipParameterService" class="th.co.ais.ipfm.service.impl.IPParameterServiceImpl">
+		<property name="ipParameterDao" ref="ipParameterDao" />
+	</bean>	
+	
+	<bean id="ipUserDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUserDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipRoleMemberDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPRoleMemberDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loginService" class="th.co.ais.ipfm.service.impl.LoginServiceImpl" >
+		<property name="ipUserDao" ref="ipUserDao" />
+		<property name="ipRoleMemberDao" ref="ipRoleMemberDao" />
+		<property name="ssoService" ref="ssoService" />
+		<property name="ldapService" ref="ldapService" />
+		<property name="ehrService" ref="ehrService" />
+		<property name="mainMenuService" ref="mainMenuService" />
+		<property name="inboxService" ref="inboxService" />
+		<property name="ipEmailNotifyDao" ref="ipEmailNotify" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipFunctionDao" ref="ipFunctionDao" />
+		<property name="ipTeamDao" ref="ipTeamDao" />
+		<property name="authService" ref="authService" />
+		<property name="ehrService2" ref="ehrService2" />
+		
+	</bean>	
+	<bean id="rangeIPDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPRangeDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="iipUserDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIIPUserDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="commonDao" class="th.co.ais.ipfm.dao.hibernate.HibernateCommonDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="commonService" class="th.co.ais.ipfm.service.impl.CommonServiceImpl">
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipParameterDao" ref="ipParameterDao" />
+	</bean>	
+	
+	<bean id="rangeIPService" class="th.co.ais.ipfm.service.impl.RangeIPServiceImpl">
+		<property name="rangeIPDao" ref="rangeIPDao" />
+		<property name="ipGroupDao" ref="ipGroupDao" />
+		<property name="commonDao" ref="commonDao" />
+	</bean>	
+	
+	<bean id="ipGroupDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPGroupDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipGroupService" class="th.co.ais.ipfm.service.impl.IPGroupServiceImpl">
+		<property name="ipGroupDao" ref="ipGroupDao" />
+		<property name="commonDao" ref="commonDao" />
+	</bean>
+	
+    <bean id="ipDetailDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPDetailDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="manageDataIPService" class="th.co.ais.ipfm.service.impl.ManageDataIPServiceImpl">
+		<property name="ipDetailDao" ref="ipDetailDao" />
+	</bean>	
+	
+<!--    <bean id="ipUserGroupInsertDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUserGroupInsertDao">-->
+<!--		<property name="sessionFactory" ref="sessionFactory" />-->
+<!--	</bean>-->
+	
+	<bean id="ipGroupMemberDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPGroupMemberDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="userGroupManageService" class="th.co.ais.ipfm.service.impl.UserGroupManageServiceImpl">
+		<property name="ipGroupMemberDao" ref="ipGroupMemberDao" />
+<!--		<property name="ipUserGroupInsertDao" ref="ipUserGroupInsertDao" />-->
+	</bean>	
+	
+    <bean id="ipUserGroupDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUserGroupDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipUserGroupService" class="th.co.ais.ipfm.service.impl.IPUserGroupServiceImpl">
+		<property name="ipUserGroupDao" ref="ipUserGroupDao" />
+	</bean>	
+	
+	<bean id="ipUrIPDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrIPDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipUrIPService" class="th.co.ais.ipfm.service.impl.IPUrIPServiceImpl">
+		<property name="ipUrIPDao" ref="ipUrIPDao" />
+		<property name="commonDao" ref="commonDao" />
+	</bean>
+	
+	<!-- modify by tassanai.k -->
+	<!-- email property -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="mail.corp.ais900.org"/>
+		<property name="port" value="25"/>
+	</bean>
+
+	<bean id="emailService" class="th.co.ais.email.service.EMailService">
+		<property name="sender" ref="mailSender"/>
+		<property name="velocityEngine" ref="velocityEngine"/>
+	</bean>
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+			</value>
+		</property>
+	</bean>
+	
+	<!-- Application DAO -->
+	<bean id="mainMenuDao" class="th.co.ais.ipfm.dao.hibernate.HibernateMainMenuDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipfmCommondDao" class="th.co.ais.ipfm.dao.IPFMCommondDaoImpl">
+		<!-- <property name="dataSource" ref="dataSource" /> -->
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="planningPLDao" class="th.co.ais.ipfm.dao.PlanningDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="firewallDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPFirewallDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipUrAttachmentDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrAttachmentDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipUrNwConfigDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrNwConfigDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipInfoDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPInfoDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipInfoTempDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPInfoTempDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipLogVerifyDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPLogVerifyDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipInfoHistoryDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPInfoHistoryDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="accessListDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPAccessListDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="accessListTNPDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPAccessListTNPDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="physicalInterfaceDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPPhyInterfaceDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="intfGatewayDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPIntfGatewayDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="routingDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPRoutingDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="f5Dao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPF5Dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipStatusDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPStatusDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipRoleDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPRoleDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipDelegateUserDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPDelegateUserDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipEmailNotify" class="th.co.ais.ipfm.dao.hibernate.HibernateIPEmailNotifyDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipNetworkConfigDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpNetworkConfigDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+
+	<!-- Application Service -->
+	<bean id="treeMenuService" class="th.co.ais.ipfm.service.impl.TreeMenuServiceImpl">
+		<property name="mainMenuDao" ref="mainMenuDao" />
+		<property name="ipfmCommondDao" ref="ipfmCommondDao" />
+		<property name="ipvMonitorReqncDao" ref="ipvMonitorReqncDao" />
+	</bean>
+	
+	<bean id="mainMenuService" class="th.co.ais.ipfm.service.impl.MainMenuServiceImpl">
+		<property name="mainMenuDao" ref="mainMenuDao" />
+	</bean>
+	
+	<bean id="ipUserService" class="th.co.ais.ipfm.service.impl.IPUserServiceImpl">
+		<property name="ipUserDao" ref="ipUserDao" />
+	</bean>
+	
+	<bean id="firewallService" class="th.co.ais.ipfm.service.impl.FirewallServiceImpl">
+		<property name="firewallDao" ref="firewallDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="ipUrAttachmentService" class="th.co.ais.ipfm.service.impl.IpUrAttachmentServiceImpl">
+		<property name="ipUrAttachmentDao" ref="ipUrAttachmentDao" />
+		<property name="commonDao" ref="commonDao" />
+	</bean>
+	
+	<bean id="ipUrNwConfigService" class="th.co.ais.ipfm.service.impl.IPUrNwConfigServiceImpl">
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+		<property name="ipUrNwConfigDao" ref="ipUrNwConfigDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipStatusDao" ref="ipStatusDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="ipTeamDao" ref="ipTeamDao" />
+		<property name="ipUserDao" ref="ipUserDao" />
+		<property name="ipRoleMemberDao" ref="ipRoleMemberDao" />
+		<property name="ipEmailNotify" ref="ipEmailNotify" />
+		<property name="ipNetworkConfigDao" ref="ipNetworkConfigDao" />
+		<property name="commonDao" ref="commonDao" />
+		
+		<property name="firewallDao" ref="firewallDao" />
+		<property name="accessListDao" ref="accessListDao" />
+		<property name="accessListTNPDao" ref="accessListTNPDao" />
+		<property name="physicalInterfaceDao" ref="physicalInterfaceDao" />
+		<property name="intfGatewayDao" ref="intfGatewayDao" />
+		<property name="routingDao" ref="routingDao" />
+		<property name="f5Dao" ref="f5Dao" />
+		<property name="callProcedureDao" ref="callProcedureDao" />
+
+		<property name="emailService" ref="emailService" />
+		<property name="ipUrActionService" ref="ipUrActionService" />
+		<property name="ipUrAttachmentService" ref="ipUrAttachmentService" />
+		<property name="ipSubUrAttachmentDao" ref="ipSubUrAttachmentDao" />
+	</bean>
+	
+	<bean id="accessListService" class="th.co.ais.ipfm.service.impl.AccessListServiceImpl">
+		<property name="accessListDao" ref="accessListDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="accessListTNPService" class="th.co.ais.ipfm.service.impl.AccessListTNPServiceImpl">
+		<property name="accessListTNPDao" ref="accessListTNPDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="phyInterfaceService" class="th.co.ais.ipfm.service.impl.PhyInterfaceServiceImpl">
+		<property name="physicalInterfaceDao" ref="physicalInterfaceDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="intfGatewayService" class="th.co.ais.ipfm.service.impl.IntfGatewayServiceImpl">
+		<property name="intfGatewayDao" ref="intfGatewayDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="routingService" class="th.co.ais.ipfm.service.impl.RoutingServiceImpl">
+		<property name="routingDao" ref="routingDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="f5Service" class="th.co.ais.ipfm.service.impl.F5ServiceImpl">
+		<property name="f5Dao" ref="f5Dao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="ipUrActionService" class="th.co.ais.ipfm.service.impl.IpUrActionServiceImpl">
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipEmailNotify" ref="ipEmailNotify" />
+		
+	</bean>
+	
+	<!-- ==== end tassanai.k -->
+	<bean id="ipUrIPDetailDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrIPDetailDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipUrActionDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrActionDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipUrActionHistoryDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrActionHistoryDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipUrIPResultDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrIPResultDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipUrIPResultService" class="th.co.ais.ipfm.service.impl.IPUrIPResultServiceImpl" >
+		<property name="ipUrIPResultDao" ref="ipUrIPResultDao" />
+	</bean>	
+	<bean id="excelService" class="th.co.ais.ipfm.service.impl.ExcelServiceImpl" >
+		<property name="ipUrIPResultService" ref="ipUrIPResultService" />
+	</bean>	
+	
+	<bean id="ipLevel1Dao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPLevel1Dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipLevel2Dao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPLevel2Dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="tempIpLevel2Dao" class="th.co.ais.ipfm.dao.hibernate.HibernateTempIPLevel2Dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipLevel2HistoryDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPLevel2HistoryDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ipMaskDisplayDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpMaskDisplayDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="userReqIPService" class="th.co.ais.ipfm.service.impl.UserReqIPServiceImpl">
+		<property name="ipUrIPDetailDao" ref="ipUrIPDetailDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="iipUserDao" ref="iipUserDao" />
+		<property name="ipLevel1Dao" ref="ipLevel1Dao" />
+		<property name="ipLevel2Dao" ref="ipLevel2Dao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="planningPLDao" ref="planningPLDao" />
+		<property name="ipUrAttachmentDao" ref="ipUrAttachmentDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+		<property name="ipUrIPResultDao" ref="ipUrIPResultDao" />
+		<property name="ipUrAttachmentService" ref="ipUrAttachmentService" />
+		<property name="ipMaskDisplayDao" ref="ipMaskDisplayDao" />
+		<property name="loginService" ref="loginService" />
+		<property name="ipTeamDao" ref="ipTeamDao" />
+	</bean>
+	
+	<bean id="planningReqIPService" class="th.co.ais.ipfm.service.impl.PlanningReqIPServiceImp">
+		<property name="ipUrIPDetailDao" ref="ipUrIPDetailDao" />
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="iipUserDao" ref="iipUserDao" />
+		<property name="ipUrAttachmentDao" ref="ipUrAttachmentDao" />
+		<property name="planningPLDao" ref="planningPLDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+		<property name="ipUrIPResultDao" ref="ipUrIPResultDao" />
+		<property name="ipLevel1Dao" ref="ipLevel1Dao" />
+		<property name="ipLevel2Dao" ref="ipLevel2Dao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="ipMaskDisplayDao" ref="ipMaskDisplayDao" />
+		<property name="loginService" ref="loginService" />
+		<property name="ipTeamDao" ref="ipTeamDao" />
+	</bean>
+
+	<!--  Management IP -->
+	<bean id="managementIpService" class="th.co.ais.ipfm.service.impl.ManagementIpServiceImpl">
+		<property name="ipLevel1Dao" ref="ipLevel1Dao" />
+		<property name="ipLevel2Dao" ref="ipLevel2Dao" />
+		<property name="ipLevel2HistoryDao" ref="ipLevel2HistoryDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+		<property name="tempIpLevel2Dao" ref="tempIpLevel2Dao" />
+		<property name="ipInfoHistoryDao" ref="ipInfoHistoryDao" />
+		<property name="ipvNetworkIpDao" ref="ipvNetworkIpDao" />
+		<property name="callProcedureDao" ref="callProcedureDao" />
+		<property name="ipfmCommondDao" ref="ipfmCommondDao" />
+		<property name="ipRoleMemberDao" ref="ipRoleMemberDao" />
+		<property name="loginService" ref="loginService" />
+		<property name="ipTeamDao" ref="ipTeamDao" />
+		<property name="ipInfoTempDao" ref="ipInfoTempDao" />
+		<property name="ipLogVerifyDao" ref="ipLogVerifyDao" />
+	</bean>
+	<!--  Inbox -->
+	<bean id="inboxDao" class="th.co.ais.ipfm.dao.hibernate.HibernateInboxDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvTodoReqncDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvTodoReqncDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvTodoUserReqDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvTodoUserReqDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvTodoPlanningReqDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvTodoPlanningReqDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvWatchReqncDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvWatchReqncDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvWatchUserReqDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvWatchUserReqDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvWatchPlanningReqDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvWatchPlanningReqDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipvMonitorReqncDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpvMonitorReqncDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipUrWfConfigDetailDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpWfConfigDetailDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipWfConfigDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpWfConfigDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="inboxService" class="th.co.ais.ipfm.service.impl.InboxServiceImpl">
+		<property name="inboxDao" ref="inboxDao" />
+		<property name="ipvTodoReqncDao" ref="ipvTodoReqncDao" />
+		<property name="ipvTodoUserReqDao" ref="ipvTodoUserReqDao" />
+		<property name="ipvTodoPlanningReqDao" ref="ipvTodoPlanningReqDao" />		
+		<property name="ipvWatchReqncDao" ref="ipvWatchReqncDao" />
+		<property name="ipvWatchUserReqDao" ref="ipvWatchUserReqDao" />
+		<property name="ipvWatchPlanningReqDao" ref="ipvWatchPlanningReqDao" />		
+		<property name="ipvMonitorReqncDao" ref="ipvMonitorReqncDao" />
+		<property name="ipFunctionDao" ref="ipFunctionDao" />
+	</bean>
+	
+    <bean id="ipUrStatusDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPUrStatusDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="searchURService" class="th.co.ais.ipfm.service.impl.SearchURServiceImp">
+		<property name="ipUrStatusDao" ref="ipUrStatusDao" />
+		<property name="ipUrIPDetailDao" ref="ipUrIPDetailDao" />
+		<property name="ipUserDao" ref="ipUserDao" />
+		<property name="iipUserDao" ref="iipUserDao" />
+	</bean>
+	
+	<bean id="searchIPService" class="th.co.ais.ipfm.service.impl.SearchIPServiceImp">
+		<property name="ipUserDao" ref="ipUserDao" />
+		<property name="iipUserDao" ref="iipUserDao" />
+		<property name="planningPLDao" ref="planningPLDao" />
+		<property name="ipInfoDao" ref="ipInfoDao" />
+	</bean>
+	
+	<bean id="teamManageService" class="th.co.ais.ipfm.service.impl.TeamManageServiceImp">
+		<property name="ipUserDao" ref="ipUserDao" />
+		<property name="ipTeamDao" ref="ipTeamDao" />
+		<property name="iipUserDao" ref="iipUserDao" />
+	</bean>
+	
+	<bean id="userProfileService" class="th.co.ais.ipfm.service.impl.UserProfileServiceImp">
+		<property name="ipUserDao" ref="ipUserDao" />
+		<property name="ipRoleDao" ref="ipRoleDao" />
+		<property name="ipRoleMemberDao" ref="ipRoleMemberDao" />
+		<property name="ipDelegateUserDao" ref="ipDelegateUserDao"/>
+		<property name="ehrService" ref="ehrService" />
+		<property name="commonDao" ref="commonDao" />
+		<property name="authService" ref="authService" />
+		<property name="ehrService2" ref="ehrService2" />
+	</bean>
+	
+	<bean id="historyNwConfigService" class="th.co.ais.ipfm.service.impl.HistoryNwConfigServiceImp">
+		<property name="ipUrActionDao" ref="ipUrActionDao" />
+		<property name="ipUrNwConfigDao" ref="ipUrNwConfigDao" />
+		<property name="ipUrActionHistoryDao" ref="ipUrActionHistoryDao" />
+	</bean>
+	
+	<bean id="workFlowService" class="th.co.ais.ipfm.service.impl.WorkFlowServiceImp">
+         <property name="ipUrWfConfigDetailDao" ref="ipUrWfConfigDetailDao" />
+         <property name="ipWfConfigDao" ref="ipWfConfigDao" />
+         <property name="commonDao" ref="commonDao" />
+	</bean>
+
+	<!-- Report dao -->	
+	<bean id="iPReportListDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIpReportListDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- Report Service -->
+	<bean id="iPReportService" class="th.co.ais.ipfm.service.impl.IPReportServiceImpl">
+		<property name="iPReportListDao" ref="iPReportListDao" />
+        <property name="commonDao" ref="commonDao" />
+	</bean>
+	
+	<!-- Auto send SMS, Email -->	
+	<bean id="iAutoSendSMSDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIAutoSendSMSDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="iAutoSendMailDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIAutoSendMailDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="sendOverSLAService" class="th.co.ais.ipfm.service.impl.SendOverSLAServiceImpl">
+		<property name="iAutoSendSMSDao" ref="iAutoSendSMSDao" />
+	</bean>
+	<bean id="sendIPExpireWarningService" class="th.co.ais.ipfm.service.impl.SendIPExpireWarningServiceImpl">
+		<property name="iAutoSendMailDao" ref="iAutoSendMailDao" />
+	</bean>
+	
+	<bean id="ipSubUrAttachmentDao" class="th.co.ais.ipfm.dao.hibernate.HibernateIPSubUrAttachmentDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ipSubUrAttachmentService" class="th.co.ais.ipfm.service.impl.IpSubUrAttachmentServiceImpl">
+		<property name="ipSubUrAttachmentDao" ref="ipSubUrAttachmentDao" />
+	</bean>
+</beans>
+

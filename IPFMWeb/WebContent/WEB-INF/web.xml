@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>IPFMWeb</display-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.CONFIG_FILES</param-name>
+		<param-value>/WEB-INF/faces-config.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>server</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.ajax4jsf.COMPRESS_SCRIPT</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.ajax4jsf.COMPRESS_STYLE</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.ajax4jsf.handleViewExpiredOnClient</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.ajax4jsf.xmlparser.ORDER</param-name>
+		<param-value>NEKO, TIDY</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.richfaces.CONTROL_SKINNING</param-name>
+		<param-value>enable</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.richfaces.LoadScriptStrategy</param-name>
+		<param-value>DEFAULT</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.richfaces.LoadStyleStrategy</param-name>
+		<param-value>DEFAULT</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.richfaces.SKIN</param-name>
+		<param-value>darkX</param-value>
+	</context-param>
+	<filter>
+		<display-name>Ajax4jsf Filter</display-name>
+		<filter-name>ajax4jsf</filter-name>
+		<filter-class>org.ajax4jsf.Filter</filter-class>
+		<init-param>
+			<param-name>createTempFiles</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>maxRequestSize</param-name>
+			<param-value>20000000</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>encoding-filter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<display-name>TimeOutFilter</display-name>
+		<filter-name>TimeOutFilter</filter-name>
+		<filter-class>th.co.ais.ipfm.web.util.SessionTimeoutFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>
+		<init-param>
+			<param-name>maxFileSize</param-name>
+			<param-value>20m</param-value>
+		</init-param>
+	</filter>
+	
+	<!-- fix firefox -->
+	<filter>
+	<filter-name>RichFacesFirefox11Filter</filter-name>
+	<filter-class>th.co.ais.ipfm.web.filter.RichFacesFirefox11Filter</filter-class>	
+	</filter>
+	<filter-mapping>
+		<filter-name>RichFacesFirefox11Filter</filter-name>
+		<url-pattern>/a4j/*</url-pattern>
+	</filter-mapping>
+	<!-- fix firefox -->
+	<filter-mapping>
+		<filter-name>ajax4jsf</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encoding-filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>TimeOutFilter</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<url-pattern>/faces/myFacesExtensionResource/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>th.co.ais.ipfm.web.util.IPFMSessionListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<display-name>File Upload Servlet</display-name>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>th.co.ais.ipfm.web.util.FileUploadServlet</servlet-class>
+		<init-param>
+			<description>Save Upload File Path</description>
+			<param-name>path</param-name>
+			<param-value>/temp</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<display-name>File Upload Sub Ur Servlet</display-name>
+		<servlet-name>FileSubUrUploadServlet</servlet-name>
+		<servlet-class>th.co.ais.ipfm.web.util.FileUploadSubUrServlet</servlet-class>
+		<init-param>
+			<description>Save Upload File Sub Ur Path</description>
+			<param-name>path</param-name>
+			<param-value>/temp</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<display-name>LogoPictureServlet</display-name>
+		<servlet-name>LogoPictureServlet</servlet-name>
+		<servlet-class>th.co.ais.ipfm.web.util.LogoPictureServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>TemplateDownload</display-name>
+		<servlet-name>TemplateDownload</servlet-name>
+		<servlet-class>th.co.ais.ipfm.web.util.TemplateDownload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/servlet/FileUploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileSubUrUploadServlet</servlet-name>
+		<url-pattern>/servlet/FileSubUrUploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoPictureServlet</servlet-name>
+		<url-pattern>/LogoPictureServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TemplateDownload</servlet-name>
+		<url-pattern>/TemplateDownload</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/redirect.jsf</location>
+	</error-page>
+	<error-page>
+		<exception-type>javax.faces.application.ViewExpiredException</exception-type>
+		<location>/redirect.jsf</location>
+	</error-page>
+	<servlet>
+		<description></description>
+		<display-name>ExportDownload</display-name>
+		<servlet-name>ExportDownload</servlet-name>
+		<servlet-class>th.co.ais.ipfm.web.util.ExportDownload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ExportDownload</servlet-name>
+		<url-pattern>/ExportDownload</url-pattern>
+	</servlet-mapping>
+</web-app>

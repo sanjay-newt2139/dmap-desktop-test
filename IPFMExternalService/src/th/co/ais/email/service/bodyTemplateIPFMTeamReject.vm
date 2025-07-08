@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {color: #4f81bd}
+.border4 {
+	border: 1px solid #97b4d7;
+}
+.borderTRB {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #97b4d7;
+	border-right-color: #97b4d7;
+	border-bottom-color: #97b4d7;
+	border-left-color: #97b4d7;
+}
+.borderLBR {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #97b4d7;
+	border-right-color: #97b4d7;
+	border-bottom-color: #97b4d7;
+	border-left-color: #97b4d7;
+}
+.borderLB {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #97b4d7;
+	border-right-color: #97b4d7;
+	border-bottom-color: #97b4d7;
+	border-left-color: #97b4d7;
+}
+.normalText {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.normalTextHD {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.style2 {border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: none; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: #97b4d7; border-right-color: #97b4d7; border-bottom-color: #97b4d7; border-left-color: #97b4d7; font-weight: bold; }
+-->
+</style>
+</head>
+
+<body class="normalText">
+Dear K. ${userName}<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Process Reject UR : ${urNo} &nbsp; Sub UR : ${subUrNo}  ${bodyDesc}
+<br /><br />
+<table width="400" border="0" cellpadding="0" cellspacing="0" class="normalText">
+  <tr bgcolor="#4f81bd" class="normalTextHD">
+    <td width="111" align="right" bgcolor="#4f81bd" class="border4"><strong class="normalTextHD">UR No&nbsp;:&nbsp;</strong></td>
+    <td width="289" class="borderTRB">&nbsp;${urNo}</td>
+  </tr>
+  <tr bgcolor="#4f81bd" class="normalTextHD">
+    <td width="111" align="right" bgcolor="#4f81bd" class="border4"><strong class="normalTextHD">Sub UR No&nbsp;:&nbsp;</strong></td>
+    <td width="289" class="borderTRB">&nbsp;${subUrNo}</td>
+  </tr>
+  <tr bgcolor="#d3dfee">
+    <td align="right" class="borderLBR"><strong>UR Type&nbsp;:&nbsp;</strong></td>
+    <td bgcolor="#d3dfee" class="borderLB">&nbsp;${urType}</td>
+  </tr>
+  <tr>
+    <td align="right" class="style2">UR Status&nbsp;:&nbsp;</td>
+    <td class="borderLB">&nbsp;${urStatus}</td>
+  </tr>
+  <tr bgcolor="#d3dfee">
+    <td align="right" class="style2">Subject&nbsp;:&nbsp;</td>
+    <td bgcolor="#d3dfee" class="borderLB">&nbsp;${subject}</td>
+  </tr>
+  <tr>
+    <td align="right" class="style2">Request By&nbsp;:&nbsp;</td>
+    <td class="borderLB">&nbsp;${requestBy}</td>
+  </tr>
+  <tr bgcolor="#d3dfee">
+    <td align="right" class="style2">Request Date&nbsp;:&nbsp;</td>
+    <td bgcolor="#d3dfee" class="borderLB">&nbsp;${requestDate}</td>
+  </tr>
+</table>
+<p>Regards,</p>
+<p>IPFM Admin
+<br />
+<a href="${url}">http://ipfm.ais.co.th</a></p>
+</body>
+
+</html>

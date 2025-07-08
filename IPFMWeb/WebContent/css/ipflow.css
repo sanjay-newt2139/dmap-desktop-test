@@ -1,0 +1,637 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	color: #000;
+	font-family: Tahoma;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family : Tahoma;
+	font-size : 11px;
+	background-color:#FFF;
+	text-align: center; /* for IE */
+	overflow:scroll;
+	overflow-X:auto;
+}
+#container {
+	width:1000px;
+	clear:both;
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 0 auto;
+  	margin-right: 0 auto;
+/*	border: 1px #000000 solid;*/
+}
+#content {
+	width:1000px; /*Firefox */
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 0px;
+}
+#topbar {
+	background-image:url(../images/banner2.jpg);
+	background-repeat:repeat-x;
+	/*width:expression((document.body.clientWidth<1000) ? 1000+"px" : document.body.clientWidth+"px");*/
+	height:100px;
+	width:1000px;
+	/*margin-left:15px;*/
+}
+#details_head {
+	width:788px;
+	font-family: tahoma, "Arial, Tahoma";
+	color: #FFF;
+	height:30px;
+	float:left;
+	margin:6px 0px 0px 0px;
+	background: #3373BD;
+}
+#details_head_empty {
+	width:788px;
+	height:0px;
+	font-family: tahoma, "Arial, Tahoma";
+	float:left;
+	margin:6px 0px 0px 0px;
+
+}
+#details_head #tgleft {
+	font-family: tahoma, "Arial, Tahoma";
+	font-size:14px;
+	font-weight:bolder;
+	text-align: left;
+	color: #FFF;
+	margin:5px 0px 0px 5px;
+	width:390px;
+	height:30px;
+	float: left;
+}
+#details_head #tgright {
+	font-family: tahoma, "Arial, Tahoma";
+	font-size:12px;
+	font-weight:bolder;
+	text-align: right;
+	margin:5px 3px 0px 0px;
+	color: #FFF;
+	width:350px;
+	height:30px;
+	float: right;
+}
+#details_head #tgright a:link, 
+#details_head #tgright a:active, 
+#details_head #tgright a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+#details #tghead #tgright a:hover {
+	color:#FFF;
+	text-decoration: underline;
+}
+#details {
+	width:788px;/* Firefox */
+	margin:0px 0px 0px 0px;
+	float:left;
+/*	
+	display:inline;
+	border: 1px #3373BD solid;
+*/
+	display:block;
+	background-color: #CFDCFB;
+}
+#details fieldset {
+	font-family: tahoma, "Arial, Tahoma";
+	font-size:11px;
+	font-weight:bolder;
+	color: #000;
+	border: 1px #3373BD solid;
+}
+
+/*
+| Detail data list
+*/
+#details-list table {
+	border-right: 1px #000 solid;
+}
+#details-list th {
+	font-family: tahoma, "Arial, Tahoma";
+	font-size:12px;
+	font-weight:bolder;
+	color: #FFF;
+	text-align: center;
+	background-color: #3373BD;
+	height: 25px;
+	border-top: 1px #000 solid;
+	border-left: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+}
+#details-list td {
+	font-family: tahoma, "Arial, Tahoma";
+	font-size:12px;
+	font-weight:normal;
+	text-align: center;
+	border-left: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+	background-color: #CCC;
+	height: 20px;
+} 
+#details_login {
+	width:1000px;/* Firefox */
+	margin: 3px 0px 0px 0px;
+	float:left;
+	/*display:inline;*/
+	display:block;
+/*	
+	border: 1px #000000 solid;
+*/
+}
+#sidebar {
+	width:206px;
+	margin-top:6px;
+	margin-left:0px;
+	margin-right:3px;
+	float:left;
+	clear:none;
+	display:inline;
+/*	border: 1px #000000 solid; */
+}
+#menu_top {
+	margin-top: 2px;
+	height:30px;
+	width:1000px;
+	background-color:#FFFFFF;
+	float:left;
+	/*margin-left:15px;*/
+}
+#menu_left {
+	width:577px;
+	height:30px;
+	float:left;
+	background-color:#3373BD;
+}
+#menu_left #textlog {
+	margin-left:10px;
+	margin-top:5px;
+	text-align:left;
+	color:#FFFFFF;
+}
+#menu_center {
+	margin-left: 5px;
+	width:303px;
+	height:30px;
+	float:left;
+	background-color:#3373BD;
+}
+#menu_center #textlog {
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:5px;
+	text-align:right;
+	color:#FFFFFF;
+}
+#menu_right {
+	margin-left: 5px;
+	width:110px;
+	height:30px;
+	float:left;
+	text-align:center;
+	background-color:#3373BD;
+}
+#menu_right #textlog {
+	margin-top:5px;
+	color:#FFF;
+}
+#menu_right a:link, #menu_right a:active, #menu_right a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+#menu_right a:hover {
+	color:#FFF;
+	text-decoration: underline;
+}
+#menu_left01 {
+	width:206px;
+	background-color:#CFDCFB;
+	float:left;
+	text-align:center;
+	overflow: visible;
+	/*margin-left:15px;*/
+}
+#menu_left02 {
+	height:131px;
+	width:206px;
+	margin-top:5px;
+	margin-left:0px;
+	background-color:#3373BD;
+	float:left;
+	background-color:#3373BD;
+	background-position:center;
+	background-repeat:no-repeat;
+/*	margin-left:15px;
+	background-image:url(../images/p1.png);
+*/
+}
+
+/*
+* Font Size
+*/
+#fontsize0 {
+	font-family: tahoma, "Arial, Tahoma"; font-weight:normal; font-size:11px;
+}
+#fontsize0b {
+	font-family: tahoma, "Arial, Tahoma"; font-weight:bolder; font-size:11px;
+}
+#fontsize1 {
+	font-family: tahoma, "Arial, Tahoma"; font-weight:normal; font-size:16px;
+}
+#fontsize1b {
+	font-family: tahoma, "Arial, Tahoma"; font-weight:bolder; font-size:16px;
+}
+#fontsize2 {
+	font-family: tahoma, "Arial, Tahoma"; font-weight:normal; font-size:21px;
+}
+#fontsize2b {
+	font-family: tahoma, "Arial, Tahoma"; font-weight:bolder; font-size:21px;
+}
+
+/*
+* Bottom
+*/
+#bottom {
+	margin: 5px 0px 0px 0px;
+	background-image:url(../images/footer1.jpg);
+	background-repeat:repeat-x;
+	height:61px;
+	width:1000px;
+	padding:0px 0px 0px 0px;
+	clear:both;
+	float:left;
+/*	border: 1px #000000 solid;*/
+}
+#bottom #copyright {
+	font-size:10px;
+	text-align:right;
+	clear:both;
+	float:right;
+	color:#FFFFFF;
+	margin:4px 30px 0px 0px;
+/*	border: 1px #000000 solid;*/
+}
+a:link,a:active,a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color:#000;
+	text-decoration: underline;
+}
+td,tr,p{
+	font-size: 11px;
+	color: #666666;
+	font-family: Tahoma;
+	line-height: 16px;
+}
+div,form{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
+	color: #000;
+	font-family: Tahoma;
+	line-height: 16px;
+	display:block;
+}
+td,tr,p,select,input  {
+	font-family: Arial, Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333;
+}
+.input30 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:30px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+	text-align: center;
+}
+.input30dsb {
+	font-family: tahoma, "Arial, Tahoma";
+	width:30px;
+	background: #CCCCCC;
+	border: solid 1px #3373BD;
+	text-align: center;
+}
+.input50 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:50px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.input80 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:80px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.input80dsp {
+	font-family: tahoma, "Arial, Tahoma";
+	width:80px;
+	background: #CCCCCC;
+	border: solid 1px #3373BD;
+}
+.input100 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:100px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.input100dsp {
+	font-family: tahoma, "Arial, Tahoma";
+	width:100px;
+	background: #CCCCCC;
+	border: solid 1px #3373BD;
+}
+.input120 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:120px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.input150 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:150px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.input150dsp {
+	font-family: tahoma, "Arial, Tahoma";
+	width:150px;
+	background: #CCCCCC;
+	border: solid 1px #3373BD;
+}
+.input200 {
+	font-family: tahoma, "Arial, Tahoma"; width:200px; background: #E3E2FE; border: solid 1px #3373BD;
+}
+.input200dsp {
+	font-family: tahoma, "Arial, Tahoma";
+	width:200px;
+	background: #CCCCCC;
+	border: solid 1px #3373BD;
+	font-style: normal;
+	font-size: 11px;
+}
+.input250 {
+	font-family: tahoma, "Arial, Tahoma";
+	width:250px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.inputFile {
+	font-family: tahoma, "Arial, Tahoma";
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.button50 {
+	font-family: tahoma, "Arial, Tahoma";
+	color:#FFF;
+	width:50px;
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+}
+.button30 {
+	font-family: tahoma, "Arial, Tahoma";
+	color:#FFF;
+	width:30px;
+	background: #3373BD;
+	border: solid 1px #3373BD;
+}
+.button50 {
+	font-family: tahoma, "Arial, Tahoma";
+	color:#FFF;
+	width:50px;
+	background: #3373BD;
+	border: solid 1px #3373BD;
+}
+.button80 {
+	font-family: tahoma, "Arial, Tahoma";
+	color:#FFF;
+	width:80px;
+	background: #3373BD;
+	border: solid 1px #3373BD;
+}
+.textarea {
+	font-family: tahoma, "Arial, Tahoma";
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+	font-size : 11px;
+	width: 240px;
+}
+.textarea2 {
+	font-family: tahoma, "Arial, Tahoma";
+	background: #E3E2FE;
+	border: solid 1px #3373BD;
+	font-size : 11px;
+	width: 255px;
+}
+.textarea2dsp {
+	font-family: tahoma, "Arial, Tahoma";
+	background: #CCCCCC;
+	border: solid 1px #3373BD;
+	font-size : 11px;
+	width: 255px;
+}
+.waring{
+	color:#FF0000;
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landrö               |
+|--------------------------------------------------*/
+
+.dtree {
+	margin-left:5px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree a {
+	color: #333;
+	text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.dtree a.nodeSel {
+	/*background-color: #c0d2ec;*/
+}
+.dtree .clip {
+	overflow: hidden;
+}
+
+
+/*
+| Top menu
+*/
+#ipflow_menu{
+	visibility:hidden;	
+	
+}
+#ipflow_menu img{
+	border:0px;
+}
+
+/* End general styles for this example page */
+/* General configuration CSS */
+
+#ipflow_menu ul li ul{
+	display:none;	/* Needed to display ok in Opera */
+}
+#ipflow_menu ul{
+	margin:0px;	/* No indent */
+	padding:0px;	/* No indent */
+}
+#ipflow_menu li{
+	list-style-type:none;	/* No bullets */
+}	
+#ipflow_menu a{
+	margin:0px;
+	padding:0px;
+}
+/* End general configuration CSS */
+
+
+/* Cosmetic */
+
+/***********************************************************************
+	CSS - MENU BLOCKS
+	General rules for all menu blocks (group of sub items) 
+***********************************************************************/
+#ipflow_menu ul{
+	border:1px solid #FFF;
+	/*background-color:#3373BD;*/
+	background-image:url(../images/bg_m.jpg); 
+	background-repeat: repeat-x;
+	padding:1px;
+	background-color: #B22112;
+}
+	
+#ipflow_menu ul.menuBlock1{	/* Menu bar - main menu items */
+	border:0px;
+	padding:3px;
+	/* border:1px solid #317082; */
+	/*background-color:#3373BD;*/
+	background-image:url(../images/bg_m.jpg);
+	background-repeat: repeat-x;
+	overflow:visible;
+}
+#ipflow_menu ul.menuBlock2{	/* Menu bar - main menu items */
+	border:0px;
+	padding:3px;
+	border:1px solid #FFF;
+		/*background-color:#3373BD;*/
+	background-image:url(../images/bg_m.jpg);
+	background-repeat: repeat-x;
+}
+
+/***********************************************************************
+	CSS - MENU ITEMS
+	Here, you could assign rules to the menu items at different depths.
+***********************************************************************/
+/* General rules for all menu items */
+#ipflow_menu a{
+	color: #FFF;
+	text-decoration:none;
+	padding-left:5px;
+	padding-right:5px;
+
+}
+/*
+Main menu items 
+*/
+#ipflow_menu .currentDepth1{
+	padding-left:5px;
+	padding-right:5px;
+	/* border:1px solid #E2EBED; */
+}
+#ipflow_menu .currentDepth1over{
+	padding-left:5px;
+	padding-right:5px;
+	text-decoration: underline;
+	color: #FFF;
+	/* border:1px solid #000; */
+}
+#ipflow_menu .currentDepth1 a{
+	font-weight:bold;
+}
+#ipflow_menu .currentDepth1over a{	/* Text rules */
+	color:#FFF;
+	font-weight:bold;
+}
+
+/* Sub menu depth 1 */
+#ipflow_menu .currentDepth2{
+	margin-top:5px;
+	margin-bottom:2px;
+	padding-right:2px;
+}
+#ipflow_menu .currentDepth2over{
+	margin-top:5px;
+	margin-bottom:2px;
+	padding-right:2px;
+	background-color:#E2EBED;
+}	
+#ipflow_menu .currentDepth2over a{	/* Text rules */
+	color:#000;
+}	
+/* Sub menu depth 2 */
+#ipflow_menu .currentDepth3{
+	margin-top:5px;
+	margin-bottom:2px;
+	padding-right:2px;
+		/*background-color:#3373BD;*/
+	background-image:url(../images/bg_m.jpg);
+}
+#ipflow_menu .currentDepth3over{
+	margin-top:5px;
+	margin-bottom:2px;
+	padding-right:2px;
+	background-color:#E2EBED;
+}
+#ipflow_menu .currentDepth3over a{	/* Text rules */
+	color:#000;
+}
+/* Sub menu depth 3 */
+#ipflow_menu .currentDepth4{
+	margin-top:5px;
+	margin-bottom:2px;
+	padding-right:2px;
+		/*background-color:#3373BD;*/
+	background-image:url(../images/bg_m.jpg);
+}
+#ipflow_menu .currentDepth4over{
+	margin-top:5px;
+	margin-bottom:2px;
+	padding-right:2px;
+	background-color:#E2EBED;
+}	
+#ipflow_menu .currentDepth4over a{	/* Text rules */
+	color:#000;
+}
+
+<!-- Update -->
+#alwayTopMenu {
+	display: block;
+	width:100% !important;
+}

@@ -1,0 +1,74 @@
+package th.co.ais.ipfm.dao.hibernate;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Hibernate;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.dao.DataAccessException;
+
+import th.co.ais.ipfm.dao.IPUrActionDao;
+import th.co.ais.ipfm.dao.IPUrAttachmentDao;
+import th.co.ais.ipfm.domain1.IpMasterTable;
+import th.co.ais.ipfm.domain1.IpUrAction;
+import th.co.ais.ipfm.domain1.IpUrAttachment;
+import th.co.ais.ipfm.domain1.IpUrFirewall;
+
+
+
+
+public class HibernateIPUrAttachmentDao extends HibernateGenericDao<IpUrAttachment> implements IPUrAttachmentDao{
+
+	@Override
+	public BigDecimal getSeqNo(String urNo) {
+		Session session = getSessionFactory().getCurrentSession();
+		String seqNo =  (String) session.createSQLQuery("SELECT NVL(MAX(SEQ),0)+1 as NEWSEQ FROM IP_UR_ATTACHMENT WHERE UR_NO='"+urNo+"'")
+				.addScalar("NEWSEQ", Hibernate.STRING).uniqueResult();
+		return new BigDecimal(seqNo);
+	}
+
+	@Override
+	public IpUrAttachment findByFileName(String urNo, String filename,
+			String catagory) {
+		Session session = getSessionFactory().getCurrentSession();
+		Criteria criteria = session.createCriteria(IpUrAttachment.class);
+		criteria.add(Restrictions.eq("id.urNo", urNo));
+		criteria.add(Restrictions.eq("fileName", filename));
+		criteria.add(Restrictions.eq("id.category", catagory));
+		List<IpUrAttachment> result=criteria.list();
+		
+		return (result.size()!=0)?result.get(0):null;
+	}
+
+
+	@SuppressWarnings({ "unchecked" })
+	@Override
+	public List<IpUrAttachment> getIpUrAttachmentList(String urNo) throws DataAccessException {
+		Session session = getSessionFactory().getCurrentSession();
+		Criteria criteria = session.createCriteria(IpUrAttachment.class);
+		criteria.add(Restrictions.eq("id.urNo", urNo));
+
+		return criteria.list();
+	}
+
+	@SuppressWarnings({ "deprecation", "unchecked" })
+	@Override
+	public void updateIpUrAttachment(String urNo ,String tempUrNo) throws DataAccessException {
+		Session session = getSessionFactory().getCurrentSession();
+		SQLQuery sqlQuery  =  session.createSQLQuery(" UPDATE IP_UR_ATTACHMENT SET UR_NO ='"+urNo+"' WHERE UR_NO ='"+tempUrNo+"'");
+		sqlQuery.executeUpdate();  
+	}
+	
+	@SuppressWarnings({ "deprecation", "unchecked" })
+	@Override
+	public void deleteIpUrAttachment(String urNo) throws DataAccessException {
+		Session session = getSessionFactory().getCurrentSession();
+		SQLQuery sqlQuery  =  session.createSQLQuery(" DELETE  FROM IP_UR_ATTACHMENT WHERE UR_NO ='"+urNo+"'");
+		sqlQuery.executeUpdate();  
+	}
+	
+}

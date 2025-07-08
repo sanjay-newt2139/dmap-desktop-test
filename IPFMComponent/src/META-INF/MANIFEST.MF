@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lib/groovy-all-1.7.3.jar 
+ lib/omsexcelutil.zip 
+ lib/poi-3.6-20091214.jar
+
