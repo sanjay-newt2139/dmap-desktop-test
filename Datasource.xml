@@ -1,0 +1,45 @@
+<!-- This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v1.1.4.3_v8.3.5.2 on Date: 31-Oct-2025 -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datasources>
+    <local-tx-datasource>
+        <jndi-name>ipfmDS</jndi-name>
+        <rar-name>jboss-local-jdbc.rar</rar-name>
+        <use-java-context>true</use-java-context>
+        <connection-definition>javax.sql.DataSource</connection-definition>
+        <jmx-invoker-name>jboss:service=invoker,type=jrmp</jmx-invoker-name>
+        <min-pool-size>35</min-pool-size>
+        <max-pool-size>120</max-pool-size>
+        <blocking-timeout-millis>30000</blocking-timeout-millis>
+        <idle-timeout-minutes>45</idle-timeout-minutes>
+        <prefill>false</prefill>
+        <background-validation>false</background-validation>
+        <background-validation-millis>0</background-validation-millis>
+        <validate-on-match>true</validate-on-match>
+        <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+        <check-valid-connection-sql>select 1 from dual</check-valid-connection-sql>
+<!--
+DMAP TAG: Query needs manual remediation: Identifier8
+DMAP ConvertedQuery - 
+-->
+
+        <statistics-formatter>org.jboss.resource.statistic.pool.JBossDefaultSubPoolStatisticFormatter</statistics-formatter>
+        <isSameRM-override-value>false</isSameRM-override-value>
+        <allocation-retry>0</allocation-retry>
+        <allocation-retry-wait-millis>5000</allocation-retry-wait-millis>
+        <application-managed-security xsi:type="securityMetaData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <metadata/>
+        <local-transaction/>
+        <user-name>root</user-name>
+        <!-- <user-name>IPFM2022</user-name> -->
+        <password>root@1</password>
+        <!-- <password>PASSWORD</password> -->
+
+        <prepared-statement-cache-size>0</prepared-statement-cache-size>
+        <share-prepared-statements>false</share-prepared-statements>
+        <set-tx-query-timeout>false</set-tx-query-timeout>
+        <query-timeout>0</query-timeout>
+        <use-try-lock>0</use-try-lock>
+        <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+        <connection-url>jdbc:oracle:thin:@192.168.1.18:1521:orcldb1</connection-url>
+    </local-tx-datasource>
+</datasources>
